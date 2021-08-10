@@ -1,0 +1,382 @@
+using GOPATH mode
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>qkdserv - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="/lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="/lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.16.5";</script>
+<script src="/lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="/pkg/">GoDoc</a></div>
+<a href="#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package qkdserv
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "qb/qkdserv"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+qkdserv包，模拟QKD服务基本功能，包括密钥分发与获取密钥
+创建人：zhanglu
+创建时间：2021/08/04
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="#QKDSecRandomShare">func QKDSecRandomShare(sign_matrix_index QKDSignMatrixIndex, random_src_dev_id, random_dst_dev_id [16]byte, random_row QKDSignRandomsMatrixRow, main_row_num QKDSignRandomsMatrixRow) bool</a></dd>
+			
+			
+				
+				<dd><a href="#QKDSignMatrixIndex">type QKDSignMatrixIndex</a></dd>
+				
+				
+			
+				
+				<dd><a href="#QKDSignRandomMainRowNum">type QKDSignRandomMainRowNum</a></dd>
+				
+				
+			
+				
+				<dd><a href="#QKDSignRandomsMatrix">type QKDSignRandomsMatrix</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#QKDReadSecRandom">func QKDReadSecRandom(sign_matrix_index QKDSignMatrixIndex, sign_main_row_num QKDSignRandomMainRowNum) QKDSignRandomsMatrix</a></dd>
+				
+				
+			
+				
+				<dd><a href="#QKDSignRandomsMatrixRow">type QKDSignRandomsMatrixRow</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/qb/qkdserv/qkdserv.go">qkdserv.go</a>
+			
+				<a href="/src/qb/qkdserv/qkdserv_msg.go">qkdserv_msg.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+QKD种子密钥，用于生成随机数
+</p>
+
+				<pre>const <span id="QKD_KEY">QKD_KEY</span> = &#34;QKD simulation&#34;</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+调用该程序的参与者名称，主要有两类参与者：联盟节点(P1、P2...),客户端(C1、C2...)
+</p>
+
+				<pre>var <span id="Node_name">Node_name</span> []<a href="/pkg/builtin/#byte">byte</a></pre>
+			
+				<p>
+签名密钥索引值： 签名事务id号，包含16字节设备id，16字节事务序列号，总共32字节作为随机数矩阵的索引值
+</p>
+
+				<pre>var <span id="QKD_sign_random_matrix_pool">QKD_sign_random_matrix_pool</span> map[<a href="#QKDSignMatrixIndex">QKDSignMatrixIndex</a>]<a href="#QKDSignRandomsMatrix">QKDSignRandomsMatrix</a></pre>
+			
+		
+		
+			
+			
+			<h2 id="QKDSecRandomShare">func <a href="/src/qb/qkdserv/qkdserv.go?s=420:607#L6">QKDSecRandomShare</a>
+				<a class="permalink" href="#QKDSecRandomShare">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func QKDSecRandomShare(sign_matrix_index <a href="#QKDSignMatrixIndex">QKDSignMatrixIndex</a>, random_src_dev_id,
+    random_dst_dev_id [16]<a href="/pkg/builtin/#byte">byte</a>, random_row <a href="#QKDSignRandomsMatrixRow">QKDSignRandomsMatrixRow</a>, main_row_num <a href="#QKDSignRandomsMatrixRow">QKDSignRandomsMatrixRow</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+			<p>
+QKDSecRandomShare，密钥分发
+参数：签名索引QKDSignMatrixIndex，源、目的ID[16]byte，共享的一行随机数QKDSignRandomsMatrixRow，主行号QKDSignRandomsMatrixRow
+返回值：分发结果bool
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="QKDSignMatrixIndex">type <a href="/src/qb/qkdserv/qkdserv_msg.go?s=917:1040#L13">QKDSignMatrixIndex</a>
+				<a class="permalink" href="#QKDSignMatrixIndex">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+签名矩阵索引，由id和SN可以唯一标识该次签名，该索引也是签名密钥索引
+</p>
+
+			<pre>type QKDSignMatrixIndex struct {
+<span id="QKDSignMatrixIndex.Sign_dev_id"></span>    Sign_dev_id  [16]<a href="/pkg/builtin/#byte">byte</a> <span class="comment">// 签名者id</span>
+<span id="QKDSignMatrixIndex.Sign_task_sn"></span>    Sign_task_sn [16]<a href="/pkg/builtin/#byte">byte</a> <span class="comment">// 本次签名的序列号</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="QKDSignRandomMainRowNum">type <a href="/src/qb/qkdserv/qkdserv_msg.go?s=1073:1376#L19">QKDSignRandomMainRowNum</a>
+				<a class="permalink" href="#QKDSignRandomMainRowNum">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+签名密钥主行号信息
+</p>
+
+			<pre>type QKDSignRandomMainRowNum struct {
+<span id="QKDSignRandomMainRowNum.Sign_Node_Name"></span>    Sign_Node_Name []<a href="/pkg/builtin/#byte">byte</a> <span class="comment">// 签名者的节点号，用于确定主行号</span>
+<span id="QKDSignRandomMainRowNum.Main_Row_Num"></span>    Main_Row_Num   <a href="/pkg/builtin/#uint32">uint32</a> <span class="comment">// 主行号，可以自定义</span>
+<span id="QKDSignRandomMainRowNum.Counts"></span>    Counts         <a href="/pkg/builtin/#uint32">uint32</a> <span class="comment">// 每行随机数的个数，可选参数</span>
+<span id="QKDSignRandomMainRowNum.Unit_len"></span>    Unit_len       <a href="/pkg/builtin/#uint32">uint32</a> <span class="comment">// 每个随机数的字节长度，可选参数</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="QKDSignRandomsMatrix">type <a href="/src/qb/qkdserv/qkdserv_msg.go?s=519:814#L6">QKDSignRandomsMatrix</a>
+				<a class="permalink" href="#QKDSignRandomsMatrix">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+签名密钥矩阵
+</p>
+
+			<pre>type QKDSignRandomsMatrix struct {
+<span id="QKDSignRandomsMatrix.Main_row_num"></span>    Main_row_num <a href="/pkg/builtin/#byte">byte</a>                      <span class="comment">// 主行号，即有多列的行，为0，表示是全矩阵，否则为只有一行为主的矩阵</span>
+<span id="QKDSignRandomsMatrix.Row_counts"></span>    Row_counts   <a href="/pkg/builtin/#uint32">uint32</a>                    <span class="comment">// 随机数行数</span>
+<span id="QKDSignRandomsMatrix.Sign_randoms"></span>    Sign_randoms []<a href="#QKDSignRandomsMatrixRow">QKDSignRandomsMatrixRow</a> <span class="comment">// 每行随机数</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="QKDReadSecRandom">func <a href="/src/qb/qkdserv/qkdserv.go?s=808:931#L14">QKDReadSecRandom</a>
+					<a class="permalink" href="#QKDReadSecRandom">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func QKDReadSecRandom(sign_matrix_index <a href="#QKDSignMatrixIndex">QKDSignMatrixIndex</a>, sign_main_row_num <a href="#QKDSignRandomMainRowNum">QKDSignRandomMainRowNum</a>) <a href="#QKDSignRandomsMatrix">QKDSignRandomsMatrix</a></pre>
+				<p>
+QKDReadSecRandom，读取共享密钥
+参数：签名索引QKDSignMatrixIndex，主行号QKDSignRandomsMatrixRow
+返回值：用于验签的密钥矩阵QKDSignRandomsMatrix
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="QKDSignRandomsMatrixRow">type <a href="/src/qb/qkdserv/qkdserv_msg.go?s=125:495#L1">QKDSignRandomsMatrixRow</a>
+				<a class="permalink" href="#QKDSignRandomsMatrixRow">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+签名密钥矩阵的一行
+</p>
+
+			<pre>type QKDSignRandomsMatrixRow struct {
+<span id="QKDSignRandomsMatrixRow.Counts"></span>    Counts     <a href="/pkg/builtin/#uint32">uint32</a> <span class="comment">// 该随机数的个数（是方形矩阵，等于总行数/列数）</span>
+<span id="QKDSignRandomsMatrixRow.Row_num"></span>    Row_num    <a href="/pkg/builtin/#uint32">uint32</a> <span class="comment">// 随机数所在行的行号</span>
+<span id="QKDSignRandomsMatrixRow.Column_num"></span>    Column_num <a href="/pkg/builtin/#uint32">uint32</a> <span class="comment">// 随机数所在列的列号，随机数个数counts&gt;1时，列号无用</span>
+<span id="QKDSignRandomsMatrixRow.Unit_len"></span>    Unit_len   <a href="/pkg/builtin/#uint32">uint32</a> <span class="comment">// 每个随机数的长度，字节为单位</span>
+<span id="QKDSignRandomsMatrixRow.Randoms"></span>    Randoms    []<a href="/pkg/builtin/#byte">byte</a> <span class="comment">// 随机数</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.16.5.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

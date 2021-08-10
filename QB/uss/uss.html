@@ -1,0 +1,323 @@
+using GOPATH mode
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>uss - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="/lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="/lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.16.5";</script>
+<script src="/lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="/pkg/">GoDoc</a></div>
+<a href="#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package uss
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "qb/uss"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+uss包，提供无条件安全签名和验签功能
+创建人：zhanglu
+创建时间：2021/08/04
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="#GenSignTaskSN">func GenSignTaskSN(length uint32) []byte</a></dd>
+			
+				
+				<dd><a href="#VerifySign">func VerifySign(uss_sign USSToeplitzHashSignMsg) bool</a></dd>
+			
+			
+				
+				<dd><a href="#USSToeplitzHashSignMsg">type USSToeplitzHashSignMsg</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Sign">func Sign(sign_index qkdserv.QKDSignMatrixIndex, counts, unit_len uint32, m [1024]byte) USSToeplitzHashSignMsg</a></dd>
+				
+				
+			
+				
+				<dd><a href="#USSToeplitzMatrixMsg">type USSToeplitzMatrixMsg</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/qb/uss/uss.go">uss.go</a>
+			
+				<a href="/src/qb/uss/uss_msg.go">uss_msg.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+用于生成toeplitz字符串
+</p>
+
+				<pre>const <span id="TOEPLITZ_KEY">TOEPLITZ_KEY</span> = &#34;Toeplitz Matrix&#34;</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="GenSignTaskSN">func <a href="/src/qb/uss/uss.go?s=2712:2752#L70">GenSignTaskSN</a>
+				<a class="permalink" href="#GenSignTaskSN">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GenSignTaskSN(length <a href="/pkg/builtin/#uint32">uint32</a>) []<a href="/pkg/builtin/#byte">byte</a></pre>
+			<p>
+GenSignTaskSN，产生指定字节长度的随机数，主要可做签名序列号（一般为16字节）
+参数：随机数长度uint32
+返回值：特定长度的随机数[]byte
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="VerifySign">func <a href="/src/qb/uss/uss.go?s=1358:1411#L31">VerifySign</a>
+				<a class="permalink" href="#VerifySign">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func VerifySign(uss_sign <a href="#USSToeplitzHashSignMsg">USSToeplitzHashSignMsg</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+			<p>
+VerifySign，验签
+参数：签名索引qkdserv.QKDSignMatrixIndex,签名个数uint32，签名单位长度uint32，待签名消息[1024]byte
+返回值：验签结果bool
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="USSToeplitzHashSignMsg">type <a href="/src/qb/uss/uss_msg.go?s=645:1169#L9">USSToeplitzHashSignMsg</a>
+				<a class="permalink" href="#USSToeplitzHashSignMsg">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+USSToeplitzHashSignMsg,用于存放签名、验签所需的参数
+</p>
+
+			<pre>type USSToeplitzHashSignMsg struct {
+<span id="USSToeplitzHashSignMsg.Sign_index"></span>    Sign_index   <a href="/pkg/qb/qkdserv/">qkdserv</a>.<a href="/pkg/qb/qkdserv/#QKDSignMatrixIndex">QKDSignMatrixIndex</a>      <span class="comment">// 签名索引</span>
+<span id="USSToeplitzHashSignMsg.Main_row_num"></span>    Main_row_num <a href="/pkg/qb/qkdserv/">qkdserv</a>.<a href="/pkg/qb/qkdserv/#QKDSignRandomMainRowNum">QKDSignRandomMainRowNum</a> <span class="comment">// 主行号</span>
+<span id="USSToeplitzHashSignMsg.Sign_counts"></span>    Sign_counts  <a href="/pkg/builtin/#uint32">uint32</a>                          <span class="comment">// 每行签名个数，=验签者数量</span>
+<span id="USSToeplitzHashSignMsg.Sign_len"></span>    Sign_len     <a href="/pkg/builtin/#uint32">uint32</a>                          <span class="comment">// 签名单位长度，=密钥单位长度（以字节为单位）</span>
+<span id="USSToeplitzHashSignMsg.Message"></span>    Message      [1024]<a href="/pkg/builtin/#byte">byte</a>                      <span class="comment">// 签名消息，默认&lt;=1024字节</span>
+<span id="USSToeplitzHashSignMsg.Sign"></span>    Sign         []<a href="/pkg/builtin/#byte">byte</a>                          <span class="comment">// 签名消息，默认&lt;=16字节</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="Sign">func <a href="/src/qb/uss/uss.go?s=395:506#L7">Sign</a>
+					<a class="permalink" href="#Sign">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func Sign(sign_index <a href="/pkg/qb/qkdserv/">qkdserv</a>.<a href="/pkg/qb/qkdserv/#QKDSignMatrixIndex">QKDSignMatrixIndex</a>, counts,
+    unit_len <a href="/pkg/builtin/#uint32">uint32</a>, m [1024]<a href="/pkg/builtin/#byte">byte</a>) <a href="#USSToeplitzHashSignMsg">USSToeplitzHashSignMsg</a></pre>
+				<p>
+USS，签名
+参数：签名索引qkdserv.QKDSignMatrixIndex,每行签名个数uint32，签名单位长度uint32，待签名消息[1024]byte
+返回值：签名信息USSToeplitzHashSignMsg
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="USSToeplitzMatrixMsg">type <a href="/src/qb/uss/uss_msg.go?s=285:574#L2">USSToeplitzMatrixMsg</a>
+				<a class="permalink" href="#USSToeplitzMatrixMsg">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+USSToeplitzMatrixMsg，包含生成toeplitz矩阵需要的参数
+</p>
+
+			<pre>type USSToeplitzMatrixMsg struct {
+<span id="USSToeplitzMatrixMsg.Row_counts"></span>    Row_counts      <a href="/pkg/builtin/#uint32">uint32</a>         <span class="comment">// 矩阵行数，=单位签名长度=单位密钥长度</span>
+<span id="USSToeplitzMatrixMsg.Column_counts"></span>    Column_counts   <a href="/pkg/builtin/#uint32">uint32</a>         <span class="comment">// 矩阵列数，&gt;=签名消息长度</span>
+<span id="USSToeplitzMatrixMsg.Toeplitz_matrix"></span>    Toeplitz_matrix [16][1024]<a href="/pkg/builtin/#uint">uint</a> <span class="comment">// 存放toeplitz矩阵，行数默认为&lt;=16，列数&lt;=1024</span>
+}
+</pre>
+
+			
+
+			
+				<p>
+toeplitz矩阵，每次签名、验签用同一个toeplitz矩阵
+</p>
+
+				<pre>var <span id="Toeplitz_Matrix">Toeplitz_Matrix</span> <a href="#USSToeplitzMatrixMsg">USSToeplitzMatrixMsg</a></pre>
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.16.5.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>
