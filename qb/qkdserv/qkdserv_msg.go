@@ -27,14 +27,14 @@ type QKDSignMatrixIndex struct {
 
 // 签名密钥主行号信息
 type QKDSignRandomMainRowNum struct {
-	Sign_Node_Name []byte // 签名者的节点号，用于确定主行号
-	Main_Row_Num   uint32 // 主行号，可以自定义
-	Counts         uint32 // 每行随机数的个数，可选参数
-	Unit_len       uint32 // 每个随机数的字节长度，可选参数
+	Sign_Node_Name [2]byte // 签名者的节点号，用于确定主行号
+	Main_Row_Num   uint32  // 主行号，可以自定义
+	Counts         uint32  // 每行随机数的个数，可选参数
+	Unit_len       uint32  // 每个随机数的字节长度，可选参数
 }
 
 // 签名密钥索引值： 签名事务id号，包含16字节设备id，16字节事务序列号，总共32字节作为随机数矩阵的索引值
 var QKD_sign_random_matrix_pool map[QKDSignMatrixIndex]QKDSignRandomsMatrix
 
 // 调用该程序的参与者名称，主要有两类参与者：联盟节点(P1、P2...),客户端(C1、C2...)
-var Node_name []byte
+var Node_name [2]byte

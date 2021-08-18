@@ -27,11 +27,11 @@ func QKDReadSecRandom(sign_matrix_index QKDSignMatrixIndex, sign_main_row_num QK
 
 	// 格式化检查：id+SN的长度
 	if sign_main_row_num.Main_Row_Num == 0 {
-		fmt.Println("	err：Only signer can use func QKDReadSecRandom()!! ")
+		fmt.Println("	qkdserv error：Only erifysigner can use func QKDReadSecRandom()!! ")
 	} else if len(sign_matrix_index.Sign_dev_id) != 16 {
-		fmt.Println("	err：The length of Sign_dev_id is wrong!! ")
+		fmt.Println("	qkdserv error：The length of Sign_dev_id is wrong!! ")
 	} else if len(sign_matrix_index.Sign_task_sn) != 16 {
-		fmt.Println("	err：The length of Sign_task_sn is wrong!! ")
+		fmt.Println("	qkdserv error：The length of Sign_task_sn is wrong!! ")
 	} else {
 		// 计算全阵，模拟实现的时候，需要通过全局种子和sign_matrix_index值来首先计算出随机数矩阵
 		sign_randoms_matrix := generateSignRandomsMatrix(sign_matrix_index, sign_main_row_num.Counts, sign_main_row_num.Unit_len)
@@ -80,7 +80,7 @@ func generateSignRandomsMatrix(sign_matrix_index QKDSignMatrixIndex, row_counts 
 // getMainRowNum，获得主行号
 // 参数：主行号信息QKDSignRandomMainRowNum，调用此程序的节点名称[]byte
 // 返回值：主行号uint32
-func getMainRowNum(SignMainRowNum QKDSignRandomMainRowNum, VerifyNode []byte) uint32 {
+func getMainRowNum(SignMainRowNum QKDSignRandomMainRowNum, VerifyNode [2]byte) uint32 {
 	var main_row_num uint32
 	SignNum, _ := strconv.Atoi(string(SignMainRowNum.Sign_Node_Name[1:])) // 将其转化为数字
 	VerifyNum, _ := strconv.Atoi(string(VerifyNode[1:]))
@@ -91,18 +91,20 @@ func getMainRowNum(SignMainRowNum QKDSignRandomMainRowNum, VerifyNode []byte) ui
 		} else if bytes.Equal(VerifyNode[:1], []byte("P")) {
 			main_row_num = uint32(VerifyNum)
 		} else {
-			fmt.Println("error:The input arg is wrong!!")
+			fmt.Println("	qkdserv error:The input arg is wrong!!")
 		}
 	} else if bytes.Equal(SignMainRowNum.Sign_Node_Name[:1], []byte("P")) { // 如果签名者是联盟节点
-		if bytes.Equal(SignMainRowNum.Sign_Node_Name, VerifyNode) { // 签名节点调用此程序，则主行号=0
+		if bytes.Equal(SignMainRowNum.Sign_Node_Name[:], VerifyNode[:]) { // 签名节点调用此程序，则主行号=0
 			main_row_num = 0
+		} else if bytes.Equal(VerifyNode[:1], []byte("C")) { // 如果验签者是客户端
+			main_row_num = 1
 		} else if VerifyNum <= SignNum { // 验签者节点下标<=签名者节点下标
 			main_row_num = uint32(VerifyNum)
 		} else { // 验签者节点下标>签名者节点下标，主行号=验签者节点下标-1
 			main_row_num = uint32(VerifyNum - 1)
 		}
 	} else {
-		fmt.Println("error:The name of Sign_dev_id is wrong!!")
+		fmt.Println("	qkdserv error:The name of Sign_dev_id is wrong!!")
 	}
 	return main_row_num
 }

@@ -27,7 +27,7 @@ func TestQKDReadSecRandom(t *testing.T) {
 	qkdserv.QKD_sign_random_matrix_pool = make(map[qkdserv.QKDSignMatrixIndex]qkdserv.QKDSignRandomsMatrix)
 	var i uint32
 	// 定义使用该程序的参与者名称，正常使用时，该参数由命令行输入，此处只是为了测试使用
-	qkdserv.Node_name = []byte("P1")
+	qkdserv.Node_name = [2]byte{'P', '1'}
 	// 定义签名索引
 	SignIndex := qkdserv.QKDSignMatrixIndex{}
 	id := []byte("XHSGDFAYQHDJ2163")
@@ -40,14 +40,14 @@ func TestQKDReadSecRandom(t *testing.T) {
 	}
 	// 定义主行号相关信息
 	SignMainRowNum := qkdserv.QKDSignRandomMainRowNum{}
-	SignMainRowNum.Sign_Node_Name = []byte("C1")
+	SignMainRowNum.Sign_Node_Name = [2]byte{'C', '1'}
 	SignMainRowNum.Main_Row_Num = 0 // 主行号默认设置为0
 	SignMainRowNum.Counts = 4
 	SignMainRowNum.Unit_len = 16
 
 	// 读取安全随机数
 	qkdserv.QKD_sign_random_matrix_pool[SignIndex] = qkdserv.QKDReadSecRandom(SignIndex, SignMainRowNum)
-	PrintVerifyMatrix(qkdserv.QKD_sign_random_matrix_pool[SignIndex])
+	//PrintVerifyMatrix(qkdserv.QKD_sign_random_matrix_pool[SignIndex])
 }
 
 // 打印签名密钥矩阵

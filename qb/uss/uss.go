@@ -28,6 +28,7 @@ func Sign(sign_index qkdserv.QKDSignMatrixIndex, counts,
 	uss_sign.Sign_index = sign_index
 	uss_sign.Main_row_num.Counts = counts
 	uss_sign.Main_row_num.Unit_len = unit_len
+	uss_sign.Main_row_num.Sign_Node_Name = qkdserv.Node_name
 	uss_sign.Sign_counts = counts
 	uss_sign.Sign_len = unit_len
 	uss_sign.Message = m
@@ -76,10 +77,14 @@ func VerifySign(uss_sign USSToeplitzHashSignMsg) bool {
 
 // GenSignTaskSN，产生指定字节长度的随机数，主要可做签名序列号（一般为16字节）
 // 参数：随机数长度uint32
-// 返回值：特定长度的随机数[]byte
-func GenSignTaskSN(length uint32) []byte {
-	sign_task_sn := make([]byte, length)
-	io.ReadFull(cryptorand.Reader, sign_task_sn)
+// 返回值：特定长度的随机数[16]byte
+func GenSignTaskSN(length uint32) [16]byte {
+	sn := make([]byte, length)
+	io.ReadFull(cryptorand.Reader, sn)
+	var sign_task_sn [16]byte
+	for i := 0; i < 16; i++ {
+		sign_task_sn[i] = sn[i]
+	}
 	return sign_task_sn
 }
 

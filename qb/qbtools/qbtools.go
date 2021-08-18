@@ -35,3 +35,24 @@ func GenRandomWithPRF(key []byte, sign_dev_id, sign_task_sn [16]byte, random_cou
 	signrandoms := randoms[0:randoms_len]
 	return randoms_len, signrandoms
 }
+
+func GetNodeIDTable(nodeName [2]byte) [16]byte {
+	NodeIDTable := make(map[[2]byte][16]byte)
+	NodeTable := map[[2]byte]string{
+		{'P', '1'}: "FHDG3489EYUWHBHD",
+		{'P', '2'}: "JGOJFOIJHRNB2346",
+		{'P', '3'}: "FIHFUIB376486821",
+		{'P', '4'}: "3748HFIYYHFIGFI3",
+		{'C', '1'}: "CHIKGHBUIGHB3468",
+	}
+	id, ok := NodeTable[nodeName]
+	if ok {
+		var NodeID [16]byte
+		ID := []byte(id)
+		for i := 0; i < 16; i++ {
+			NodeID[i] = ID[i]
+		}
+		NodeIDTable[nodeName] = NodeID
+	}
+	return NodeIDTable[nodeName]
+}
