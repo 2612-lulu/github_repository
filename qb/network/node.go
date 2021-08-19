@@ -11,8 +11,8 @@ import (
 )
 
 type Node struct {
-	Node_name     [2]byte            // 联盟节点名称
-	NodeID        [16]byte           // 联盟节点ID，16字节QKD设备号
+	Node_name     [2]byte            // 联盟节点/客户端名称
+	NodeID        [16]byte           // 联盟节点/客户端ID，16字节QKD设备号
 	NodeTable     map[[2]byte]string // 节点索引表，key=Node_name, value=url
 	ClientTable   map[[2]byte]string // 客户端索引表，key=Node_name, value=url
 	View          *View              // 视图号
@@ -49,14 +49,14 @@ func NewNode(node_name string) *Node {
 		NodeName[i] = []byte(node_name)[i]
 	}
 
-	qkdserv.Node_name = NodeName // 调用此程序的当前节点名称
+	qkdserv.Node_name = NodeName // 调用此程序的当前节点或客户端名称
 
 	// 初始化签名密钥池
 	qkdserv.QKD_sign_random_matrix_pool = make(map[qkdserv.QKDSignMatrixIndex]qkdserv.QKDSignRandomsMatrix)
 
 	// 初始化节点
 	node := &Node{
-		Node_name: NodeName, // 联盟节点名称，形式为P1、P2...或C1、C2...
+		Node_name: NodeName, // 联盟节点或客户段名称，形式为P1、P2...或C1、C2...
 		NodeTable: map[[2]byte]string{ // 节点索引表，key=Node_name, value=url
 			{'P', '1'}: "localhost:1111",
 			{'P', '2'}: "localhost:1112",
@@ -332,6 +332,23 @@ func (node *Node) createStateForNewConsensus() error {
 	return nil
 }
 
+// 只有客户端可调用此函数，用于生成request消息并将该消息发送至主节点以请求共识
+func (node *Node) Request(operation string, node_name [2]byte) error {
+	err := node.createStateForNewConsensus() // 创建新的共识
+	if err != nil {                          // 如果节点未处于共识状态，输出错误
+		return err
+	}
+	request, _ := node.CurrentState.GenReqMsg(operation, node_name)
+	jsonMsg, err := json.Marshal(request)
+	if err != nil {
+		return err
+	}
+	send(node.NodeTable[node.View.Primary]+"/request", jsonMsg)
+	fmt.Println(" The request have send to primary node")
+	return nil
+
+}
+
 func (node *Node) resolveRequestMsg(msgs []*pbft.RequestMsg) []error {
 	errs := make([]error, 0)
 	// 批量处理request信息
@@ -358,13 +375,14 @@ func (node *Node) resolveReq(reqMsg *pbft.RequestMsg) error {
 	}
 
 	// 进入共识，获得preprepare消息
-	prePrepareMsg, _ := node.CurrentState.PrePrePare(reqMsg)
+	prePrepareMsg, ok := node.CurrentState.PrePrePare(reqMsg)
 
 	//LogStage(fmt.Sprintf("Consensus Process (ViewID:%d)", node.CurrentState.ViewID), false)
 
 	// 发送pre-prepare消息给其他联盟节点
-	if prePrepareMsg != nil {
+	if ok {
 		node.Broadcast(prePrepareMsg, "/preprepare")
+		fmt.Println(" received request, and have sent preprepare message")
 		//LogStage("Pre-prepare", true)
 	}
 
@@ -398,13 +416,13 @@ func (node *Node) resolvePrePrepare(prePrepareMsg *pbft.PrePrepareMsg) error {
 	}
 
 	// 处理预准备信息，获得prepare信息
-	prePareMsg, _ := node.CurrentState.PrePare(prePrepareMsg)
-
-	if prePareMsg != nil {
+	prePareMsg, ok := node.CurrentState.PrePare(prePrepareMsg)
+	if ok {
 		// 添加当前节点编号
 		prePareMsg.Node_i, _ = strconv.ParseInt(string(node.Node_name[1]), 10, 64)
 		//LogStage("Pre-prepare", true)
 		node.Broadcast(prePareMsg, "/prepare") // 发送prepare信息给其他节点
+		fmt.Println(" received pre-prepare message, and have sent prepare message")
 		//LogStage("Prepare", false)
 	}
 
@@ -439,6 +457,7 @@ func (node *Node) resolvePrepare(prepareMsg *pbft.PrepareMsg) error {
 		commitMsg.Node_i, _ = strconv.ParseInt(string(node.Node_name[1]), 10, 64)
 		//LogStage("Prepare", true)
 		node.Broadcast(commitMsg, "/commit")
+		fmt.Println(" received prepare message, and have sent commit message")
 		//LogStage("Commit", false)
 	}
 	return nil

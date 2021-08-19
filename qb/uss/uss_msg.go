@@ -21,8 +21,6 @@ type USSToeplitzHashSignMsg struct {
 	Main_row_num qkdserv.QKDSignRandomMainRowNum // 主行号
 	Sign_counts  uint32                          // 每行签名个数，=验签者数量
 	Sign_len     uint32                          // 签名单位长度，=密钥单位长度（以字节为单位）
-	Message      [1024]byte                      // 待签名消息，默认<=1024字节，不足1024时自动补齐
+	Message      []byte                          // 待签名消息，默认<=1024字节，不足1024时自动补齐
 	Sign         []byte                          // 签名消息
 }
-
-

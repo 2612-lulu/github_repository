@@ -55,16 +55,41 @@ func CreateState(view int64, lastSequenceNumber int64) *State {
 	}
 }
 
+func (state *State) GenReqMsg(operation string, node_name [2]byte) (*RequestMsg, bool) {
+	request := RequestMsg{}
+	request.Time_stamp = time.Now().UnixNano()
+	request.Client_id = qbtools.GetNodeIDTable(node_name)
+	request.Operation_type = []byte("transaction")
+	request.M = []byte(operation)
+	request.Digest_m = Digest(request.M)
+
+	// 确定preprepare消息的签名信息,签名者主行号信息可不定义，为0即可
+	request.Sign_client.Sign_index.Sign_dev_id = qbtools.GetNodeIDTable(qkdserv.Node_name) // 签名者ID
+	request.Sign_client.Sign_index.Sign_task_sn = uss.GenSignTaskSN(16)                    // 签名序列号
+	request.Sign_client.Sign_counts = N - 1                                                // 验签者的数量
+	request.Sign_client.Sign_len = 16                                                      // 签名的单位长度，一般默认为16
+	request.Sign_client.Main_row_num.Sign_Node_Name = qkdserv.Node_name                    // 签名者节点号
+	request.Sign_client.Main_row_num.Main_Row_Num = 0                                      // 签名主行号，签名时默认为0
+	request.Sign_client.Message, _ = request.signMessageEncode()                           // 获取preprepare阶段待签名消息
+	// 获取Pre-prepare消息的签名
+	request.Sign_client = uss.Sign(request.Sign_client.Sign_index,
+		request.Sign_client.Sign_counts, request.Sign_client.Sign_len, request.Sign_client.Message)
+	state.Msg_logs.ReqMsg = &request // 记录request消息到state的log中
+
+	return &request, true
+
+}
+
 // PrePrePare，进入共识，客户端Request——>主节点PrePrePare——>从节点
 func (state *State) PrePrePare(request *RequestMsg) (*PrePrepareMsg, bool) {
 	var result bool
+	state.Msg_logs.ReqMsg = request // 记录request消息到state的log中
 
-	preprepare := PrePrepareMsg{}           // 定义一个preprepare消息
-	preprepare.View = state.View            // 获取视图号
-	preprepare.Digest_m = Digest(request.M) // 获取请求消息的摘要
+	preprepare := PrePrepareMsg{}          // 定义一个preprepare消息
+	preprepare.View = state.View           // 获取视图号
+	preprepare.Digest_m = request.Digest_m // 获取请求消息的摘要
 	// 1. 检查客户端签名是否正确
 	if uss.VerifySign(request.Sign_client) {
-		//fmt.Println("	The verify of ReqMsg is true, will enter the prepare statge!")
 		sequenceID := time.Now().UnixNano() // 使用时间戳作为序列号
 		if state.Last_sequence_number != -1 {
 			for state.Last_sequence_number >= sequenceID {
@@ -80,20 +105,15 @@ func (state *State) PrePrePare(request *RequestMsg) (*PrePrepareMsg, bool) {
 		preprepare.Sign_p.Sign_len = 16                                                      // 签名的单位长度，一般默认为16
 		preprepare.Sign_p.Main_row_num.Sign_Node_Name = qkdserv.Node_name                    // 签名者节点号
 		preprepare.Sign_p.Main_row_num.Main_Row_Num = 0                                      // 签名主行号，签名时默认为0
-		m, _ := preprepare.SignMessageEncode()                                               // 获取preprepare阶段待签名消息
-		for i := 0; i < len(m); i++ {
-			preprepare.Sign_p.Message[i] = m[i]
-		}
+		preprepare.Sign_p.Message, _ = preprepare.signMessageEncode()                        // 获取preprepare阶段待签名消息
 		// 获取Pre-prepare消息的签名
 		preprepare.Sign_p = uss.Sign(preprepare.Sign_p.Sign_index,
 			preprepare.Sign_p.Sign_counts, preprepare.Sign_p.Sign_len, preprepare.Sign_p.Message)
-		// 将request消息添加到pre-prepare消息中
-		preprepare.request = *request
+		preprepare.Request = *request
 
-		state.Msg_logs.ReqMsg = request  // 记录request消息到state的log中
 		state.CurrentStage = PrePrepared // 此时状态改变为PrePrepared
-
-		result = true // 客户端验签成功，进入prepare阶段
+		result = true                    // 客户端验签成功，进入prepare阶段
+		//fmt.Println("	The verify of ReqMsg is true, get the preprepare message!")
 
 	} else {
 		fmt.Println("	pbft-PrePrepare error:The verify of client sign is false!!!")
@@ -105,12 +125,11 @@ func (state *State) PrePrePare(request *RequestMsg) (*PrePrepareMsg, bool) {
 
 //  PrePare，进入准备阶段，从节点PrePrepareMsg——>各节点PrepareMsg
 func (state *State) PrePare(preprepare *PrePrepareMsg) (*PrepareMsg, bool) {
-	digest := Digest(preprepare.request.M) // 计算消息的摘要值
-
-	var result bool // prepare结果
+	state.Msg_logs.ReqMsg = &preprepare.Request
+	digest := Digest(state.Msg_logs.ReqMsg.M) // 计算消息的摘要值
+	var result bool                           // prepare结果
 
 	prepare := PrepareMsg{} // 定义一个prepare消息
-
 	// 判断是否符合校验条件！！！待完善
 	if state.View != preprepare.View {
 		fmt.Println("	pbft-Prepare error:the view is wrong!")
@@ -118,7 +137,7 @@ func (state *State) PrePare(preprepare *PrePrepareMsg) (*PrepareMsg, bool) {
 	} else if !bytes.Equal(digest, preprepare.Digest_m) {
 		fmt.Println("	pbft-Prepare error:the digest is wrong!")
 		result = false
-	} else if !uss.VerifySign(preprepare.request.Sign_client) {
+	} else if !uss.VerifySign(state.Msg_logs.ReqMsg.Sign_client) {
 		fmt.Println("	pbft-Prepare error:the client_sign is wrong!")
 		result = false
 	} else if !uss.VerifySign(preprepare.Sign_p) {
@@ -127,7 +146,7 @@ func (state *State) PrePare(preprepare *PrePrepareMsg) (*PrepareMsg, bool) {
 	} else {
 		prepare.View = preprepare.View                                             // 获取视图号
 		prepare.Sequence_number = preprepare.Sequence_number                       // 获取索引号
-		prepare.Digest_m = preprepare.request.Digest_m                             // 获取消息摘要
+		prepare.Digest_m = digest                                                  // 获取消息摘要
 		prepare.Node_i, _ = strconv.ParseInt(string(qkdserv.Node_name[1]), 10, 64) // 获取节点编号
 		// 确定preprepare消息的签名信息,签名者主行号信息可不定义，为0即可
 		prepare.Sign_i.Sign_index.Sign_dev_id = qbtools.GetNodeIDTable(qkdserv.Node_name) // 签名者ID
@@ -136,10 +155,7 @@ func (state *State) PrePare(preprepare *PrePrepareMsg) (*PrepareMsg, bool) {
 		prepare.Sign_i.Sign_len = 16                                                      // 签名的单位长度，一般默认为16
 		prepare.Sign_i.Main_row_num.Sign_Node_Name = qkdserv.Node_name                    // 签名者节点号
 		prepare.Sign_i.Main_row_num.Main_Row_Num = 0                                      // 签名主行号，签名时默认为0
-		sign_m, _ := prepare.SignMessageEncode()                                          // 获取preprepare阶段待签名消息
-		for i := 0; i < len(sign_m); i++ {
-			prepare.Sign_i.Message[i] = sign_m[i]
-		}
+		prepare.Sign_i.Message, _ = prepare.signMessageEncode()                           // 获取preprepare阶段待签名消息
 		// prepare消息的签名
 		prepare.Sign_i = uss.Sign(prepare.Sign_i.Sign_index,
 			prepare.Sign_i.Sign_counts, prepare.Sign_i.Sign_len, prepare.Sign_i.Message)
@@ -165,10 +181,7 @@ func (state *State) GetCommitMsg(prepare *PrepareMsg) *CommitMsg {
 	commit.Sign_i.Sign_len = 16                                                      // 签名的单位长度，一般默认为16
 	commit.Sign_i.Main_row_num.Sign_Node_Name = qkdserv.Node_name                    // 签名者节点号
 	commit.Sign_i.Main_row_num.Main_Row_Num = 0                                      // 签名主行号，签名时默认为0
-	sign_m, _ := commit.SignMessageEncode()                                          // 获取preprepare阶段待签名消息
-	for i := 0; i < len(sign_m); i++ {
-		commit.Sign_i.Message[i] = sign_m[i]
-	}
+	commit.Sign_i.Message, _ = commit.signMessageEncode()                            // 获取preprepare阶段待签名消息
 	// commit消息的签名
 	commit.Sign_i = uss.Sign(commit.Sign_i.Sign_index,
 		commit.Sign_i.Sign_counts, commit.Sign_i.Sign_len, commit.Sign_i.Message)
@@ -192,10 +205,7 @@ func (state *State) GetReplyMsg(commit *CommitMsg) *ReplyMsg {
 	reply.Sign_i.Sign_len = 16                                                      // 签名的单位长度，一般默认为16
 	reply.Sign_i.Main_row_num.Sign_Node_Name = qkdserv.Node_name                    // 签名者节点号
 	reply.Sign_i.Main_row_num.Main_Row_Num = 0                                      // 签名主行号，签名时默认为0
-	m, _ := reply.SignMessageEncode()
-	for i := 0; i < len(m); i++ {
-		reply.Sign_i.Message[i] = m[i]
-	}
+	reply.Sign_i.Message, _ = reply.signMessageEncode()
 	// reply消息的签名
 	reply.Sign_i = uss.Sign(reply.Sign_i.Sign_index,
 		reply.Sign_i.Sign_counts, reply.Sign_i.Sign_len, reply.Sign_i.Message)
@@ -208,16 +218,16 @@ func (state *State) VerifyPrepareMsg(prepare *PrepareMsg) bool {
 	digest := Digest(state.Msg_logs.ReqMsg.M) // 计算消息的摘要值
 
 	if state.View != prepare.View {
-		fmt.Println("	pbft-Prepare error:the view is wrong!")
+		fmt.Println("	pbft-Commit error:the view is wrong!")
 		result = false
 	} else if !bytes.Equal(digest, prepare.Digest_m) {
-		fmt.Println("	pbft-Prepare error:the digest is wrong!")
+		fmt.Println("	pbft-Commit error:the digest is wrong!")
 		result = false
 	} else if !uss.VerifySign(state.Msg_logs.ReqMsg.Sign_client) {
-		fmt.Println("	pbft-Prepare error:the client_sign is wrong!")
+		fmt.Println("	pbft-Commit error:the client_sign is wrong!")
 		result = false
 	} else if !uss.VerifySign(prepare.Sign_i) {
-		fmt.Println("	pbft-Prepare error:the primary_sign is wrong!")
+		fmt.Println("	pbft-Commit error:the primary_sign is wrong!")
 		result = false
 	} else {
 		result = true
@@ -231,16 +241,16 @@ func (state *State) VerifyCommitMsg(commit *CommitMsg) bool {
 	digest := Digest(state.Msg_logs.ReqMsg.M) // 计算消息的摘要值
 
 	if state.View != commit.View { // 校验视图号
-		fmt.Println("	pbft-Commit error:the view is wrong!")
+		fmt.Println("	pbft-Reply error:the view is wrong!")
 		result = false
 	} else if !bytes.Equal(digest, commit.Digest_m) { // 校验消息摘要值
-		fmt.Println("	pbft-Commit error:the digest is wrong!")
+		fmt.Println("	pbft-Reply error:the digest is wrong!")
 		result = false
 	} else if !uss.VerifySign(state.Msg_logs.ReqMsg.Sign_client) { // 校验客户端签名
-		fmt.Println("	pbft-Commit error:the client_sign is wrong!")
+		fmt.Println("	pbft-Reply error:the client_sign is wrong!")
 		result = false
 	} else if !uss.VerifySign(commit.Sign_i) { // 校验上一阶段节点签名
-		fmt.Println("	pbft-Commit error:the primary_sign is wrong!")
+		fmt.Println("	pbft-Reply error:the primary_sign is wrong!")
 		result = false
 	} else {
 		result = true
@@ -248,7 +258,7 @@ func (state *State) VerifyCommitMsg(commit *CommitMsg) bool {
 	return result
 }
 
-func (obj *RequestMsg) SignMessageEncode() ([]byte, error) {
+func (obj *RequestMsg) signMessageEncode() ([]byte, error) {
 	buf := new(bytes.Buffer)
 
 	binary.Write(buf, binary.LittleEndian, obj.Time_stamp)
@@ -259,7 +269,7 @@ func (obj *RequestMsg) SignMessageEncode() ([]byte, error) {
 	return buf.Bytes(), nil
 }
 
-func (obj *PrePrepareMsg) SignMessageEncode() ([]byte, error) {
+func (obj *PrePrepareMsg) signMessageEncode() ([]byte, error) {
 	buf := new(bytes.Buffer)
 
 	binary.Write(buf, binary.LittleEndian, obj.View)
@@ -268,17 +278,7 @@ func (obj *PrePrepareMsg) SignMessageEncode() ([]byte, error) {
 	return buf.Bytes(), nil
 }
 
-func (obj *PrepareMsg) SignMessageEncode() ([]byte, error) {
-	buf := new(bytes.Buffer)
-
-	binary.Write(buf, binary.LittleEndian, obj.View)
-	binary.Write(buf, binary.LittleEndian, obj.Sequence_number)
-	binary.Write(buf, binary.LittleEndian, obj.Digest_m)
-	binary.Write(buf, binary.LittleEndian, obj.Node_i)
-	return buf.Bytes(), nil
-}
-
-func (obj *CommitMsg) SignMessageEncode() ([]byte, error) {
+func (obj *PrepareMsg) signMessageEncode() ([]byte, error) {
 	buf := new(bytes.Buffer)
 
 	binary.Write(buf, binary.LittleEndian, obj.View)
@@ -288,7 +288,17 @@ func (obj *CommitMsg) SignMessageEncode() ([]byte, error) {
 	return buf.Bytes(), nil
 }
 
-func (obj *ReplyMsg) SignMessageEncode() ([]byte, error) {
+func (obj *CommitMsg) signMessageEncode() ([]byte, error) {
+	buf := new(bytes.Buffer)
+
+	binary.Write(buf, binary.LittleEndian, obj.View)
+	binary.Write(buf, binary.LittleEndian, obj.Sequence_number)
+	binary.Write(buf, binary.LittleEndian, obj.Digest_m)
+	binary.Write(buf, binary.LittleEndian, obj.Node_i)
+	return buf.Bytes(), nil
+}
+
+func (obj *ReplyMsg) signMessageEncode() ([]byte, error) {
 	buf := new(bytes.Buffer)
 
 	binary.Write(buf, binary.LittleEndian, obj.View)

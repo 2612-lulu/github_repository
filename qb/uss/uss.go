@@ -6,6 +6,7 @@ package uss
 import (
 	"bytes"
 	cryptorand "crypto/rand"
+	"fmt"
 	"io"
 	"qb/qbtools"
 	"qb/qkdserv"
@@ -15,7 +16,7 @@ import (
 // 参数：签名索引qkdserv.QKDSignMatrixIndex,每行签名个数uint32，签名单位长度uint32，待签名消息[1024]byte
 // 返回值：签名信息USSToeplitzHashSignMsg
 func Sign(sign_index qkdserv.QKDSignMatrixIndex, counts,
-	unit_len uint32, m [1024]byte) USSToeplitzHashSignMsg {
+	unit_len uint32, m []byte) USSToeplitzHashSignMsg {
 	// 1.密钥分发
 	_, randoms := qbtools.GenRandomWithPRF([]byte(qkdserv.QKD_KEY),
 		sign_index.Sign_dev_id, sign_index.Sign_task_sn,
@@ -32,8 +33,25 @@ func Sign(sign_index qkdserv.QKDSignMatrixIndex, counts,
 	uss_sign.Sign_counts = counts
 	uss_sign.Sign_len = unit_len
 	uss_sign.Message = m
-	uss_sign.Sign = ussToeplitzHashSign(Toeplitz_Matrix, randoms, m, counts, unit_len)
+	sign_m := toSignMessage(m)
+	uss_sign.Sign = ussToeplitzHashSign(Toeplitz_Matrix, randoms, sign_m, counts, unit_len)
 	return uss_sign
+}
+
+func toSignMessage(m []byte) [1024]byte {
+	var sign_m [1024]byte
+	for i := 0; i < len(m); i++ {
+		sign_m[i] = m[i]
+	}
+	if len(m) > 1024 {
+		fmt.Println("	uss error:length of m is too big")
+	} else if len(m) < 1024 {
+		for i := len(m); i < 1024; i++ {
+			sign_m[i] = byte(0)
+		}
+	}
+	return sign_m
+
 }
 
 // VerifySign，验签
@@ -50,9 +68,10 @@ func VerifySign(uss_sign USSToeplitzHashSignMsg) bool {
 	j := 0
 	for i := 0; i < int(verify_random_matrix.Row_counts); i++ {
 		// 计算签名值
+		sign_m := toSignMessage(uss_sign.Message)
 		verify_sign := ussToeplitzHashSign(Toeplitz_Matrix,
 			verify_random_matrix.Sign_randoms[i].Randoms,
-			uss_sign.Message, 1, uss_sign.Sign_len)
+			sign_m, 1, uss_sign.Sign_len)
 		// 取出对应位置的签名值
 		row := verify_random_matrix.Sign_randoms[i].Row_num
 		column := verify_random_matrix.Sign_randoms[i].Column_num
@@ -115,9 +134,6 @@ func generateToeplitz(signindex qkdserv.QKDSignMatrixIndex, m, n uint32) USSToep
 func ussToeplitzHashSign(toeplitz_matrix USSToeplitzMatrixMsg,
 	r []byte, m [1024]byte, counts, len uint32) []byte {
 	uss_sign := USSToeplitzHashSignMsg{}
-	//uss_sign.Sign_counts = counts
-	//uss_sign.Sign_len = len
-	//uss_sign.Message = m
 
 	// 签名个数
 	sign_number := int(counts * counts)

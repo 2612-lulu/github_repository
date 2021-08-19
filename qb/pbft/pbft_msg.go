@@ -33,7 +33,7 @@ type PrePrepareMsg struct {
 	Sequence_number int64                      // 主节点分配的序列号n,在[h, H]之间，用于对request进行排序？
 	Digest_m        []byte                     // 客户端请求消息中m的摘要
 	Sign_p          uss.USSToeplitzHashSignMsg // 主节点P对PrePrepare消息中v,n,d的签名
-	request         RequestMsg                 // 客户端request消息
+	Request         RequestMsg
 }
 
 // Prepare消息，由从节点发往其他所有节点
@@ -53,21 +53,3 @@ type CommitMsg struct {
 	Node_i          int64                      // 当前节点编号
 	Sign_i          uss.USSToeplitzHashSignMsg // 当前从节点i对Commit消息的签名
 }
-
-/*type VoteMsg struct {
-	View            int64                      // 当前视图编号
-	Sequence_number int64                      // 主节点分配的序列号n,在[h, H]之间，用于对request进行排序？
-	Digest_m        string                     // 客户端请求消息中m的摘要
-	Node_i          string                     // 当前节点编号
-	Sign_i          uss.USSToeplitzHashSignMsg // 当前从节点i对Prepare消息的签名
-	MsgType                                    // 参数类型
-}
-
-type MsgType int
-
-// 枚举
-const (
-	PrepareMsg MsgType = iota // PrepareMsgType=0
-	CommitMsg                 // CommitMsgType=1
-)
-*/
