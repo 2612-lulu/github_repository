@@ -8,21 +8,15 @@ import (
 	"testing"
 )
 
-// 测试qkdserv
-func TestQKDServ(t *testing.T) {
-	fmt.Println("-----------------------------------------------------------------------------------------------------------")
-	fmt.Println("--------------------------!!!!QKDServ测试!!!!--------------------------------------------------------------")
-}
-
 // 测试接口函数一：共享安全随机数
 func TestQKDSecRandomShare(t *testing.T) {
-	fmt.Println("----------【接口函数测试一】——QKDSecRandomShare--------------------------------------------------------------------")
+	fmt.Println("----------【QKD】——QKDSecRandomShare-----------------------------------------------------------")
 
 }
 
 // 测试接口函数二：读取安全随机数
 func TestQKDReadSecRandom(t *testing.T) {
-	fmt.Println("----------【接口函数测试二】——QKDReadSecRandom--------------------------------------------------------------------")
+	fmt.Println("----------【QKD】——QKDReadSecRandom------------------------------------------------------------")
 	// 初始化签名密钥池
 	qkdserv.QKD_sign_random_matrix_pool = make(map[qkdserv.QKDSignMatrixIndex]qkdserv.QKDSignRandomsMatrix)
 	var i uint32

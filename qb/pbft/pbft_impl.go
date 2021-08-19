@@ -12,17 +12,18 @@ import (
 	"qb/qkdserv"
 	"qb/uss"
 	"strconv"
+	"time"
 )
 
 type State struct {
-	View     int64 //视图号
-	Msg_logs MsgLogs
-	//Last_sequence_number int64
-	CurrentStage Stage
+	View                 int64 //视图号
+	Msg_logs             MsgLogs
+	Last_sequence_number int64
+	CurrentStage         Stage
 }
 
 type MsgLogs struct {
-	ReqMsg RequestMsg
+	ReqMsg *RequestMsg
 	//CommitMsgs map[int64]*CommitMsg
 	//CommitMsgs  map[string]*VoteMsg
 }
@@ -41,20 +42,18 @@ const F = 1 //f，容忍无效或者恶意节点数
 const N = 4
 
 // CreateState，如果不存在lastSequenceNumber，则lastSequenceNumber=-1
-// ？？？？
-/*func CreateState(view []byte, lastSequenceNumber int64) *State {
+func CreateState(view int64, lastSequenceNumber int64) *State {
 	return &State{
 		View: view, // 当前视图号，为主节点编号
-		// 初始化
-		Msg_logs: &MsgLogs{
-			ReqMsg:      nil,
-			PrepareMsgs: make(map[string]*VoteMsg),
-			CommitMsgs:  make(map[string]*VoteMsg),
+		Msg_logs: MsgLogs{ // 初始化
+			ReqMsg: nil,
+			//PrepareMsgs: make(map[string]*VoteMsg),
+			//CommitMsgs:  make(map[string]*VoteMsg),
 		},
 		Last_sequence_number: lastSequenceNumber, // 上一个序列号
-		CurrentStage:         Idle,               // 目前状态
+		CurrentStage:         Idle,               // 目前状态，节点创立，即将进入共识
 	}
-}*/
+}
 
 // PrePrePare，进入共识，客户端Request——>主节点PrePrePare——>从节点
 func (state *State) PrePrePare(request *RequestMsg) (*PrePrepareMsg, bool) {
@@ -66,7 +65,14 @@ func (state *State) PrePrePare(request *RequestMsg) (*PrePrepareMsg, bool) {
 	// 1. 检查客户端签名是否正确
 	if uss.VerifySign(request.Sign_client) {
 		//fmt.Println("	The verify of ReqMsg is true, will enter the prepare statge!")
-		preprepare.Sequence_number = 1 // 为其分配序列号,待完善！！！！！
+		sequenceID := time.Now().UnixNano() // 使用时间戳作为序列号
+		if state.Last_sequence_number != -1 {
+			for state.Last_sequence_number >= sequenceID {
+				sequenceID = state.Last_sequence_number + 1 // 主节点每开始一次共识，序列号+1
+			}
+		}
+		preprepare.Sequence_number = sequenceID // 为其分配序列号
+
 		// 确定preprepare消息的签名信息,签名者主行号信息可不定义，为0即可
 		preprepare.Sign_p.Sign_index.Sign_dev_id = qbtools.GetNodeIDTable(qkdserv.Node_name) // 签名者ID
 		preprepare.Sign_p.Sign_index.Sign_task_sn = uss.GenSignTaskSN(16)                    // 签名序列号
@@ -84,7 +90,7 @@ func (state *State) PrePrePare(request *RequestMsg) (*PrePrepareMsg, bool) {
 		// 将request消息添加到pre-prepare消息中
 		preprepare.request = *request
 
-		state.Msg_logs.ReqMsg = *request // 记录request消息到state的log中
+		state.Msg_logs.ReqMsg = request  // 记录request消息到state的log中
 		state.CurrentStage = PrePrepared // 此时状态改变为PrePrepared
 
 		result = true // 客户端验签成功，进入prepare阶段
@@ -171,7 +177,7 @@ func (state *State) GetCommitMsg(prepare *PrepareMsg) *CommitMsg {
 	return &commit
 }
 
-//  GetReplyMsg，获取reply消息，当受到2f+1个满足要求的commit时，调用此函数
+//  GetReplyMsg，获取reply消息，当收到2f+1个满足要求的commit时，调用此函数
 func (state *State) GetReplyMsg(commit *CommitMsg) *ReplyMsg {
 	reply := ReplyMsg{}
 	reply.View = commit.View

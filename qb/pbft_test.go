@@ -10,15 +10,8 @@ import (
 	"time"
 )
 
-// 测试PBFT
-func TestPBFT(t *testing.T) {
-	fmt.Println("-----------------------------------------------------------------------------------------------------------")
-	fmt.Println("--------------------------!!!!PBFT测试!!!!--------------------------------------------------------------")
-}
 func TestPBFTConsensus(t *testing.T) {
-	fmt.Println("-----------------------------------------------------------------------------------------------------------")
-	fmt.Println("--------------------------【pbft共识】PrePrepare--------------------------------------------------------------")
-
+	fmt.Println("-----------------------【pbft共识】PrePrepare-------------------------------------------------")
 	qkdserv.QKD_sign_random_matrix_pool = make(map[qkdserv.QKDSignMatrixIndex]qkdserv.QKDSignRandomsMatrix)
 
 	qkdserv.Node_name = [2]byte{'C', '1'} // 签名者是C1
@@ -63,7 +56,7 @@ func TestPBFTConsensus(t *testing.T) {
 		fmt.Println("	request 校验成功")
 
 	}
-	fmt.Println("--------------------------【pbft共识】Prepare--------------------------------------------------------------")
+	fmt.Println("-----------------------【pbft共识】Prepare----------------------------------------------------")
 	qkdserv.Node_name = [2]byte{'P', '2'} // P2是从节点
 	prepare, ok := state.PrePare(preprepare)
 	if ok {
@@ -74,7 +67,7 @@ func TestPBFTConsensus(t *testing.T) {
 		fmt.Print("\nsign=", hex.EncodeToString(prepare.Sign_i.Sign))*/
 		fmt.Println("	preprepare校验成功")
 	}
-	fmt.Println("--------------------------【pbft共识】Commit--------------------------------------------------------------")
+	fmt.Println("-----------------------【pbft共识】Commit-----------------------------------------------------")
 	qkdserv.Node_name = [2]byte{'P', '3'} // P3是从节点
 	var commit *pbft.CommitMsg
 	if state.VerifyPrepareMsg(prepare) {
@@ -82,7 +75,7 @@ func TestPBFTConsensus(t *testing.T) {
 		//fmt.Print("sign=", hex.EncodeToString(commit.Sign_i.Sign))
 		fmt.Println("	prepare校验成功")
 	}
-	fmt.Println("--------------------------【pbft共识】Reply--------------------------------------------------------------")
+	fmt.Println("-----------------------【pbft共识】Reply------------------------------------------------------")
 	qkdserv.Node_name = [2]byte{'P', '4'} // P3是从节点
 	if state.VerifyCommitMsg(commit) {
 		fmt.Println("	commit校验成功")
@@ -94,5 +87,4 @@ func TestPBFTConsensus(t *testing.T) {
 	if uss.VerifySign(reply.Sign_i) { // 校验上一阶段节点签名
 		fmt.Println("	验签成功")
 	}
-
 }
