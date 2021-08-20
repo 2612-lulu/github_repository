@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"qb/log"
 	"qb/pbft"
 	"qb/qkdserv"
 	"strconv"
@@ -64,10 +65,10 @@ func NewNode(node_name string) *Node {
 			{'P', '4'}: "localhost:1114",
 		},
 		ClientTable: map[[2]byte]string{ // 客户端索引表，key=Node_name, value=url
-			{'C', '1'}: "localhost:2111",
-			{'C', '2'}: "localhost:2112",
-			{'C', '3'}: "localhost:2113",
-			{'C', '4'}: "localhost:2114",
+			{'C', '1'}: "localhost:1115",
+			{'C', '2'}: "localhost:1116",
+			{'C', '3'}: "localhost:1117",
+			{'C', '4'}: "localhost:1118",
 		},
 		View: &View{ // 视图号信息，视图号=主节点下标
 			ID:      view,              // 视图号
@@ -85,20 +86,16 @@ func NewNode(node_name string) *Node {
 			CommitMsgs:     make([]*pbft.CommitMsg, 0),
 		},
 
-		// Channels
+		// 初始化通道Channels
 		MsgEntrance: make(chan interface{}), // 无缓冲的信息接收通道
 		MsgDelivery: make(chan interface{}), // 无缓冲的信息发送通道
 		Alarm:       make(chan bool),        // 警告通道
 	}
 
-	// 启动消息调度器
-	go node.dispatchMsg()
-
-	// Start alarm trigger
-	go node.alarmToDispatcher()
-
-	// 开始信息表决
-	go node.resolveMsg()
+	// 开启线程gorutine
+	go node.dispatchMsg()       // 启动消息调度器
+	go node.alarmToDispatcher() // Start alarm trigger
+	go node.resolveMsg()        // 开始信息表决
 
 	return node
 }
@@ -109,25 +106,67 @@ func (node *Node) Broadcast(msg interface{}, path string) map[[2]byte]error {
 
 	// 将消息广播给其他联盟节点
 	for nodeID, url := range node.NodeTable {
-		// 因为不需要向自己进行广播了，所以就直接跳过
-		if nodeID == node.Node_name {
+		fmt.Printf("	node =%s", nodeID)
+		if nodeID != node.Node_name { // 不需要向自己进行广播
+			jsonMsg, err := json.Marshal(msg) // 将msg信息编码成json格式
+			if err != nil {
+				errorMap[nodeID] = err
+				continue
+			}
+			// 将json格式传送给其他的联盟节点
+			send(url+path, jsonMsg) // url：localhost:1111  path：/prepare等等
+			fmt.Printf("	send to %s\n", nodeID)
+			continue
+		} else {
 			continue
 		}
-		// 将msg信息编码成json格式
-		jsonMsg, err := json.Marshal(msg)
-		if err != nil {
-			errorMap[nodeID] = err
-			continue
-		}
-		// 将json格式传送给其他的联盟节点
-		send(url+path, jsonMsg) // url：localhost:1111  path：/prepare等等
+
 	}
 
 	if len(errorMap) == 0 { // 如果转发消息均成功
+		fmt.Println("	brocast success")
 		return nil
 	} else { // 如果有转发失败的情况
+		fmt.Println("	brocast fail")
 		return errorMap
 	}
+}
+
+// createStateForNewConsensus，创建新的共识
+func (node *Node) createStateForNewConsensus() error {
+	if node.CurrentState != nil { // 判断当前节点是不是处于其他阶段（预准备阶段或者准备阶段等等）
+		return errors.New("another pbft consensus is ongoing") // 如果有，则输出提示
+	}
+	var lastSequenceID int64 // 获取上一个序列号
+	// 判断当前阶段是否已经发送过消息
+	if len(node.CommittedMsgs) == 0 { // 如果是首次进行共识，则上一个序列号lastSequenceID设置为-1
+		lastSequenceID = -1
+	} else { // 否则取出上一个序列号????
+		lastSequenceID = node.CommittedMsgs[len(node.CommittedMsgs)-1].Sequence_number
+	}
+	// 创建新的节点状态，即进行节点状态的初始化
+	node.CurrentState = pbft.CreateState(node.View.ID, lastSequenceID)
+	//LogStage("Create the replica status", true)
+	return nil
+}
+
+// Request,只有客户端可调用此函数，用于生成request消息并将该消息发送至主节点以请求共识
+func (node *Node) Request(operation string, node_name [2]byte) error {
+	err := node.createStateForNewConsensus() // 创建新的共识
+	if err != nil {                          // 如果节点未处于共识状态，输出错误
+		return err
+	}
+	request, ok := node.CurrentState.GenReqMsg(operation, node_name)
+	if ok {
+		jsonMsg, err := json.Marshal(request)
+		if err != nil {
+			return err
+		}
+		// 将request发送给主节点
+		send(node.NodeTable[node.View.Primary]+"/request", jsonMsg)
+		fmt.Println(" The request have send to primary node")
+	}
+	return nil
 }
 
 // 协程1：dispatchMsg
@@ -204,15 +243,16 @@ func (node *Node) routeMsg(msg interface{}) []error {
 
 	// 处理ReplyMsg信息
 	case *pbft.ReplyMsg:
-		if node.CurrentState == nil { // 当CurrentState为nil时
+		if node.CurrentState == nil || node.CurrentState.CurrentStage != pbft.Committed {
+			node.MsgBuffer.ReplyMsgs = append(node.MsgBuffer.ReplyMsgs, msg)
+		} else { // 当CurrentState为nil时
 			msgs := make([]*pbft.ReplyMsg, len(node.MsgBuffer.ReplyMsgs))
 			copy(msgs, node.MsgBuffer.ReplyMsgs)                 // 复制缓冲数据
 			msgs = append(msgs, msg)                             // 附加新到达的消息
 			node.MsgBuffer.ReplyMsgs = make([]*pbft.ReplyMsg, 0) // 清空重置
 
 			node.MsgDelivery <- msgs // 信息发送通道：将msgs中的信息发送给MsgDelivery通道
-		} else { // 当CurrentState不为nil时，直接往MsgBuffer缓冲通道中进行添加
-			node.MsgBuffer.ReplyMsgs = append(node.MsgBuffer.ReplyMsgs, msg)
+
 		}
 	}
 	return nil
@@ -221,10 +261,9 @@ func (node *Node) routeMsg(msg interface{}) []error {
 func (node *Node) routeMsgWhenAlarmed() []error {
 	if node.CurrentState == nil {
 		// 检查ReqMsgs, 并发送到MsgDelivery.
-		if len(node.MsgBuffer.ReqMsgs) != 0 {
+		if len(node.MsgBuffer.ReqMsgs) != 0 { // 缓冲区有之前存储的request数据时
 			msgs := make([]*pbft.RequestMsg, len(node.MsgBuffer.ReqMsgs))
 			copy(msgs, node.MsgBuffer.ReqMsgs)
-
 			node.MsgDelivery <- msgs
 		}
 
@@ -232,7 +271,6 @@ func (node *Node) routeMsgWhenAlarmed() []error {
 		if len(node.MsgBuffer.PrePrepareMsgs) != 0 {
 			msgs := make([]*pbft.PrePrepareMsg, len(node.MsgBuffer.PrePrepareMsgs))
 			copy(msgs, node.MsgBuffer.PrePrepareMsgs)
-
 			node.MsgDelivery <- msgs
 		}
 	} else {
@@ -250,19 +288,33 @@ func (node *Node) routeMsgWhenAlarmed() []error {
 			if len(node.MsgBuffer.CommitMsgs) != 0 {
 				msgs := make([]*pbft.CommitMsg, len(node.MsgBuffer.CommitMsgs))
 				copy(msgs, node.MsgBuffer.CommitMsgs)
-
 				node.MsgDelivery <- msgs
 			}
+		case pbft.Committed:
+			// 检查ReplyMsgs,并发送到MsgDelivery.
+			if len(node.MsgBuffer.ReplyMsgs) != 0 {
+				msgs := make([]*pbft.ReplyMsg, len(node.MsgBuffer.ReplyMsgs))
+				copy(msgs, node.MsgBuffer.ReplyMsgs)
+				node.MsgDelivery <- msgs
+			}
+
 		}
 	}
-
 	return nil
 }
 
-// 协程2：resolveMsg
+// 协程2，alarmToDispatcher，警告信息
+func (node *Node) alarmToDispatcher() {
+	for {
+		time.Sleep(ResolvingTimeDuration)
+		node.Alarm <- true
+	}
+}
+
+// 协程3：resolveMsg
 func (node *Node) resolveMsg() {
 	for {
-		msgs := <-node.MsgDelivery // 从调度器中获取缓存信息
+		msgs := <-node.MsgDelivery // 从调度器通道中获取缓存信息
 		switch msgs := msgs.(type) {
 		// 节点表决决策信息
 		case []*pbft.RequestMsg:
@@ -285,7 +337,6 @@ func (node *Node) resolveMsg() {
 				for _, err := range errs {
 					fmt.Println(err) // TODO: send err to ErrorChannel
 				}
-
 			}
 		case []*pbft.CommitMsg:
 			errs := node.resolveCommitMsg(msgs)
@@ -294,61 +345,18 @@ func (node *Node) resolveMsg() {
 					fmt.Println(err) // TODO: send err to ErrorChannel
 				}
 			}
-			/*case []*pbft.ReplyMsg:
+		case []*pbft.ReplyMsg:
 			errs := node.resolveReplyMsg(msgs)
 			if len(errs) != 0 {
 				for _, err := range errs {
 					fmt.Println(err) // TODO: send err to ErrorChannel
 				}
-			}*/
+			}
 		}
 	}
 }
 
-// 协程3，alarmToDispatcher，警告信息
-func (node *Node) alarmToDispatcher() {
-	for {
-		time.Sleep(ResolvingTimeDuration)
-		node.Alarm <- true
-	}
-}
-
-// createStateForNewConsensus，创建新的共识
-func (node *Node) createStateForNewConsensus() error {
-	if node.CurrentState != nil { // 判断当前节点是不是处于其他阶段（预准备阶段或者准备阶段等等）
-		return errors.New("another pbft consensus is ongoing") // 如果有，则输出提示
-	}
-
-	var lastSequenceID int64 // 获取上一个序列号
-	// 判断当前阶段是否已经发送过消息
-	if len(node.CommittedMsgs) == 0 { // 如果是首次进行共识，则上一个序列号lastSequenceID设置为-1
-		lastSequenceID = -1
-	} else { // 否则取出上一个序列号
-		lastSequenceID = node.CommittedMsgs[len(node.CommittedMsgs)-1].Sequence_number
-	}
-	// 创建新的节点状态，即进行节点状态的初始化
-	node.CurrentState = pbft.CreateState(node.View.ID, lastSequenceID)
-	//LogStage("Create the replica status", true)
-	return nil
-}
-
-// 只有客户端可调用此函数，用于生成request消息并将该消息发送至主节点以请求共识
-func (node *Node) Request(operation string, node_name [2]byte) error {
-	err := node.createStateForNewConsensus() // 创建新的共识
-	if err != nil {                          // 如果节点未处于共识状态，输出错误
-		return err
-	}
-	request, _ := node.CurrentState.GenReqMsg(operation, node_name)
-	jsonMsg, err := json.Marshal(request)
-	if err != nil {
-		return err
-	}
-	send(node.NodeTable[node.View.Primary]+"/request", jsonMsg)
-	fmt.Println(" The request have send to primary node")
-	return nil
-
-}
-
+// node.resolveRequestMsg,[request]处理输入的req消息
 func (node *Node) resolveRequestMsg(msgs []*pbft.RequestMsg) []error {
 	errs := make([]error, 0)
 	// 批量处理request信息
@@ -358,38 +366,30 @@ func (node *Node) resolveRequestMsg(msgs []*pbft.RequestMsg) []error {
 			errs = append(errs, err)
 		}
 	}
-
 	if len(errs) != 0 { // 如果有处理错误，则输出错误
 		return errs
 	}
-
 	return nil
 }
 
-// 进入共识,由主节点处理request消息
+// node.resolveReq,[request]进入共识,由主节点处理request消息
 func (node *Node) resolveReq(reqMsg *pbft.RequestMsg) error {
-	//LogMsg(reqMsg)
 	err := node.createStateForNewConsensus() // 创建新的共识
 	if err != nil {                          // 如果节点未处于共识状态，输出错误
 		return err
 	}
 
-	// 进入共识，获得preprepare消息
-	prePrepareMsg, ok := node.CurrentState.PrePrePare(reqMsg)
-
+	prePrepareMsg, ok := node.CurrentState.PrePrePare(reqMsg) // 进入共识，获得preprepare消息
 	//LogStage(fmt.Sprintf("Consensus Process (ViewID:%d)", node.CurrentState.ViewID), false)
-
-	// 发送pre-prepare消息给其他联盟节点
-	if ok {
+	if ok { // 发送pre-prepare消息给其他联盟节点
+		log.LogStage("Request", true)
 		node.Broadcast(prePrepareMsg, "/preprepare")
-		fmt.Println(" received request, and have sent preprepare message")
-		//LogStage("Pre-prepare", true)
+		log.LogStage("Pre-Parepare", false)
 	}
-
 	return nil
 }
 
-// 由从节点处理PrePrepare消息
+// node.resolvePrePrepareMsg,[pre-prepare]由从节点处理PrePrepare消息
 func (node *Node) resolvePrePrepareMsg(msgs []*pbft.PrePrepareMsg) []error {
 	errs := make([]error, 0)
 
@@ -400,32 +400,28 @@ func (node *Node) resolvePrePrepareMsg(msgs []*pbft.PrePrepareMsg) []error {
 			errs = append(errs, err)
 		}
 	}
-
 	if len(errs) != 0 { // 如果有处理错误，则输出错误
 		return errs
 	}
-
 	return nil
 }
 
+// node.resolvePrePrepare,[pre-prepare]
 func (node *Node) resolvePrePrepare(prePrepareMsg *pbft.PrePrepareMsg) error {
-	// LogMsg(prePrepareMsg)
 	err := node.createStateForNewConsensus() // 创建节点状态，因为从节点刚开始进入共识，所以需要初始化状态
 	if err != nil {
 		return err
 	}
 
-	// 处理预准备信息，获得prepare信息
-	prePareMsg, ok := node.CurrentState.PrePare(prePrepareMsg)
-	if ok {
-		// 添加当前节点编号
-		prePareMsg.Node_i, _ = strconv.ParseInt(string(node.Node_name[1]), 10, 64)
-		//LogStage("Pre-prepare", true)
-		node.Broadcast(prePareMsg, "/prepare") // 发送prepare信息给其他节点
-		fmt.Println(" received pre-prepare message, and have sent prepare message")
-		//LogStage("Prepare", false)
+	prePareMsg, err := node.CurrentState.PrePare(prePrepareMsg) // 获得prepare信息
+	if err != nil {
+		return err
 	}
-
+	if prePareMsg != nil {
+		log.LogStage("Pre-prepare", true)
+		node.Broadcast(prePareMsg, "/prepare") // 发送prepare信息给其他节点
+		log.LogStage("Prepare", false)
+	}
 	return nil
 }
 
@@ -440,28 +436,23 @@ func (node *Node) resolvePrepareMsg(msgs []*pbft.PrepareMsg) []error {
 			errs = append(errs, err)
 		}
 	}
-
 	if len(errs) != 0 {
 		return errs
 	}
-
 	return nil
 }
 
 func (node *Node) resolvePrepare(prepareMsg *pbft.PrepareMsg) error {
-	//LogMsg(prepareMsg)
-
-	commitMsg := pbft.CommitMsg{}
-	if node.CurrentState.VerifyPrepareMsg(prepareMsg) {
-		commitMsg = *node.CurrentState.GetCommitMsg(prepareMsg)
-		commitMsg.Node_i, _ = strconv.ParseInt(string(node.Node_name[1]), 10, 64)
-		//LogStage("Prepare", true)
+	commitMsg, err := node.CurrentState.Commit(prepareMsg)
+	if err != nil {
+		return err
+	}
+	if commitMsg != nil {
+		log.LogStage("Prepare", true)
 		node.Broadcast(commitMsg, "/commit")
-		fmt.Println(" received prepare message, and have sent commit message")
-		//LogStage("Commit", false)
+		log.LogStage("Commit", false)
 	}
 	return nil
-
 }
 
 func (node *Node) resolveCommitMsg(msgs []*pbft.CommitMsg) []error {
@@ -474,29 +465,28 @@ func (node *Node) resolveCommitMsg(msgs []*pbft.CommitMsg) []error {
 			errs = append(errs, err)
 		}
 	}
-
 	if len(errs) != 0 {
 		return errs
 	}
-
 	return nil
 }
 func (node *Node) resolveCommit(commitMsg *pbft.CommitMsg) error {
 	//LogMsg(commitMsg)
-	replyMsg := pbft.ReplyMsg{}
-	if node.CurrentState.VerifyCommitMsg(commitMsg) {
-		replyMsg = *node.CurrentState.GetReplyMsg(commitMsg)
-		replyMsg.Node_i, _ = strconv.ParseInt(string(node.Node_name[1]), 10, 64)
-
-		// Save the last version of committed messages to node.????
-		node.CommittedMsgs = append(node.CommittedMsgs, commitMsg)
-
-		//LogStage("Commit", true)
-		node.Reply(&replyMsg)
-		//LogStage("Reply", true)
+	replyMsg, err := node.CurrentState.GetReply(commitMsg)
+	if err != nil {
+		return err
 	}
-
+	if replyMsg != nil {
+		replyMsg.Node_i, _ = strconv.ParseInt(string(node.Node_name[1]), 10, 64)
+		//node.CommittedMsgs = append(node.CommittedMsgs, committedMsg)
+	}
 	return nil
+}
+
+func (node *Node) resolveReplyMsg(msgs []*pbft.ReplyMsg) []error {
+	errs := make([]error, 0)
+	// 批量处理reply信息
+	return errs
 }
 
 // 各联盟节点发送reply消息给客户端

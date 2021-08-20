@@ -44,6 +44,7 @@ func GetNodeIDTable(nodeName [2]byte) [16]byte {
 		{'P', '3'}: "FIHFUIB376486821",
 		{'P', '4'}: "3748HFIYYHFIGFI3",
 		{'C', '1'}: "CHIKGHBUIGHB3468",
+		{'C', '2'}: "HDFUIY68687NKFJH",
 	}
 	id, ok := NodeTable[nodeName]
 	if ok {
