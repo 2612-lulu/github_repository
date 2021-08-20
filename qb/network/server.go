@@ -118,7 +118,6 @@ func (server *Server) getReply(writer http.ResponseWriter, request *http.Request
 		fmt.Println(err)
 		return
 	}
-	fmt.Println("result")
 	server.node.MsgEntrance <- &msg
 }
 

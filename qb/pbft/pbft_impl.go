@@ -27,6 +27,7 @@ type MsgLogs struct {
 	ReqMsg        *RequestMsg          // 存放request消息
 	PreparedMsgs  map[int64]PrepareMsg // 存放prepared消息
 	CommittedMsgs map[int64]CommitMsg  // 存放committed消息
+	ReplyMsgs     map[int64]ReplyMsg   // 存放Reply消息
 }
 
 type Stage int
@@ -50,6 +51,7 @@ func CreateState(view int64, lastSequenceNumber int64) *State {
 			ReqMsg:        nil,
 			PreparedMsgs:  make(map[int64]PrepareMsg),
 			CommittedMsgs: make(map[int64]CommitMsg),
+			ReplyMsgs:     make(map[int64]ReplyMsg),
 		},
 		Last_sequence_number: lastSequenceNumber, // 上一个序列号
 		CurrentStage:         Idle,               // 目前状态，节点创立，即将进入共识

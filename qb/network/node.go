@@ -128,12 +128,13 @@ func (node *Node) BroadcastMsg() {
 			log.LogStage("Commit", false)
 		case *pbft.ReplyMsg:
 			log.LogStage("Commit", true)
-			jsonMsg, err := json.Marshal(msg) // 将msg信息编码成json格式
+			/*jsonMsg, err := json.Marshal(msg) // 将msg信息编码成json格式
 			if err != nil {
 				fmt.Println(err)
 			}
 			url := node.ClientTable[msg.Client_name]
-			send(url+"/reply", jsonMsg)
+			send(url+"/reply", jsonMsg)*/
+			node.Broadcast(msg, "/reply") // 发送reply信息给其他节点
 			log.LogStage("Reply", false)
 		}
 	}
@@ -514,14 +515,13 @@ func (node *Node) resolveCommit(commitMsg *pbft.CommitMsg) error {
 // node.resolveReplyMsg,[reply]客户端根据收到的reply消息得出共识结果
 func (node *Node) resolveReplyMsg(msgs []*pbft.ReplyMsg) ([]error, bool) {
 	errs := make([]error, 0)
-	r := 0
 	// 批量处理reply信息
 	for _, replyMsg := range msgs {
 		if node.CurrentState.VerifyReplyMsg(replyMsg) {
-			r++
+			node.CurrentState.Msg_logs.ReplyMsgs[replyMsg.Node_i] = *replyMsg
 		}
 	}
-	if r < 2*pbft.F+1 {
+	if len(node.CurrentState.Msg_logs.ReplyMsgs) >= 2*pbft.F {
 		return errs, true
 	}
 	return nil, false
