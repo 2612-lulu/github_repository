@@ -5,7 +5,7 @@ import "qb/uss"
 // Request消息，由客户端发往主节点
 type RequestMsg struct {
 	Time_stamp       int64                      // 时间戳，发出请求时客户端本地时钟的值
-	Client_id        [16]byte                   // 客户端标识
+	Client_name      [2]byte                    // 客户端名称
 	RequestOperation                            // 请求的具体操作
 	Sign_client      uss.USSToeplitzHashSignMsg // 客户端对request消息的签名
 }
@@ -19,12 +19,12 @@ type RequestOperation struct {
 
 // Reply消息，由各节点发往客户端
 type ReplyMsg struct {
-	View       int64                      // 当前视图编号
-	Time_stamp int64                      // 相应request的时间戳
-	Client_id  [16]byte                   // 客户端标识
-	Node_i     int64                      // 当前节点编号
-	Result     bool                       // 执行request操作的结果
-	Sign_i     uss.USSToeplitzHashSignMsg // 当前节点对Commit消息中v,t,c,i,r的签名
+	View        int64                      // 当前视图编号
+	Time_stamp  int64                      // 相应request的时间戳
+	Client_name [2]byte                    // 客户端名称
+	Node_i      int64                      // 当前节点编号
+	Result      bool                       // 执行request操作的结果
+	Sign_i      uss.USSToeplitzHashSignMsg // 当前节点对Commit消息中v,t,c,i,r的签名
 }
 
 // PrePrepare消息，由主节点发往从节点

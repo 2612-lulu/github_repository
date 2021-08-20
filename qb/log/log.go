@@ -10,9 +10,9 @@ import (
 func LogMsg(msg interface{}) {
 	switch msg := msg.(type) {
 	case *pbft.RequestMsg:
-		fmt.Printf("[REQUEST] ClientID: %s, Timestamp: %d\n", msg.Client_id, msg.Time_stamp)
+		fmt.Printf("[REQUEST] ClientID: %s, Timestamp: %d\n", msg.Client_name[:], msg.Time_stamp)
 	case *pbft.PrePrepareMsg:
-		fmt.Printf("[PREPREPARE] ClientID: %s,  SequenceID: %d\n", msg.Request.Client_id, msg.Sequence_number)
+		fmt.Printf("[PREPREPARE] ClientID: %s,  SequenceID: %d\n", msg.Request.Client_name[:], msg.Sequence_number)
 	case *pbft.PrepareMsg:
 		fmt.Printf("[PREPARE] NodeID: %d\n", msg.Node_i)
 	case *pbft.CommitMsg:

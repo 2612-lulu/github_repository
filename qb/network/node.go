@@ -7,7 +7,6 @@ import (
 	"qb/log"
 	"qb/pbft"
 	"qb/qkdserv"
-	"strconv"
 	"time"
 )
 
@@ -20,9 +19,11 @@ type Node struct {
 	CurrentState  *pbft.State        // 节点状态，默认为nil
 	CommittedMsgs []*pbft.CommitMsg  // 被提交的信息????
 	MsgBuffer     *MsgBuffer         // 五种消息类型缓冲列表
-	MsgEntrance   chan interface{}   // 无缓冲的信息接收通道
-	MsgDelivery   chan interface{}   // 无缓冲的信息发送通道
-	Alarm         chan bool          // 警告通道
+
+	MsgBroast   chan interface{} // 信息发送通道
+	MsgEntrance chan interface{} // 无缓冲的信息接收通道
+	MsgDelivery chan interface{} // 无缓冲的信息发送通道
+	Alarm       chan bool        // 警告通道
 }
 
 type MsgBuffer struct {
@@ -87,17 +88,55 @@ func NewNode(node_name string) *Node {
 		},
 
 		// 初始化通道Channels
+		MsgBroast:   make(chan interface{}), // 信息发送通道
 		MsgEntrance: make(chan interface{}), // 无缓冲的信息接收通道
 		MsgDelivery: make(chan interface{}), // 无缓冲的信息发送通道
 		Alarm:       make(chan bool),        // 警告通道
 	}
 
 	// 开启线程gorutine
+	go node.BroadcastMsg()      // 广播信息
 	go node.dispatchMsg()       // 启动消息调度器
 	go node.alarmToDispatcher() // Start alarm trigger
 	go node.resolveMsg()        // 开始信息表决
 
 	return node
+}
+
+// 进程1：BroadcastMsg
+func (node *Node) BroadcastMsg() {
+	for {
+		msg := <-node.MsgBroast
+		switch msg := msg.(type) {
+		case *pbft.RequestMsg:
+			jsonMsg, err := json.Marshal(msg) // 将msg信息编码成json格式
+			if err != nil {
+				fmt.Println(err)
+			}
+			send(node.NodeTable[node.View.Primary]+"/request", jsonMsg)
+		case *pbft.PrePrepareMsg:
+			log.LogStage("Request", true)
+			node.Broadcast(msg, "/preprepare") // 发送preprepare信息给其他节点
+			log.LogStage("Pre-Prepare", false)
+		case *pbft.PrepareMsg:
+			log.LogStage("Pre-prepare", true)
+			node.Broadcast(msg, "/prepare") // 发送prepare信息给其他节点
+			log.LogStage("Prepare", false)
+		case *pbft.CommitMsg:
+			log.LogStage("Prepare", true)
+			node.Broadcast(msg, "/commit") // 发送commit信息给其他节点
+			log.LogStage("Commit", false)
+		case *pbft.ReplyMsg:
+			log.LogStage("Commit", true)
+			jsonMsg, err := json.Marshal(msg) // 将msg信息编码成json格式
+			if err != nil {
+				fmt.Println(err)
+			}
+			url := node.ClientTable[msg.Client_name]
+			send(url+"/reply", jsonMsg)
+			log.LogStage("Reply", false)
+		}
+	}
 }
 
 // Broadcast，节点广播函数
@@ -106,7 +145,6 @@ func (node *Node) Broadcast(msg interface{}, path string) map[[2]byte]error {
 
 	// 将消息广播给其他联盟节点
 	for nodeID, url := range node.NodeTable {
-		fmt.Printf("	node =%s", nodeID)
 		if nodeID != node.Node_name { // 不需要向自己进行广播
 			jsonMsg, err := json.Marshal(msg) // 将msg信息编码成json格式
 			if err != nil {
@@ -115,8 +153,6 @@ func (node *Node) Broadcast(msg interface{}, path string) map[[2]byte]error {
 			}
 			// 将json格式传送给其他的联盟节点
 			send(url+path, jsonMsg) // url：localhost:1111  path：/prepare等等
-			fmt.Printf("	send to %s\n", nodeID)
-			continue
 		} else {
 			continue
 		}
@@ -124,52 +160,15 @@ func (node *Node) Broadcast(msg interface{}, path string) map[[2]byte]error {
 	}
 
 	if len(errorMap) == 0 { // 如果转发消息均成功
-		fmt.Println("	brocast success")
+		//fmt.Println("	brocast success")
 		return nil
 	} else { // 如果有转发失败的情况
-		fmt.Println("	brocast fail")
+		//fmt.Println("	brocast fail")
 		return errorMap
 	}
 }
 
-// createStateForNewConsensus，创建新的共识
-func (node *Node) createStateForNewConsensus() error {
-	if node.CurrentState != nil { // 判断当前节点是不是处于其他阶段（预准备阶段或者准备阶段等等）
-		return errors.New("another pbft consensus is ongoing") // 如果有，则输出提示
-	}
-	var lastSequenceID int64 // 获取上一个序列号
-	// 判断当前阶段是否已经发送过消息
-	if len(node.CommittedMsgs) == 0 { // 如果是首次进行共识，则上一个序列号lastSequenceID设置为-1
-		lastSequenceID = -1
-	} else { // 否则取出上一个序列号????
-		lastSequenceID = node.CommittedMsgs[len(node.CommittedMsgs)-1].Sequence_number
-	}
-	// 创建新的节点状态，即进行节点状态的初始化
-	node.CurrentState = pbft.CreateState(node.View.ID, lastSequenceID)
-	//LogStage("Create the replica status", true)
-	return nil
-}
-
-// Request,只有客户端可调用此函数，用于生成request消息并将该消息发送至主节点以请求共识
-func (node *Node) Request(operation string, node_name [2]byte) error {
-	err := node.createStateForNewConsensus() // 创建新的共识
-	if err != nil {                          // 如果节点未处于共识状态，输出错误
-		return err
-	}
-	request, ok := node.CurrentState.GenReqMsg(operation, node_name)
-	if ok {
-		jsonMsg, err := json.Marshal(request)
-		if err != nil {
-			return err
-		}
-		// 将request发送给主节点
-		send(node.NodeTable[node.View.Primary]+"/request", jsonMsg)
-		fmt.Println(" The request have send to primary node")
-	}
-	return nil
-}
-
-// 协程1：dispatchMsg
+// 线程2：dispatchMsg
 func (node *Node) dispatchMsg() {
 	for {
 		select {
@@ -245,7 +244,7 @@ func (node *Node) routeMsg(msg interface{}) []error {
 	case *pbft.ReplyMsg:
 		if node.CurrentState == nil || node.CurrentState.CurrentStage != pbft.Committed {
 			node.MsgBuffer.ReplyMsgs = append(node.MsgBuffer.ReplyMsgs, msg)
-		} else { // 当CurrentState为nil时
+		} else {
 			msgs := make([]*pbft.ReplyMsg, len(node.MsgBuffer.ReplyMsgs))
 			copy(msgs, node.MsgBuffer.ReplyMsgs)                 // 复制缓冲数据
 			msgs = append(msgs, msg)                             // 附加新到达的消息
@@ -303,7 +302,7 @@ func (node *Node) routeMsgWhenAlarmed() []error {
 	return nil
 }
 
-// 协程2，alarmToDispatcher，警告信息
+// 线程3：alarmToDispatcher，警告信息
 func (node *Node) alarmToDispatcher() {
 	for {
 		time.Sleep(ResolvingTimeDuration)
@@ -311,7 +310,7 @@ func (node *Node) alarmToDispatcher() {
 	}
 }
 
-// 协程3：resolveMsg
+// 线程4：resolveMsg
 func (node *Node) resolveMsg() {
 	for {
 		msgs := <-node.MsgDelivery // 从调度器通道中获取缓存信息
@@ -346,14 +345,47 @@ func (node *Node) resolveMsg() {
 				}
 			}
 		case []*pbft.ReplyMsg:
-			errs := node.resolveReplyMsg(msgs)
+			errs, result := node.resolveReplyMsg(msgs)
 			if len(errs) != 0 {
 				for _, err := range errs {
 					fmt.Println(err) // TODO: send err to ErrorChannel
 				}
+			} else if result {
+				fmt.Println("[pbft success]")
 			}
 		}
 	}
+}
+
+// createStateForNewConsensus，创建新的共识
+func (node *Node) createStateForNewConsensus() error {
+	if node.CurrentState != nil { // 判断当前节点是不是处于其他阶段（预准备阶段或者准备阶段等等）
+		return errors.New("another pbft consensus is ongoing") // 如果有，则输出提示
+	}
+	var lastSequenceID int64 // 获取上一个序列号
+	// 判断当前阶段是否已经发送过消息
+	if len(node.CommittedMsgs) == 0 { // 如果是首次进行共识，则上一个序列号lastSequenceID设置为-1
+		lastSequenceID = -1
+	} else { // 否则取出上一个序列号????
+		lastSequenceID = node.CommittedMsgs[len(node.CommittedMsgs)-1].Sequence_number
+	}
+	// 创建新的节点状态，即进行节点状态的初始化
+	node.CurrentState = pbft.CreateState(node.View.ID, lastSequenceID)
+	//LogStage("Create the replica status", true)
+	return nil
+}
+
+// Request,只有客户端可调用此函数，用于生成request消息并将该消息发送至主节点以请求共识
+func (node *Node) Request(operation string, node_name [2]byte) error {
+	err := node.createStateForNewConsensus() // 创建新的共识
+	if err != nil {                          // 如果节点未处于共识状态，输出错误
+		return err
+	}
+	request, ok := node.CurrentState.GenReqMsg(operation, node_name)
+	if ok {
+		node.MsgBroast <- request // 将待发送消息放入通道
+	}
+	return nil
 }
 
 // node.resolveRequestMsg,[request]处理输入的req消息
@@ -381,10 +413,8 @@ func (node *Node) resolveReq(reqMsg *pbft.RequestMsg) error {
 
 	prePrepareMsg, ok := node.CurrentState.PrePrePare(reqMsg) // 进入共识，获得preprepare消息
 	//LogStage(fmt.Sprintf("Consensus Process (ViewID:%d)", node.CurrentState.ViewID), false)
-	if ok { // 发送pre-prepare消息给其他联盟节点
-		log.LogStage("Request", true)
-		node.Broadcast(prePrepareMsg, "/preprepare")
-		log.LogStage("Pre-Parepare", false)
+	if ok {
+		node.MsgBroast <- prePrepareMsg // 将待广播消息放入通道
 	}
 	return nil
 }
@@ -418,14 +448,12 @@ func (node *Node) resolvePrePrepare(prePrepareMsg *pbft.PrePrepareMsg) error {
 		return err
 	}
 	if prePareMsg != nil {
-		log.LogStage("Pre-prepare", true)
-		node.Broadcast(prePareMsg, "/prepare") // 发送prepare信息给其他节点
-		log.LogStage("Prepare", false)
+		node.MsgBroast <- prePareMsg // 将待广播消息放入通道
 	}
 	return nil
 }
 
-// 所有联盟节点接收prepare消息，处理得到commit消息
+// node.resolvePrepareMsg,[prepare]所有联盟节点接收prepare消息，处理得到commit消息
 func (node *Node) resolvePrepareMsg(msgs []*pbft.PrepareMsg) []error {
 	errs := make([]error, 0)
 
@@ -442,19 +470,19 @@ func (node *Node) resolvePrepareMsg(msgs []*pbft.PrepareMsg) []error {
 	return nil
 }
 
+// node.resolvePrepare,[prepare]
 func (node *Node) resolvePrepare(prepareMsg *pbft.PrepareMsg) error {
 	commitMsg, err := node.CurrentState.Commit(prepareMsg)
 	if err != nil {
 		return err
 	}
 	if commitMsg != nil {
-		log.LogStage("Prepare", true)
-		node.Broadcast(commitMsg, "/commit")
-		log.LogStage("Commit", false)
+		node.MsgBroast <- commitMsg // 将待广播消息放入通道
 	}
 	return nil
 }
 
+// node.resolveCommitMsg,[commit]所有节点处理接收的commit消息得到reply消息
 func (node *Node) resolveCommitMsg(msgs []*pbft.CommitMsg) []error {
 	errs := make([]error, 0)
 
@@ -470,43 +498,31 @@ func (node *Node) resolveCommitMsg(msgs []*pbft.CommitMsg) []error {
 	}
 	return nil
 }
+
+// node.resolveCommit,[commit]
 func (node *Node) resolveCommit(commitMsg *pbft.CommitMsg) error {
-	//LogMsg(commitMsg)
 	replyMsg, err := node.CurrentState.GetReply(commitMsg)
 	if err != nil {
 		return err
 	}
 	if replyMsg != nil {
-		replyMsg.Node_i, _ = strconv.ParseInt(string(node.Node_name[1]), 10, 64)
-		//node.CommittedMsgs = append(node.CommittedMsgs, committedMsg)
+		node.MsgBroast <- replyMsg // 将待广播消息放入通道
 	}
 	return nil
 }
 
-func (node *Node) resolveReplyMsg(msgs []*pbft.ReplyMsg) []error {
+// node.resolveReplyMsg,[reply]客户端根据收到的reply消息得出共识结果
+func (node *Node) resolveReplyMsg(msgs []*pbft.ReplyMsg) ([]error, bool) {
 	errs := make([]error, 0)
+	r := 0
 	// 批量处理reply信息
-	return errs
-}
-
-// 各联盟节点发送reply消息给客户端
-func (node *Node) Reply(msg *pbft.ReplyMsg) error {
-
-	/*for _, value := range node.CommittedMsgs {
-		fmt.Printf("Committed value: %s, %d, %s, %d", value.ClientID, value.Timestamp, value.Operation, value.SequenceID)
+	for _, replyMsg := range msgs {
+		if node.CurrentState.VerifyReplyMsg(replyMsg) {
+			r++
+		}
 	}
-	fmt.Print("\n")*/
-
-	jsonMsg, err := json.Marshal(msg)
-	if err != nil {
-		return err
+	if r < 2*pbft.F+1 {
+		return errs, true
 	}
-	send(node.ClientTable[node.CurrentState.Msg_logs.ReqMsg.Sign_client.Main_row_num.Sign_Node_Name]+"/reply", jsonMsg)
-
-	return nil
-}
-
-func (node *Node) GetReply(msg *pbft.ReplyMsg) {
-	fmt.Print("Result:", msg.Result)
-	fmt.Print("by node ", msg.Result)
+	return nil, false
 }

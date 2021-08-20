@@ -96,7 +96,6 @@ func (server *Server) getPrepare(writer http.ResponseWriter, request *http.Reque
 		fmt.Println(err)
 		return
 	}
-
 	server.node.MsgEntrance <- &msg // 将解码后的prepare消息放入通道MsgEntrance
 }
 
@@ -108,7 +107,6 @@ func (server *Server) getCommit(writer http.ResponseWriter, request *http.Reques
 		fmt.Println(err)
 		return
 	}
-
 	server.node.MsgEntrance <- &msg // 将解码后的commit消息放入通道MsgEntrance
 }
 
@@ -120,8 +118,8 @@ func (server *Server) getReply(writer http.ResponseWriter, request *http.Request
 		fmt.Println(err)
 		return
 	}
-
-	server.node.GetReply(&msg) // 将解码后的reply消息放入通道MsgEntrance
+	fmt.Println("result")
+	server.node.MsgEntrance <- &msg
 }
 
 // send，通信函数，实现点对点通信

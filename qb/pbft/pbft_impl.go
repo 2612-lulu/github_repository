@@ -39,7 +39,7 @@ const (
 )
 
 // N=3F+1，本程序中N=4，即F=1
-const F = 1 //f，容忍无效或者恶意节点数
+const F = 1 //F，容忍无效或者恶意节点数
 const N = 4
 
 // CreateState，如果不存在lastSequenceNumber，则lastSequenceNumber=-1
@@ -59,20 +59,20 @@ func CreateState(view int64, lastSequenceNumber int64) *State {
 // 生成请求消息，只有客户端可以调用该函数
 func (state *State) GenReqMsg(operation string, node_name [2]byte) (*RequestMsg, bool) {
 	request := RequestMsg{}
-	request.Time_stamp = time.Now().UnixNano()            // 获取当前时间戳
-	request.Client_id = qbtools.GetNodeIDTable(node_name) // 获取签名者ID
-	request.Operation_type = []byte("transaction")        // 交易类型目前默认只有交易一种类型
-	request.M = []byte(operation)                         // 具体操作请求
-	request.Digest_m = Digest(request.M)                  // 操作请求消息摘要
+	request.Time_stamp = time.Now().UnixNano()     // 获取当前时间戳
+	request.Client_name = node_name                // 获取签名者ID
+	request.Operation_type = []byte("transaction") // 交易类型目前默认只有交易一种类型
+	request.M = []byte(operation)                  // 具体操作请求
+	request.Digest_m = Digest(request.M)           // 操作请求消息摘要
 
 	// 确定preprepare消息的签名信息,签名者主行号信息可不定义，为0即可
-	request.Sign_client.Sign_index.Sign_dev_id = request.Client_id      // 签名者ID
-	request.Sign_client.Sign_index.Sign_task_sn = uss.GenSignTaskSN(16) // 签名序列号
-	request.Sign_client.Sign_counts = N                                 // 验签者的数量，等于节点数量
-	request.Sign_client.Sign_len = 16                                   // 签名的单位长度，一般默认为16
-	request.Sign_client.Main_row_num.Sign_Node_Name = node_name         // 签名者节点号
-	request.Sign_client.Main_row_num.Main_Row_Num = 0                   // 签名主行号，签名时默认为0
-	request.Sign_client.Message, _ = request.signMessageEncode()        // 获取preprepare阶段待签名消息
+	request.Sign_client.Sign_index.Sign_dev_id = qbtools.GetNodeIDTable(node_name) // 签名者ID
+	request.Sign_client.Sign_index.Sign_task_sn = uss.GenSignTaskSN(16)            // 签名序列号
+	request.Sign_client.Sign_counts = N                                            // 验签者的数量，等于节点数量
+	request.Sign_client.Sign_len = 16                                              // 签名的单位长度，一般默认为16
+	request.Sign_client.Main_row_num.Sign_Node_Name = node_name                    // 签名者节点号
+	request.Sign_client.Main_row_num.Main_Row_Num = 0                              // 签名主行号，签名时默认为0
+	request.Sign_client.Message, _ = request.signMessageEncode()                   // 获取preprepare阶段待签名消息
 	// 获取Pre-prepare消息的签名
 	request.Sign_client = uss.Sign(request.Sign_client.Sign_index,
 		request.Sign_client.Sign_counts, request.Sign_client.Sign_len, request.Sign_client.Message)
@@ -185,12 +185,12 @@ func (state *State) Commit(prepare *PrepareMsg) (*CommitMsg, error) {
 			msg := commit
 			state.Msg_logs.CommittedMsgs[commit.Node_i] = msg // 将commit写入log，以便后续投票校验
 
-			fmt.Printf("[Prepare-Vote]: %d\n", len(state.Msg_logs.PreparedMsgs))
+			//fmt.Printf("[Prepare-Vote]: %d\n", len(state.Msg_logs.PreparedMsgs))
 
 			state.CurrentStage = Prepared // 此时状态改变为Prepared
 			return &commit, nil
 		} else if ok { // 如果log中已有commit，表明已发送过commit，无需重复发送
-			fmt.Println("	sent commit already")
+			//fmt.Println("	send commit already")
 			return nil, nil
 		}
 	}
@@ -205,7 +205,7 @@ func (state *State) GetReply(commit *CommitMsg) (*ReplyMsg, error) {
 	if state.committed() {
 		reply := ReplyMsg{}
 		reply.View = commit.View
-		reply.Client_id = state.Msg_logs.ReqMsg.Client_id
+		reply.Client_name = state.Msg_logs.ReqMsg.Client_name
 		reply.Time_stamp = state.Msg_logs.ReqMsg.Time_stamp
 		reply.Node_i, _ = strconv.ParseInt(string(qkdserv.Node_name[1]), 10, 64)
 		reply.Result = true
@@ -227,6 +227,7 @@ func (state *State) GetReply(commit *CommitMsg) (*ReplyMsg, error) {
 	return nil, nil
 }
 
+// VerifyPrePrepareMsg,校验受到的pre-prepare消息
 func (state *State) VerifyPrePrepareMsg(preprepare *PrePrepareMsg) bool {
 	var result bool
 	digest := Digest(state.Msg_logs.ReqMsg.M) // 计算消息的摘要值
@@ -253,6 +254,8 @@ func (state *State) VerifyPrePrepareMsg(preprepare *PrePrepareMsg) bool {
 	}
 	return result
 }
+
+// VerifyPrepareMsg，校验受到的prepare消息
 func (state *State) VerifyPrepareMsg(prepare *PrepareMsg) bool {
 	var result bool
 	digest := Digest(state.Msg_logs.ReqMsg.M) // 计算消息的摘要值
@@ -275,9 +278,15 @@ func (state *State) VerifyPrepareMsg(prepare *PrepareMsg) bool {
 		fmt.Println("	pbft-Commit error:the primary_sign is wrong!")
 		result = false
 	} else {
-		state.Msg_logs.PreparedMsgs[prepare.Node_i] = *prepare
-		fmt.Printf("	reveive prepare from %d\n", prepare.Node_i)
-		result = true
+		_, ok := state.Msg_logs.PreparedMsgs[prepare.Node_i]
+		if !ok {
+			state.Msg_logs.PreparedMsgs[prepare.Node_i] = *prepare
+			//fmt.Printf("	reveive prepare from %d\n", prepare.Node_i)
+			result = true
+		} else {
+			fmt.Printf("	pbft-commit error:repeat reveive prepare from %d\n", prepare.Node_i)
+			result = false
+		}
 	}
 	return result
 }
@@ -318,8 +327,15 @@ func (state *State) VerifyCommitMsg(commit *CommitMsg) bool {
 		fmt.Println("	pbft-Reply error:the primary_sign is wrong!")
 		result = false
 	} else {
-		state.Msg_logs.CommittedMsgs[commit.Node_i] = *commit
-		result = true
+		_, ok := state.Msg_logs.CommittedMsgs[commit.Node_i]
+		if !ok {
+			state.Msg_logs.CommittedMsgs[commit.Node_i] = *commit
+			//fmt.Printf("	reveive prepare from %d\n", commit.Node_i)
+			result = true
+		} else {
+			fmt.Printf("	repeat reveive commit from %d\n", commit.Node_i)
+			result = false
+		}
 	}
 	return result
 }
@@ -328,17 +344,39 @@ func (state *State) committed() bool {
 	if !state.prepared() { // 如果prepare投票未通过，则不能进入commit
 		return false
 	}
-	if len(state.Msg_logs.CommittedMsgs) < 2*F+1 {
+	if len(state.Msg_logs.CommittedMsgs) < 2*F+1 { // commit通过的条件是受到2f+1个校验通过的commit
 		return false
 	}
 	return true
+}
+
+func (state *State) VerifyReplyMsg(reply *ReplyMsg) bool {
+	var result bool
+
+	if state.View != reply.View {
+		fmt.Println("	pbft-Result error:the view is wrong!")
+		result = false
+	} else if reply.Time_stamp != state.Msg_logs.ReqMsg.Time_stamp {
+		fmt.Println("	pbft-Result error:the timestamp is wrong!")
+		result = false
+	} else if !bytes.Equal(reply.Client_name[:], state.Msg_logs.ReqMsg.Client_name[:]) {
+		fmt.Println("	pbft-Result error:the clientID is wrong!")
+	} else if !reply.Result {
+		fmt.Printf("	pbft-Result error:result from node %d is wrong!", reply.Node_i)
+	} else if !uss.VerifySign(reply.Sign_i) {
+		fmt.Println("	pbft-Result error:the reply_sign is wrong!")
+		result = false
+	} else {
+		result = true
+	}
+	return result
 }
 
 func (obj *RequestMsg) signMessageEncode() ([]byte, error) {
 	buf := new(bytes.Buffer)
 
 	binary.Write(buf, binary.LittleEndian, obj.Time_stamp)
-	binary.Write(buf, binary.LittleEndian, obj.Client_id)
+	binary.Write(buf, binary.LittleEndian, obj.Client_name)
 	binary.Write(buf, binary.LittleEndian, obj.Operation_type)
 	binary.Write(buf, binary.LittleEndian, obj.M)
 	binary.Write(buf, binary.LittleEndian, obj.Digest_m)
@@ -379,7 +417,7 @@ func (obj *ReplyMsg) signMessageEncode() ([]byte, error) {
 
 	binary.Write(buf, binary.LittleEndian, obj.View)
 	binary.Write(buf, binary.LittleEndian, obj.Time_stamp)
-	binary.Write(buf, binary.LittleEndian, obj.Client_id)
+	binary.Write(buf, binary.LittleEndian, obj.Client_name)
 	binary.Write(buf, binary.LittleEndian, obj.Node_i)
 	binary.Write(buf, binary.LittleEndian, obj.Result)
 	return buf.Bytes(), nil
