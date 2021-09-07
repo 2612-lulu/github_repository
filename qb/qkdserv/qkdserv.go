@@ -1,13 +1,15 @@
 //qkdserv包，模拟QKD服务基本功能，包括密钥分发与获取密钥
 //创建人：zhanglu
 //创建时间：2021/08/04
+//使用须知：使用前需初始化签名密钥池qkdserv.QKD_sign_random_matrix_pool与当前节点号qkdserv.Node_name
 package qkdserv
 
 import (
 	"bytes"
 	"fmt"
-	"qb/qbtools"
 	"strconv"
+
+	"qb/qbtools"
 )
 
 // QKDSecRandomShare，密钥分发

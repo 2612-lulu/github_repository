@@ -1,9 +1,10 @@
 package pbft
 
+import "qb/block"
+
 type PBFT interface {
-	GenReqMsg(operation string, node_name [2]byte) (*RequestMsg, bool)
-	PrePrePare(request *RequestMsg) (*PrePrepareMsg, bool)
+	PrePrePare(request *block.Block) (*PrePrepareMsg, error)
 	PrePare(preprepare *PrePrepareMsg) (*PrepareMsg, error)
 	Commit(prepare *PrepareMsg) (*CommitMsg, error)
-	GetReply(commit *CommitMsg) (*ReplyMsg, error)
+	Reply(commit *CommitMsg) (*ReplyMsg, error)
 }

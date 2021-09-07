@@ -7,7 +7,6 @@ import (
 
 func main() {
 	nodeID := os.Args[1]
-	server := network.NewServer(nodeID)
+	network.CreateServer(nodeID)
 
-	server.Start()
 }

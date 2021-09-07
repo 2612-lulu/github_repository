@@ -1,20 +1,15 @@
 package pbft
 
-import "qb/uss"
-
-// Request消息，由客户端发往主节点
-type RequestMsg struct {
-	Time_stamp       int64                      // 时间戳，发出请求时客户端本地时钟的值
-	Client_name      [2]byte                    // 客户端名称
-	RequestOperation                            // 请求的具体操作
-	Sign_client      uss.USSToeplitzHashSignMsg // 客户端对request消息的签名
-}
+import (
+	"qb/block"
+	"qb/uss"
+)
 
 // Request消息中Operation的具体参数
 type RequestOperation struct {
-	Operation_type []byte // 操作类型，本系统中主要是转账
-	M              []byte // 消息
-	Digest_m       []byte // 消息m的摘要值
+	Operation_type      []byte // 操作类型，本系统中主要是转账:transaction
+	Transaction_message []byte // 消息
+	Digest_m            []byte // 消息m的摘要值
 }
 
 // Reply消息，由各节点发往客户端
@@ -33,7 +28,7 @@ type PrePrepareMsg struct {
 	Sequence_number int64                      // 主节点分配的序列号n,在[h, H]之间，用于对request进行排序？
 	Digest_m        []byte                     // 客户端请求消息中m的摘要
 	Sign_p          uss.USSToeplitzHashSignMsg // 主节点P对PrePrepare消息中v,n,d的签名
-	Request         RequestMsg
+	Request         block.Block
 }
 
 // Prepare消息，由从节点发往其他所有节点

@@ -57,3 +57,11 @@ func GetNodeIDTable(nodeName [2]byte) [16]byte {
 	}
 	return NodeIDTable[nodeName]
 }
+
+// digest，摘要函数
+func Digest(m []byte) []byte {
+	h := sha256.New()
+	h.Write(m)
+	digest_m := h.Sum(nil)
+	return digest_m
+}

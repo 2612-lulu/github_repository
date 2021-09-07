@@ -11,7 +11,6 @@ import (
 // 测试接口函数一：共享安全随机数
 func TestQKDSecRandomShare(t *testing.T) {
 	fmt.Println("----------【QKD】——QKDSecRandomShare-----------------------------------------------------------")
-
 }
 
 // 测试接口函数二：读取安全随机数
