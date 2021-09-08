@@ -71,7 +71,6 @@ func (state *State) PrePrePare(request *block.Block) (*PrePrepareMsg, error) {
 		if state.Last_sequence_number != -1 {
 			sequenceID = state.Last_sequence_number + 1 // 主节点每开始一次共识，序列号+1
 		}
-		fmt.Println(state.Last_sequence_number)
 
 		digest_msg, _ := json.Marshal(request)
 		// 定义一个preprepare消息
@@ -277,7 +276,6 @@ func (state *State) prepared() bool {
 	}
 
 	if len(state.Msg_logs.PreparedMsgs) < 2*F {
-		fmt.Println(len(state.Msg_logs.PreparedMsgs))
 		fmt.Println("	pbft-commit error:didn't receive 2*f prepared message,please wait")
 		return false
 	}

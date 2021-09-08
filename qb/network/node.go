@@ -540,7 +540,6 @@ func (node *Node) createStateForNewConsensus() error {
 	}
 	// 创建新的节点状态，即进行节点状态的初始化
 	node.PBFT.CurrentState = pbft.CreateState(node.View.ID, lastSequenceID)
-	fmt.Println(lastSequenceID)
 	return nil
 }
 
