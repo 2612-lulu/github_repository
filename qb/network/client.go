@@ -41,14 +41,9 @@ func NewClient(client_name [2]byte) *Client {
 
 	// 初始化节点
 	client := &Client{
-		Client_name: client_name,                         // 客户端名称，形式为C1、C2...
-		Client_ID:   qbtools.GetNodeIDTable(client_name), // 客户端ID，16字节QKD设备号
-		Client_table: map[[2]byte]string{ // 客户端索引表，key=Node_name, value=url
-			{'C', '1'}: "localhost:1115",
-			{'C', '2'}: "localhost:1116",
-			{'C', '3'}: "localhost:1117",
-			{'C', '4'}: "localhost:1118",
-		},
+		Client_name:  client_name,                                                           // 客户端名称，形式为C1、C2...
+		Client_ID:    qbtools.GetNodeIDTable(client_name),                                   // 客户端ID，16字节QKD设备号
+		Client_table: qbtools.InitConfig_localhost("./qbtools/config/client_localhost.txt"), // 客户端索引表，key=Node_name, value=url
 		Node_table: map[[2]byte]string{ // 节点索引表，key=Node_name, value=url
 			{'P', '1'}: "localhost:1111",
 			{'P', '2'}: "localhost:1112",
@@ -119,7 +114,7 @@ func (client *Client) broadcastMsg() {
 			send(client.Node_table[client.View.Primary]+"/transcation", jsonMsg)
 			mylog.LogStage("Request", false)
 
-			//init_log("./network/log/" + string(client.Client_name[:]) + ".log")
+			init_log("./network/clientlog/" + string(client.Client_name[:]) + ".log")
 			log.Println("send a transcation to the Primary node")
 		}
 	}
@@ -138,15 +133,14 @@ func (client *Client) dispatchMsg() {
 		switch msg := msg.(type) {
 		case string: // 客户端输入的交易信息
 			if client.CurrentState == nil {
-				log.Println("get a new message")
 				client.ReplyMsgs = make([]*pbft.ReplyMsg, 0)
 				transcation := client.genTranscationMsg(msg)
 				client.MsgBroadcast <- transcation
 
-				//init_log("./network/log/" + string(client.Client_name[:]) + ".log")
+				init_log("./network/clientlog/" + string(client.Client_name[:]) + ".log")
 				log.Println("creat a new transcation,and put it into broadcast channel")
 			} else {
-				//init_log("./network/log/" + string(client.Client_name[:]) + ".log")
+				init_log("./network/clientlog/" + string(client.Client_name[:]) + ".log")
 				log.Println("the last transcation didn't finished, please wait")
 			}
 		case *pbft.ReplyMsg:
@@ -199,33 +193,9 @@ func (client *Client) resolveMsg() {
 		msgs := <-client.MsgDelivery // 从调度器通道中获取缓存信息
 		switch msgs := msgs.(type) {
 		case []*pbft.ReplyMsg:
-			//init_log("./network/log/" + string(client.Client_name[:]) + ".log")
+			init_log("./network/clientlog/" + string(client.Client_name[:]) + ".log")
 			fmt.Println(msgs)
 			log.Println("transcation success")
 		}
 	}
 }
-
-/*
-
-// node.resolvePrePrepareMsg,[pre-prepare]由从节点处理PrePrepare消息
-func (client *Client) resolveReplyMsg(msgs []*pbft.ReplyMsg) []error {
-	errs := make([]error, 0)
-
-	// 批量处理pre-prepare信息
-	for _, replyMsg := range msgs {
-		err := client.resolveReply(replyMsg)
-		if err != nil {
-			errs = append(errs, err)
-		}
-	}
-	if len(errs) != 0 { // 如果有处理错误，则输出错误
-		return errs
-	}
-	return nil
-}
-
-func (client *Client) resolveReply(msgs *pbft.ReplyMsg) error {
-	return nil
-}
-*/

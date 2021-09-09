@@ -1,0 +1,185 @@
+P3-[get prepareMsg]2021/09/09 16:37:14.023459 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 16:37:14.023491 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 16:37:14.025880 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[receive PrepareMsg]2021/09/09 16:37:14.025914 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[pbft.CommitMsg]2021/09/09 16:37:14.028164 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[get replyMsg]2021/09/09 16:37:14.028850 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[pbft.CommitMsg]2021/09/09 16:37:14.029397 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[get prepareMsg]2021/09/09 16:39:55.692584 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 16:39:55.692623 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 16:39:55.695730 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[receive PrepareMsg]2021/09/09 16:39:55.695755 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[pbft.PrepareMsg]2021/09/09 16:39:55.695978 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
+P3-[pbft.CommitMsg]2021/09/09 16:39:55.696563 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[receive CommitMsg]2021/09/09 16:39:55.697270 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get replyMsg]2021/09/09 16:39:55.699003 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[pbft.CommitMsg]2021/09/09 16:39:55.699922 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[get prepareMsg]2021/09/09 18:53:50.484738 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 18:53:50.484752 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 18:53:50.486256 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[receive CommitMsg]2021/09/09 18:53:50.488045 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[pbft.CommitMsg]2021/09/09 18:53:50.488059 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[get replyMsg]2021/09/09 18:53:50.489277 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[receive CommitMsg]2021/09/09 18:53:50.489302 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[pbft.CommitMsg]2021/09/09 18:53:50.489463 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[get prepareMsg]2021/09/09 18:53:50.816051 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 18:53:50.816076 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 18:53:50.817921 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[receive PrepareMsg]2021/09/09 18:53:50.817950 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[get replyMsg]2021/09/09 18:53:50.820169 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[get prepareMsg]2021/09/09 18:58:59.861865 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 18:58:59.861903 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 18:58:59.880477 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[receive PrepareMsg]2021/09/09 18:58:59.880488 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[get replyMsg]2021/09/09 18:58:59.883843 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[receive CommitMsg]2021/09/09 18:58:59.883877 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[pbft.CommitMsg]2021/09/09 18:58:59.884534 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[receive CommitMsg]2021/09/09 18:58:59.884776 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get prepareMsg]2021/09/09 19:00:12.958561 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:00:12.958604 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 19:00:12.960679 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[receive PrepareMsg]2021/09/09 19:00:12.960690 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[pbft.CommitMsg]2021/09/09 19:00:12.963821 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[get replyMsg]2021/09/09 19:00:12.964746 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[pbft.CommitMsg]2021/09/09 19:00:12.965313 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[receive CommitMsg]2021/09/09 19:00:12.965935 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get prepareMsg]2021/09/09 19:00:13.282017 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:00:13.282031 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 19:00:13.285248 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[pbft.CommitMsg]2021/09/09 19:00:13.286312 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[receive CommitMsg]2021/09/09 19:00:13.286774 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get replyMsg]2021/09/09 19:00:13.322626 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[receive CommitMsg]2021/09/09 19:00:13.324702 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get prepareMsg]2021/09/09 19:11:46.704284 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:11:46.704352 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 19:11:46.706621 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[receive PrepareMsg]2021/09/09 19:11:46.706655 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[receive CommitMsg]2021/09/09 19:11:46.708991 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get replyMsg]2021/09/09 19:11:46.710546 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[receive CommitMsg]2021/09/09 19:11:46.710562 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[pbft.CommitMsg]2021/09/09 19:11:46.710941 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[receive CommitMsg]2021/09/09 19:11:46.711552 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get prepareMsg]2021/09/09 19:11:47.045951 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:11:47.045979 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 19:11:47.047751 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[receive PrepareMsg]2021/09/09 19:11:47.047785 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[pbft.PrepareMsg]2021/09/09 19:11:47.047926 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
+P3-[receive PrepareMsg]2021/09/09 19:11:47.048871 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[receive CommitMsg]2021/09/09 19:11:47.050441 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get replyMsg]2021/09/09 19:11:47.076360 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[receive CommitMsg]2021/09/09 19:11:47.076424 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get prepareMsg]2021/09/09 19:13:17.658234 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:13:17.658274 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 19:13:17.681168 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[pbft.CommitMsg]2021/09/09 19:13:41.392519 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[pbft.CommitMsg]2021/09/09 19:13:41.394510 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[get replyMsg]2021/09/09 19:13:41.394619 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[receive CommitMsg]2021/09/09 19:13:41.394656 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get prepareMsg]2021/09/09 19:14:36.464193 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:14:36.464225 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 19:14:36.469779 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[receive PrepareMsg]2021/09/09 19:14:36.470831 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[get replyMsg]2021/09/09 19:14:36.825635 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[receive CommitMsg]2021/09/09 19:14:36.826445 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[pbft.CommitMsg]2021/09/09 19:14:36.826489 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[receive CommitMsg]2021/09/09 19:14:36.826502 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get prepareMsg]2021/09/09 19:14:37.031160 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:14:37.031188 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get prepareMsg]2021/09/09 19:15:29.652890 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:15:29.652922 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 19:15:29.656958 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[pbft.CommitMsg]2021/09/09 19:15:29.658694 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[get replyMsg]2021/09/09 19:15:29.659552 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[receive CommitMsg]2021/09/09 19:15:29.659560 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[pbft.CommitMsg]2021/09/09 19:15:29.659859 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[receive CommitMsg]2021/09/09 19:15:29.660471 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get prepareMsg]2021/09/09 19:15:29.980761 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:15:29.980800 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 19:15:29.982406 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[pbft.CommitMsg]2021/09/09 19:15:29.983552 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[get replyMsg]2021/09/09 19:15:29.985252 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[pbft.CommitMsg]2021/09/09 19:15:29.985265 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[get prepareMsg]2021/09/09 19:16:46.487658 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:16:46.487687 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 19:16:46.490590 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[receive PrepareMsg]2021/09/09 19:16:46.490626 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[pbft.CommitMsg]2021/09/09 19:16:46.492820 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[get replyMsg]2021/09/09 19:16:46.493596 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[get prepareMsg]2021/09/09 19:16:46.823650 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:16:46.823664 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 19:16:46.825472 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[pbft.PrepareMsg]2021/09/09 19:16:46.826301 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
+P3-[receive PrepareMsg]2021/09/09 19:16:46.827006 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[receive CommitMsg]2021/09/09 19:16:46.827956 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get replyMsg]2021/09/09 19:16:46.846917 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[receive CommitMsg]2021/09/09 19:16:46.846961 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[pbft.CommitMsg]2021/09/09 19:16:46.847220 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[receive CommitMsg]2021/09/09 19:16:46.847732 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get prepareMsg]2021/09/09 19:17:07.329530 /root/study/github_repository/qb/network/node.go:189: receive a prepare message
+P3-[get prepareMsg]2021/09/09 19:17:07.329531 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:17:07.329573 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 19:17:07.330922 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[receive CommitMsg]2021/09/09 19:17:07.333967 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get replyMsg]2021/09/09 19:17:07.336515 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[receive CommitMsg]2021/09/09 19:17:07.336527 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[pbft.CommitMsg]2021/09/09 19:17:07.337064 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[receive CommitMsg]2021/09/09 19:17:07.337592 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get prepareMsg]2021/09/09 19:17:07.675845 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:17:07.675855 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 19:17:07.677777 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[receive PrepareMsg]2021/09/09 19:17:07.677806 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[pbft.PrepareMsg]2021/09/09 19:17:07.678068 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
+P3-[pbft.CommitMsg]2021/09/09 19:17:07.679252 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[get replyMsg]2021/09/09 19:17:07.681123 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[pbft.CommitMsg]2021/09/09 19:17:07.681135 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[get prepareMsg]2021/09/09 19:18:27.573269 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:18:27.573291 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 19:18:27.601897 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[receive PrepareMsg]2021/09/09 19:18:27.601923 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[pbft.PrepareMsg]2021/09/09 19:18:27.602278 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
+P3-[receive PrepareMsg]2021/09/09 19:18:27.602690 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[get replyMsg]2021/09/09 19:18:27.607908 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[receive CommitMsg]2021/09/09 19:18:27.607968 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[pbft.CommitMsg]2021/09/09 19:18:27.608288 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[get prepareMsg]2021/09/09 19:18:27.912301 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:18:27.912348 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 19:18:27.915302 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[receive PrepareMsg]2021/09/09 19:18:27.915317 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[pbft.PrepareMsg]2021/09/09 19:18:27.916013 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
+P3-[receive PrepareMsg]2021/09/09 19:18:27.916394 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[pbft.CommitMsg]2021/09/09 19:18:27.919321 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[get replyMsg]2021/09/09 19:18:27.919835 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[receive CommitMsg]2021/09/09 19:18:27.919858 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[pbft.CommitMsg]2021/09/09 19:18:27.920030 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[receive CommitMsg]2021/09/09 19:18:27.920664 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get prepareMsg]2021/09/09 19:39:13.851426 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:39:13.851451 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 19:39:13.854157 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[receive PrepareMsg]2021/09/09 19:39:13.854198 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[receive CommitMsg]2021/09/09 19:39:13.856661 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get replyMsg]2021/09/09 19:39:13.858105 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[receive CommitMsg]2021/09/09 19:39:13.858129 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get prepareMsg]2021/09/09 19:39:14.225709 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:39:14.225748 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 19:39:14.227666 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[receive PrepareMsg]2021/09/09 19:39:14.227680 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[receive PrepareMsg]2021/09/09 19:39:14.228522 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[pbft.PrepareMsg]2021/09/09 19:39:14.228535 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
+P3-[receive CommitMsg]2021/09/09 19:39:14.229529 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get replyMsg]2021/09/09 19:39:14.262673 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[pbft.CommitMsg]2021/09/09 19:39:14.263744 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[receive CommitMsg]2021/09/09 19:39:14.264304 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get prepareMsg]2021/09/09 19:47:47.322774 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:47:47.322813 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 19:47:47.325039 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[receive PrepareMsg]2021/09/09 19:47:47.325077 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[receive CommitMsg]2021/09/09 19:47:47.326415 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get replyMsg]2021/09/09 19:47:47.329577 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P3-[get prepareMsg]2021/09/09 19:47:47.681628 /root/study/github_repository/qb/network/node.go:587: put prepare message into broadcast channel
+P3-[receive PrePrepareMsg]2021/09/09 19:47:47.681662 /root/study/github_repository/qb/network/node.go:500: Msgdelivery channel get a preprepare, and handle it
+P3-[get commitMsg]2021/09/09 19:47:47.683274 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P3-[receive PrepareMsg]2021/09/09 19:47:47.683305 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
+P3-[pbft.PrepareMsg]2021/09/09 19:47:47.683474 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
+P3-[pbft.CommitMsg]2021/09/09 19:47:47.684322 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
+P3-[receive CommitMsg]2021/09/09 19:47:47.685231 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
+P3-[get replyMsg]2021/09/09 19:47:47.687647 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel

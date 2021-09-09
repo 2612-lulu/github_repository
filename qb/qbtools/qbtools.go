@@ -4,8 +4,12 @@
 package qbtools
 
 import (
+	"bufio"
 	"crypto/hmac"
 	"crypto/sha256"
+	"io"
+	"os"
+	"strings"
 )
 
 // GenRandomWithPRF,生成随机数（密钥）：根据种子密钥和签名索引产生符合要求的随机数
@@ -38,14 +42,7 @@ func GenRandomWithPRF(key []byte, sign_dev_id, sign_task_sn [16]byte, random_cou
 
 func GetNodeIDTable(nodeName [2]byte) [16]byte {
 	NodeIDTable := make(map[[2]byte][16]byte)
-	NodeTable := map[[2]byte]string{
-		{'P', '1'}: "FHDG3489EYUWHBHD",
-		{'P', '2'}: "JGOJFOIJHRNB2346",
-		{'P', '3'}: "FIHFUIB376486821",
-		{'P', '4'}: "3748HFIYYHFIGFI3",
-		{'C', '1'}: "CHIKGHBUIGHB3468",
-		{'C', '2'}: "HDFUIY68687NKFJH",
-	}
+	NodeTable := InitConfig_localhost("qbtools/config/id_table")
 	id, ok := NodeTable[nodeName]
 	if ok {
 		var NodeID [16]byte
@@ -64,4 +61,46 @@ func Digest(m []byte) []byte {
 	h.Write(m)
 	digest_m := h.Sum(nil)
 	return digest_m
+}
+
+//读取key=value类型的配置文件
+func InitConfig_localhost(path string) map[[2]byte]string {
+	config := make(map[[2]byte]string)
+
+	f, err := os.Open(path)
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+
+	r := bufio.NewReader(f)
+	for {
+		b, _, err := r.ReadLine()
+		if err != nil {
+			if err == io.EOF {
+				break
+			}
+			panic(err)
+		}
+		s := strings.TrimSpace(string(b))
+		index := strings.Index(s, "=")
+		if index < 0 {
+			continue
+		}
+		key := strings.TrimSpace(s[:index])
+		if len(key) == 0 {
+			continue
+		}
+		value := strings.TrimSpace(s[index+1:])
+		if len(value) == 0 {
+			continue
+		}
+
+		var map_key [2]byte
+		for i := 0; i < 2; i++ {
+			map_key[i] = []byte(key)[i]
+		}
+		config[map_key] = value
+	}
+	return config
 }
