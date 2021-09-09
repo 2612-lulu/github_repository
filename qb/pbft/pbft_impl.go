@@ -134,8 +134,8 @@ func (state *State) PrePare(preprepare *PrePrepareMsg) (*PrepareMsg, error) {
 	if !state.verifyPrePrepareMsg(preprepare) { // 校验受到的pre-prepare是否通过
 		return nil, errors.New("pre-prepare message is corrupted")
 	} else {
-		i, _ := strconv.ParseInt(string(qkdserv.Node_name[1]), 10, 64) // 获取节点编号
-		prepare := &PrepareMsg{                                        // 定义一个prepare消息
+		i, _ := strconv.ParseInt(qkdserv.Node_name[1:], 10, 64) // 获取节点编号
+		prepare := &PrepareMsg{                                 // 定义一个prepare消息
 			View:            preprepare.View,            // 获取视图号
 			Sequence_number: preprepare.Sequence_number, // 获取索引号
 			Digest_m:        preprepare.Digest_m,        // 获取消息摘要
@@ -205,7 +205,7 @@ func (state *State) Commit(prepare *PrepareMsg) (*CommitMsg, error) {
 	if !state.verifyPrepareMsg(prepare) { // 校验收到的prepare消息
 		return nil, errors.New("prepare message is corrupted")
 	} else if state.prepared() { // 检查是否收到2f+1（含本节点产生的prepare）个通过校验的prepare消息
-		i, _ := strconv.ParseInt(string(qkdserv.Node_name[1]), 10, 64)
+		i, _ := strconv.ParseInt(qkdserv.Node_name[1:], 10, 64)
 		_, ok := state.Msg_logs.CommittedMsgs[i] // 检查是否发送过commit消息
 		if !ok {                                 // 如果log中无commit信息，则发送commit
 			commit := &CommitMsg{ // 定义一个commit消息
@@ -298,7 +298,7 @@ func (state *State) Reply(commit *CommitMsg) (*ReplyMsg, error) {
 	if !state.verifyCommitMsg(commit) {
 		return nil, errors.New("commit message is corrupted")
 	} else if state.committed() {
-		i, _ := strconv.ParseInt(string(qkdserv.Node_name[1]), 10, 64)
+		i, _ := strconv.ParseInt(qkdserv.Node_name[1:], 10, 64)
 		_, ok := state.Msg_logs.ReplyMsgs[i] // 检查是否发送过reply消息
 		if !ok {                             // 如果未发送过reply消息
 			reply := &ReplyMsg{

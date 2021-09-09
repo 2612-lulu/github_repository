@@ -17,11 +17,11 @@ import (
 )
 
 type Client struct {
-	Client_name  [2]byte            // 客户端名称
-	Client_ID    [16]byte           // 客户端ID，16字节QKD设备号
-	Client_table map[[2]byte]string // 客户端索引表，key=Client_name, value=url
-	Node_table   map[[2]byte]string // 节点索引表，key=Node_name, value=url
-	View         *View              // 视图号
+	Client_name  string            // 客户端名称
+	Client_ID    [16]byte          // 客户端ID，16字节QKD设备号
+	Client_table map[string]string // 客户端索引表，key=Client_name, value=url
+	Node_table   map[string]string // 节点索引表，key=Node_name, value=url
+	View         *View             // 视图号
 
 	ReplyMsgs    []*pbft.ReplyMsg // 接收的reply消息缓冲列表
 	CurrentState *pbft.State
@@ -33,7 +33,7 @@ type Client struct {
 }
 
 // 节点初始化
-func NewClient(client_name [2]byte) *Client {
+func NewClient(client_name string) *Client {
 	const view = 1                  // 暂设视图号为1
 	qkdserv.Node_name = client_name // 调用此程序的当前节点或客户端名称
 	// 初始化签名密钥池
@@ -41,18 +41,13 @@ func NewClient(client_name [2]byte) *Client {
 
 	// 初始化节点
 	client := &Client{
-		Client_name:  client_name,                                                           // 客户端名称，形式为C1、C2...
-		Client_ID:    qbtools.GetNodeIDTable(client_name),                                   // 客户端ID，16字节QKD设备号
-		Client_table: qbtools.InitConfig_localhost("./qbtools/config/client_localhost.txt"), // 客户端索引表，key=Node_name, value=url
-		Node_table: map[[2]byte]string{ // 节点索引表，key=Node_name, value=url
-			{'P', '1'}: "localhost:1111",
-			{'P', '2'}: "localhost:1112",
-			{'P', '3'}: "localhost:1113",
-			{'P', '4'}: "localhost:1114",
-		},
+		Client_name:  client_name,                                                 // 客户端名称，形式为C1、C2...
+		Client_ID:    qbtools.GetNodeIDTable(client_name),                         // 客户端ID，16字节QKD设备号
+		Client_table: qbtools.InitConfig("./qbtools/config/client_localhost.txt"), // 客户端索引表，key=Node_name, value=url
+		Node_table:   qbtools.InitConfig("./qbtools/config/node_localhost.txt"),
 		View: &View{ // 视图号信息，视图号=主节点下标
-			ID:      view,              // 视图号
-			Primary: [2]byte{'P', '1'}, // 主节点,暂设为P1
+			ID:      view, // 视图号
+			Primary: "P1", // 主节点,暂设为P1
 		},
 
 		CurrentState: nil,
@@ -114,7 +109,7 @@ func (client *Client) broadcastMsg() {
 			send(client.Node_table[client.View.Primary]+"/transcation", jsonMsg)
 			mylog.LogStage("Request", false)
 
-			init_log("./network/clientlog/" + string(client.Client_name[:]) + ".log")
+			init_log("./network/clientlog/" + client.Client_name + ".log")
 			log.Println("send a transcation to the Primary node")
 		}
 	}
@@ -137,10 +132,10 @@ func (client *Client) dispatchMsg() {
 				transcation := client.genTranscationMsg(msg)
 				client.MsgBroadcast <- transcation
 
-				init_log("./network/clientlog/" + string(client.Client_name[:]) + ".log")
+				init_log("./network/clientlog/" + client.Client_name + ".log")
 				log.Println("creat a new transcation,and put it into broadcast channel")
 			} else {
-				init_log("./network/clientlog/" + string(client.Client_name[:]) + ".log")
+				init_log("./network/clientlog/" + client.Client_name + ".log")
 				log.Println("the last transcation didn't finished, please wait")
 			}
 		case *pbft.ReplyMsg:
@@ -193,7 +188,7 @@ func (client *Client) resolveMsg() {
 		msgs := <-client.MsgDelivery // 从调度器通道中获取缓存信息
 		switch msgs := msgs.(type) {
 		case []*pbft.ReplyMsg:
-			init_log("./network/clientlog/" + string(client.Client_name[:]) + ".log")
+			init_log("./network/clientlog/" + client.Client_name + ".log")
 			fmt.Println(msgs)
 			log.Println("transcation success")
 		}

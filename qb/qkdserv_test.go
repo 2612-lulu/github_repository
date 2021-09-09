@@ -10,17 +10,17 @@ import (
 
 // 测试接口函数一：共享安全随机数
 func TestQKDSecRandomShare(t *testing.T) {
-	fmt.Println("----------【QKD】——QKDSecRandomShare-----------------------------------------------------------")
+	fmt.Println("----------【1.QKD】——QKDSecRandomShare-----------------------------------------------------------")
 }
 
 // 测试接口函数二：读取安全随机数
 func TestQKDReadSecRandom(t *testing.T) {
-	fmt.Println("----------【QKD】——QKDReadSecRandom------------------------------------------------------------")
+	fmt.Println("----------【1.QKD】——QKDReadSecRandom------------------------------------------------------------")
 	// 初始化签名密钥池
 	qkdserv.QKD_sign_random_matrix_pool = make(map[qkdserv.QKDSignMatrixIndex]qkdserv.QKDSignRandomsMatrix)
 	var i uint32
 	// 定义使用该程序的参与者名称，正常使用时，该参数由命令行输入，此处只是为了测试使用
-	qkdserv.Node_name = [2]byte{'P', '1'}
+	qkdserv.Node_name = "P163"
 	// 定义签名索引
 	SignIndex := qkdserv.QKDSignMatrixIndex{}
 	id := []byte("XHSGDFAYQHDJ2163")
@@ -33,7 +33,7 @@ func TestQKDReadSecRandom(t *testing.T) {
 	}
 	// 定义主行号相关信息
 	SignMainRowNum := qkdserv.QKDSignRandomMainRowNum{}
-	SignMainRowNum.Sign_Node_Name = [2]byte{'C', '1'}
+	SignMainRowNum.Sign_Node_Name = "P12"
 	SignMainRowNum.Main_Row_Num = 0 // 主行号默认设置为0
 	SignMainRowNum.Counts = 4
 	SignMainRowNum.Unit_len = 16
@@ -45,7 +45,7 @@ func TestQKDReadSecRandom(t *testing.T) {
 
 // 打印签名密钥矩阵
 func PrintVerifyMatrix(VerifyMatrix qkdserv.QKDSignRandomsMatrix) {
-	// fmt.Println("	Main_row_num=", VerifyMatrix.Main_row_num)
+	fmt.Println("	Main_row_num=", VerifyMatrix.Main_row_num)
 	// fmt.Println("	Row_counts=", VerifyMatrix.Row_counts)
 	for i := 0; i < int(VerifyMatrix.Row_counts); i++ {
 		fmt.Printf("	第%d行,第%d列随机数=", i+1, VerifyMatrix.Sign_randoms[i].Column_num)

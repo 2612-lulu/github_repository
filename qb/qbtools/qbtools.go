@@ -12,6 +12,8 @@ import (
 	"strings"
 )
 
+const NODE_NAME_LENGTH = 3
+
 // GenRandomWithPRF,生成随机数（密钥）：根据种子密钥和签名索引产生符合要求的随机数
 // 参数：种子密钥[]byte，签名索引QKDSignMatrixIndex，每行随机数个数uint32，随机数的单位字节长度uint32
 // 返回值：随机数字节长度uint32，随机数[]byte
@@ -40,9 +42,9 @@ func GenRandomWithPRF(key []byte, sign_dev_id, sign_task_sn [16]byte, random_cou
 	return randoms_len, signrandoms
 }
 
-func GetNodeIDTable(nodeName [2]byte) [16]byte {
-	NodeIDTable := make(map[[2]byte][16]byte)
-	NodeTable := InitConfig_localhost("qbtools/config/id_table")
+func GetNodeIDTable(nodeName string) [16]byte {
+	NodeIDTable := make(map[string][16]byte)
+	NodeTable := InitConfig("qbtools/config/id_table")
 	id, ok := NodeTable[nodeName]
 	if ok {
 		var NodeID [16]byte
@@ -64,8 +66,8 @@ func Digest(m []byte) []byte {
 }
 
 //读取key=value类型的配置文件
-func InitConfig_localhost(path string) map[[2]byte]string {
-	config := make(map[[2]byte]string)
+func InitConfig(path string) map[string]string {
+	config := make(map[string]string)
 
 	f, err := os.Open(path)
 	if err != nil {
@@ -96,11 +98,7 @@ func InitConfig_localhost(path string) map[[2]byte]string {
 			continue
 		}
 
-		var map_key [2]byte
-		for i := 0; i < 2; i++ {
-			map_key[i] = []byte(key)[i]
-		}
-		config[map_key] = value
+		config[key] = value
 	}
 	return config
 }

@@ -17,10 +17,10 @@ import (
 )
 
 type Node struct {
-	Node_name    [2]byte            // 联盟节点名称
-	Node_ID      [16]byte           // 联盟节点ID，16字节QKD设备号
-	Node_table   map[[2]byte]string // 节点索引表，key=Node_name, value=url
-	Client_table map[[2]byte]string // 客户端索引表，key=Client_name, value=url
+	Node_name    string            // 联盟节点名称
+	Node_ID      [16]byte          // 联盟节点ID，16字节QKD设备号
+	Node_table   map[string]string // 节点索引表，key=Node_name, value=url
+	Client_table map[string]string // 客户端索引表，key=Client_name, value=url
 
 	View      *View // 视图号
 	PBFT      *Consensus
@@ -34,8 +34,8 @@ type Node struct {
 }
 
 type View struct {
-	ID      int64   // 视图号
-	Primary [2]byte // 主节点
+	ID      int64  // 视图号
+	Primary string // 主节点
 }
 type Consensus struct {
 	CurrentState *pbft.State // 节点状态，默认为nil
@@ -54,7 +54,7 @@ type MsgBuffer struct {
 const ResolvingTimeDuration = time.Millisecond * 1000 // 1 second.
 
 // 节点初始化
-func NewNode(node_name [2]byte) *Node {
+func NewNode(node_name string) *Node {
 	const view = 1                // 暂设视图号为1
 	qkdserv.Node_name = node_name // 调用此程序的当前节点或客户端名称
 	// 初始化签名密钥池
@@ -62,24 +62,14 @@ func NewNode(node_name [2]byte) *Node {
 
 	// 初始化节点
 	node := &Node{
-		Node_name: node_name,                         // 联盟节点或客户段名称，形式为P1、P2...
-		Node_ID:   qbtools.GetNodeIDTable(node_name), // 客户端ID，16字节QKD设备号
-		Node_table: map[[2]byte]string{ // 联盟节点节点索引表，key=Node_name, value=url
-			{'P', '1'}: "localhost:1111",
-			{'P', '2'}: "localhost:1112",
-			{'P', '3'}: "localhost:1113",
-			{'P', '4'}: "localhost:1114",
-		},
-		Client_table: map[[2]byte]string{ // 客户端索引表，key=Client_name, value=url
-			{'C', '1'}: "localhost:1115",
-			{'C', '2'}: "localhost:1116",
-			{'C', '3'}: "localhost:1117",
-			{'C', '4'}: "localhost:1118",
-		},
+		Node_name:    node_name,                                                   // 联盟节点或客户段名称，形式为P1、P2...
+		Node_ID:      qbtools.GetNodeIDTable(node_name),                           // 客户端ID，16字节QKD设备号
+		Node_table:   qbtools.InitConfig("./qbtools/config/node_localhost.txt"),   // 联盟节点节点索引表，key=Node_name, value=url
+		Client_table: qbtools.InitConfig("./qbtools/config/client_localhost.txt"), // 客户端索引表，key=Client_name, value=url
 
 		View: &View{ // 视图号信息，视图号=主节点下标
-			ID:      view,              // 视图号
-			Primary: [2]byte{'P', '1'}, // 主节点,暂设为P1
+			ID:      view, // 视图号
+			Primary: "P1", // 主节点,暂设为P1
 		},
 
 		PBFT: &Consensus{
@@ -156,7 +146,7 @@ func (node *Node) getTranscation(writer http.ResponseWriter, request *http.Reque
 		return
 	}
 	node.MsgEntrance <- &msg // 将解码后的交易消息放入打包通道
-	init_log("./network/nodelog/listenHttp_" + string(node.Node_name[:]) + ".log")
+	init_log("./network/nodelog/listenHttp_" + node.Node_name + ".log")
 	log.SetPrefix(string(node.Node_name[:]) + "-transcation")
 	log.Println("receive a transcation message")
 }
@@ -170,7 +160,7 @@ func (node *Node) getPrePrepare(writer http.ResponseWriter, request *http.Reques
 		return
 	}
 	node.MsgEntrance <- &msg // 将解码后的消息放入通道MsgEntrance
-	init_log("./network/nodelog/listenHttp_" + string(node.Node_name[:]) + ".log")
+	init_log("./network/nodelog/listenHttp_" + node.Node_name + ".log")
 	log.SetPrefix(string(node.Node_name[:]) + "-pre-prepare")
 	log.Println("receive a preprepare message")
 }
@@ -184,7 +174,7 @@ func (node *Node) getPrepare(writer http.ResponseWriter, request *http.Request) 
 		return
 	}
 	node.MsgEntrance <- &msg // 将解码后的prepare消息放入通道MsgEntrance
-	init_log("./network/nodelog/listenHttp_" + string(node.Node_name[:]) + ".log")
+	init_log("./network/nodelog/listenHttp_" + node.Node_name + ".log")
 	log.SetPrefix(string(node.Node_name[:]) + "-prepare")
 	log.Println("receive a prepare message")
 }
@@ -198,7 +188,7 @@ func (node *Node) getCommit(writer http.ResponseWriter, request *http.Request) {
 		return
 	}
 	node.MsgEntrance <- &msg // 将解码后的commit消息放入通道MsgEntrance
-	init_log("./network/nodelog/listenHttp_" + string(node.Node_name[:]) + ".log")
+	init_log("./network/nodelog/listenHttp_" + node.Node_name + ".log")
 	log.SetPrefix(string(node.Node_name[:]) + "-commit")
 	log.Println("receive a commit message")
 }
@@ -223,32 +213,32 @@ func (node *Node) broadcastMsg() {
 			node.broadcast(msg, "/preprepare") // 发送preprepare信息给其他节点
 			mylog.LogStage("Pre-Prepare", false)
 
-			init_log("./network/nodelog/broadcast_" + string(node.Node_name[:]) + ".log")
-			log.SetPrefix(string(node.Node_name[:]) + "-[broadcast preprepare]")
+			init_log("./network/nodelog/broadcast_" + node.Node_name + ".log")
+			log.SetPrefix(node.Node_name + "-[broadcast preprepare]")
 			log.Println("broadcast preprepare message")
 		case *pbft.PrepareMsg:
 			mylog.LogStage("Pre-prepare", true)
 			node.broadcast(msg, "/prepare") // 发送prepare信息给其他节点
 			mylog.LogStage("Prepare", false)
 
-			init_log("./network/nodelog/broadcast_" + string(node.Node_name[:]) + ".log")
-			log.SetPrefix(string(node.Node_name[:]) + "-[broadcast prepare]")
+			init_log("./network/nodelog/broadcast_" + node.Node_name + ".log")
+			log.SetPrefix(node.Node_name + "-[broadcast prepare]")
 			log.Println("broadcast prepare message")
 		case *pbft.CommitMsg:
 			mylog.LogStage("Prepare", true)
 			node.broadcast(msg, "/commit") // 发送commit信息给其他节点
 			mylog.LogStage("Commit", false)
 
-			init_log("./network/nodelog/broadcast_" + string(node.Node_name[:]) + ".log")
-			log.SetPrefix(string(node.Node_name[:]) + "-[broadcast commit]")
+			init_log("./network/nodelog/broadcast_" + node.Node_name + ".log")
+			log.SetPrefix(node.Node_name + "-[broadcast commit]")
 			log.Println("broadcast commit message")
 		case *pbft.ReplyMsg:
 			mylog.LogStage("Commit", true)
 			node.broadcastReply(msg, "/reply")
 			mylog.LogStage("Reply", false)
 
-			init_log("./network/nodelog/broadcast_" + string(node.Node_name[:]) + ".log")
-			log.SetPrefix(string(node.Node_name[:]) + "-[broadcast reply]")
+			init_log("./network/nodelog/broadcast_" + node.Node_name + ".log")
+			log.SetPrefix(node.Node_name + "-[broadcast reply]")
 			log.Println("broadcast reply message")
 
 			node.PBFT.CurrentState = nil
@@ -257,8 +247,8 @@ func (node *Node) broadcastMsg() {
 }
 
 // broadcast，节点广播函数
-func (node *Node) broadcast(msg interface{}, path string) map[[2]byte]error {
-	errorMap := make(map[[2]byte]error) // 存放广播结果
+func (node *Node) broadcast(msg interface{}, path string) map[string]error {
+	errorMap := make(map[string]error) // 存放广播结果
 	// 将消息广播给其他联盟节点
 	for nodeID, url := range node.Node_table {
 		if nodeID != node.Node_name { // 不需要向自己进行广播
@@ -283,8 +273,8 @@ func (node *Node) broadcast(msg interface{}, path string) map[[2]byte]error {
 }
 
 // broadcastReply，节点广播函数
-func (node *Node) broadcastReply(msg interface{}, path string) map[[2]byte]error {
-	errorMap := make(map[[2]byte]error) // 存放广播结果
+func (node *Node) broadcastReply(msg interface{}, path string) map[string]error {
+	errorMap := make(map[string]error) // 存放广播结果
 
 	// 将Reply消息广播给相应的客户端
 	for _, transcation := range node.PBFT.CurrentState.Msg_logs.ReqMsg.Transactions {
@@ -324,7 +314,7 @@ func (node *Node) dispatchMsg() {
 }
 
 func (node *Node) routeMsg(msg interface{}) []error {
-	init_log("./network/nodelog/dispatch_" + string(node.Node_name[:]) + ".log")
+	init_log("./network/nodelog/dispatch_" + node.Node_name + ".log")
 	switch msg := msg.(type) {
 	case *block.Transaction:
 		if len(node.PBFT.MsgBuffer.TranscationMsgs) >= block.Block_Length-1 { // 当区块长度满足要求时
@@ -335,11 +325,11 @@ func (node *Node) routeMsg(msg interface{}) []error {
 			request := block.CreateBlock(msgs)
 			node.PBFT.MsgBuffer.TranscationMsgs = make([]*block.Transaction, 0) // 清空重置
 			node.MsgBlock <- request
-			log.SetPrefix(string(node.Node_name[:]) + "-[block.Transaction]")
+			log.SetPrefix(node.Node_name + "-[block.Transaction]")
 			log.Println("create a new block, and put it into MsgEntrance channel")
 		} else { // 数量不够打包时，直接往MsgBuffer缓冲通道中进行添加
 			node.PBFT.MsgBuffer.TranscationMsgs = append(node.PBFT.MsgBuffer.TranscationMsgs, msg)
-			log.SetPrefix(string(node.Node_name[:]) + "-[block.Transaction]")
+			log.SetPrefix(node.Node_name + "-[block.Transaction]")
 			log.Println("get a transcation message")
 		}
 	// 处理PrePrepare信息
@@ -351,18 +341,18 @@ func (node *Node) routeMsg(msg interface{}) []error {
 			node.PBFT.MsgBuffer.PrePrepareMsgs = make([]*pbft.PrePrepareMsg, 0) // 清空重置
 			node.MsgDelivery <- msgs
 			// 信息发送通道：将msgs中的信息发送给MsgDelivery通道
-			log.SetPrefix(string(node.Node_name[:]) + "-[pbft.PrePrepareMsg]")
+			log.SetPrefix(node.Node_name + "-[pbft.PrePrepareMsg]")
 			log.Println("[put pre-prepare message into MsgDelivery channel]")
 		} else { // 当CurrentState不为nil时，直接往MsgBuffer缓冲通道中进行添加
 			node.PBFT.MsgBuffer.PrePrepareMsgs = append(node.PBFT.MsgBuffer.PrePrepareMsgs, msg)
-			log.SetPrefix(string(node.Node_name[:]) + "-[pbft.PrePrepareMsg]")
+			log.SetPrefix(node.Node_name + "-[pbft.PrePrepareMsg]")
 			log.Println("[get a pre-prepare message, but don't put it into channel]")
 		}
 	// 处理Prepare信息
 	case *pbft.PrepareMsg:
 		if node.PBFT.CurrentState == nil || node.PBFT.CurrentState.Current_stage != pbft.PrePrepared {
 			node.PBFT.MsgBuffer.PrepareMsgs = append(node.PBFT.MsgBuffer.PrepareMsgs, msg)
-			log.SetPrefix(string(node.Node_name[:]) + "-[pbft.PrepareMsg]")
+			log.SetPrefix(node.Node_name + "-[pbft.PrepareMsg]")
 			log.Println("[get a prepare message,but don't put it into channel]")
 		} else {
 			msgs := make([]*pbft.PrepareMsg, len(node.PBFT.MsgBuffer.PrepareMsgs))
@@ -370,14 +360,14 @@ func (node *Node) routeMsg(msg interface{}) []error {
 			msgs = append(msgs, msg)                                      // 附加新到达的消息
 			node.PBFT.MsgBuffer.PrepareMsgs = make([]*pbft.PrepareMsg, 0) // 清空重置
 			node.MsgDelivery <- msgs                                      // 信息发送通道：将msgs中的信息发送给MsgDelivery通道
-			log.SetPrefix(string(node.Node_name[:]) + "-[pbft.PrepareMsg]")
+			log.SetPrefix(node.Node_name + "-[pbft.PrepareMsg]")
 			log.Println("[put prepare message into MsgDelivery channel]")
 		}
 	// 处理CommitMsg信息
 	case *pbft.CommitMsg:
 		if node.PBFT.CurrentState == nil || node.PBFT.CurrentState.Current_stage != pbft.Prepared {
 			node.PBFT.MsgBuffer.CommitMsgs = append(node.PBFT.MsgBuffer.CommitMsgs, msg)
-			log.SetPrefix(string(node.Node_name[:]) + "-[pbft.CommitMsg]")
+			log.SetPrefix(node.Node_name + "-[pbft.CommitMsg]")
 			log.Println("[get a commit message,but don't put it into channel]")
 		} else {
 			msgs := make([]*pbft.CommitMsg, len(node.PBFT.MsgBuffer.CommitMsgs))
@@ -385,7 +375,7 @@ func (node *Node) routeMsg(msg interface{}) []error {
 			msgs = append(msgs, msg)                                    // 附加新到达的消息
 			node.PBFT.MsgBuffer.CommitMsgs = make([]*pbft.CommitMsg, 0) // 清空重置
 			node.MsgDelivery <- msgs                                    // 信息发送通道：将msgs中的信息发送给MsgDelivery通道
-			log.SetPrefix(string(node.Node_name[:]) + "-[pbft.CommitMsg]")
+			log.SetPrefix(node.Node_name + "-[pbft.CommitMsg]")
 			log.Println("[put commit message into MsgDelivery channel]")
 		}
 	}
@@ -443,14 +433,14 @@ func (node *Node) blockMsg() {
 		msg := <-node.MsgBlock // 从调度器通道中获取缓存信息
 		switch msg := msg.(type) {
 		case *block.Block:
-			init_log("./network/nodelog/block_" + string(node.Node_name[:]) + ".log")
+			init_log("./network/nodelog/block_" + node.Node_name + ".log")
 			if node.PBFT.CurrentState == nil { // 如果此时不存在共识
 				node.MsgDelivery <- msg
-				log.SetPrefix(string(node.Node_name[:]) + "-[block.Block]")
+				log.SetPrefix(node.Node_name + "-[block.Block]")
 				log.Println("there no pbft on going, now create a new one and put the new block into MsgDelivery channel")
 			} else {
 				node.MsgEntrance <- msg
-				log.SetPrefix(string(node.Node_name[:]) + "-[block.Block]")
+				log.SetPrefix(node.Node_name + "-[block.Block]")
 				log.Println("exit another pbft,so put the block into MsgEntrance channel agains")
 			}
 		}
@@ -464,9 +454,9 @@ func (node *Node) resolveMsg() {
 		switch msgs := msgs.(type) {
 		// 节点表决决策信息
 		case *block.Block:
-			init_log("./network/nodelog/resolve_" + string(node.Node_name[:]) + ".log")
+			init_log("./network/nodelog/resolve_" + node.Node_name + ".log")
 			if node.PBFT.CurrentState != nil {
-				log.SetPrefix(string(node.Node_name[:]) + "-[block.Block]")
+				log.SetPrefix(node.Node_name + "-[block.Block]")
 				log.Println("get a block,but another pbft consensus is ongoing")
 			} else {
 				node.PBFT = node.NewConsensus() // 初始化一次共识
@@ -474,14 +464,14 @@ func (node *Node) resolveMsg() {
 				if err != nil {
 					fmt.Println(err) // TODO: send err to ErrorChannel
 				}
-				log.SetPrefix(string(node.Node_name[:]) + "-[receive block.Block]")
+				log.SetPrefix(node.Node_name + "-[receive block.Block]")
 				log.Println("Msgdelivery channel get a new block,and create a new consensus")
 
 			}
 		case []*pbft.PrePrepareMsg:
-			init_log("./network/nodelog/resolve_" + string(node.Node_name[:]) + ".log")
+			init_log("./network/nodelog/resolve_" + node.Node_name + ".log")
 			if node.PBFT.CurrentState != nil {
-				log.SetPrefix(string(node.Node_name[:]) + "-[receive PrePrepareMsg]")
+				log.SetPrefix(node.Node_name + "-[receive PrePrepareMsg]")
 				log.Println("get a preprepare,but another pbft consensus is ongoing")
 			} else {
 				node.PBFT = node.NewConsensus()          // 初始化一次共识
@@ -496,29 +486,29 @@ func (node *Node) resolveMsg() {
 						fmt.Println(err) // TODO: send err to ErrorChannel
 					}
 				}
-				log.SetPrefix(string(node.Node_name[:]) + "-[receive PrePrepareMsg]")
+				log.SetPrefix(node.Node_name + "-[receive PrePrepareMsg]")
 				log.Println("Msgdelivery channel get a preprepare, and handle it")
 			}
 		case []*pbft.PrepareMsg:
-			init_log("./network/nodelog/resolve_" + string(node.Node_name[:]) + ".log")
+			init_log("./network/nodelog/resolve_" + node.Node_name + ".log")
 			errs := node.resolvePrepareMsg(msgs)
 			if len(errs) != 0 {
 				for _, err := range errs {
 					fmt.Println(err) // TODO: send err to ErrorChannel
 				}
 			}
-			log.SetPrefix(string(node.Node_name[:]) + "-[receive PrepareMsg]")
+			log.SetPrefix(node.Node_name + "-[receive PrepareMsg]")
 			log.Println("Msgdelivery channel get a prepare message, and handle it")
 
 		case []*pbft.CommitMsg:
-			init_log("./network/nodelog/resolve_" + string(node.Node_name[:]) + ".log")
+			init_log("./network/nodelog/resolve_" + node.Node_name + ".log")
 			errs := node.resolveCommitMsg(msgs)
 			if len(errs) != 0 {
 				for _, err := range errs {
 					fmt.Println(err) // TODO: send err to ErrorChannel
 				}
 			}
-			log.SetPrefix(string(node.Node_name[:]) + "-[receive CommitMsg]")
+			log.SetPrefix(node.Node_name + "-[receive CommitMsg]")
 			log.Println("Msgdelivery channel get a commit message, and handle it")
 
 		}
@@ -582,8 +572,8 @@ func (node *Node) resolvePrePrepare(prePrepareMsg *pbft.PrePrepareMsg) error {
 		return err
 	}
 	if prePareMsg != nil {
-		init_log("./network/nodelog/resolve_" + string(node.Node_name[:]) + ".log")
-		log.SetPrefix(string(node.Node_name[:]) + "-[get prepareMsg]")
+		init_log("./network/nodelog/resolve_" + node.Node_name + ".log")
+		log.SetPrefix(node.Node_name + "-[get prepareMsg]")
 		log.Println("put prepare message into broadcast channel")
 		node.MsgBroadcast <- prePareMsg // 将待广播消息放入通道
 	}
@@ -614,8 +604,8 @@ func (node *Node) resolvePrepare(prepareMsg *pbft.PrepareMsg) error {
 		return err
 	}
 	if commitMsg != nil {
-		init_log("./network/nodelog/resolve_" + string(node.Node_name[:]) + ".log")
-		log.SetPrefix(string(node.Node_name[:]) + "-[get commitMsg]")
+		init_log("./network/nodelog/resolve_" + node.Node_name + ".log")
+		log.SetPrefix(node.Node_name + "-[get commitMsg]")
 		log.Println("put commit message into broadcast channel")
 
 		node.MsgBroadcast <- commitMsg // 将待广播消息放入通道
@@ -647,8 +637,8 @@ func (node *Node) resolveCommit(commitMsg *pbft.CommitMsg) error {
 		return err
 	}
 	if replyMsg != nil {
-		init_log("./network/nodelog/resolve_" + string(node.Node_name[:]) + ".log")
-		log.SetPrefix(string(node.Node_name[:]) + "-[get replyMsg]")
+		init_log("./network/nodelog/resolve_" + node.Node_name + ".log")
+		log.SetPrefix(node.Node_name + "-[get replyMsg]")
 		log.Println("put reply message into broadcast channel")
 
 		node.Committed = append(node.Committed, node.PBFT.CurrentState.CommittedMessage)

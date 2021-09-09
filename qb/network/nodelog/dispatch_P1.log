@@ -1,138 +1,265 @@
-P1-[block.Transaction]2021/09/09 16:36:48.971296 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 16:37:14.019159 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 16:37:14.024030 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[receive PrepareMsg]2021/09/09 16:37:14.024886 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
-P1-[receive CommitMsg]2021/09/09 16:37:14.028015 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
-P1-[block.Transaction]2021/09/09 16:39:44.443061 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 16:39:55.688669 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 16:39:55.693205 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[pbft.PrepareMsg]2021/09/09 16:39:55.695183 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 16:39:55.697196 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 16:39:55.699903 /root/study/github_repository/qb/network/node.go:381: [get a commit message,but don't put it into channel]
-P1-[block.Transaction]2021/09/09 18:53:50.296556 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 18:53:50.479511 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 18:53:50.483748 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[pbft.PrepareMsg]2021/09/09 18:53:50.484606 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[block.Transaction]2021/09/09 18:53:50.661470 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 18:53:50.813185 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 18:53:50.815921 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[receive PrepareMsg]2021/09/09 18:53:50.817027 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
-P1-[receive PrepareMsg]2021/09/09 18:53:50.846325 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
-P1-[block.Transaction]2021/09/09 18:58:59.498818 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 18:58:59.858250 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 18:58:59.862221 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[receive PrepareMsg]2021/09/09 18:58:59.863219 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 18:58:59.881367 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 18:58:59.882111 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
-P1-[block.Transaction]2021/09/09 18:59:46.617203 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:00:12.788121 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:00:12.953567 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:00:12.958182 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[pbft.PrepareMsg]2021/09/09 19:00:12.959309 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 19:00:12.960963 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 19:00:12.962325 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
-P1-[pbft.PrepareMsg]2021/09/09 19:00:12.962345 /root/study/github_repository/qb/network/node.go:366: [get a prepare message,but don't put it into channel]
-P1-[pbft.CommitMsg]2021/09/09 19:00:12.965113 /root/study/github_repository/qb/network/node.go:381: [get a commit message,but don't put it into channel]
-P1-[block.Transaction]2021/09/09 19:00:13.111793 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:00:13.278277 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:00:13.282051 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[receive PrepareMsg]2021/09/09 19:00:13.282981 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 19:00:13.285277 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
-P1-[block.Transaction]2021/09/09 19:11:46.545430 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:11:46.699080 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:11:46.703892 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[pbft.PrepareMsg]2021/09/09 19:11:46.705475 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[block.Transaction]2021/09/09 19:11:46.867982 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:11:47.042506 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:11:47.045870 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[receive PrepareMsg]2021/09/09 19:11:47.046696 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
-P1-[broadcast commit]2021/09/09 19:11:47.073510 /root/study/github_repository/qb/network/node.go:244: broadcast commit message
-P1-[pbft.CommitMsg]2021/09/09 19:11:47.074984 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 19:11:47.406257 /root/study/github_repository/qb/network/node.go:381: [get a commit message,but don't put it into channel]
-P1-[block.Transaction]2021/09/09 19:13:17.489748 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:13:17.654024 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:13:17.658197 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[receive PrepareMsg]2021/09/09 19:13:17.659137 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
-P1-[block.Transaction]2021/09/09 19:13:17.806570 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:13:17.973455 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[block.Transaction]2021/09/09 19:14:36.300947 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:14:36.458965 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:14:36.464796 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[receive PrepareMsg]2021/09/09 19:14:36.465755 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 19:14:36.467092 /root/study/github_repository/qb/network/node.go:366: [get a prepare message,but don't put it into channel]
-P1-[pbft.CommitMsg]2021/09/09 19:14:36.467099 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 19:14:36.468919 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 19:14:36.471400 /root/study/github_repository/qb/network/node.go:381: [get a commit message,but don't put it into channel]
-P1-[block.Transaction]2021/09/09 19:14:36.648959 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:14:36.817181 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:14:36.821050 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[receive PrepareMsg]2021/09/09 19:14:36.821859 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 19:14:36.821873 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 19:14:36.825237 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 19:14:37.051800 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
-P1-[block.Transaction]2021/09/09 19:15:29.490777 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:15:29.647579 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:15:29.653401 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[pbft.PrepareMsg]2021/09/09 19:15:29.656038 /root/study/github_repository/qb/network/node.go:366: [get a prepare message,but don't put it into channel]
-P1-[pbft.CommitMsg]2021/09/09 19:15:29.656226 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 19:15:29.657150 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 19:15:29.659179 /root/study/github_repository/qb/network/node.go:381: [get a commit message,but don't put it into channel]
-P1-[block.Transaction]2021/09/09 19:15:29.814768 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:15:29.977341 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:15:29.980713 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[receive PrepareMsg]2021/09/09 19:15:29.981637 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 19:15:29.983003 /root/study/github_repository/qb/network/node.go:381: [get a commit message,but don't put it into channel]
-P1-commit2021/09/09 19:15:30.013055 /root/study/github_repository/qb/network/node.go:203: receive a commit message
-P1-[receive PrepareMsg]2021/09/09 19:15:30.013849 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
-P1-[block.Transaction]2021/09/09 19:16:46.323070 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:16:46.482879 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:16:46.487905 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[receive PrepareMsg]2021/09/09 19:16:46.488911 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 19:16:46.494487 /root/study/github_repository/qb/network/node.go:381: [get a commit message,but don't put it into channel]
-P1-[block.Transaction]2021/09/09 19:16:46.641477 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:16:46.820662 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:16:46.823918 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[receive PrepareMsg]2021/09/09 19:16:46.824905 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 19:16:46.844850 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
-P1-[block.Transaction]2021/09/09 19:17:07.159029 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:17:07.324743 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:17:07.329035 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[pbft.PrepareMsg]2021/09/09 19:17:07.330549 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[block.Transaction]2021/09/09 19:17:07.504568 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:17:07.672555 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:17:07.675659 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[receive PrepareMsg]2021/09/09 19:17:07.676782 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 19:17:07.703154 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
-P1-[block.Transaction]2021/09/09 19:18:27.400848 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:18:27.570027 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:18:27.573854 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[pbft.PrepareMsg]2021/09/09 19:18:27.601047 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[block.Transaction]2021/09/09 19:18:27.719156 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:18:27.908867 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:18:27.912126 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[receive PrepareMsg]2021/09/09 19:18:27.913276 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 19:18:27.917053 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 19:18:27.917900 /root/study/github_repository/qb/network/node.go:522: Msgdelivery channel get a commit message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 19:18:27.919392 /root/study/github_repository/qb/network/node.go:381: [get a commit message,but don't put it into channel]
-P1-[block.Transaction]2021/09/09 19:39:13.680896 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:39:13.847837 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:39:13.852414 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[pbft.PrepareMsg]2021/09/09 19:39:13.853625 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[block.Transaction]2021/09/09 19:39:14.038601 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:39:14.222322 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:39:14.225806 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[pbft.PrepareMsg]2021/09/09 19:39:14.226787 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[broadcast commit]2021/09/09 19:39:14.260905 /root/study/github_repository/qb/network/node.go:244: broadcast commit message
-P1-[receive PrepareMsg]2021/09/09 19:39:14.261728 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
-P1-[block.Transaction]2021/09/09 19:47:47.152315 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:47:47.317255 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:47:47.322867 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[receive PrepareMsg]2021/09/09 19:47:47.323752 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 19:47:47.327197 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 19:47:47.328314 /root/study/github_repository/qb/network/node.go:389: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 19:47:47.330091 /root/study/github_repository/qb/network/node.go:381: [get a commit message,but don't put it into channel]
-P1-[block.Transaction]2021/09/09 19:47:47.499743 /root/study/github_repository/qb/network/node.go:343: get a transcation message
-P1-[block.Transaction]2021/09/09 19:47:47.677412 /root/study/github_repository/qb/network/node.go:339: create a new block, and put it into MsgEntrance channel
-P1-[pbft.PrepareMsg]2021/09/09 19:47:47.680826 /root/study/github_repository/qb/network/node.go:374: [put prepare message into MsgDelivery channel]
-P1-[receive PrepareMsg]2021/09/09 19:47:47.681713 /root/study/github_repository/qb/network/node.go:511: Msgdelivery channel get a prepare message, and handle it
-P1-commit2021/09/09 19:47:47.697287 /root/study/github_repository/qb/network/node.go:203: receive a commit message
+P1-[block.Transaction]2021/09/09 22:36:07.411171 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:36:07.561122 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:36:07.566362 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[pbft.PrepareMsg]2021/09/09 22:36:07.567443 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[block.Transaction]2021/09/09 22:36:07.725850 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:36:07.890148 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:36:07.893963 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[pbft.PrepareMsg]2021/09/09 22:36:07.896111 /root/study/github_repository-master/qb/network/node.go:356: [get a prepare message,but don't put it into channel]
+P1-[pbft.CommitMsg]2021/09/09 22:36:07.896119 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/09 22:36:07.912935 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/09 22:36:08.283324 /root/study/github_repository-master/qb/network/node.go:371: [get a commit message,but don't put it into channel]
+P1-[block.Transaction]2021/09/09 22:44:05.541011 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:44:05.663668 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:44:05.668024 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[pbft.PrepareMsg]2021/09/09 22:44:05.669559 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/09 22:44:05.672705 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[block.Transaction]2021/09/09 22:44:05.787949 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:44:05.905922 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:44:05.908792 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 22:44:05.909837 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[block.Transaction]2021/09/09 22:44:06.026197 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:44:06.505293 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:44:06.535101 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[pbft.PrepareMsg]2021/09/09 22:44:06.563068 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/09 22:44:06.566292 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[block.Transaction]2021/09/09 22:44:07.108233 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:44:07.228864 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:44:07.231679 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[pbft.PrepareMsg]2021/09/09 22:44:07.232537 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[pbft.PrepareMsg]2021/09/09 22:44:07.235738 /root/study/github_repository-master/qb/network/node.go:356: [get a prepare message,but don't put it into channel]
+P1-[pbft.CommitMsg]2021/09/09 22:44:07.237445 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/09 22:44:07.238535 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/09 22:44:07.370834 /root/study/github_repository-master/qb/network/node.go:371: [get a commit message,but don't put it into channel]
+P1-[block.Transaction]2021/09/09 22:50:03.995935 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:50:04.136313 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:50:04.140695 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[pbft.PrepareMsg]2021/09/09 22:50:04.142264 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[block.Transaction]2021/09/09 22:50:04.256580 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:50:04.373110 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:50:04.376302 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 22:50:04.377069 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[block.Transaction]2021/09/09 22:50:04.492771 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:50:04.609661 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:50:04.627734 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[pbft.PrepareMsg]2021/09/09 22:50:04.647988 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/09 22:50:04.665926 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[pbft.PrepareMsg]2021/09/09 22:50:04.667231 /root/study/github_repository-master/qb/network/node.go:356: [get a prepare message,but don't put it into channel]
+P1-[pbft.CommitMsg]2021/09/09 22:50:04.668945 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[block.Transaction]2021/09/09 22:50:04.729430 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:50:04.849990 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:50:04.854606 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[block.Transaction]2021/09/09 22:50:04.968380 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:50:05.089028 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[block.Transaction]2021/09/09 22:50:05.207881 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:50:05.326381 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[block.Transaction]2021/09/09 22:50:05.444891 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:50:05.562838 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[block.Transaction]2021/09/09 22:50:05.682097 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:50:05.800946 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[block.Transaction]2021/09/09 22:50:05.922176 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:50:06.047798 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[block.Transaction]2021/09/09 22:50:06.170132 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:50:06.290809 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:50:06.353267 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/09 22:50:06.355314 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[block.Transaction]2021/09/09 22:53:13.826638 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:53:13.945128 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:53:14.063705 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:53:14.183986 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:53:14.302168 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:53:14.307753 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 22:53:14.309326 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[block.Transaction]2021/09/09 22:53:14.424646 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:53:14.542860 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:53:14.685982 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:53:14.784669 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:53:14.903387 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:53:14.908348 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 22:53:14.911591 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[block.Transaction]2021/09/09 22:53:15.026400 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:53:15.146204 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:53:15.262377 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:53:15.381178 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:53:15.500981 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:53:15.505665 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 22:53:15.507337 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[block.Transaction]2021/09/09 22:53:15.622531 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:53:15.742709 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:53:15.862241 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:53:15.981546 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:53:16.100767 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:53:16.104953 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 22:53:16.106728 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[pbft.CommitMsg]2021/09/09 22:53:16.108909 /root/study/github_repository-master/qb/network/node.go:371: [get a commit message,but don't put it into channel]
+P1-[pbft.CommitMsg]2021/09/09 22:53:16.109418 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[pbft.PrepareMsg]2021/09/09 22:53:16.174140 /root/study/github_repository-master/qb/network/node.go:356: [get a prepare message,but don't put it into channel]
+P1-[pbft.CommitMsg]2021/09/09 22:53:16.176488 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[block.Transaction]2021/09/09 22:58:12.930666 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:13.055439 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:13.172311 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:13.291387 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:13.412415 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:58:13.418183 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 22:58:13.419886 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/09 22:58:13.423689 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[block.Transaction]2021/09/09 22:58:13.537996 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:13.660299 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:13.806382 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:13.906942 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:14.027281 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:58:14.031828 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 22:58:14.035183 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[block.Transaction]2021/09/09 22:58:14.149580 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:14.268845 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:14.385961 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:14.504061 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:14.622077 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:58:14.626712 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 22:58:14.628368 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[block.Transaction]2021/09/09 22:58:14.741543 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:14.861279 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:14.981367 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:15.099546 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:15.217333 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:58:15.221865 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 22:58:15.223525 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[pbft.CommitMsg]2021/09/09 22:58:15.243690 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[receive CommitMsg]2021/09/09 22:58:15.245225 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
+P1-[pbft.CommitMsg]2021/09/09 22:58:15.248324 /root/study/github_repository-master/qb/network/node.go:371: [get a commit message,but don't put it into channel]
+P1-[block.Transaction]2021/09/09 22:58:49.154314 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:49.279585 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:49.395678 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:49.511723 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:49.628490 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:58:49.635508 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 22:58:49.637160 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[pbft.CommitMsg]2021/09/09 22:58:49.644255 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[block.Transaction]2021/09/09 22:58:49.750360 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:49.868232 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:50.005917 /root/study/github_repository-master/qb/network/node.go:151: receive a transcation message
+P1-[block.Transaction]2021/09/09 22:58:50.005920 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:50.102401 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:50.221295 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:58:50.226334 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 22:58:50.229873 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/09 22:58:50.234954 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
+P1-[block.Transaction]2021/09/09 22:58:50.342588 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:50.462754 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:50.582679 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:50.700454 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:50.819645 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:58:50.824040 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/09 22:58:50.827234 /root/study/github_repository-master/qb/network/node.go:371: [get a commit message,but don't put it into channel]
+P1-[block.Transaction]2021/09/09 22:58:50.939802 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[pbft.PrepareMsg]2021/09/09 22:58:51.026078 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/09 22:58:51.028742 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[block.Transaction]2021/09/09 22:58:51.057206 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[pbft.PrepareMsg]2021/09/09 22:58:51.144490 /root/study/github_repository-master/qb/network/node.go:356: [get a prepare message,but don't put it into channel]
+P1-[pbft.CommitMsg]2021/09/09 22:58:51.147694 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[block.Transaction]2021/09/09 22:58:51.174620 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:51.296040 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:58:51.416728 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:58:51.422276 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[pbft.PrepareMsg]2021/09/09 22:58:53.028561 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/09 22:58:53.031728 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[block.Transaction]2021/09/09 22:59:27.793516 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:59:27.917245 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:59:28.032052 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:59:28.148803 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:59:28.265486 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:59:28.271010 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 22:59:28.272805 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[block.Transaction]2021/09/09 22:59:28.388298 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:59:28.504472 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:59:28.634436 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:59:28.741819 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:59:28.859792 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:59:28.864763 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 22:59:28.866381 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[block.Transaction]2021/09/09 22:59:28.981223 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:59:29.100224 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:59:29.217324 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:59:29.335090 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:59:29.454760 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:59:29.459689 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 22:59:29.461334 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[block.Transaction]2021/09/09 22:59:29.574625 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:59:29.691343 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:59:29.809614 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 22:59:29.929306 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[pbft.CommitMsg]2021/09/09 22:59:30.019513 /root/study/github_repository-master/qb/network/node.go:371: [get a commit message,but don't put it into channel]
+P1-[block.Transaction]2021/09/09 22:59:30.048376 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 22:59:30.067975 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 22:59:30.069649 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[pbft.CommitMsg]2021/09/09 22:59:30.071430 /root/study/github_repository-master/qb/network/node.go:371: [get a commit message,but don't put it into channel]
+P1-[pbft.CommitMsg]2021/09/09 22:59:30.100586 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[pbft.PrepareMsg]2021/09/09 22:59:31.022955 /root/study/github_repository-master/qb/network/node.go:356: [get a prepare message,but don't put it into channel]
+P1-[block.Transaction]2021/09/09 23:02:10.045138 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:02:10.166599 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:02:10.281645 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:02:10.397630 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:02:10.516707 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 23:02:10.522844 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 23:02:10.524548 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/09 23:02:10.528641 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[block.Transaction]2021/09/09 23:02:10.664518 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:02:10.783631 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:02:10.926504 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:02:11.022587 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:02:11.140202 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 23:02:11.145968 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 23:02:11.147859 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[block.Transaction]2021/09/09 23:02:11.262508 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:02:11.379152 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:02:11.496683 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:02:11.613011 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:02:11.730560 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 23:02:11.735967 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[block.Transaction]2021/09/09 23:02:11.851645 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:02:11.970041 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:02:12.086826 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:02:12.204828 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:02:12.323087 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 23:02:12.327473 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 23:02:12.330337 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[pbft.CommitMsg]2021/09/09 23:02:12.331156 /root/study/github_repository-master/qb/network/node.go:371: [get a commit message,but don't put it into channel]
+P1-[pbft.CommitMsg]2021/09/09 23:02:12.350071 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[receive CommitMsg]2021/09/09 23:02:12.351813 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
+P1-[pbft.PrepareMsg]2021/09/09 23:02:12.711194 /root/study/github_repository-master/qb/network/node.go:356: [get a prepare message,but don't put it into channel]
+P1-[block.Transaction]2021/09/09 23:09:18.501272 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:09:18.619155 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:09:18.736016 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:09:18.852160 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:09:18.969687 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 23:09:18.975703 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 23:09:18.978084 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[pbft.CommitMsg]2021/09/09 23:09:19.021709 /root/study/github_repository-master/qb/network/node.go:371: [get a commit message,but don't put it into channel]
+P1-[block.Transaction]2021/09/09 23:09:19.091569 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:09:19.210756 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:09:19.361922 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:09:19.450982 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:09:19.568958 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 23:09:19.573737 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 23:09:19.575390 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[pbft.CommitMsg]2021/09/09 23:09:19.577031 /root/study/github_repository-master/qb/network/node.go:371: [get a commit message,but don't put it into channel]
+P1-[pbft.CommitMsg]2021/09/09 23:09:19.577176 /root/study/github_repository-master/qb/network/node.go:371: [get a commit message,but don't put it into channel]
+P1-[block.Transaction]2021/09/09 23:09:19.689081 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:09:19.812002 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:09:19.930943 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:09:20.047436 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[pbft.PrepareMsg]2021/09/09 23:09:20.054658 /root/study/github_repository-master/qb/network/node.go:356: [get a prepare message,but don't put it into channel]
+P1-[block.Transaction]2021/09/09 23:09:20.170481 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 23:09:20.175665 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 23:09:20.177162 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[pbft.CommitMsg]2021/09/09 23:09:20.180252 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
+P1-[receive CommitMsg]2021/09/09 23:09:20.181902 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
+P1-[block.Transaction]2021/09/09 23:09:20.292563 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:09:20.411967 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:09:20.533145 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:09:20.656008 /root/study/github_repository-master/qb/network/node.go:333: get a transcation message
+P1-[block.Transaction]2021/09/09 23:09:20.776542 /root/study/github_repository-master/qb/network/node.go:329: create a new block, and put it into MsgEntrance channel
+P1-[pbft.PrepareMsg]2021/09/09 23:09:20.781543 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/09 23:09:20.783251 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
+P1-[pbft.CommitMsg]2021/09/09 23:09:20.785007 /root/study/github_repository-master/qb/network/node.go:371: [get a commit message,but don't put it into channel]
+P1-[pbft.CommitMsg]2021/09/09 23:09:20.785139 /root/study/github_repository-master/qb/network/node.go:371: [get a commit message,but don't put it into channel]

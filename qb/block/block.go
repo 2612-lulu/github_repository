@@ -23,7 +23,7 @@ type Block struct {
 // 用于共识的交易结构
 type Transaction struct {
 	Time_stamp           int64                      // 时间戳，发出请求时客户端本地时钟的值
-	Name                 [2]byte                    // 客户端名称
+	Name                 string                     // 客户端名称
 	TransactionOperation                            // 请求的具体操作
 	Sign_client          uss.USSToeplitzHashSignMsg // 客户端对request消息的签名
 }
@@ -34,13 +34,13 @@ type TransactionOperation struct {
 	Digest_m            []byte // 消息m的摘要值
 }
 
-const Block_Length = 2
+const Block_Length = 5
 
 func (obj *Transaction) SignMessageEncode() ([]byte, error) {
 	buf := new(bytes.Buffer)
 
 	binary.Write(buf, binary.LittleEndian, obj.Time_stamp)
-	binary.Write(buf, binary.LittleEndian, obj.Name)
+	binary.Write(buf, binary.LittleEndian, []byte(obj.Name))
 	binary.Write(buf, binary.LittleEndian, obj.Transaction_message)
 	binary.Write(buf, binary.LittleEndian, obj.Digest_m)
 	return buf.Bytes(), nil

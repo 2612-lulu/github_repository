@@ -2,19 +2,20 @@ package main
 
 import (
 	"fmt"
+	"testing"
+	"time"
+
 	"qb/block"
 	"qb/mylog"
 	"qb/pbft"
 	"qb/qbtools"
 	"qb/qkdserv"
 	"qb/uss"
-	"testing"
-	"time"
 )
 
 func TestPBFTConsensus(t *testing.T) {
 	qkdserv.QKD_sign_random_matrix_pool = make(map[qkdserv.QKDSignMatrixIndex]qkdserv.QKDSignRandomsMatrix)
-	qkdserv.Node_name = [2]byte{'C', '1'}
+	qkdserv.Node_name = "C1"
 
 	// 定义State消息
 	state := pbft.CreateState(1, -1)
@@ -55,7 +56,7 @@ func TestPBFTConsensus(t *testing.T) {
 	//log.LogStage("Request", false)
 
 	fmt.Println("-----------------------【pbft共识】PrePrepare-------------------------------------------------")
-	qkdserv.Node_name = [2]byte{'P', '1'}
+	qkdserv.Node_name = "P1"
 	preprepare, err := state.PrePrePare(&request)
 	if err == nil {
 		mylog.LogStage("	Request", true)
@@ -63,38 +64,38 @@ func TestPBFTConsensus(t *testing.T) {
 		mylog.LogStage("	Pre-prepare", false)
 	}
 	fmt.Println("-----------------------【pbft共识】Prepare----------------------------------------------------")
-	qkdserv.Node_name = [2]byte{'P', '2'}
+	qkdserv.Node_name = "P2"
 	prepare, err := state.PrePare(preprepare)
 	if err == nil {
 		mylog.LogStage("	Pre-prepare", true)
 		mylog.LogStage("	prepare", false)
 	}
-	qkdserv.Node_name = [2]byte{'P', '3'}
+	qkdserv.Node_name = "P3"
 	_, err = state.PrePare(preprepare)
 	if err == nil {
 		mylog.LogStage("	Pre-prepare", true)
 		mylog.LogStage("	prepare", false)
 	}
-	qkdserv.Node_name = [2]byte{'P', '4'}
+	qkdserv.Node_name = "P4"
 	_, err = state.PrePare(preprepare)
 	if err == nil {
 		mylog.LogStage("	Pre-prepare", true)
 		mylog.LogStage("	prepare", false)
 	}
 	fmt.Println("-----------------------【pbft共识】Commit-----------------------------------------------------")
-	qkdserv.Node_name = [2]byte{'P', '3'}
+	qkdserv.Node_name = "P3"
 	commit, _ := state.Commit(prepare)
 	if commit != nil {
 		mylog.LogStage("	Prepare", true)
 		mylog.LogStage("	Commit", false)
 	}
-	qkdserv.Node_name = [2]byte{'P', '4'}
+	qkdserv.Node_name = "P4"
 	_, err = state.Commit(prepare)
 	if err == nil {
 		mylog.LogStage("	Prepare", true)
 		mylog.LogStage("	Commit", false)
 	}
-	qkdserv.Node_name = [2]byte{'P', '1'}
+	qkdserv.Node_name = "P1"
 	_, err = state.Commit(prepare)
 	if err == nil {
 		mylog.LogStage("	Prepare", true)
@@ -102,7 +103,7 @@ func TestPBFTConsensus(t *testing.T) {
 	}
 
 	fmt.Println("-----------------------【pbft共识】Reply------------------------------------------------------")
-	qkdserv.Node_name = [2]byte{'P', '1'}
+	qkdserv.Node_name = "P1"
 	reply, _ := state.Reply(commit)
 	if reply != nil {
 		mylog.LogStage("	Commit", true)
