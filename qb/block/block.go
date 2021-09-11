@@ -6,9 +6,13 @@ package block
 import (
 	"bytes"
 	"encoding/binary"
-	"qb/uss"
 	"time"
+
+	"qb/uss"
 )
+
+// 区块包含的最小交易数量
+const BLOCK_LENGTH = 5
 
 // 区块结构
 type Block struct {
@@ -28,14 +32,15 @@ type Transaction struct {
 	Sign_client          uss.USSToeplitzHashSignMsg // 客户端对request消息的签名
 }
 
-// 交易信息结构
+// 交易内容
 type TransactionOperation struct {
 	Transaction_message []byte // 消息
 	Digest_m            []byte // 消息m的摘要值
 }
 
-const Block_Length = 5
-
+// Transaction.signMessageEncode,对交易消息编码，形成待签名消息
+// 参数：交易消息Transaction
+// 返回值：待签名消息[]byte
 func (obj *Transaction) SignMessageEncode() ([]byte, error) {
 	buf := new(bytes.Buffer)
 
@@ -46,6 +51,9 @@ func (obj *Transaction) SignMessageEncode() ([]byte, error) {
 	return buf.Bytes(), nil
 }
 
+// CreateBlock，生成区块
+// 参数：交易信息数组[]*Transaction
+// 返回值：区块*Block
 func CreateBlock(transcation []*Transaction) *Block {
 
 	block := Block{

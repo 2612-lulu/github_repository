@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"qb/qbtools"
 	"testing"
+
+	"qb/qbtools"
 )
 
 func TestInitConfig(t *testing.T) {

@@ -14,8 +14,6 @@ import (
 	"strings"
 )
 
-const NODE_NAME_LENGTH = 3
-
 // GenRandomWithPRF,生成随机数（密钥）：根据种子密钥和签名索引产生符合要求的随机数
 // 参数：种子密钥[]byte，签名索引QKDSignMatrixIndex，每行随机数个数uint32，随机数的单位字节长度uint32
 // 返回值：随机数字节长度uint32，随机数[]byte
@@ -44,6 +42,9 @@ func GenRandomWithPRF(key []byte, sign_dev_id, sign_task_sn [16]byte, random_cou
 	return randoms_len, signrandoms
 }
 
+// GetNodeIDTable，获取节点设备号
+// 参数：节点名称string
+// 返回值：节点设备号[16]byte
 func GetNodeIDTable(nodeName string) [16]byte {
 	NodeIDTable := make(map[string][16]byte)
 	NodeTable := InitConfig("qbtools/config/id_table")
@@ -59,7 +60,9 @@ func GetNodeIDTable(nodeName string) [16]byte {
 	return NodeIDTable[nodeName]
 }
 
-// digest，摘要函数
+// Digest，摘要函数
+// 参数：消息[]byte
+// 返回值：摘要值[]byte
 func Digest(m []byte) []byte {
 	h := sha256.New()
 	h.Write(m)
@@ -67,7 +70,9 @@ func Digest(m []byte) []byte {
 	return digest_m
 }
 
-//读取key=value类型的配置文件
+// InitConfig,读取key=value类型的配置文件
+// 参数：配置文件存放路径string
+// 返回值：节点/客户端配置信息map[string]string
 func InitConfig(path string) map[string]string {
 	config := make(map[string]string)
 
@@ -105,6 +110,9 @@ func InitConfig(path string) map[string]string {
 	return config
 }
 
+// Init_log,初始化log日志存放文件
+// 参数：日志存放路径string
+// 返回值：初始化处理错误error，初始化成功返回nil
 func Init_log(path string) error {
 	logFile, err := os.OpenFile(path, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644) //【如果已经存在，则在尾部添加写】
 	if err != nil {
@@ -114,4 +122,15 @@ func Init_log(path string) error {
 	log.SetOutput(logFile)
 	log.SetFlags(log.Llongfile | log.Lmicroseconds | log.Ldate)
 	return nil
+}
+
+// LogStage，在终端打印共识处理过程
+// 参数：共识过程string，该共识过程处理情况bool
+// 返回值：无
+func LogStage(stage string, isDone bool) {
+	if isDone {
+		fmt.Printf("[STAGE-DONE] %s\n", stage)
+	} else {
+		fmt.Printf("[STAGE-BEGIN] %s\n", stage)
+	}
 }

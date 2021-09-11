@@ -11,7 +11,7 @@ echo "run client C4!"
 gnome-terminal  -t "C4" -x bash -c "./qbrun.exe C4 1200fromC4toC1;exec bash"
 echo "run client C5!"
 gnome-terminal  -t "C5" -x bash -c "./qbrun.exe C5 1200fromC5toC1;exec bash"
-sleep 1
+#sleep 1
 
 echo "run client C6!"
 gnome-terminal  -t "C6" -x bash -c "./qbrun.exe C6 1200fromC6toC1;exec bash"
@@ -23,7 +23,7 @@ echo "run client C9!"
 gnome-terminal  -t "C9" -x bash -c "./qbrun.exe C9 1200fromC9toC2;exec bash"
 echo "run client C10!"
 gnome-terminal  -t "C10" -x bash -c "./qbrun.exe C10 1200fromC10toC1;exec bash"
-sleep 1
+#sleep 1
 
 echo "run client C11!"
 gnome-terminal  -t "C11" -x bash -c "./qbrun.exe C11 1200fromC11toC2;exec bash"
@@ -35,7 +35,7 @@ echo "run client C14!"
 gnome-terminal  -t "C14" -x bash -c "./qbrun.exe C14 1200fromC14toC1;exec bash"
 echo "run client C15!"
 gnome-terminal  -t "C15" -x bash -c "./qbrun.exe C15 1200fromC15toC1;exec bash"
-sleep 1
+#sleep 1
 
 echo "run client C16!"
 gnome-terminal  -t "C16" -x bash -c "./qbrun.exe C16 1200fromC16toC1;exec bash"

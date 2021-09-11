@@ -5,10 +5,7 @@ package pbft
 
 import (
 	"bytes"
-	"encoding/binary"
 	"encoding/json"
-	"errors"
-	"fmt"
 	"log"
 	"strconv"
 	"time"
@@ -19,14 +16,16 @@ import (
 	"qb/uss"
 )
 
+// pbft状态标识
 type State struct {
-	View                 int64 // 视图号
-	Msg_logs             MsgLogs
-	Last_sequence_number int64 // 上次共识序列号
-	Current_stage        Stage
+	View                 int64      // 视图号
+	Msg_logs             MsgLogs    // 缓存数据
+	Last_sequence_number int64      // 上次共识序列号
+	Current_stage        Stage      // 当前状态
 	CommittedMessage     *CommitMsg // 达成共识的commit消息
 }
 
+// pbft缓存数据，用于存放pbft过程中的各类消息
 type MsgLogs struct {
 	ReqMsg        *block.Block          // 存放request消息
 	PreparedMsgs  map[int64]*PrepareMsg // 存放prepared消息
@@ -34,12 +33,9 @@ type MsgLogs struct {
 	ReplyMsgs     map[int64]*ReplyMsg   // 存放Reply消息
 }
 
-// N=3F+1，本程序中N=4，即F=1
-const F = 1 //F，容忍无效或者恶意节点数
-const N = 4
-
 type Stage int
 
+// 状态标识
 const (
 	Idle        Stage = iota // Idle=0，节点已成功创建，但共识过程尚未启动。
 	PrePrepared              // PrePrepared=1，RequestMsg已成功处理。节点已准备好进入prepare阶段。
@@ -47,9 +43,11 @@ const (
 	Committed                // Committed=3，Same with `committed-local` stage explained in the original paper.
 )
 
-// CreateState，如果不存在lastSequenceNumber，则lastSequenceNumber=-1
+// CreateState，创建共识状态。如果不存在lastSequenceNumber，则lastSequenceNumber=-1
+// 参数：视图号int64，上次共识的序列号int64
+// 返回值：pbft状态State
 func CreateState(view int64, lastSequenceNumber int64) *State {
-	qbtools.Init_log("./pbft/error_" + qkdserv.Node_name + ".log")
+	qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
 	log.SetPrefix("【START A NEW PBFT】")
 	log.Println("start a new pbft")
 	return &State{
@@ -66,7 +64,9 @@ func CreateState(view int64, lastSequenceNumber int64) *State {
 	}
 }
 
-// PrePrePare，进入共识，由主节点进行消息处理：客户端Request——>主节点PrePrePare——>从节点
+// State.PrePrePare，进入共识，由主节点进行消息处理：客户端Request——>主节点PrePrePare——>从节点
+// 参数：请求消息*block.Block
+// 返回值：预准备消息*PrePrepareMsg，处理错误error
 func (state *State) PrePrePare(request *block.Block) (*PrePrepareMsg, error) {
 	state.Msg_logs.ReqMsg = request // 记录request消息到state的log中
 
@@ -102,41 +102,45 @@ func (state *State) PrePrePare(request *block.Block) (*PrePrepareMsg, error) {
 		state.Current_stage = PrePrepared
 		return preprepare, nil
 	} else {
-		fmt.Println("failing to verify request message")
+		qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Pre-prepare]")
+		log.Println("failing to verify request message")
 		return nil, nil
 	}
 }
 
-// VerifyRequest
+// State.VerifyRequest，验证请求消息中每条交易信息的正确性
+// 参数：交易消息[]*block.Transaction
+// 返回值：验证结果bool
 func (state *State) verifyRequest(request []*block.Transaction) bool {
 	//TODO:验证每条交易信息的签名
 	verify_num := 0
 	for _, reqMsg := range request {
-		if uss.VerifySign(reqMsg.Sign_client) {
+		if uss.VerifySign(reqMsg.Sign_client) { // 验证签名正确性
 			verify_num++
 		}
 	}
 	if verify_num == len(request) {
 		return true
 	} else {
-		fmt.Println("	pbft-PrePrepare error:The verify of client sign is false!!!")
+		qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Pre-prepare]")
+		log.Println("The verify of client sign is false!!!")
 		return false
 	}
 }
 
-func (obj *PrePrepareMsg) signMessageEncode() []byte {
-	buf := new(bytes.Buffer)
-	binary.Write(buf, binary.LittleEndian, obj.View)
-	binary.Write(buf, binary.LittleEndian, obj.Sequence_number)
-	binary.Write(buf, binary.LittleEndian, obj.Digest_m)
-	return buf.Bytes()
-}
-
-//  PrePare，进入准备阶段，从节点处理pre-prepare消息：从节点PrePrepareMsg——>各节点PrepareMsg
+// State.PrePare，进入准备阶段，从节点处理pre-prepare消息：从节点PrePrepareMsg——>各节点PrepareMsg
+// 参数：预准备消息*PrePrepareMsg
+// 返回值：准备消息*PrepareMsg，处理错误error
 func (state *State) PrePare(preprepare *PrePrepareMsg) (*PrepareMsg, error) {
 	state.Msg_logs.ReqMsg = &preprepare.Request // 将request消息提取出来记录到state中
 	if !state.verifyPrePrepareMsg(preprepare) { // 校验受到的pre-prepare是否通过
-		return nil, errors.New("pre-prepare message is corrupted")
+		//return nil, errors.New("pre-prepare message is corrupted")
+		qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Prepare]")
+		log.Println("pre-prepare message is corrupted")
+		return nil, nil
 	} else {
 		i, _ := strconv.ParseInt(qkdserv.Node_name[1:], 10, 64) // 获取节点编号
 		prepare := &PrepareMsg{                                 // 定义一个prepare消息
@@ -167,12 +171,14 @@ func (state *State) PrePare(preprepare *PrePrepareMsg) (*PrepareMsg, error) {
 	}
 }
 
-// VerifyPrePrepareMsg,校验受到的pre-prepare消息
+// State.VerifyPrePrepareMsg,验证收到的pre-prepare消息的正确性
+// 参数：预准备消息*PrePrepareMsg
+// 返回值：验证结果bool
 func (state *State) verifyPrePrepareMsg(preprepare *PrePrepareMsg) bool {
 	var result bool
 	msg, _ := json.Marshal(preprepare.Request)
 	digest := qbtools.Digest(msg) // 计算消息的摘要值
-	qbtools.Init_log("./pbft/error_" + qkdserv.Node_name + ".log")
+	qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
 	// 判断是否符合校验条件
 	if state.View != preprepare.View {
 		log.SetPrefix("[Prepare error]")
@@ -204,20 +210,16 @@ func (state *State) verifyPrePrepareMsg(preprepare *PrePrepareMsg) bool {
 	return result
 }
 
-func (obj *PrepareMsg) signMessageEncode() ([]byte, error) {
-	buf := new(bytes.Buffer)
-
-	binary.Write(buf, binary.LittleEndian, obj.View)
-	binary.Write(buf, binary.LittleEndian, obj.Sequence_number)
-	binary.Write(buf, binary.LittleEndian, obj.Digest_m)
-	binary.Write(buf, binary.LittleEndian, obj.Node_i)
-	return buf.Bytes(), nil
-}
-
-//  Commit，所有联盟节点处理收到的prepare消息：各节点prepare——>其余节点commit
+//  State.Commit，所有联盟节点处理收到的prepare消息：各节点prepare——>其余节点commit
+// 参数：准备消息*PrepareMsg
+// 返回值：提交消息*CommitMsg，处理错误error
 func (state *State) Commit(prepare *PrepareMsg) (*CommitMsg, error) {
 	if !state.verifyPrepareMsg(prepare) { // 校验收到的prepare消息
-		return nil, errors.New("prepare message is corrupted")
+		//return nil, errors.New("prepare message is corrupted")
+		qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Commit]")
+		log.Println("prepare message is corrupted")
+		return nil, nil
 	} else if state.prepared() { // 检查是否收到2f+1（含本节点产生的prepare）个通过校验的prepare消息
 		i, _ := strconv.ParseInt(qkdserv.Node_name[1:], 10, 64)
 		_, ok := state.Msg_logs.CommittedMsgs[i] // 检查是否发送过commit消息
@@ -256,12 +258,14 @@ func (state *State) Commit(prepare *PrepareMsg) (*CommitMsg, error) {
 	return nil, nil
 }
 
-// VerifyPrepareMsg，校验受到的prepare消息
+// State.VerifyPrepareMsg，验证收到的prepare消息的正确性
+// 参数：准备消息*PrepareMsg
+// 返回值：验证结果bool
 func (state *State) verifyPrepareMsg(prepare *PrepareMsg) bool {
 	var result bool
 	msg, _ := json.Marshal(state.Msg_logs.ReqMsg)
 	digest := qbtools.Digest(msg) // 计算消息的摘要值
-	qbtools.Init_log("./pbft/error_" + qkdserv.Node_name + ".log")
+	qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
 	if state.View != prepare.View {
 		log.SetPrefix("[Commit]")
 		log.Println("the view of prepare message is wrong!")
@@ -295,37 +299,37 @@ func (state *State) verifyPrepareMsg(prepare *PrepareMsg) bool {
 	return result
 }
 
+// State.prepared,验证收到的prepare消息是否符合要求
+// 参数：共识状态state
+// 返回值：验证结果bool
 func (state *State) prepared() bool {
-	qbtools.Init_log("./pbft/error_" + qkdserv.Node_name + ".log")
+
 	if state.Msg_logs.ReqMsg == nil {
+		qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
 		log.SetPrefix("[Commit error]")
 		log.Println("request of state is nil")
 		return false
 	}
 
 	if len(state.Msg_logs.PreparedMsgs) < 2*F {
+		//qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
 		//log.SetPrefix("[Commit error]")
 		//log.Println("didn't receive 2*f prepared message,please wait")
 		return false
 	}
-
 	return true
 }
 
-func (obj *CommitMsg) signMessageEncode() ([]byte, error) {
-	buf := new(bytes.Buffer)
-
-	binary.Write(buf, binary.LittleEndian, obj.View)
-	binary.Write(buf, binary.LittleEndian, obj.Sequence_number)
-	binary.Write(buf, binary.LittleEndian, obj.Digest_m)
-	binary.Write(buf, binary.LittleEndian, obj.Node_i)
-	return buf.Bytes(), nil
-}
-
-//  ReplyMsg，获取reply消息，当收到2f+1个满足要求的commit时，调用此函数
+//  State.ReplyMsg，获取reply消息，当收到2f+1个满足要求的commit时，调用此函数
+// 参数：提交消息*CommitMsg
+// 返回值：应答消息*ReplyMsg，处理错误error
 func (state *State) Reply(commit *CommitMsg) (*ReplyMsg, error) {
 	if !state.verifyCommitMsg(commit) {
-		return nil, errors.New("commit message is corrupted")
+		//return nil, errors.New("commit message is corrupted")
+		qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Reply]")
+		log.Println("commit message is corrupted")
+		return nil, nil
 	} else if state.committed() {
 		i, _ := strconv.ParseInt(qkdserv.Node_name[1:], 10, 64)
 		_, ok := state.Msg_logs.ReplyMsgs[i] // 检查是否发送过reply消息
@@ -366,11 +370,14 @@ func (state *State) Reply(commit *CommitMsg) (*ReplyMsg, error) {
 	}
 }
 
+// State.VerifyCommitMsg，验证收到的commit消息的正确性
+// 参数：提交消息*CommitMsg
+// 返回值：验证结果bool
 func (state *State) verifyCommitMsg(commit *CommitMsg) bool {
 	var result bool
 	msg, _ := json.Marshal(state.Msg_logs.ReqMsg)
 	digest := qbtools.Digest(msg) // 计算消息的摘要值
-	qbtools.Init_log("./pbft/error_" + qkdserv.Node_name + ".log")
+	qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
 	if state.View != commit.View {
 		log.SetPrefix("[Reply error]")
 		log.Println("the view is wrong!")
@@ -402,27 +409,21 @@ func (state *State) verifyCommitMsg(commit *CommitMsg) bool {
 	return result
 }
 
+// State.commited,验证收到的commit消息是否符合要求
+// 参数：共识状态state
+// 返回值：验证结果bool
 func (state *State) committed() bool {
 	if !state.prepared() { // 如果prepare投票未通过，则不能进入commit
+		qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
 		log.SetPrefix("[Reply error]")
 		log.Println("didn't prepared!")
 		return false
 	}
 	if len(state.Msg_logs.CommittedMsgs) < 2*F+1 { // commit通过的条件是受到2f+1个校验通过的commit,包括自身节点
+		//qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
 		//log.SetPrefix("[Reply error]")
 		//log.Println("didn't receive 2*f committed message,please wait!")
 		return false
 	}
 	return true
-}
-
-func (obj *ReplyMsg) signMessageEncode() ([]byte, error) {
-	buf := new(bytes.Buffer)
-
-	binary.Write(buf, binary.LittleEndian, obj.View)
-	binary.Write(buf, binary.LittleEndian, obj.Time_stamp)
-	binary.Write(buf, binary.LittleEndian, obj.Client_name)
-	binary.Write(buf, binary.LittleEndian, obj.Node_i)
-	binary.Write(buf, binary.LittleEndian, obj.Result)
-	return buf.Bytes(), nil
 }

@@ -1,9 +1,15 @@
 package pbft
 
 import (
+	"bytes"
+	"encoding/binary"
+
 	"qb/block"
 	"qb/uss"
 )
+
+const F = 1       // F，容忍无效或者恶意节点数
+const N = 3*F + 1 // N=3F+1，本程序中N=4
 
 // Request消息中Operation的具体参数
 type RequestOperation struct {
@@ -47,4 +53,55 @@ type CommitMsg struct {
 	Digest_m        []byte                     // 客户端请求消息中m的摘要
 	Node_i          int64                      // 当前节点编号
 	Sign_i          uss.USSToeplitzHashSignMsg // 当前从节点i对Commit消息的签名
+}
+
+// PrePrepareMsg.signMessageEncode,对预准备消息编码，形成待签名消息
+// 参数：预准备消息PrePrepareMsg
+// 返回值：待签名消息[]byte
+func (obj *PrePrepareMsg) signMessageEncode() []byte {
+	buf := new(bytes.Buffer)
+	binary.Write(buf, binary.LittleEndian, obj.View)
+	binary.Write(buf, binary.LittleEndian, obj.Sequence_number)
+	binary.Write(buf, binary.LittleEndian, obj.Digest_m)
+	return buf.Bytes()
+}
+
+// PrepareMsg.signMessageEncode,对准备消息编码，形成待签名消息
+// 参数：准备消息PrepareMsg
+// 返回值：待签名消息[]byte
+func (obj *PrepareMsg) signMessageEncode() ([]byte, error) {
+	buf := new(bytes.Buffer)
+
+	binary.Write(buf, binary.LittleEndian, obj.View)
+	binary.Write(buf, binary.LittleEndian, obj.Sequence_number)
+	binary.Write(buf, binary.LittleEndian, obj.Digest_m)
+	binary.Write(buf, binary.LittleEndian, obj.Node_i)
+	return buf.Bytes(), nil
+}
+
+// CommitMsg.signMessageEncode,对提交消息编码，形成待签名消息
+// 参数：提交消息CommitMsg
+// 返回值：待签名消息[]byte
+func (obj *CommitMsg) signMessageEncode() ([]byte, error) {
+	buf := new(bytes.Buffer)
+
+	binary.Write(buf, binary.LittleEndian, obj.View)
+	binary.Write(buf, binary.LittleEndian, obj.Sequence_number)
+	binary.Write(buf, binary.LittleEndian, obj.Digest_m)
+	binary.Write(buf, binary.LittleEndian, obj.Node_i)
+	return buf.Bytes(), nil
+}
+
+// ReplyMsg.signMessageEncode,对应答消息编码，形成待签名消息
+// 参数：应答消息ReplyMsg
+// 返回值：待签名消息[]byte
+func (obj *ReplyMsg) signMessageEncode() ([]byte, error) {
+	buf := new(bytes.Buffer)
+
+	binary.Write(buf, binary.LittleEndian, obj.View)
+	binary.Write(buf, binary.LittleEndian, obj.Time_stamp)
+	binary.Write(buf, binary.LittleEndian, obj.Client_name)
+	binary.Write(buf, binary.LittleEndian, obj.Node_i)
+	binary.Write(buf, binary.LittleEndian, obj.Result)
+	return buf.Bytes(), nil
 }

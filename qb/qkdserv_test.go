@@ -3,9 +3,10 @@ package main
 import (
 	"encoding/hex"
 	"fmt"
+	"testing"
+
 	"qb/qkdserv"
 	"qb/uss"
-	"testing"
 )
 
 // 测试接口函数一：共享安全随机数

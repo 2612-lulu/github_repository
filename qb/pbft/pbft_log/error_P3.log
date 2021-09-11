@@ -1,0 +1,20 @@
+【START A NEW PBFT】2021/09/11 19:22:15.225904 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
+【START A NEW PBFT】2021/09/11 19:22:16.227037 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
+[Commit error]2021/09/11 19:22:16.230859 /root/study/github_repository/qb/pbft/pbft_impl.go:277: the sequenceID of prepare message is wrong!
+[Commit error]2021/09/11 19:22:16.230870 /root/study/github_repository/qb/pbft/pbft_impl.go:278: Last_sequence_number= 1631359335223635676
+[Commit error]2021/09/11 19:22:16.230874 /root/study/github_repository/qb/pbft/pbft_impl.go:279: prepare.Sequence_number= 1631359335223635676
+[Commit]2021/09/11 19:22:16.230879 /root/study/github_repository/qb/pbft/pbft_impl.go:221: prepare message is corrupted
+[Commit]2021/09/11 19:22:16.230711 /root/study/github_repository/qb/network/node.go:373: [put prepare message into MsgDelivery channel]
+【START A NEW PBFT】2021/09/11 19:22:17.227741 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
+【START A NEW PBFT】2021/09/11 20:19:27.860942 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
+【START A NEW PBFT】2021/09/11 20:19:28.860483 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
+[Commit error]2021/09/11 20:19:28.864091 /root/study/github_repository/qb/pbft/pbft_impl.go:277: the sequenceID of prepare message is wrong!
+[Commit error]2021/09/11 20:19:28.864100 /root/study/github_repository/qb/pbft/pbft_impl.go:278: Last_sequence_number= 1631362767858608891
+[Commit error]2021/09/11 20:19:28.864105 /root/study/github_repository/qb/pbft/pbft_impl.go:279: prepare.Sequence_number= 1631362767858608891
+[Commit]2021/09/11 20:19:28.864111 /root/study/github_repository/qb/pbft/pbft_impl.go:221: prepare message is corrupted
+[Reply error]2021/09/11 20:19:28.903149 /root/study/github_repository/qb/pbft/pbft_impl.go:387: the sequenceID of commit message is wrong!
+[Reply error]2021/09/11 20:19:28.903155 /root/study/github_repository/qb/pbft/pbft_impl.go:388: Last_sequence_number= 1631362767858608891
+[Reply error]2021/09/11 20:19:28.903158 /root/study/github_repository/qb/pbft/pbft_impl.go:389: commit.Sequence_number= 1631362767858608891
+[Reply]2021/09/11 20:19:28.903162 /root/study/github_repository/qb/pbft/pbft_impl.go:331: commit message is corrupted
+【START A NEW PBFT】2021/09/11 20:19:40.874758 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
+【START A NEW PBFT】2021/09/11 20:19:41.874157 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft

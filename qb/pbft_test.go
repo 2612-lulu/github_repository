@@ -6,7 +6,6 @@ import (
 	"time"
 
 	"qb/block"
-	"qb/mylog"
 	"qb/pbft"
 	"qb/qbtools"
 	"qb/qkdserv"
@@ -59,54 +58,54 @@ func TestPBFTConsensus(t *testing.T) {
 	qkdserv.Node_name = "P1"
 	preprepare, err := state.PrePrePare(&request)
 	if err == nil {
-		mylog.LogStage("	Request", true)
+		qbtools.LogStage("	Request", true)
 		//fmt.Println(len(preprepare.Sign_p.Message))
-		mylog.LogStage("	Pre-prepare", false)
+		qbtools.LogStage("	Pre-prepare", false)
 	}
 	fmt.Println("-----------------------【pbft共识】Prepare----------------------------------------------------")
 	qkdserv.Node_name = "P2"
 	prepare, err := state.PrePare(preprepare)
 	if err == nil {
-		mylog.LogStage("	Pre-prepare", true)
-		mylog.LogStage("	prepare", false)
+		qbtools.LogStage("	Pre-prepare", true)
+		qbtools.LogStage("	prepare", false)
 	}
 	qkdserv.Node_name = "P3"
 	_, err = state.PrePare(preprepare)
 	if err == nil {
-		mylog.LogStage("	Pre-prepare", true)
-		mylog.LogStage("	prepare", false)
+		qbtools.LogStage("	Pre-prepare", true)
+		qbtools.LogStage("	prepare", false)
 	}
 	qkdserv.Node_name = "P4"
 	_, err = state.PrePare(preprepare)
 	if err == nil {
-		mylog.LogStage("	Pre-prepare", true)
-		mylog.LogStage("	prepare", false)
+		qbtools.LogStage("	Pre-prepare", true)
+		qbtools.LogStage("	prepare", false)
 	}
 	fmt.Println("-----------------------【pbft共识】Commit-----------------------------------------------------")
 	qkdserv.Node_name = "P3"
 	commit, _ := state.Commit(prepare)
 	if commit != nil {
-		mylog.LogStage("	Prepare", true)
-		mylog.LogStage("	Commit", false)
+		qbtools.LogStage("	Prepare", true)
+		qbtools.LogStage("	Commit", false)
 	}
 	qkdserv.Node_name = "P4"
 	_, err = state.Commit(prepare)
 	if err == nil {
-		mylog.LogStage("	Prepare", true)
-		mylog.LogStage("	Commit", false)
+		qbtools.LogStage("	Prepare", true)
+		qbtools.LogStage("	Commit", false)
 	}
 	qkdserv.Node_name = "P1"
 	_, err = state.Commit(prepare)
 	if err == nil {
-		mylog.LogStage("	Prepare", true)
-		mylog.LogStage("	Commit", false)
+		qbtools.LogStage("	Prepare", true)
+		qbtools.LogStage("	Commit", false)
 	}
 
 	fmt.Println("-----------------------【pbft共识】Reply------------------------------------------------------")
 	qkdserv.Node_name = "P1"
 	reply, _ := state.Reply(commit)
 	if reply != nil {
-		mylog.LogStage("	Commit", true)
-		mylog.LogStage("	Reply", false)
+		qbtools.LogStage("	Commit", true)
+		qbtools.LogStage("	Reply", false)
 	}
 }

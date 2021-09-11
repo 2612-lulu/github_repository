@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
+	"testing"
+
 	"qb/qkdserv"
 	"qb/uss"
-	"testing"
 )
 
 // 测试接口函数一：签名
