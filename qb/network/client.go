@@ -109,7 +109,7 @@ func (client *Client) broadcastMsg() {
 			send(client.Node_table[client.View.Primary]+"/transcation", jsonMsg)
 			mylog.LogStage("Request", false)
 
-			init_log("./network/clientlog/" + client.Client_name + ".log")
+			qbtools.Init_log("./network/clientlog/" + client.Client_name + ".log")
 			log.Println("send a transcation to the Primary node")
 		}
 	}
@@ -132,10 +132,10 @@ func (client *Client) dispatchMsg() {
 				transcation := client.genTranscationMsg(msg)
 				client.MsgBroadcast <- transcation
 
-				init_log("./network/clientlog/" + client.Client_name + ".log")
+				qbtools.Init_log("./network/clientlog/" + client.Client_name + ".log")
 				log.Println("creat a new transcation,and put it into broadcast channel")
 			} else {
-				init_log("./network/clientlog/" + client.Client_name + ".log")
+				qbtools.Init_log("./network/clientlog/" + client.Client_name + ".log")
 				log.Println("the last transcation didn't finished, please wait")
 			}
 		case *pbft.ReplyMsg:
@@ -188,7 +188,7 @@ func (client *Client) resolveMsg() {
 		msgs := <-client.MsgDelivery // 从调度器通道中获取缓存信息
 		switch msgs := msgs.(type) {
 		case []*pbft.ReplyMsg:
-			init_log("./network/clientlog/" + client.Client_name + ".log")
+			qbtools.Init_log("./network/clientlog/" + client.Client_name + ".log")
 			fmt.Println(msgs)
 			log.Println("transcation success")
 		}

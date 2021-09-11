@@ -1,297 +1,507 @@
-P1-[receive block.Block]2021/09/09 22:36:07.562432 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[receive PrepareMsg]2021/09/09 22:36:07.567185 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[get commitMsg]2021/09/09 22:36:07.568683 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:36:07.568716 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:36:07.569044 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:36:07.569732 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:36:07.570862 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 22:36:07.571649 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:36:07.571676 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 22:36:07.572051 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 22:36:07.572917 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:36:07.891271 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[receive PrepareMsg]2021/09/09 22:36:07.894786 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[get commitMsg]2021/09/09 22:36:07.895999 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:36:07.896016 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:36:07.896094 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 22:36:07.914036 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:36:07.914060 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:44:05.665062 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[receive PrepareMsg]2021/09/09 22:44:05.668740 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[get commitMsg]2021/09/09 22:44:05.670932 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:44:05.670954 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:44:05.671124 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 22:44:05.672688 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 22:44:05.672697 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 22:44:05.673716 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:44:05.673748 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 22:44:05.673957 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 22:44:05.674682 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:44:05.907023 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 22:44:05.910458 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 22:44:05.911542 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:44:05.911553 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:44:05.911561 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:44:05.938950 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:44:05.939278 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 22:44:05.940164 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:44:05.940190 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 22:44:05.940338 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 22:44:05.942841 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:44:06.506445 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[receive PrepareMsg]2021/09/09 22:44:06.535832 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[get commitMsg]2021/09/09 22:44:06.564609 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:44:06.564621 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:44:06.564829 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 22:44:06.566274 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 22:44:06.566284 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 22:44:06.567161 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:44:06.567181 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:44:07.229872 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[receive PrepareMsg]2021/09/09 22:44:07.232448 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[get commitMsg]2021/09/09 22:44:07.234029 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:44:07.234052 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[get replyMsg]2021/09/09 22:44:07.239413 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:44:07.239421 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:50:04.137738 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[receive PrepareMsg]2021/09/09 22:50:04.141720 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[get commitMsg]2021/09/09 22:50:04.143779 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:50:04.143801 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:50:04.144346 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:50:04.145529 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:50:04.146328 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 22:50:04.147108 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:50:04.147144 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 22:50:04.147408 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 22:50:04.148178 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:50:04.374459 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 22:50:04.377253 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 22:50:04.378272 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:50:04.378281 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:50:04.378337 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[receive PrepareMsg]2021/09/09 22:50:04.407063 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 22:50:04.407472 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:50:04.408439 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 22:50:04.408980 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:50:04.409016 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 22:50:04.409522 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 22:50:04.409959 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:50:04.610710 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[receive PrepareMsg]2021/09/09 22:50:04.628508 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[get commitMsg]2021/09/09 22:50:04.652118 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[get replyMsg]2021/09/09 22:50:04.669774 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:50:04.669811 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:50:04.850942 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[receive PrepareMsg]2021/09/09 22:50:04.855408 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[get commitMsg]2021/09/09 22:50:06.354497 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:50:06.354517 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[receive block.Block]2021/09/09 22:53:14.304178 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 22:53:14.309490 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 22:53:14.311623 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:53:14.311674 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:53:14.311957 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:53:14.314137 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:53:14.315557 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 22:53:14.317101 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:53:14.317131 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 22:53:14.317714 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 22:53:14.319365 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:53:14.905185 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 22:53:14.912938 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 22:53:14.913561 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:53:14.913611 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:53:14.913793 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:53:14.917935 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 22:53:14.918913 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:53:14.918938 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 22:53:14.919074 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 22:53:14.920392 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:53:15.502650 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 22:53:15.508400 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 22:53:15.509302 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:53:15.509365 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:53:15.509608 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:53:15.511386 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:53:15.512521 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 22:53:15.514999 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:53:15.515022 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:53:16.102426 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 22:53:16.107340 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 22:53:16.109351 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:53:16.109361 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[receive CommitMsg]2021/09/09 22:53:16.110973 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[get replyMsg]2021/09/09 22:53:16.178124 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:53:16.178181 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:58:13.414463 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 22:58:13.420038 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 22:58:13.421906 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:58:13.421929 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:58:13.422145 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:58:13.424146 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:58:13.425258 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 22:58:13.427678 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:58:13.427719 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 22:58:13.428152 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 22:58:13.429867 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:58:14.029185 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 22:58:14.035625 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 22:58:14.037155 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:58:14.037163 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:58:14.037747 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:58:14.038683 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 22:58:14.041646 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:58:14.041657 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 22:58:14.041844 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 22:58:14.043179 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:58:14.623828 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 22:58:14.628772 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 22:58:14.630907 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:58:14.630945 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:58:14.631378 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:58:14.633045 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:58:14.635363 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 22:58:14.635942 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:58:14.635963 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 22:58:14.636366 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[receive block.Block]2021/09/09 22:58:15.219065 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 22:58:15.224339 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 22:58:15.225426 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:58:15.225471 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[receive PrepareMsg]2021/09/09 22:58:15.226957 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:58:15.226972 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:58:15.245329 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 22:58:15.246866 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:58:15.246889 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:58:49.630864 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 22:58:49.637512 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 22:58:49.639268 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:58:49.639305 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:58:49.639584 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:58:49.641798 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 22:58:49.642587 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[get replyMsg]2021/09/09 22:58:49.646282 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:58:49.646307 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 22:58:49.646582 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 22:58:49.648290 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:58:50.223077 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 22:58:50.230547 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 22:58:50.231827 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:58:50.231856 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:58:50.232040 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:58:50.233541 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:58:50.235515 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 22:58:50.237139 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:58:50.237166 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:58:50.821373 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[receive PrepareMsg]2021/09/09 22:58:50.825594 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[get commitMsg]2021/09/09 22:58:51.027894 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:58:51.027915 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[receive CommitMsg]2021/09/09 22:58:51.030305 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[get replyMsg]2021/09/09 22:58:51.149265 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:58:51.149296 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:58:51.419364 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[receive PrepareMsg]2021/09/09 22:58:51.423869 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[get commitMsg]2021/09/09 22:58:53.030818 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:58:53.030857 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[receive block.Block]2021/09/09 22:59:28.267352 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 22:59:28.272969 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 22:59:28.275030 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:59:28.275041 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:59:28.275843 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:59:28.277768 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:59:28.278979 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 22:59:28.281069 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:59:28.281097 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 22:59:28.281263 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 22:59:28.283454 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:59:28.861651 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 22:59:28.866527 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 22:59:28.870189 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:59:28.870205 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:59:28.870335 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:59:28.872039 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:59:28.874496 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 22:59:28.875327 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[pbft.CommitMsg]2021/09/09 22:59:28.877180 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 22:59:28.878568 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:59:29.456588 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 22:59:29.461888 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 22:59:29.463326 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:59:29.463351 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 22:59:29.463828 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:59:29.465055 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 22:59:29.466880 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 22:59:29.469080 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:59:29.469114 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 22:59:30.050161 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 22:59:30.070574 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 22:59:30.071440 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 22:59:30.071447 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[get replyMsg]2021/09/09 22:59:30.103589 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 22:59:30.103612 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 23:02:10.518753 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 23:02:10.524839 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 23:02:10.526748 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 23:02:10.526798 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 23:02:10.527074 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 23:02:10.528842 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 23:02:10.530813 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 23:02:10.532558 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 23:02:10.532590 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 23:02:10.532791 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 23:02:10.534656 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 23:02:11.142003 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 23:02:11.148649 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 23:02:11.150507 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 23:02:11.150523 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 23:02:11.151496 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 23:02:11.152936 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 23:02:11.154841 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 23:02:11.156830 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 23:02:11.156868 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 23:02:11.157084 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[receive CommitMsg]2021/09/09 23:02:11.158696 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 23:02:11.732217 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[receive PrepareMsg]2021/09/09 23:02:11.737585 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 23:02:11.738256 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 23:02:11.739652 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 23:02:11.739675 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 23:02:11.740255 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 23:02:11.742471 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 23:02:11.746019 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 23:02:11.746040 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 23:02:12.324732 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 23:02:12.330835 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 23:02:12.332787 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 23:02:12.332817 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 23:02:12.352250 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 23:02:12.353447 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 23:02:12.353468 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 23:09:18.971865 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 23:09:18.978217 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 23:09:18.981122 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 23:09:18.981149 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.PrepareMsg]2021/09/09 23:09:18.981670 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 23:09:18.983838 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[pbft.CommitMsg]2021/09/09 23:09:18.985153 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 23:09:18.986563 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 23:09:18.986584 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 23:09:19.570724 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 23:09:19.575501 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 23:09:19.579270 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 23:09:19.579300 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[get replyMsg]2021/09/09 23:09:19.897679 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 23:09:19.897751 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 23:09:20.172292 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 23:09:20.177558 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 23:09:20.179150 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 23:09:20.179183 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[pbft.CommitMsg]2021/09/09 23:09:20.182664 /root/study/github_repository-master/qb/network/node.go:379: [put commit message into MsgDelivery channel]
-P1-[get replyMsg]2021/09/09 23:09:20.183464 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 23:09:20.183488 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
-P1-[receive block.Block]2021/09/09 23:09:20.778453 /root/study/github_repository-master/qb/network/node.go:468: Msgdelivery channel get a new block,and create a new consensus
-P1-[pbft.PrepareMsg]2021/09/09 23:09:20.783865 /root/study/github_repository-master/qb/network/node.go:364: [put prepare message into MsgDelivery channel]
-P1-[get commitMsg]2021/09/09 23:09:20.786209 /root/study/github_repository-master/qb/network/node.go:609: put commit message into broadcast channel
-P1-[receive PrepareMsg]2021/09/09 23:09:20.786233 /root/study/github_repository-master/qb/network/node.go:501: Msgdelivery channel get a prepare message, and handle it
-P1-[get replyMsg]2021/09/09 23:09:20.898991 /root/study/github_repository-master/qb/network/node.go:642: put reply message into broadcast channel
-P1-[receive CommitMsg]2021/09/09 23:09:20.899029 /root/study/github_repository-master/qb/network/node.go:512: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:41:26.068338 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:41:26.070187 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:41:26.073920 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:41:26.075720 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:41:26.078455 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:41:26.078470 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:41:26.080431 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:41:26.083148 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:41:26.085035 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:41:26.085067 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:41:33.707889 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:41:33.709658 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:41:33.712592 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:41:33.714250 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:41:33.717820 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:41:33.741620 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:41:33.744220 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:41:33.746130 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/11 15:41:41.318504 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:41:41.320303 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:41:41.323431 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:41:41.325068 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:41:41.327446 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:41:41.327492 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:41:41.329415 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:41:41.330877 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:41:41.332383 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:41:41.332418 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:41:48.940301 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:41:48.941956 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:41:48.944770 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:41:48.947429 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:41:48.949302 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:41:48.949326 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:41:48.950741 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:41:48.952206 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:41:48.953773 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:41:48.953805 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:42:00.777161 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:42:00.778786 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:42:00.781824 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:42:00.783468 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:42:00.785657 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:42:00.785688 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:42:00.787989 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:42:00.789438 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:42:00.791114 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:42:00.791150 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:42:08.414444 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:42:08.416140 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:42:08.418963 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:42:08.420769 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:42:08.422816 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:42:08.422870 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:42:08.424416 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:42:08.426069 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:42:08.427855 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:42:08.427889 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:42:16.017090 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:42:16.018869 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:42:16.021810 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:42:16.023394 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:42:16.025441 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:42:16.025453 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:42:16.026945 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:42:16.028396 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:42:16.030020 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:42:16.030050 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:42:23.618146 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:42:23.619869 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:42:23.623057 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:42:23.624792 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:42:23.626705 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:42:23.626733 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:42:23.629343 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:42:23.631366 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:42:23.633199 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:42:23.633241 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get pre-prepareMsg]2021/09/11 15:43:09.306853 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:43:09.310074 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:43:09.311857 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:43:09.313918 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:43:09.313950 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:43:09.315605 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:43:09.317282 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:43:09.318857 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:43:09.318883 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:43:16.977617 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:43:16.980445 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:43:16.983190 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:43:16.984632 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:43:16.986478 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:43:16.986493 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:43:16.988053 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:43:16.989754 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:43:16.991581 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:43:16.991612 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:43:24.603940 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:43:24.605674 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:43:24.608537 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:43:24.610493 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:43:24.613974 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:43:24.614008 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:43:24.616409 /root/study/github_repository/qb/network/node.go:221: broadcast commit message
+P1-[receive CommitMsg]2021/09/11 15:43:24.616411 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:43:24.617976 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:43:24.619735 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:43:24.619759 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:43:32.207949 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:43:32.209746 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:43:32.214532 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:43:32.217401 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:43:32.217459 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:43:32.219293 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:43:32.220815 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:43:32.222412 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:43:32.222434 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:43:54.317952 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:43:54.319774 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:43:54.322891 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:43:54.324518 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:43:54.326725 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:43:54.326749 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:43:54.328491 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:43:54.330298 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:43:54.332185 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:43:54.332226 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:44:01.902900 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:44:01.904837 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:44:01.907687 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:44:01.909630 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:44:01.912544 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:44:01.912617 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:44:01.914520 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:44:01.916431 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:44:01.918514 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/11 15:44:09.477158 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:44:09.478861 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:44:09.482199 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:44:09.484284 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:44:09.486454 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:44:09.486492 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:44:09.488168 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:44:09.489732 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:44:09.491341 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:44:09.491390 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:44:17.091687 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:44:17.094087 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:44:17.098240 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:44:17.099749 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:44:17.102154 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:44:17.102210 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:44:17.103872 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:44:17.105487 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:44:17.107031 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:44:17.107069 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:45:37.091468 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:45:37.093740 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:45:37.098938 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:45:37.100739 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:45:37.102956 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:45:37.102998 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:45:37.104914 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:45:37.106569 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:45:37.108226 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:45:37.108256 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:45:40.717518 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:45:40.719617 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:45:40.723323 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:45:40.725342 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:45:40.729326 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:45:40.729374 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:45:40.744365 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:45:40.745982 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:45:40.747671 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:45:40.747710 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:45:44.322683 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:45:44.324567 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:45:44.327606 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:45:44.329562 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:45:44.332252 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:45:44.332271 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:45:44.333985 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:45:44.336027 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:45:44.338322 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:45:44.338371 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:45:47.925318 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:45:47.929121 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:45:47.932269 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:45:47.933936 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:45:47.936042 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:45:47.936085 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:45:47.937646 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:45:47.939477 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:45:47.941200 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:45:47.941242 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:46:07.008592 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:46:07.010333 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:46:07.013049 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:46:07.015123 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:46:07.017509 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:46:07.017596 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:46:07.020060 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:46:07.021523 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:46:07.023067 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:46:07.023156 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:46:10.622870 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:46:10.624917 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:46:10.627990 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:46:10.629669 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:46:10.631815 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:46:10.631858 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:46:10.633498 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:46:10.635020 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:46:10.636637 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:46:10.636682 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:46:14.231308 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:46:14.233118 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:46:14.235876 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:46:14.237492 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:46:14.239547 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:46:14.239565 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:46:14.242714 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:46:14.244705 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:46:14.244760 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:46:17.833597 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:46:17.835469 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:46:17.838519 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:46:17.840376 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:46:17.842658 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:46:17.842676 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:46:17.844602 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:46:17.847216 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:46:17.848961 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/11 15:46:43.578536 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:46:43.580318 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:46:43.583988 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:46:43.585821 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:46:43.588467 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:46:43.588492 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:46:43.590399 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:46:43.592020 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:46:43.593735 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:46:43.593782 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:46:47.208749 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:46:47.210503 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:46:47.213241 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:46:47.215765 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:46:47.218083 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:46:47.218136 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:46:47.219930 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:46:47.221623 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:46:47.223367 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:46:47.223398 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:46:50.813164 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:46:50.814965 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:46:50.817974 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:46:50.819669 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:46:50.821969 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:46:50.821993 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:46:50.823768 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:46:50.826206 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:46:50.828346 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:46:50.828398 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:46:54.419616 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[receive block.Block]2021/09/11 15:46:54.419619 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:46:54.421341 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:46:54.424927 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:46:54.426618 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:46:54.428543 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:46:54.428593 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:46:54.430076 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:46:54.431654 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:46:54.433344 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:46:54.433361 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:47:16.982471 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:47:16.984341 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:47:16.987078 /root/study/github_repository/qb/network/node.go:339: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/11 15:47:16.987082 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:47:16.988843 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:47:16.991423 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:47:16.991483 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:47:16.993396 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:47:16.994873 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:47:16.996730 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:47:16.996752 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:47:20.605644 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:47:20.607476 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:47:20.610293 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:47:20.612151 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:47:20.614221 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:47:20.614261 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:47:20.616600 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:47:20.618254 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:47:20.620230 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:47:20.620266 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:47:24.216512 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:47:24.218170 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:47:24.221104 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:47:24.222659 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:47:24.224968 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:47:24.225015 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:47:24.226910 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:47:24.228628 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:47:24.230382 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/11 15:47:27.826917 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:47:27.829475 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:47:27.832245 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:47:27.834020 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:47:27.836660 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:47:27.836704 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:47:27.838847 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:47:27.840685 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:47:27.842423 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:47:27.842455 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:48:04.793516 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:48:04.795232 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:04.798040 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:48:04.799638 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:48:04.801660 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:04.801683 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:04.803383 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:04.806215 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:48:04.808177 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/11 15:48:06.403351 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:48:06.405204 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:06.408005 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:48:06.409819 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:48:06.412404 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:06.412467 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:06.414183 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:06.415793 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:48:06.417678 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/11 15:48:08.040643 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[receive block.Block]2021/09/11 15:48:08.040647 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:48:08.042551 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:08.045367 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:48:08.047151 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:48:08.051296 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:08.051333 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:08.053273 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:08.054834 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:48:08.056539 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:48:08.056580 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:48:09.659774 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:48:09.661609 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:09.664735 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:48:09.666665 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:48:09.668792 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:09.668812 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:09.670591 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:09.672182 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:48:09.675103 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:48:09.675131 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:48:16.978115 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:48:16.980018 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:16.982728 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:48:16.984446 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:48:16.986342 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:16.986357 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:16.988137 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:16.989902 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:48:16.991641 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:48:16.991710 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:48:18.573741 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:48:18.575583 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:18.578277 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:48:18.580861 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:48:18.583839 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:18.583921 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:18.585658 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:18.587179 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:48:18.589039 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/11 15:48:20.184254 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:48:20.185995 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:20.188854 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:48:20.190546 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:48:20.192586 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:20.192629 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:20.194295 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:20.196372 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:48:20.198655 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:48:20.198700 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:48:21.794364 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:48:21.796297 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:21.799479 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:48:21.801119 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:48:21.803154 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:21.803204 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:21.804798 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:21.806251 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:48:21.807778 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/11 15:48:34.261209 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:48:34.262903 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:34.266056 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:48:34.267935 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:48:34.271082 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:34.271124 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:34.272781 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:34.274382 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:48:34.276088 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/11 15:48:35.860064 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[receive block.Block]2021/09/11 15:48:35.860074 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[get pre-prepareMsg]2021/09/11 15:48:35.861974 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:35.865307 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:48:35.867499 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:48:35.870124 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:35.870165 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:35.871847 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:35.873455 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:48:35.875171 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:48:35.875193 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:48:37.463229 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:48:37.465178 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:37.468393 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:48:37.470007 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:48:37.472011 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:37.472047 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:37.473601 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:37.475069 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:48:37.476714 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/11 15:48:39.055684 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:48:39.057381 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:39.060146 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:48:39.061940 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:48:39.064049 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:48:39.064066 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:39.065757 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:48:39.069073 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:48:39.070633 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/11 15:49:54.926249 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:49:54.928451 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:49:54.932304 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:49:54.934188 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:49:54.936294 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:49:54.936330 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:49:54.938126 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:49:54.940142 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:49:54.942440 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:49:54.942459 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:49:56.529126 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:49:56.530894 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:49:56.533516 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:49:56.535154 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:49:56.538687 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:49:56.538716 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:49:56.553915 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:49:56.568512 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:49:56.570117 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/11 15:49:58.136157 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:49:58.137916 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:49:58.141686 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:49:58.143377 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:49:58.145307 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:49:58.145345 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:49:58.146844 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:49:58.148549 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:49:58.150402 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/11 15:49:59.740595 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:49:59.742350 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:49:59.745799 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:49:59.747494 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:49:59.749961 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:49:59.750000 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:49:59.751713 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:49:59.753276 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:49:59.754858 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:49:59.754892 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:50:09.251469 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:50:09.253331 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:50:09.256612 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:50:09.258259 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:50:09.260472 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:50:09.260495 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:50:09.262752 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:50:09.264269 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:50:09.266319 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:50:09.266356 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:50:10.860805 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:50:10.862430 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:50:10.865350 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:50:10.867108 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:50:10.869039 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:50:10.869050 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:50:10.870678 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:50:10.872763 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:50:10.875282 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:50:10.875338 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:50:12.463082 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:50:12.464764 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:50:12.467967 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:50:12.470602 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:50:12.472579 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:50:12.472594 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:50:12.474160 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:50:12.476109 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:50:12.477775 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:50:12.477793 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/11 15:50:14.107299 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/11 15:50:14.108942 /root/study/github_repository/qb/network/node.go:551: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:50:14.111942 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/11 15:50:14.113484 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/11 15:50:14.115364 /root/study/github_repository/qb/network/node.go:619: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/11 15:50:14.115377 /root/study/github_repository/qb/network/node.go:483: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/11 15:50:14.117094 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/11 15:50:14.121448 /root/study/github_repository/qb/network/node.go:652: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/11 15:50:14.121498 /root/study/github_repository/qb/network/node.go:494: Msgdelivery channel get a commit message, and handle it

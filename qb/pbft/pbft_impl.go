@@ -9,6 +9,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"log"
 	"strconv"
 	"time"
 
@@ -48,6 +49,9 @@ const (
 
 // CreateState，如果不存在lastSequenceNumber，则lastSequenceNumber=-1
 func CreateState(view int64, lastSequenceNumber int64) *State {
+	qbtools.Init_log("./pbft/error_" + qkdserv.Node_name + ".log")
+	log.SetPrefix("【START A NEW PBFT】")
+	log.Println("start a new pbft")
 	return &State{
 		View: view, // 当前视图号，为主节点编号
 		Msg_logs: MsgLogs{ // 初始化
@@ -168,21 +172,31 @@ func (state *State) verifyPrePrepareMsg(preprepare *PrePrepareMsg) bool {
 	var result bool
 	msg, _ := json.Marshal(preprepare.Request)
 	digest := qbtools.Digest(msg) // 计算消息的摘要值
+	qbtools.Init_log("./pbft/error_" + qkdserv.Node_name + ".log")
 	// 判断是否符合校验条件
 	if state.View != preprepare.View {
-		fmt.Println("	pbft-Prepare error:the view is wrong!")
+		log.SetPrefix("[Prepare error]")
+		log.Println("the view of preprepare message is wrong!")
+		log.Println("state.View=", state.View)
+		log.Println("preprepare.View=", preprepare.View)
 		result = false
-	} else if state.Last_sequence_number != -1 && state.Last_sequence_number >= preprepare.Sequence_number {
-		fmt.Println("	pbft-Prepare error:the sequenceID is wrong!")
+	} else if state.Last_sequence_number >= preprepare.Sequence_number {
+		log.SetPrefix("[Prepare error]")
+		log.Println("the sequenceID of preprepare message is wrong!")
+		log.Println("Last_sequence_number=", state.Last_sequence_number)
+		log.Println("preprepare.Sequence_number=", preprepare.Sequence_number)
 		result = false
 	} else if !bytes.Equal(digest, preprepare.Digest_m) {
-		fmt.Println("	pbft-Prepare error:the digest is wrong!")
+		log.SetPrefix("[Prepare error]")
+		log.Println("the digest is wrong!")
 		result = false
 	} else if !state.verifyRequest(preprepare.Request.Transactions) {
-		fmt.Println("	pbft-Prepare error:the client_sign is wrong!")
+		log.SetPrefix("[Prepare error]")
+		log.Println("the client_sign is wrong!")
 		result = false
 	} else if !uss.VerifySign(preprepare.Sign_p) {
-		fmt.Println("	pbft-Prepare error:the primary_sign is wrong!")
+		log.SetPrefix("[Prepare error]")
+		log.Println("the primary_sign is wrong!")
 		result = false
 	} else {
 		result = true
@@ -247,20 +261,32 @@ func (state *State) verifyPrepareMsg(prepare *PrepareMsg) bool {
 	var result bool
 	msg, _ := json.Marshal(state.Msg_logs.ReqMsg)
 	digest := qbtools.Digest(msg) // 计算消息的摘要值
+	qbtools.Init_log("./pbft/error_" + qkdserv.Node_name + ".log")
 	if state.View != prepare.View {
-		fmt.Println("	pbft-Commit error:the view is wrong!")
+		log.SetPrefix("[Commit]")
+		log.Println("the view of prepare message is wrong!")
+		log.Println("state.View=", state.View)
+		log.Println("prepare.View=", prepare.View)
 		result = false
-	} else if state.Last_sequence_number != -1 && state.Last_sequence_number >= prepare.Sequence_number {
-		fmt.Println("	pbft-Commit error:the sequenceID is wrong!")
+	} else if state.Last_sequence_number >= prepare.Sequence_number {
+		log.SetPrefix("[Commit error]")
+		log.Println("the sequenceID of prepare message is wrong!")
+		log.Println("Last_sequence_number=", state.Last_sequence_number)
+		log.Println("prepare.Sequence_number=", prepare.Sequence_number)
 		result = false
 	} else if !bytes.Equal(digest, prepare.Digest_m) {
-		fmt.Println("	pbft-Commit error:the digest is wrong!")
+		log.SetPrefix("[Commit error]")
+		log.Println("the verify of digest is wrong!")
+		log.Println("digest of prepare=", prepare.Digest_m)
+		log.Println("verify digest=", digest)
 		result = false
 	} else if !state.verifyRequest(state.Msg_logs.ReqMsg.Transactions) {
-		fmt.Println("	pbft-Commit error:the client_sign is wrong!")
+		log.SetPrefix("[Commit error]")
+		log.Println("the client_sign is wrong!")
 		result = false
 	} else if !uss.VerifySign(prepare.Sign_i) {
-		fmt.Println("	pbft-Commit error:the node_sign is wrong!")
+		log.SetPrefix("[Commit error]")
+		log.Println("the node_sign is wrong!")
 		result = false
 	} else {
 		state.Msg_logs.PreparedMsgs[prepare.Node_i] = prepare
@@ -270,13 +296,16 @@ func (state *State) verifyPrepareMsg(prepare *PrepareMsg) bool {
 }
 
 func (state *State) prepared() bool {
+	qbtools.Init_log("./pbft/error_" + qkdserv.Node_name + ".log")
 	if state.Msg_logs.ReqMsg == nil {
-		fmt.Println("	pbft-commit error:request of state is nil")
+		log.SetPrefix("[Commit error]")
+		log.Println("request of state is nil")
 		return false
 	}
 
 	if len(state.Msg_logs.PreparedMsgs) < 2*F {
-		fmt.Println("	pbft-commit error:didn't receive 2*f prepared message,please wait")
+		//log.SetPrefix("[Commit error]")
+		//log.Println("didn't receive 2*f prepared message,please wait")
 		return false
 	}
 
@@ -341,20 +370,30 @@ func (state *State) verifyCommitMsg(commit *CommitMsg) bool {
 	var result bool
 	msg, _ := json.Marshal(state.Msg_logs.ReqMsg)
 	digest := qbtools.Digest(msg) // 计算消息的摘要值
+	qbtools.Init_log("./pbft/error_" + qkdserv.Node_name + ".log")
 	if state.View != commit.View {
-		fmt.Println("	pbft-Reply error:the view is wrong!")
+		log.SetPrefix("[Reply error]")
+		log.Println("the view is wrong!")
 		result = false
 	} else if state.Last_sequence_number != -1 && state.Last_sequence_number >= commit.Sequence_number {
-		fmt.Println("	pbft-Reply error:the sequenceID is wrong!")
+		log.SetPrefix("[Reply error]")
+		log.Println("the sequenceID of commit message is wrong!")
+		log.Println("Last_sequence_number=", state.Last_sequence_number)
+		log.Println("commit.Sequence_number=", commit.Sequence_number)
 		result = false
 	} else if !bytes.Equal(digest, commit.Digest_m) {
-		fmt.Println("	pbft-Reply error:the digest is wrong!")
+		log.SetPrefix("[Reply error]")
+		log.Println("the verify of digest is wrong!")
+		log.Println("digest of prepare=", commit.Digest_m)
+		log.Println("verify digest=", digest)
 		result = false
 	} else if !state.verifyRequest(state.Msg_logs.ReqMsg.Transactions) {
-		fmt.Println("	pbft-Reply error:the client_sign is wrong!")
+		log.SetPrefix("[Reply error]")
+		log.Println("the client_sign is wrong!")
 		result = false
 	} else if !uss.VerifySign(commit.Sign_i) {
-		fmt.Println("	pbft-Reply error:the node_sign is wrong!")
+		log.SetPrefix("[Reply error]")
+		log.Println("the node_sign is wrong!")
 		result = false
 	} else {
 		state.Msg_logs.CommittedMsgs[commit.Node_i] = commit
@@ -365,9 +404,13 @@ func (state *State) verifyCommitMsg(commit *CommitMsg) bool {
 
 func (state *State) committed() bool {
 	if !state.prepared() { // 如果prepare投票未通过，则不能进入commit
+		log.SetPrefix("[Reply error]")
+		log.Println("didn't prepared!")
 		return false
 	}
 	if len(state.Msg_logs.CommittedMsgs) < 2*F+1 { // commit通过的条件是受到2f+1个校验通过的commit,包括自身节点
+		//log.SetPrefix("[Reply error]")
+		//log.Println("didn't receive 2*f committed message,please wait!")
 		return false
 	}
 	return true

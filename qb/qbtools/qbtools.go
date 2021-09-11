@@ -7,7 +7,9 @@ import (
 	"bufio"
 	"crypto/hmac"
 	"crypto/sha256"
+	"fmt"
 	"io"
+	"log"
 	"os"
 	"strings"
 )
@@ -101,4 +103,15 @@ func InitConfig(path string) map[string]string {
 		config[key] = value
 	}
 	return config
+}
+
+func Init_log(path string) error {
+	logFile, err := os.OpenFile(path, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644) //【如果已经存在，则在尾部添加写】
+	if err != nil {
+		fmt.Println("open log file failed, err:", err)
+		return err
+	}
+	log.SetOutput(logFile)
+	log.SetFlags(log.Llongfile | log.Lmicroseconds | log.Ldate)
+	return nil
 }

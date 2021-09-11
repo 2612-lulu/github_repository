@@ -1,40 +1,50 @@
-P1-[block.Block]2021/09/09 22:36:07.561147 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:36:07.890166 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:44:05.663679 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:44:05.905938 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:44:06.505305 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:44:07.228888 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:50:04.136350 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:50:04.373126 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:50:04.609678 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:50:04.850000 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:50:05.089038 /root/study/github_repository-master/qb/network/node.go:444: exit another pbft,so put the block into MsgEntrance channel agains
-P1-[block.Block]2021/09/09 22:50:05.326390 /root/study/github_repository-master/qb/network/node.go:444: exit another pbft,so put the block into MsgEntrance channel agains
-P1-[block.Block]2021/09/09 22:50:05.562852 /root/study/github_repository-master/qb/network/node.go:444: exit another pbft,so put the block into MsgEntrance channel agains
-P1-[block.Block]2021/09/09 22:50:05.800956 /root/study/github_repository-master/qb/network/node.go:444: exit another pbft,so put the block into MsgEntrance channel agains
-P1-[block.Block]2021/09/09 22:50:06.047808 /root/study/github_repository-master/qb/network/node.go:444: exit another pbft,so put the block into MsgEntrance channel agains
-P1-[block.Block]2021/09/09 22:50:06.290820 /root/study/github_repository-master/qb/network/node.go:444: exit another pbft,so put the block into MsgEntrance channel agains
-P1-[block.Block]2021/09/09 22:53:14.302178 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:53:14.903404 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:53:15.500993 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:53:16.100778 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:58:13.412445 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:58:14.027299 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:58:14.622087 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:58:15.217356 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:58:49.628504 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:58:50.221305 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:58:50.819672 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:58:51.416753 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:59:28.265497 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:59:28.859802 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:59:29.454773 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 22:59:30.048386 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 23:02:10.516728 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 23:02:11.140219 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 23:02:11.730577 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 23:02:12.323098 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 23:09:18.969697 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 23:09:19.568969 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 23:09:20.170497 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
-P1-[block.Block]2021/09/09 23:09:20.776556 /root/study/github_repository-master/qb/network/node.go:440: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:41:26.068309 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:41:33.707880 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:41:41.318490 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:41:48.939970 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:42:00.777153 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:42:08.414438 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:42:16.017068 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:42:23.618139 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:43:09.304843 /root/study/github_repository/qb/network/node.go:458: Msgdelivery channel get a new block,and create a new consensus
+P1-[block.Block]2021/09/11 15:43:16.977610 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:43:24.603931 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:43:32.207941 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:43:54.317944 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:44:01.902891 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:44:09.477150 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:44:17.091679 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:45:40.717503 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:45:44.322675 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:45:47.925299 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:46:07.008584 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:46:10.622859 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:46:14.231292 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:46:17.833580 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:46:43.578526 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:46:47.208739 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:46:50.813148 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:47:16.982461 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:47:20.605634 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:47:24.216504 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:47:27.826907 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:48:04.793506 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:48:06.403338 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:48:09.659765 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:48:16.978094 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:48:18.573732 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:48:20.184233 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:48:21.794341 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:48:21.794339 /root/study/github_repository/qb/network/node.go:317: create a new block, and put it into MsgBlock channel
+P1-[block.Block]2021/09/11 15:48:34.261201 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:48:37.463220 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:48:39.055675 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:49:54.926238 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:49:56.529115 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:49:58.136143 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:49:59.740589 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:50:09.251461 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:50:10.860799 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:50:12.463075 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/11 15:50:14.107285 /root/study/github_repository/qb/network/node.go:317: create a new block, and put it into MsgBlock channel
+P1-[block.Block]2021/09/11 15:50:14.107286 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel

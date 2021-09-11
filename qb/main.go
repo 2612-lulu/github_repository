@@ -8,5 +8,4 @@ import (
 func main() {
 	nodeID := os.Args[1]
 	network.CreateServer(nodeID)
-
 }

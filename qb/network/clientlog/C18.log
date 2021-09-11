@@ -1,20 +1,41 @@
-2021/09/09 22:44:07.592972 /root/study/github_repository-master/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
-2021/09/09 22:50:06.046450 /root/study/github_repository-master/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
-2021/09/09 22:50:06.047943 /root/study/github_repository-master/qb/network/client.go:113: send a transcation to the Primary node
-2021/09/09 22:53:15.860471 /root/study/github_repository-master/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
-2021/09/09 22:53:15.862338 /root/study/github_repository-master/qb/network/client.go:113: send a transcation to the Primary node
-2021/09/09 22:53:16.292708 /root/study/github_repository-master/qb/network/client.go:193: transcation success
-2021/09/09 22:58:14.980154 /root/study/github_repository-master/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
-2021/09/09 22:58:14.981408 /root/study/github_repository-master/qb/network/client.go:113: send a transcation to the Primary node
-2021/09/09 22:58:15.249245 /root/study/github_repository-master/qb/network/client.go:193: transcation success
-2021/09/09 22:58:51.173766 /root/study/github_repository-master/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
-2021/09/09 22:58:51.174673 /root/study/github_repository-master/qb/network/client.go:113: send a transcation to the Primary node
-2021/09/09 22:59:29.808691 /root/study/github_repository-master/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
-2021/09/09 22:59:29.809676 /root/study/github_repository-master/qb/network/client.go:113: send a transcation to the Primary node
-2021/09/09 22:59:30.141650 /root/study/github_repository-master/qb/network/client.go:193: transcation success
-2021/09/09 23:02:12.085635 /root/study/github_repository-master/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
-2021/09/09 23:02:12.087084 /root/study/github_repository-master/qb/network/client.go:113: send a transcation to the Primary node
-2021/09/09 23:02:12.355626 /root/study/github_repository-master/qb/network/client.go:193: transcation success
-2021/09/09 23:09:20.532170 /root/study/github_repository-master/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
-2021/09/09 23:09:20.533249 /root/study/github_repository-master/qb/network/client.go:113: send a transcation to the Primary node
-2021/09/09 23:09:20.900812 /root/study/github_repository-master/qb/network/client.go:193: transcation success
+2021/09/11 15:39:13.555480 /root/study/github_repository/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
+2021/09/11 15:39:13.556833 /root/study/github_repository/qb/network/client.go:113: send a transcation to the Primary node
+2021/09/11 15:41:48.675884 /root/study/github_repository/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
+2021/09/11 15:41:48.677176 /root/study/github_repository/qb/network/client.go:113: send a transcation to the Primary node
+2021/09/11 15:41:48.955250 /root/study/github_repository/qb/network/client.go:193: transcation success
+2021/09/11 15:42:23.381615 /root/study/github_repository/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
+2021/09/11 15:42:23.382621 /root/study/github_repository/qb/network/client.go:113: send a transcation to the Primary node
+2021/09/11 15:42:23.634569 /root/study/github_repository/qb/network/client.go:193: transcation success
+2021/09/11 15:43:31.974097 /root/study/github_repository/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
+2021/09/11 15:43:31.975244 /root/study/github_repository/qb/network/client.go:113: send a transcation to the Primary node
+2021/09/11 15:43:32.223773 /root/study/github_repository/qb/network/client.go:193: transcation success
+2021/09/11 15:44:16.846940 /root/study/github_repository/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
+2021/09/11 15:44:16.848113 /root/study/github_repository/qb/network/client.go:113: send a transcation to the Primary node
+2021/09/11 15:44:17.108275 /root/study/github_repository/qb/network/client.go:193: transcation success
+2021/09/11 15:45:47.680390 /root/study/github_repository/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
+2021/09/11 15:45:47.681758 /root/study/github_repository/qb/network/client.go:113: send a transcation to the Primary node
+2021/09/11 15:45:47.944313 /root/study/github_repository/qb/network/client.go:193: transcation success
+2021/09/11 15:46:17.588040 /root/study/github_repository/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
+2021/09/11 15:46:17.589344 /root/study/github_repository/qb/network/client.go:113: send a transcation to the Primary node
+2021/09/11 15:46:17.850386 /root/study/github_repository/qb/network/client.go:193: transcation success
+2021/09/11 15:46:54.180584 /root/study/github_repository/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
+2021/09/11 15:46:54.181831 /root/study/github_repository/qb/network/client.go:113: send a transcation to the Primary node
+2021/09/11 15:46:54.435258 /root/study/github_repository/qb/network/client.go:193: transcation success
+2021/09/11 15:47:27.578201 /root/study/github_repository/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
+2021/09/11 15:47:27.580069 /root/study/github_repository/qb/network/client.go:113: send a transcation to the Primary node
+2021/09/11 15:47:27.844600 /root/study/github_repository/qb/network/client.go:193: transcation success
+2021/09/11 15:48:09.412119 /root/study/github_repository/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
+2021/09/11 15:48:09.413087 /root/study/github_repository/qb/network/client.go:113: send a transcation to the Primary node
+2021/09/11 15:48:09.675889 /root/study/github_repository/qb/network/client.go:193: transcation success
+2021/09/11 15:48:21.545820 /root/study/github_repository/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
+2021/09/11 15:48:21.547250 /root/study/github_repository/qb/network/client.go:113: send a transcation to the Primary node
+2021/09/11 15:48:21.810347 /root/study/github_repository/qb/network/client.go:193: transcation success
+2021/09/11 15:48:38.819134 /root/study/github_repository/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
+2021/09/11 15:48:38.820208 /root/study/github_repository/qb/network/client.go:113: send a transcation to the Primary node
+2021/09/11 15:48:39.071903 /root/study/github_repository/qb/network/client.go:193: transcation success
+2021/09/11 15:49:59.497991 /root/study/github_repository/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
+2021/09/11 15:49:59.499198 /root/study/github_repository/qb/network/client.go:113: send a transcation to the Primary node
+2021/09/11 15:49:59.756510 /root/study/github_repository/qb/network/client.go:193: transcation success
+2021/09/11 15:50:13.871201 /root/study/github_repository/qb/network/client.go:136: creat a new transcation,and put it into broadcast channel
+2021/09/11 15:50:13.871996 /root/study/github_repository/qb/network/client.go:113: send a transcation to the Primary node
+2021/09/11 15:50:14.123115 /root/study/github_repository/qb/network/client.go:193: transcation success

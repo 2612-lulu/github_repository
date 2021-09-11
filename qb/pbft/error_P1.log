@@ -1,0 +1,101 @@
+【START A NEW PBFT】2021/09/11 15:41:26.068354 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:41:33.707895 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:41:41.318512 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+[Commit error]2021/09/11 15:41:41.323475 /root/study/github_repository/qb/pbft/pbft_impl.go:273: the sequenceID of prepare message is wrong!
+[Commit error]2021/09/11 15:41:41.323480 /root/study/github_repository/qb/pbft/pbft_impl.go:274: Last_sequence_number= 1631346086069688325
+[Commit error]2021/09/11 15:41:41.323483 /root/study/github_repository/qb/pbft/pbft_impl.go:275: prepare.Sequence_number= 1631346086069688325
+[Reply error]2021/09/11 15:41:41.329452 /root/study/github_repository/qb/pbft/pbft_impl.go:380: the sequenceID of commit message is wrong!
+[Reply error]2021/09/11 15:41:41.329457 /root/study/github_repository/qb/pbft/pbft_impl.go:381: Last_sequence_number= 1631346086069688325
+[Reply error]2021/09/11 15:41:41.329460 /root/study/github_repository/qb/pbft/pbft_impl.go:382: commit.Sequence_number= 1631346086069688325
+【START A NEW PBFT】2021/09/11 15:41:48.940318 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+P1-[pbft.CommitMsg]2021/09/11 15:41:48.952274 /root/study/github_repository/qb/network/node.go:356: [put commit message into MsgDelivery channel]
+【START A NEW PBFT】2021/09/11 15:42:00.777168 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:42:08.414451 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:42:16.017097 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+P1-[pbft.CommitMsg]2021/09/11 15:42:16.026973 /root/study/github_repository/qb/network/node.go:356: [put commit message into MsgDelivery channel]
+【START A NEW PBFT】2021/09/11 15:42:23.618152 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:43:09.304845 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+【START A NEW PBFT】2021/09/11 15:43:09.304851 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:43:16.977623 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:43:24.603949 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:43:32.207957 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+P1-[pbft.PrepareMsg]2021/09/11 15:43:32.213133 /root/study/github_repository/qb/network/node.go:339: [put prepare message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/11 15:43:32.220853 /root/study/github_repository/qb/network/node.go:356: [put commit message into MsgDelivery channel]
+【START A NEW PBFT】2021/09/11 15:43:54.317960 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:44:01.902908 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:44:09.477166 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+[Reply error]2021/09/11 15:44:09.488231 /root/study/github_repository/qb/pbft/pbft_impl.go:380: the sequenceID of commit message is wrong!
+[Reply error]2021/09/11 15:44:09.488238 /root/study/github_repository/qb/pbft/pbft_impl.go:381: Last_sequence_number= 1631346086069688337
+[Reply error]2021/09/11 15:44:09.488249 /root/study/github_repository/qb/pbft/pbft_impl.go:382: commit.Sequence_number= 1631346086069688337
+【START A NEW PBFT】2021/09/11 15:44:17.091697 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+P1-[pbft.PrepareMsg]2021/09/11 15:44:17.099808 /root/study/github_repository/qb/network/node.go:339: [put prepare message into MsgDelivery channel]
+【START A NEW PBFT】2021/09/11 15:45:37.091479 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:45:37.091477 /root/study/github_repository/qb/network/node.go:416: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[pbft.CommitMsg]2021/09/11 15:45:37.128109 /root/study/github_repository/qb/network/node.go:356: [put commit message into MsgDelivery channel]
+【START A NEW PBFT】2021/09/11 15:45:40.717547 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:45:44.322692 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:45:47.925326 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:46:07.008600 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:46:10.622890 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:46:14.231318 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+P1-[pbft.CommitMsg]2021/09/11 15:46:14.241087 /root/study/github_repository/qb/network/node.go:356: [put commit message into MsgDelivery channel]
+P1-commit2021/09/11 15:46:14.242774 /root/study/github_repository/qb/network/node.go:178: receive a commit message
+【START A NEW PBFT】2021/09/11 15:46:17.833617 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:46:43.578544 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+[Reply error]2021/09/11 15:46:43.590450 /root/study/github_repository/qb/pbft/pbft_impl.go:380: the sequenceID of commit message is wrong!
+[Reply error]2021/09/11 15:46:43.590459 /root/study/github_repository/qb/pbft/pbft_impl.go:381: Last_sequence_number= 1631346337093179047
+[Reply error]2021/09/11 15:46:43.590462 /root/study/github_repository/qb/pbft/pbft_impl.go:382: commit.Sequence_number= 1631346337093179047
+【START A NEW PBFT】2021/09/11 15:46:47.208758 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+P1-commit2021/09/11 15:46:47.221705 /root/study/github_repository/qb/network/node.go:178: receive a commit message
+【START A NEW PBFT】2021/09/11 15:46:50.813183 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:46:54.419655 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:47:16.982480 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:47:20.605660 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:47:24.216520 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+P1-[pbft.CommitMsg]2021/09/11 15:47:24.226958 /root/study/github_repository/qb/network/node.go:356: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/11 15:47:24.228668 /root/study/github_repository/qb/network/node.go:356: [put commit message into MsgDelivery channel]
+【START A NEW PBFT】2021/09/11 15:47:27.826925 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+[Reply error]2021/09/11 15:47:27.838935 /root/study/github_repository/qb/pbft/pbft_impl.go:380: the sequenceID of commit message is wrong!
+[Reply error]2021/09/11 15:47:27.838949 /root/study/github_repository/qb/pbft/pbft_impl.go:381: Last_sequence_number= 1631346337093179054
+[Reply error]2021/09/11 15:47:27.838955 /root/study/github_repository/qb/pbft/pbft_impl.go:382: commit.Sequence_number= 1631346337093179054
+【START A NEW PBFT】2021/09/11 15:48:04.793527 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:48:06.403361 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+[Reply error]2021/09/11 15:48:06.414256 /root/study/github_repository/qb/pbft/pbft_impl.go:380: the sequenceID of commit message is wrong!
+[Reply error]2021/09/11 15:48:06.414274 /root/study/github_repository/qb/pbft/pbft_impl.go:381: Last_sequence_number= 1631346337093179056
+[Reply error]2021/09/11 15:48:06.414278 /root/study/github_repository/qb/pbft/pbft_impl.go:382: commit.Sequence_number= 1631346337093179056
+【START A NEW PBFT】2021/09/11 15:48:08.040692 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+[Reply error]2021/09/11 15:48:08.053316 /root/study/github_repository/qb/pbft/pbft_impl.go:380: the sequenceID of commit message is wrong!
+[Reply error]2021/09/11 15:48:08.053324 /root/study/github_repository/qb/pbft/pbft_impl.go:381: Last_sequence_number= 1631346337093179057
+[Reply error]2021/09/11 15:48:08.053328 /root/study/github_repository/qb/pbft/pbft_impl.go:382: commit.Sequence_number= 1631346337093179057
+【START A NEW PBFT】2021/09/11 15:48:09.659781 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:48:16.978123 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:48:18.573750 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:48:20.184263 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+[Reply error]2021/09/11 15:48:20.194335 /root/study/github_repository/qb/network/node.go:356: [put commit message into MsgDelivery channel]
+【START A NEW PBFT】2021/09/11 15:48:21.794392 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:48:34.261217 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+[Reply error]2021/09/11 15:48:34.272828 /root/study/github_repository/qb/pbft/pbft_impl.go:380: the sequenceID of commit message is wrong!
+[Reply error]2021/09/11 15:48:34.272838 /root/study/github_repository/qb/pbft/pbft_impl.go:381: Last_sequence_number= 1631346337093179063
+[Reply error]2021/09/11 15:48:34.272843 /root/study/github_repository/qb/pbft/pbft_impl.go:382: commit.Sequence_number= 1631346337093179063
+【START A NEW PBFT】2021/09/11 15:48:35.860101 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+[Reply error]2021/09/11 15:48:35.871890 /root/study/github_repository/qb/pbft/pbft_impl.go:380: the sequenceID of commit message is wrong!
+[Reply error]2021/09/11 15:48:35.871897 /root/study/github_repository/qb/pbft/pbft_impl.go:381: Last_sequence_number= 1631346337093179064
+[Reply error]2021/09/11 15:48:35.871900 /root/study/github_repository/qb/pbft/pbft_impl.go:382: commit.Sequence_number= 1631346337093179064
+【START A NEW PBFT】2021/09/11 15:48:37.463236 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:48:39.055691 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+[Reply error]2021/09/11 15:48:39.065812 /root/study/github_repository/qb/network/node.go:356: [put commit message into MsgDelivery channel]
+[Reply error]2021/09/11 15:48:39.065813 /root/study/github_repository/qb/pbft/pbft_impl.go:380: the sequenceID of commit message is wrong!
+【START A NEW PBFT】2021/09/11 15:49:54.926263 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:49:56.529133 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:49:58.136175 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+[Reply error]2021/09/11 15:49:58.146889 /root/study/github_repository/qb/pbft/pbft_impl.go:380: the sequenceID of commit message is wrong!
+[Reply error]2021/09/11 15:49:58.146906 /root/study/github_repository/qb/pbft/pbft_impl.go:381: Last_sequence_number= 1631346594927851384
+[Reply error]2021/09/11 15:49:58.146908 /root/study/github_repository/qb/pbft/pbft_impl.go:382: commit.Sequence_number= 1631346594927851384
+【START A NEW PBFT】2021/09/11 15:49:59.740602 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+[Reply error]2021/09/11 15:49:59.751753 /root/study/github_repository/qb/pbft/pbft_impl.go:380: the sequenceID of commit message is wrong!
+[Reply error]2021/09/11 15:49:59.751758 /root/study/github_repository/qb/pbft/pbft_impl.go:381: Last_sequence_number= 1631346594927851385
+[Reply error]2021/09/11 15:49:59.751761 /root/study/github_repository/qb/pbft/pbft_impl.go:382: commit.Sequence_number= 1631346594927851385
+【START A NEW PBFT】2021/09/11 15:50:09.251477 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:50:10.860810 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:50:12.463088 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
+【START A NEW PBFT】2021/09/11 15:50:14.107314 /root/study/github_repository/qb/pbft/pbft_impl.go:54: start a new pbft
