@@ -12,7 +12,7 @@ import (
 )
 
 // 区块包含的最小交易数量
-const BLOCK_LENGTH = 5
+const BLOCK_LENGTH = 1
 
 // 区块结构
 type Block struct {

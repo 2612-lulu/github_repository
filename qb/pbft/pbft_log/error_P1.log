@@ -1,15 +1,4 @@
-【START A NEW PBFT】2021/09/11 19:22:15.221938 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
-【START A NEW PBFT】2021/09/11 19:22:16.221929 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
-【START A NEW PBFT】2021/09/11 19:22:17.223677 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
-【START A NEW PBFT】2021/09/11 20:19:27.856447 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
-【START A NEW PBFT】2021/09/11 20:19:28.856697 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
-【START A NEW PBFT】2021/09/11 20:19:40.869407 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
-[Reply error]2021/09/11 20:19:40.888963 /root/study/github_repository/qb/pbft/pbft_impl.go:387: the sequenceID of commit message is wrong!
-[Reply error]2021/09/11 20:19:40.888968 /root/study/github_repository/qb/pbft/pbft_impl.go:388: Last_sequence_number= 1631362767858608892
-[Reply error]2021/09/11 20:19:40.888971 /root/study/github_repository/qb/pbft/pbft_impl.go:389: commit.Sequence_number= 1631362767858608892
-[Reply]2021/09/11 20:19:40.888975 /root/study/github_repository/qb/pbft/pbft_impl.go:331: commit message is corrupted
-【START A NEW PBFT】2021/09/11 20:19:41.870831 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
-[Reply error]2021/09/11 20:19:41.884168 /root/study/github_repository/qb/pbft/pbft_impl.go:387: the sequenceID of commit message is wrong!
-[Reply error]2021/09/11 20:19:41.884176 /root/study/github_repository/qb/pbft/pbft_impl.go:388: Last_sequence_number= 1631362767858608893
-[Reply error]2021/09/11 20:19:41.884180 /root/study/github_repository/qb/pbft/pbft_impl.go:389: commit.Sequence_number= 1631362767858608893
-[Reply]2021/09/11 20:19:41.884187 /root/study/github_repository/qb/pbft/pbft_impl.go:331: commit message is corrupted
+【START A NEW PBFT】2021/09/14 22:13:19.127942 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
+【START A NEW PBFT】2021/09/14 22:13:21.134735 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
+【START A NEW PBFT】2021/09/14 22:13:29.132651 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
+【START A NEW PBFT】2021/09/14 22:13:31.133335 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft

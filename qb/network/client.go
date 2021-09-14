@@ -17,11 +17,12 @@ import (
 
 // 客户端
 type Client struct {
-	Client_name  string            // 客户端名称
-	Client_ID    [16]byte          // 客户端ID，16字节QKD设备号
-	Client_table map[string]string // 客户端索引表，key=Client_name, value=url
-	Node_table   map[string]string // 节点索引表，key=Node_name, value=url
-	View         *View             // 视图号
+	Client_name          string            // 客户端名称
+	Client_ID            [16]byte          // 客户端ID，16字节QKD设备号
+	Client_table         map[string]string // 客户端索引表，key=Client_name, value=url
+	Node_consensus_table map[string]string // 节点索引表，key=Node_name, value=url
+	Node_table           map[string]string // 节点索引表，key=Node_name, value=url
+	View                 *View             // 视图号
 
 	ReplyMsgs    []*pbft.ReplyMsg // 接收的reply消息缓冲列表
 	CurrentState *pbft.State
@@ -43,10 +44,11 @@ func NewClient(client_name string) *Client {
 
 	// 初始化节点
 	client := &Client{
-		Client_name:  client_name,                                                 // 客户端名称，形式为C1、C2...
-		Client_ID:    qbtools.GetNodeIDTable(client_name),                         // 客户端ID，16字节QKD设备号
-		Client_table: qbtools.InitConfig("./qbtools/config/client_localhost.txt"), // 客户端索引表，key=Node_name, value=url
-		Node_table:   qbtools.InitConfig("./qbtools/config/node_localhost.txt"),
+		Client_name:          client_name,                                                 // 客户端名称，形式为C1、C2...
+		Client_ID:            qbtools.GetNodeIDTable(client_name),                         // 客户端ID，16字节QKD设备号
+		Client_table:         qbtools.InitConfig("./qbtools/config/client_localhost.txt"), // 客户端索引表，key=Node_name, value=url
+		Node_table:           qbtools.InitConfig("./qbtools/config/node_localhost.txt"),   // 联盟节点节点索引表，key=Node_name, value=url
+		Node_consensus_table: qbtools.InitConfig("./qbtools/config/node_consensus_localhost.txt"),
 		View: &View{ // 视图号信息，视图号=主节点下标
 			ID:      view, // 视图号
 			Primary: "P1", // 主节点,暂设为P1

@@ -1,0 +1,44 @@
+P1-[block.Transaction]2021/09/14 22:13:18.564870 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:18.683672 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:18.800467 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:18.916273 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:19.031901 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Block]2021/09/14 22:13:19.127112 /root/study/github_repository/qb/network/node.go:172: create a new block, and put it into MsgEntrance channel
+P1-[block.Transaction]2021/09/14 22:13:19.162663 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:19.266929 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:19.384489 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:19.500942 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:19.618190 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:19.734406 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:19.851494 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:19.967562 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:20.083468 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:20.202647 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:20.322046 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:20.439196 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:20.556724 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:20.676913 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:20.794163 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Block]2021/09/14 22:13:21.127526 /root/study/github_repository/qb/network/node.go:172: create a new block, and put it into MsgEntrance channel
+P1-[block.Transaction]2021/09/14 22:13:28.496154 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:28.619024 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:28.740200 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:28.860233 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:28.980612 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:29.100253 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Block]2021/09/14 22:13:29.132262 /root/study/github_repository/qb/network/node.go:172: create a new block, and put it into MsgEntrance channel
+P1-[block.Transaction]2021/09/14 22:13:29.227052 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:29.351113 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:29.468087 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:29.585512 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:29.701788 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:29.822571 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:29.950727 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:30.070687 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:30.186886 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:30.305254 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:30.428642 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:30.549256 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:30.669968 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Transaction]2021/09/14 22:13:30.792326 /root/study/github_repository/qb/network/node.go:160: get a transcation message
+P1-[block.Block]2021/09/14 22:13:31.132829 /root/study/github_repository/qb/network/node.go:172: create a new block, and put it into MsgEntrance channel
