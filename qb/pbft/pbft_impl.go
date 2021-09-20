@@ -1,6 +1,6 @@
-//pbft包，实现了pbft共识的相关处理
-//创建人：zhanglu
-//创建时间：2021/08/15
+// pbft包，实现了pbft共识的相关处理
+// 创建人：zhanglu
+// 创建时间：2021/08/15
 package pbft
 
 import (
@@ -10,8 +10,9 @@ import (
 	"strconv"
 	"time"
 
-	"qb/block"
+	"qb/qblock"
 	"qb/qbtools"
+	"qb/qbtx"
 	"qb/qkdserv"
 	"qb/uss"
 )
@@ -27,7 +28,7 @@ type State struct {
 
 // pbft缓存数据，用于存放pbft过程中的各类消息
 type MsgLogs struct {
-	ReqMsg        *block.Block          // 存放request消息
+	ReqMsg        *qblock.Block         // 存放request消息
 	PreparedMsgs  map[int64]*PrepareMsg // 存放prepared消息
 	CommittedMsgs map[int64]*CommitMsg  // 存放committed消息
 	ReplyMsgs     map[int64]*ReplyMsg   // 存放Reply消息
@@ -43,11 +44,14 @@ const (
 	Committed                // Committed=3，Same with `committed-local` stage explained in the original paper.
 )
 
+// 错误log存放路径
+const LOG_ERROR_PATH = "/root/study/github_repository/qb/pbft/log/pbft_error_log/error_"
+
 // CreateState，创建共识状态。如果不存在lastSequenceNumber，则lastSequenceNumber=-1
 // 参数：视图号int64，上次共识的序列号int64
 // 返回值：pbft状态State
 func CreateState(view int64, lastSequenceNumber int64) *State {
-	qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
+	qbtools.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 	log.SetPrefix("【START A NEW PBFT】")
 	log.Println("start a new pbft")
 	return &State{
@@ -67,7 +71,7 @@ func CreateState(view int64, lastSequenceNumber int64) *State {
 // State.PrePrePare，进入共识，由主节点进行消息处理：客户端Request——>主节点PrePrePare——>从节点
 // 参数：请求消息*block.Block
 // 返回值：预准备消息*PrePrepareMsg，处理错误error
-func (state *State) PrePrePare(request *block.Block) (*PrePrepareMsg, error) {
+func (state *State) PrePrePare(request *qblock.Block) (*PrePrepareMsg, error) {
 	state.Msg_logs.ReqMsg = request // 记录request消息到state的log中
 
 	if state.verifyRequest(request.Transactions) { // 如果每条交易信息验签成功
@@ -102,7 +106,7 @@ func (state *State) PrePrePare(request *block.Block) (*PrePrepareMsg, error) {
 		state.Current_stage = PrePrepared
 		return preprepare, nil
 	} else {
-		qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
+		qbtools.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 		log.SetPrefix("[Pre-prepare]")
 		log.Println("failing to verify request message")
 		return nil, nil
@@ -112,18 +116,19 @@ func (state *State) PrePrePare(request *block.Block) (*PrePrepareMsg, error) {
 // State.VerifyRequest，验证请求消息中每条交易信息的正确性
 // 参数：交易消息[]*block.Transaction
 // 返回值：验证结果bool
-func (state *State) verifyRequest(request []*block.Transaction) bool {
+func (state *State) verifyRequest(request []*qbtx.Transaction) bool {
 	//TODO:验证每条交易信息的签名
 	verify_num := 0
 	for _, reqMsg := range request {
-		if uss.VerifySign(reqMsg.Sign_client) { // 验证签名正确性
+
+		if reqMsg.VerifyTX() { // 验证签名正确性
 			verify_num++
 		}
 	}
 	if verify_num == len(request) {
 		return true
 	} else {
-		qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
+		qbtools.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 		log.SetPrefix("[Pre-prepare]")
 		log.Println("The verify of client sign is false!!!")
 		return false
@@ -137,7 +142,7 @@ func (state *State) PrePare(preprepare *PrePrepareMsg) (*PrepareMsg, error) {
 	state.Msg_logs.ReqMsg = &preprepare.Request // 将request消息提取出来记录到state中
 	if !state.verifyPrePrepareMsg(preprepare) { // 校验受到的pre-prepare是否通过
 		//return nil, errors.New("pre-prepare message is corrupted")
-		qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
+		qbtools.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 		log.SetPrefix("[Prepare]")
 		log.Println("pre-prepare message is corrupted")
 		return nil, nil
@@ -178,7 +183,7 @@ func (state *State) verifyPrePrepareMsg(preprepare *PrePrepareMsg) bool {
 	var result bool
 	msg, _ := json.Marshal(preprepare.Request)
 	digest := qbtools.Digest(msg) // 计算消息的摘要值
-	qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
+	qbtools.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 	// 判断是否符合校验条件
 	if state.View != preprepare.View {
 		log.SetPrefix("[Prepare error]")
@@ -216,7 +221,7 @@ func (state *State) verifyPrePrepareMsg(preprepare *PrePrepareMsg) bool {
 func (state *State) Commit(prepare *PrepareMsg) (*CommitMsg, error) {
 	if !state.verifyPrepareMsg(prepare) { // 校验收到的prepare消息
 		//return nil, errors.New("prepare message is corrupted")
-		qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
+		qbtools.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 		log.SetPrefix("[Commit]")
 		log.Println("prepare message is corrupted")
 		return nil, nil
@@ -265,7 +270,7 @@ func (state *State) verifyPrepareMsg(prepare *PrepareMsg) bool {
 	var result bool
 	msg, _ := json.Marshal(state.Msg_logs.ReqMsg)
 	digest := qbtools.Digest(msg) // 计算消息的摘要值
-	qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
+	qbtools.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 	if state.View != prepare.View {
 		log.SetPrefix("[Commit]")
 		log.Println("the view of prepare message is wrong!")
@@ -305,14 +310,14 @@ func (state *State) verifyPrepareMsg(prepare *PrepareMsg) bool {
 func (state *State) prepared() bool {
 
 	if state.Msg_logs.ReqMsg == nil {
-		qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
+		qbtools.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 		log.SetPrefix("[Commit error]")
 		log.Println("request of state is nil")
 		return false
 	}
 
 	if len(state.Msg_logs.PreparedMsgs) < 2*F {
-		//qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
+		//qbtools.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 		//log.SetPrefix("[Commit error]")
 		//log.Println("didn't receive 2*f prepared message,please wait")
 		return false
@@ -326,7 +331,7 @@ func (state *State) prepared() bool {
 func (state *State) Reply(commit *CommitMsg) (*ReplyMsg, error) {
 	if !state.verifyCommitMsg(commit) {
 		//return nil, errors.New("commit message is corrupted")
-		qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
+		qbtools.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 		log.SetPrefix("[Reply]")
 		log.Println("commit message is corrupted")
 		return nil, nil
@@ -377,7 +382,7 @@ func (state *State) verifyCommitMsg(commit *CommitMsg) bool {
 	var result bool
 	msg, _ := json.Marshal(state.Msg_logs.ReqMsg)
 	digest := qbtools.Digest(msg) // 计算消息的摘要值
-	qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
+	qbtools.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 	if state.View != commit.View {
 		log.SetPrefix("[Reply error]")
 		log.Println("the view is wrong!")
@@ -414,13 +419,13 @@ func (state *State) verifyCommitMsg(commit *CommitMsg) bool {
 // 返回值：验证结果bool
 func (state *State) committed() bool {
 	if !state.prepared() { // 如果prepare投票未通过，则不能进入commit
-		qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
+		qbtools.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 		log.SetPrefix("[Reply error]")
 		log.Println("didn't prepared!")
 		return false
 	}
 	if len(state.Msg_logs.CommittedMsgs) < 2*F+1 { // commit通过的条件是受到2f+1个校验通过的commit,包括自身节点
-		//qbtools.Init_log("./pbft/pbft_log/error_" + qkdserv.Node_name + ".log")
+		//qbtools.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 		//log.SetPrefix("[Reply error]")
 		//log.Println("didn't receive 2*f committed message,please wait!")
 		return false

@@ -1,5 +1,0 @@
-【START A NEW PBFT】2021/09/14 22:13:19.130563 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
-【START A NEW PBFT】2021/09/14 22:13:21.139298 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
-【START A NEW PBFT】2021/09/14 22:13:29.134984 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft
-P2-[receive PrepareMsg]2021/09/14 22:13:29.141381 /root/study/github_repository/qb/network/consensus.go:379: [put prepare message into MsgDelivery channel]
-【START A NEW PBFT】2021/09/14 22:13:31.140666 /root/study/github_repository/qb/pbft/pbft_impl.go:52: start a new pbft

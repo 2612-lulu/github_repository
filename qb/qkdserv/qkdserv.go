@@ -1,7 +1,7 @@
-//qkdserv包，模拟QKD服务基本功能，包括密钥分发与获取密钥
-//创建人：zhanglu
-//创建时间：2021/08/04
-//使用须知：使用前需初始化签名密钥池qkdserv.QKD_sign_random_matrix_pool与当前节点号qkdserv.Node_name
+// qkdserv包，模拟QKD服务基本功能，包括密钥分发与获取密钥
+// 创建人：zhanglu
+// 创建时间：2021/08/04
+// 使用须知：使用前需初始化签名密钥池qkdserv.QKD_sign_random_matrix_pool与当前节点号qkdserv.Node_name
 package qkdserv
 
 import (
@@ -21,7 +21,7 @@ var QKD_sign_random_matrix_pool map[QKDSignMatrixIndex]QKDSignRandomsMatrix
 var Node_name string
 
 // 签名密钥矩阵的一行
-type QKDSignRandomsMatrixRow struct {
+type qkdSignRandomsMatrixRow struct {
 	Counts     uint32 // 该随机数的个数（是方形矩阵，等于总行数/列数）
 	Row_num    uint32 // 随机数所在行的行号
 	Column_num uint32 // 随机数所在列的列号，随机数个数counts>1时，列号无用
@@ -33,7 +33,7 @@ type QKDSignRandomsMatrixRow struct {
 type QKDSignRandomsMatrix struct {
 	Main_row_num byte                      // 主行号，即有多列的行，为0，表示是全矩阵，否则为只有一行为主的矩阵
 	Row_counts   uint32                    // 随机数行数
-	Sign_randoms []QKDSignRandomsMatrixRow // 每行随机数
+	Sign_randoms []qkdSignRandomsMatrixRow // 每行随机数
 }
 
 // 签名矩阵索引，由id和SN可以唯一标识该次签名，该索引也是签名密钥索引
@@ -54,7 +54,7 @@ type QKDSignRandomMainRowNum struct {
 // 参数：签名索引QKDSignMatrixIndex，源、目的ID[16]byte，共享的一行随机数QKDSignRandomsMatrixRow，主行号QKDSignRandomsMatrixRow
 // 返回值：分发结果bool
 func QKDSecRandomShare(sign_matrix_index QKDSignMatrixIndex, random_src_dev_id,
-	random_dst_dev_id [16]byte, random_row QKDSignRandomsMatrixRow, main_row_num QKDSignRandomsMatrixRow) bool {
+	random_dst_dev_id [16]byte, random_row qkdSignRandomsMatrixRow, main_row_num qkdSignRandomsMatrixRow) bool {
 	return true
 }
 
@@ -99,7 +99,7 @@ func generateSignRandomsMatrix(sign_matrix_index QKDSignMatrixIndex, row_counts 
 	sign_matrix.Row_counts = row_counts // 验签者个数
 
 	for i := 0; i < int(row_counts); i++ {
-		curr_row := QKDSignRandomsMatrixRow{}
+		curr_row := qkdSignRandomsMatrixRow{}
 		curr_row.Counts = row_counts     // 完整行，随机数数量等于行数/列数
 		curr_row.Row_num = uint32(i + 1) // 当前行的行号
 		curr_row.Column_num = 0          // 完整行，列号无意义
@@ -159,7 +159,7 @@ func getVerifyMatrix(SignIndex QKDSignMatrixIndex, SignRandomsMatrix QKDSignRand
 	SN := int(SignIndex.Sign_task_sn[15])                       // 取SN最后一位字节
 
 	for i := 0; i < int(VerifyMatrix.Row_counts); i++ {
-		curr_row := QKDSignRandomsMatrixRow{}
+		curr_row := qkdSignRandomsMatrixRow{}
 		curr_row.Counts = 1                                                                              // 该行中包含的签名随机数的个数，签名密钥中均为1                                                                   // 随机数个数，因为是验签用的残阵，这里每行有一个随机数
 		curr_row.Row_num = uint32(i + 1)                                                                 // 当前行号
 		curr_row.Column_num = ((uint32(i+SN) + main_row_num.Main_Row_Num) % VerifyMatrix.Row_counts) + 1 // 列号

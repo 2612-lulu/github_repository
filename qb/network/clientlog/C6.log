@@ -1,6 +1,0 @@
-[input]2021/09/14 22:11:19.123641 /root/study/github_repository/qb/network/client.go:148: creat a new transcation,and put it into broadcast channel
-[send transcation]2021/09/14 22:11:19.124682 /root/study/github_repository/qb/network/client.go:122: send a transcation to the Primary node
-[input]2021/09/14 22:13:19.148585 /root/study/github_repository/qb/network/client.go:148: creat a new transcation,and put it into broadcast channel
-[send transcation]2021/09/14 22:13:19.162836 /root/study/github_repository/qb/network/client.go:122: send a transcation to the Primary node
-[input]2021/09/14 22:13:29.099169 /root/study/github_repository/qb/network/client.go:148: creat a new transcation,and put it into broadcast channel
-[send transcation]2021/09/14 22:13:29.100327 /root/study/github_repository/qb/network/client.go:122: send a transcation to the Primary node

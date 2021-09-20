@@ -5,14 +5,18 @@ package qbtools
 
 import (
 	"bufio"
+	"bytes"
 	"crypto/hmac"
 	"crypto/sha256"
 	"fmt"
 	"io"
 	"log"
+	"net/http"
 	"os"
 	"strings"
 )
+
+const INIT_PATH = "/root/study/github_repository/qb/qbtools/config/"
 
 // GenRandomWithPRF,生成随机数（密钥）：根据种子密钥和签名索引产生符合要求的随机数
 // 参数：种子密钥[]byte，签名索引QKDSignMatrixIndex，每行随机数个数uint32，随机数的单位字节长度uint32
@@ -47,7 +51,7 @@ func GenRandomWithPRF(key []byte, sign_dev_id, sign_task_sn [16]byte, random_cou
 // 返回值：节点设备号[16]byte
 func GetNodeIDTable(nodeName string) [16]byte {
 	NodeIDTable := make(map[string][16]byte)
-	NodeTable := InitConfig("qbtools/config/id_table")
+	NodeTable := InitConfig(INIT_PATH + "id_table.txt")
 	id, ok := NodeTable[nodeName]
 	if ok {
 		var NodeID [16]byte
@@ -132,5 +136,17 @@ func LogStage(stage string, isDone bool) {
 		fmt.Printf("[STAGE-DONE] %s\n", stage)
 	} else {
 		fmt.Printf("[STAGE-BEGIN] %s\n", stage)
+	}
+}
+
+func Send(url string, msg []byte) {
+	buff := bytes.NewBuffer(msg)
+	http.Post("http://"+url, "application/json", buff)
+}
+
+// ReverseBytes，将字符串逆序
+func ReverseBytes(data []byte) {
+	for i, j := 0, len(data)-1; i < j; i, j = i+1, j-1 {
+		data[i], data[j] = data[j], data[i]
 	}
 }

@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/binary"
 
-	"qb/block"
+	"qb/qblock"
 	"qb/uss"
 )
 
@@ -34,7 +34,7 @@ type PrePrepareMsg struct {
 	Sequence_number int64                      // 主节点分配的序列号n,在[h, H]之间，用于对request进行排序？
 	Digest_m        []byte                     // 客户端请求消息中m的摘要
 	Sign_p          uss.USSToeplitzHashSignMsg // 主节点P对PrePrepare消息中v,n,d的签名
-	Request         block.Block
+	Request         qblock.Block
 }
 
 // Prepare消息，由从节点发往其他所有节点

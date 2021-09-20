@@ -2,10 +2,11 @@ package main
 
 import (
 	"os"
-	"qb/network"
+	"qb/qbcli"
 )
 
 func main() {
-	nodeID := os.Args[1]
-	network.CreateServer(nodeID)
+	os.Setenv("NODE_NAME", "C1")
+	cli := qbcli.CLI{}
+	cli.Run()
 }
