@@ -12,13 +12,13 @@ import (
 )
 
 // 数据库路径及名称
-const dbFile = "/root/study/github_repository/qb/quantumbc/DB/blockchain_%s.db"
+const DBFile = "/root/study/github_repository/qb/quantumbc/DB/blockchain_%s.db"
 
 // bucket名称
 const blocksBucket = "blocks"
 
 // 创世区块留言
-const genesisCoinbaseData = "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
+const genesisReservebaseData = "The Times 27/Sept/2021 Reserve is made"
 
 // Blockchain implements interactions with a DB
 type Blockchain struct {
@@ -27,123 +27,139 @@ type Blockchain struct {
 }
 
 // CreateBlockchain,创建区块链结构，初始化时只有创世区块
-func CreateBlockchain(address, nodeID string) *Blockchain {
+func CreateBlockchain(addresses []string, nodeID string) *Blockchain {
 	// 定义区块链数据库名称
-	dbFile := fmt.Sprintf(dbFile, nodeID)
+	dbFile := fmt.Sprintf(DBFile, nodeID)
 
 	// 只能第一次创建，所以需要查找是否存在相应的区块链数据库文件
-	if dbExists(dbFile) {
+	if DBExists(dbFile) {
 		log.Println("Blockchain already exists.")
 		return nil
-	}
+	} else {
+		var tip []byte
+		reserve_tx := qbtx.NewReserveTX(addresses, genesisReservebaseData) // 发放准备金
+		genesis := qblock.NewGenesisBlock(reserve_tx)                      // 创建创世区块
 
-	var tip []byte
-
-	reserve_tx := qbtx.NewReserveTX(address, genesisCoinbaseData) // 铸币交易
-	genesis := qblock.NewGenesisBlock(reserve_tx)                 // 创建创世区块
-
-	// 1.不存在区块链则创建数据库文件，0600，仅限本用户可读可写
-	db, err := bolt.Open(dbFile, 0600, nil)
-	if err != nil {
-		log.Panic(err)
-	}
-
-	// 2.更新数据库，插入数据库数据
-	err = db.Update(func(tx *bolt.Tx) error {
-		// 创建bucket
-		b, err := tx.CreateBucket([]byte(blocksBucket)) // bolt包函数
+		// 1.不存在区块链则创建数据库文件，0600，仅限本用户可读可写
+		db, err := bolt.Open(dbFile, 0600, nil)
 		if err != nil {
 			log.Panic(err)
 		}
 
-		// 设置key-value
-		err = b.Put(genesis.Hash, genesis.SerializeBlock())
+		// 2.更新数据库，插入数据库数据
+		err = db.Update(func(tx *bolt.Tx) error {
+			// 创建bucket
+			b, err := tx.CreateBucket([]byte(blocksBucket)) // bolt包函数
+			if err != nil {
+				log.Panic(err)
+			}
+			// 设置key-value
+			err = b.Put(genesis.Hash, genesis.SerializeBlock())
+			if err != nil {
+				log.Panic(err)
+			}
+			// 设置key-value，存储最新区块链哈希
+			err = b.Put([]byte("last"), genesis.Hash)
+			if err != nil {
+				log.Panic(err)
+			}
+			tip = genesis.Hash
+
+			return nil
+		})
 		if err != nil {
 			log.Panic(err)
 		}
-
-		// 设置key-value
-		err = b.Put([]byte("last"), genesis.Hash)
-		if err != nil {
-			log.Panic(err)
-		}
-		tip = genesis.Hash
-
-		return nil
-	})
-	if err != nil {
-		log.Panic(err)
+		bc := Blockchain{tip, db} // 记录blockchain信息
+		// log.Println("Create blockChain success")
+		return &bc
 	}
+}
 
-	bc := Blockchain{tip, db}
-	log.Println("Create blockChain success")
+// 打印区块链
+func PrintBlockChain(nodeID string) {
+	bc := NewBlockchain(nodeID) // 1.获取当前区块链信息
+	defer bc.DB.Close()
+	bci := bc.Iterator() // 2.设置迭代器
+	for {
+		b := bci.Next()                                                                            // 3.获取当前区块信息，并变更为前一区块以迭代
+		fmt.Printf("==================== Block %d ==================================\n", b.Height) // 4，打印当前区块信息
+		fmt.Printf("Version: %d\n", b.Version)
+		fmt.Printf("Height: %d\n", b.Height)
+		fmt.Printf("TimeStamp: %d\n", b.Time_stamp)
+		fmt.Printf("PrevHash: %x\n", b.Prev_block_hash)
+		fmt.Printf("CurrentHash: %x\n", b.Hash)
+		fmt.Printf("Transactions:\n")
+		for _, tx := range b.Transactions {
+			fmt.Printf("\tID:%x\n", tx.ID)
+			fmt.Println("\tVin:", tx.Vin)
+			fmt.Println("\tVout:", tx.Vout)
+			fmt.Printf("\n")
+		}
+		fmt.Printf("\n\n")
 
-	// 记录blockchain信息
-	return &bc
+		if len(b.Prev_block_hash) == 0 { // 遍历数据库至创世区块
+			break
+		}
+	}
 }
 
 // NewBlockchain,读取当前区块
 func NewBlockchain(nodeID string) *Blockchain {
-	dbFile := fmt.Sprintf(dbFile, nodeID)
-	if !dbExists(dbFile) {
+	dbFile := fmt.Sprintf(DBFile, nodeID)
+	// 判断账本/数据库是否存在
+	if !DBExists(dbFile) {
 		fmt.Println("No existing blockchain found. Create one first.")
 		os.Exit(1)
 	}
 
 	var tip []byte
-	// 打开数据库文件
-	db, err := bolt.Open(dbFile, 0600, nil)
+	db, err := bolt.Open(dbFile, 0600, nil) // 1.打开数据库文件
 	if err != nil {
 		log.Panic(err)
 	}
-
-	// 更新数据库
-	err = db.Update(func(tx *bolt.Tx) error {
-		// 获取bucket
-		b := tx.Bucket([]byte(blocksBucket))
-		// 不是第一次使用，之前有块，所以此时不需要作判断
-		tip = b.Get([]byte("last"))
+	err = db.Update(func(tx *bolt.Tx) error { // 2.更新数据库
+		b := tx.Bucket([]byte(blocksBucket)) // 获取bucket
+		tip = b.Get([]byte("last"))          // 获取最新区块指针。不是第一次使用，之前有块，所以此时不需要作判断
 		return nil
 	})
 	if err != nil {
 		log.Panic(err)
 	}
-
-	// 记录blockchain信息
-	bc := Blockchain{tip, db}
-
+	bc := Blockchain{tip, db} // 记录blockchain信息
 	return &bc
 }
 
-// FindUTXO finds all unspent transaction outputs and returns transactions with spent outputs removed
+// FindUTXO，查找所有未花费的交易输出
+// 参数：
+// 返回值：
 func (bc *Blockchain) FindUTXO() map[string]qbtx.TXOutputs {
 	UTXO := make(map[string]qbtx.TXOutputs)
-	spentTXOs := make(map[string][]int)
-	bci := bc.Iterator()
+	spentTXOs := make(map[string][]int) // 已花费的交易，key:txID,value:Vin.Vout
+	bci := bc.Iterator()                // 迭代器
 
-	for {
-		block := bci.Next()
+	for { // 迭代区块
+		block := bci.Next() // 从最后一区块逐一向前迭代
 
-		for _, tx := range block.Transactions {
-			txID := hex.EncodeToString(tx.ID)
+		for _, tx := range block.Transactions { // 遍历当前区块存储的交易信息
+			txID := hex.EncodeToString(tx.ID) // 转换为string格式
 
-		Outputs:
-			for outIdx, out := range tx.Vout {
-				// Was the output spent?
-				if spentTXOs[txID] != nil {
+		Outputs: // label语法，适用于多级嵌套
+			for outIdx, out := range tx.Vout { // 遍历该交易信息的交易输出
+				if spentTXOs[txID] != nil { // 如果交易已经被花费，直接跳过此交易
 					for _, spentOutIdx := range spentTXOs[txID] {
 						if spentOutIdx == outIdx {
-							continue Outputs
+							continue Outputs // continue label跳出当前该次的循环圈，立马跳到label处继续上一层的下一次循环操作
 						}
 					}
 				}
-
+				// 如果交易未被花费，则放入UTXO
 				outs := UTXO[txID]
 				outs.Outputs = append(outs.Outputs, out)
 				UTXO[txID] = outs
 			}
 
-			if !tx.IsReserveTX() {
+			if !tx.IsReserveTX() { // 如果该交易信息不是准备金发放交易
 				for _, in := range tx.Vin {
 					inTxID := hex.EncodeToString(in.Txid)
 					spentTXOs[inTxID] = append(spentTXOs[inTxID], in.Vout)
@@ -151,17 +167,16 @@ func (bc *Blockchain) FindUTXO() map[string]qbtx.TXOutputs {
 			}
 		}
 
-		if len(block.Prev_block_hash) == 0 {
+		if len(block.Prev_block_hash) == 0 { // 迭代至创世区块，结束遍历
 			break
 		}
 	}
-
 	return UTXO
 }
 
 // Iterator,通过blockchain构造迭代器
 func (bc *Blockchain) Iterator() *BlockchainIterator {
-	bci := &BlockchainIterator{
+	bci := &BlockchainIterator{ // 初始为最新区块
 		currentHash: bc.tip,
 		db:          bc.DB,
 	}
@@ -377,7 +392,7 @@ func (bc *Blockchain) VerifyTransaction(tx *transaction.Transaction) bool {
 }
 */
 // 判断数据库文件/区块链是否存在
-func dbExists(dbFile string) bool {
+func DBExists(dbFile string) bool {
 	if _, err := os.Stat(dbFile); os.IsNotExist(err) {
 		return false
 	}

@@ -28,6 +28,7 @@ type NodeConsensus struct {
 	MsgEntrance  chan interface{} // 无缓冲的信息接收通道
 	MsgDelivery  chan interface{} // 无缓冲的信息发送通道
 	Alarm        chan bool        // 警告通道
+	Result       chan interface{} // pbft结果
 }
 
 // 视图号
@@ -40,6 +41,7 @@ type View struct {
 type Consensus struct {
 	CurrentState *State     // 节点状态，默认为nil
 	MsgBuffer    *MsgBuffer // 五种消息类型缓冲列表
+	ReqMsgs      *qblock.Block
 }
 
 // 数据缓存区
@@ -90,6 +92,7 @@ func NewNodeConsensus(node_name string) *NodeConsensus {
 		MsgEntrance:  make(chan interface{}), // 无缓冲的信息接收通道
 		MsgDelivery:  make(chan interface{}), // 无缓冲的信息发送通道
 		Alarm:        make(chan bool),        // 警告通道
+		Result:       make(chan interface{}),
 	}
 
 	node_consensus.setRoute()
@@ -199,6 +202,12 @@ func (node *NodeConsensus) broadcastMsg() {
 			node.broadcastReply(msg, "/reply")
 			qbtools.LogStage("Reply", true)
 
+			result := ResultMsg{
+				TX_block: *node.PBFT.CurrentState.Msg_logs.ReqMsg,
+				Result:   true,
+			}
+			node.Result <- result // 向节点返回共识结果，区块上链
+
 			node.PBFT.CurrentState = nil
 
 			qbtools.Init_log(LOG_PATH + "broadcast_" + node.Node_name + ".log")
@@ -243,17 +252,16 @@ func (node *NodeConsensus) broadcastReply(msg interface{}, path string) map[stri
 	errorMap := make(map[string]error) // 存放广播结果
 
 	// 将Reply消息广播给相应的客户端
-	for _, transcation := range node.PBFT.CurrentState.Msg_logs.ReqMsg.Transactions {
-		for _, vin := range transcation.Vin {
-			jsonMsg, err := json.Marshal(msg) // 将msg信息编码成json格式
-			if err != nil {
-				errorMap[vin.From] = err
-				continue
-			}
-			url := node.Client_table[vin.From]
-			// 将json格式发送到相应客户端
-			qbtools.Send(url+path, jsonMsg) // url：localhost:1111  path：/prepare等等
+	for _, tx := range node.PBFT.CurrentState.Msg_logs.ReqMsg.Transactions {
+		jsonMsg, err := json.Marshal(msg) // 将msg信息编码成json格式
+		if err != nil {
+			errorMap[tx.Vin[0].From] = err
+			continue
 		}
+		fmt.Println("send to:", tx.Vin[0].From)
+		url := node.Client_table[tx.Vin[0].From]
+		// 将json格式发送到相应客户端
+		qbtools.Send(url+path, jsonMsg) // url：localhost:1111  path：/prepare等等
 	}
 
 	if len(errorMap) == 0 { // 如果转发消息均成功
@@ -511,7 +519,13 @@ func (node *NodeConsensus) resolveRequestMsg(msgs []*qblock.Block) []error {
 // 参数：区块*block.Block
 // 返回值：处理错误error，默认为nil
 func (node *NodeConsensus) resolveRequest(msgs *qblock.Block) error {
+	node.PBFT.ReqMsgs = msgs
 	prePrepareMsg, err := node.PBFT.CurrentState.PrePrePare(msgs) // 进入共识，获得preprepare消息
+	for _, tx := range node.PBFT.ReqMsgs.Transactions {
+		for _, vin := range tx.Vin {
+			fmt.Println(vin.From)
+		}
+	}
 	if err != nil {
 		return err
 	} else {
@@ -522,6 +536,7 @@ func (node *NodeConsensus) resolveRequest(msgs *qblock.Block) error {
 		node.MsgBroadcast <- prePrepareMsg // 将待广播消息放入通道
 		return nil
 	}
+
 }
 
 // node.resolvePrePrepareMsg，由从节点处理PrePrepare消息数组
@@ -551,6 +566,13 @@ func (node *NodeConsensus) resolvePrePrepareMsg(msgs []*PrePrepareMsg) []error {
 // 参数：预准备消息*pbft.PrePrepareMsg
 // 返回值：处理错误error，默认为nil
 func (node *NodeConsensus) resolvePrePrepare(prePrepareMsg *PrePrepareMsg) error {
+	node.PBFT.ReqMsgs = &prePrepareMsg.Request
+	for _, tx := range node.PBFT.ReqMsgs.Transactions {
+		for _, vin := range tx.Vin {
+			fmt.Println(vin.From)
+		}
+	}
+
 	prePareMsg, err := node.PBFT.CurrentState.PrePare(prePrepareMsg) // 获得prepare信息
 	if err != nil {
 		return err
@@ -636,6 +658,7 @@ func (node *NodeConsensus) resolveCommit(commitMsg *CommitMsg) error {
 
 		node.Committed = append(node.Committed, commitMsg)
 		node.MsgBroadcast <- replyMsg // 将待广播消息放入通道
+
 	}
 	return nil
 }

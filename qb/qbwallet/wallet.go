@@ -34,11 +34,11 @@ type Wallet struct {
 }
 
 // NewWallet，创建钱包
-func NewWallet() *Wallet {
+func NewWallet(nodeID string) *Wallet {
 	var wallet Wallet
-	wallet.Node_id = qbtools.GetNodeIDTable(qkdserv.Node_name)
-	wallet.Addr = wallet.getAddress()
-	wallet.SaveToFile(qkdserv.Node_name)
+	wallet.Node_id = qbtools.GetNodeIDTable(nodeID) // 获取设备ID用于生成钱包地址
+	wallet.Addr = wallet.getAddress()               // 生成钱包地址
+	wallet.saveToFile(qkdserv.Node_name)            // 将钱包地址存入文件
 	return &wallet
 }
 
@@ -83,7 +83,7 @@ func checksum(payload []byte) []byte {
 }
 
 // SaveToFile，保存方法,把新建的wallet添加进去
-func (w Wallet) SaveToFile(nodeName string) {
+func (w Wallet) saveToFile(nodeName string) {
 	var content bytes.Buffer
 	walletFile := fmt.Sprintf(walletFile, nodeName)
 
@@ -118,6 +118,7 @@ func (w *Wallet) LoadFromFile(nodeID string) error {
 	walletFile := fmt.Sprintf(walletFile, nodeID)
 	// 在读取之前，要先确认文件是否在，如果不存在，直接退出
 	if _, err := os.Stat(walletFile); os.IsNotExist(err) {
+		log.Println("wallet file is not exit")
 		return err
 	}
 

@@ -1,0 +1,121 @@
+P4-pre-prepare2021/09/27 22:17:04.448837 /root/study/github_repository/qb/pbft/pbft_network.go:128: receive a preprepare message
+P4-prepare2021/09/27 22:17:04.449667 /root/study/github_repository/qb/pbft/pbft_network.go:145: receive a prepare message
+P4-prepare2021/09/27 22:17:04.449964 /root/study/github_repository/qb/pbft/pbft_network.go:145: receive a prepare message
+P4-commit2021/09/27 22:17:04.451928 /root/study/github_repository/qb/pbft/pbft_network.go:161: receive a commit message
+P4-commit2021/09/27 22:17:04.452441 /root/study/github_repository/qb/pbft/pbft_network.go:161: receive a commit message
+P4-commit2021/09/27 22:17:04.453650 /root/study/github_repository/qb/pbft/pbft_network.go:161: receive a commit message
+P4-pre-prepare2021/09/27 22:35:30.524299 /root/study/github_repository/qb/pbft/pbft_network.go:130: receive a preprepare message
+P4-prepare2021/09/27 22:35:30.529531 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-[pbft.PrepareMsg]2021/09/27 22:35:30.529608 /root/study/github_repository/qb/pbft/pbft_network.go:349: [put prepare message into MsgDelivery channel]
+P4-prepare2021/09/27 22:35:30.529803 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-prepare2021/09/27 22:35:30.530016 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P4-commit2021/09/27 22:35:30.531109 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 22:35:30.531232 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P4-commit2021/09/27 22:35:30.531752 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 22:35:30.531904 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P4-commit2021/09/27 22:35:30.532693 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-pre-prepare2021/09/27 22:41:11.039770 /root/study/github_repository/qb/pbft/pbft_network.go:130: receive a preprepare message
+P4-prepare2021/09/27 22:41:11.040556 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-commit2021/09/27 22:41:11.043205 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 22:41:11.043579 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-prepare2021/09/27 22:41:11.043778 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-[pbft.PrepareMsg]2021/09/27 22:41:11.043839 /root/study/github_repository/qb/pbft/pbft_network.go:354: [put prepare message into MsgDelivery channel]
+P4-commit2021/09/27 22:41:11.045313 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 22:41:11.045528 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P4-pre-prepare2021/09/27 22:47:45.499647 /root/study/github_repository/qb/pbft/pbft_network.go:130: receive a preprepare message
+P4-prepare2021/09/27 22:47:45.501571 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-[pbft.PrepareMsg]2021/09/27 22:47:45.501682 /root/study/github_repository/qb/pbft/pbft_network.go:353: [put prepare message into MsgDelivery channel]
+P4-prepare2021/09/27 22:47:45.502095 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-commit2021/09/27 22:47:45.504075 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 22:47:45.504473 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 22:47:45.504661 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P4-commit2021/09/27 22:47:45.504937 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-pre-prepare2021/09/27 22:51:30.733167 /root/study/github_repository/qb/pbft/pbft_network.go:130: receive a preprepare message
+P4-prepare2021/09/27 22:51:30.734934 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-[pbft.PrepareMsg]2021/09/27 22:51:30.735021 /root/study/github_repository/qb/pbft/pbft_network.go:353: [put prepare message into MsgDelivery channel]
+P4-commit2021/09/27 22:51:30.737147 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 22:51:30.737997 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-pre-prepare2021/09/27 22:55:05.926442 /root/study/github_repository/qb/pbft/pbft_network.go:130: receive a preprepare message
+P4-prepare2021/09/27 22:55:05.928493 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-[pbft.PrepareMsg]2021/09/27 22:55:05.928554 /root/study/github_repository/qb/pbft/pbft_network.go:353: [put prepare message into MsgDelivery channel]
+P4-prepare2021/09/27 22:55:05.929237 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-commit2021/09/27 22:55:05.930754 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 22:55:05.930929 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 22:55:05.931159 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P4-commit2021/09/27 22:55:05.932040 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-pre-prepare2021/09/27 22:59:33.107047 /root/study/github_repository/qb/pbft/pbft_network.go:130: receive a preprepare message
+P4-prepare2021/09/27 22:59:33.108040 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-prepare2021/09/27 22:59:33.108470 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-[pbft.PrepareMsg]2021/09/27 22:59:33.108576 /root/study/github_repository/qb/pbft/pbft_network.go:353: [put prepare message into MsgDelivery channel]
+P4-commit2021/09/27 22:59:33.110827 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 22:59:33.111352 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 22:59:33.111859 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 22:59:33.111862 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P4-pre-prepare2021/09/27 23:01:36.020141 /root/study/github_repository/qb/pbft/pbft_network.go:130: receive a preprepare message
+P4-prepare2021/09/27 23:01:36.021501 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-prepare2021/09/27 23:01:36.022606 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-commit2021/09/27 23:01:36.024951 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 23:01:36.025888 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 23:01:36.025934 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-pre-prepare2021/09/27 23:03:29.318610 /root/study/github_repository/qb/pbft/pbft_network.go:130: receive a preprepare message
+P4-prepare2021/09/27 23:03:29.320282 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-[pbft.PrepareMsg]2021/09/27 23:03:29.320407 /root/study/github_repository/qb/pbft/pbft_network.go:353: [put prepare message into MsgDelivery channel]
+P4-prepare2021/09/27 23:03:29.321429 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-commit2021/09/27 23:03:29.322342 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 23:03:29.322740 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P4-commit2021/09/27 23:03:29.324098 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 23:03:29.324205 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 23:03:29.324397 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P4-pre-prepare2021/09/27 23:04:29.368678 /root/study/github_repository/qb/pbft/pbft_network.go:130: receive a preprepare message
+P4-prepare2021/09/27 23:04:29.369985 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-[pbft.PrepareMsg]2021/09/27 23:04:29.370071 /root/study/github_repository/qb/pbft/pbft_network.go:353: [put prepare message into MsgDelivery channel]
+P4-commit2021/09/27 23:04:29.372365 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 23:04:29.372659 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 23:04:29.372689 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P4-pre-prepare2021/09/27 23:05:18.504030 /root/study/github_repository/qb/pbft/pbft_network.go:130: receive a preprepare message
+P4-prepare2021/09/27 23:05:18.507504 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-prepare2021/09/27 23:05:18.507709 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-commit2021/09/27 23:05:18.509424 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 23:05:18.509558 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P4-commit2021/09/27 23:05:18.509981 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 23:05:18.510831 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 23:05:18.511049 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P4-pre-prepare2021/09/27 23:06:27.165893 /root/study/github_repository/qb/pbft/pbft_network.go:130: receive a preprepare message
+P4-prepare2021/09/27 23:06:27.167256 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-commit2021/09/27 23:06:27.169754 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 23:06:27.171005 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-pre-prepare2021/09/27 23:10:24.868063 /root/study/github_repository/qb/pbft/pbft_network.go:130: receive a preprepare message
+P4-prepare2021/09/27 23:10:24.868301 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-prepare2021/09/27 23:10:24.869425 /root/study/github_repository/qb/pbft/pbft_network.go:147: receive a prepare message
+P4-commit2021/09/27 23:10:24.871225 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 23:10:24.872788 /root/study/github_repository/qb/pbft/pbft_network.go:163: receive a commit message
+P4-commit2021/09/27 23:10:24.872818 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P4-pre-prepare2021/09/27 23:17:23.993526 /root/study/github_repository/qb/pbft/pbft_network.go:131: receive a preprepare message
+P4-prepare2021/09/27 23:17:23.994039 /root/study/github_repository/qb/pbft/pbft_network.go:148: receive a prepare message
+P4-prepare2021/09/27 23:17:23.995318 /root/study/github_repository/qb/pbft/pbft_network.go:148: receive a prepare message
+P4-[pbft.PrepareMsg]2021/09/27 23:17:23.995420 /root/study/github_repository/qb/pbft/pbft_network.go:357: [put prepare message into MsgDelivery channel]
+P4-commit2021/09/27 23:17:23.997106 /root/study/github_repository/qb/pbft/pbft_network.go:164: receive a commit message
+P4-commit2021/09/27 23:17:23.997528 /root/study/github_repository/qb/pbft/pbft_network.go:164: receive a commit message
+P4-commit2021/09/27 23:17:23.997933 /root/study/github_repository/qb/pbft/pbft_network.go:164: receive a commit message
+P4-commit2021/09/27 23:17:23.998003 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P4-pre-prepare2021/09/27 23:20:07.960523 /root/study/github_repository/qb/pbft/pbft_network.go:131: receive a preprepare message
+P4-prepare2021/09/27 23:20:07.961169 /root/study/github_repository/qb/pbft/pbft_network.go:148: receive a prepare message
+P4-prepare2021/09/27 23:20:07.961253 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P4-prepare2021/09/27 23:20:07.962445 /root/study/github_repository/qb/pbft/pbft_network.go:148: receive a prepare message
+P4-[pbft.PrepareMsg]2021/09/27 23:20:07.962524 /root/study/github_repository/qb/pbft/pbft_network.go:355: [put prepare message into MsgDelivery channel]
+P4-commit2021/09/27 23:20:07.963922 /root/study/github_repository/qb/pbft/pbft_network.go:164: receive a commit message
+P4-commit2021/09/27 23:20:07.963922 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P4-commit2021/09/27 23:20:07.965193 /root/study/github_repository/qb/pbft/pbft_network.go:164: receive a commit message
+P4-commit2021/09/27 23:20:07.965710 /root/study/github_repository/qb/pbft/pbft_network.go:164: receive a commit message
+P4-pre-prepare2021/09/27 23:21:13.262325 /root/study/github_repository/qb/pbft/pbft_network.go:131: receive a preprepare message
+P4-prepare2021/09/27 23:21:13.265322 /root/study/github_repository/qb/pbft/pbft_network.go:148: receive a prepare message
+P4-[pbft.PrepareMsg]2021/09/27 23:21:13.265388 /root/study/github_repository/qb/pbft/pbft_network.go:355: [put prepare message into MsgDelivery channel]
+P4-commit2021/09/27 23:21:13.266180 /root/study/github_repository/qb/pbft/pbft_network.go:164: receive a commit message
+P4-prepare2021/09/27 23:21:13.266233 /root/study/github_repository/qb/pbft/pbft_network.go:148: receive a prepare message
+P4-commit2021/09/27 23:21:13.268221 /root/study/github_repository/qb/pbft/pbft_network.go:164: receive a commit message
+P4-commit2021/09/27 23:21:13.269349 /root/study/github_repository/qb/pbft/pbft_network.go:164: receive a commit message
+P4-pre-prepare2021/09/27 23:22:46.358158 /root/study/github_repository/qb/pbft/pbft_network.go:131: receive a preprepare message
+P4-prepare2021/09/27 23:22:46.361397 /root/study/github_repository/qb/pbft/pbft_network.go:148: receive a prepare message
+P4-[pbft.PrepareMsg]2021/09/27 23:22:46.361467 /root/study/github_repository/qb/pbft/pbft_network.go:355: [put prepare message into MsgDelivery channel]
+P4-commit2021/09/27 23:22:46.362145 /root/study/github_repository/qb/pbft/pbft_network.go:164: receive a commit message
+P4-commit2021/09/27 23:22:46.362491 /root/study/github_repository/qb/pbft/pbft_network.go:164: receive a commit message

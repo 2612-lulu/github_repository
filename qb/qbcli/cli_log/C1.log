@@ -1,0 +1,9 @@
+[send to get tx]2021/09/27 21:46:12.111786 /root/study/github_repository/qb/qbcli/cli_broadcastMsg.go:25: send a transcation message to the Primary node
+[send to get tx]2021/09/27 21:52:11.083959 /root/study/github_repository/qb/qbcli/cli_broadcastMsg.go:25: send a transcation message to the Primary node
+[send to get tx]2021/09/27 22:04:50.042625 /root/study/github_repository/qb/qbcli/cli_broadcastMsg.go:25: send a transcation message to the Primary node
+[send to get tx]2021/09/27 22:06:09.216517 /root/study/github_repository/qb/qbcli/cli_broadcastMsg.go:25: send a transcation message to the Primary node
+[send to get tx]2021/09/27 22:07:21.316631 /root/study/github_repository/qb/qbcli/cli_broadcastMsg.go:25: send a transcation message to the Primary node
+[send to get tx]2021/09/27 22:09:46.082119 /root/study/github_repository/qb/qbcli/cli_broadcastMsg.go:25: send a transcation message to the Primary node to get utxo
+[send a tx]2021/09/27 22:09:46.085311 /root/study/github_repository/qb/qbcli/cli_broadcastMsg.go:35: send a transcation to the Primary node
+[send to get tx]2021/09/27 22:10:14.313094 /root/study/github_repository/qb/qbcli/cli_broadcastMsg.go:25: send a transcation message to the Primary node to get utxo
+[send a tx]2021/09/27 22:10:14.315760 /root/study/github_repository/qb/qbcli/cli_broadcastMsg.go:35: send a transcation to the Primary node

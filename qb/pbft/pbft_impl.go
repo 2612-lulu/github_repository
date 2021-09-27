@@ -72,8 +72,7 @@ func CreateState(view int64, lastSequenceNumber int64) *State {
 // 参数：请求消息*block.Block
 // 返回值：预准备消息*PrePrepareMsg，处理错误error
 func (state *State) PrePrePare(request *qblock.Block) (*PrePrepareMsg, error) {
-	state.Msg_logs.ReqMsg = request // 记录request消息到state的log中
-
+	state.Msg_logs.ReqMsg = request                // 记录request消息到state的log中
 	if state.verifyRequest(request.Transactions) { // 如果每条交易信息验签成功
 		sequenceID := time.Now().UnixNano() // 使用时间戳作为暂时序列号
 		if state.Last_sequence_number != -1 {

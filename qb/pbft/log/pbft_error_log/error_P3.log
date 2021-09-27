@@ -1,0 +1,64 @@
+【START A NEW PBFT】2021/09/27 22:17:04.448140 /root/study/github_repository/qb/pbft/pbft_impl.go:56: start a new pbft
+【START A NEW PBFT】2021/09/27 22:17:04.448637 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive PrepareMsg]2021/09/27 22:17:04.451252 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive CommitMsg]2021/09/27 22:17:04.452993 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+【START A NEW PBFT】2021/09/27 22:35:30.526240 /root/study/github_repository/qb/pbft/pbft_impl.go:56: start a new pbft
+P3-[receive CommitMsg]2021/09/27 22:35:30.531228 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+【START A NEW PBFT】2021/09/27 22:41:11.038783 /root/study/github_repository/qb/pbft/pbft_impl.go:56: start a new pbft
+【START A NEW PBFT】2021/09/27 22:41:11.039263 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive PrepareMsg]2021/09/27 22:41:11.041880 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive CommitMsg]2021/09/27 22:41:11.044524 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive CommitMsg]2021/09/27 22:41:11.046679 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+【START A NEW PBFT】2021/09/27 22:47:45.498958 /root/study/github_repository/qb/pbft/pbft_impl.go:56: start a new pbft
+【START A NEW PBFT】2021/09/27 22:47:45.499474 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive PrepareMsg]2021/09/27 22:47:45.501060 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+【START A NEW PBFT】2021/09/27 22:55:05.925789 /root/study/github_repository/qb/pbft/pbft_impl.go:56: start a new pbft
+【START A NEW PBFT】2021/09/27 22:55:05.926492 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive PrepareMsg]2021/09/27 22:55:05.928289 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+【START A NEW PBFT】2021/09/27 22:59:33.106435 /root/study/github_repository/qb/pbft/pbft_impl.go:56: start a new pbft
+【START A NEW PBFT】2021/09/27 22:59:33.106920 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive PrepareMsg]2021/09/27 22:59:33.108458 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive CommitMsg]2021/09/27 22:59:33.110885 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+【START A NEW PBFT】2021/09/27 23:01:36.019546 /root/study/github_repository/qb/pbft/pbft_impl.go:56: start a new pbft
+【START A NEW PBFT】2021/09/27 23:01:36.020049 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive PrepareMsg]2021/09/27 23:01:36.023739 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-commit2021/09/27 23:01:36.025701 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[broadcast commit]2021/09/27 23:01:36.025999 /root/study/github_repository/qb/pbft/pbft_network.go:197: broadcast commit message
+P3-[broadcast commit]2021/09/27 23:01:36.026309 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+【START A NEW PBFT】2021/09/27 23:03:29.317777 /root/study/github_repository/qb/pbft/pbft_impl.go:56: start a new pbft
+【START A NEW PBFT】2021/09/27 23:03:29.318209 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive PrepareMsg]2021/09/27 23:03:29.319674 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive CommitMsg]2021/09/27 23:03:29.324157 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+【START A NEW PBFT】2021/09/27 23:05:18.505369 /root/study/github_repository/qb/pbft/pbft_impl.go:56: start a new pbft
+【START A NEW PBFT】2021/09/27 23:05:18.505941 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive PrepareMsg]2021/09/27 23:05:18.507286 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive PrepareMsg]2021/09/27 23:05:18.508692 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[pbft.PrepareMsg]2021/09/27 23:05:18.508986 /root/study/github_repository/qb/pbft/pbft_network.go:353: [put prepare message into MsgDelivery channel]
+P3-[receive CommitMsg]2021/09/27 23:05:18.510320 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+【START A NEW PBFT】2021/09/27 23:06:27.165185 /root/study/github_repository/qb/pbft/pbft_impl.go:56: start a new pbft
+【START A NEW PBFT】2021/09/27 23:06:27.165727 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive PrepareMsg]2021/09/27 23:06:27.169239 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive CommitMsg]2021/09/27 23:06:27.170542 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive CommitMsg]2021/09/27 23:06:27.360208 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+【START A NEW PBFT】2021/09/27 23:10:24.867089 /root/study/github_repository/qb/pbft/pbft_impl.go:56: start a new pbft
+【START A NEW PBFT】2021/09/27 23:10:24.867557 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive PrepareMsg]2021/09/27 23:10:24.869839 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive CommitMsg]2021/09/27 23:10:24.873038 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+【START A NEW PBFT】2021/09/27 23:17:08.074272 /root/study/github_repository/qb/pbft/pbft_impl.go:56: start a new pbft
+【START A NEW PBFT】2021/09/27 23:17:08.074824 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+【START A NEW PBFT】2021/09/27 23:17:23.992893 /root/study/github_repository/qb/pbft/pbft_impl.go:56: start a new pbft
+【START A NEW PBFT】2021/09/27 23:17:23.993563 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive PrepareMsg]2021/09/27 23:17:23.995493 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-commit2021/09/27 23:17:23.997132 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+【START A NEW PBFT】2021/09/27 23:20:07.959697 /root/study/github_repository/qb/pbft/pbft_impl.go:56: start a new pbft
+【START A NEW PBFT】2021/09/27 23:20:07.960223 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive PrepareMsg]2021/09/27 23:20:07.963618 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[get commitMsg]2021/09/27 23:20:07.964746 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[broadcast commit]2021/09/27 23:20:07.966272 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[get replyMsg]2021/09/27 23:20:07.966889 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+【START A NEW PBFT】2021/09/27 23:21:13.263673 /root/study/github_repository/qb/pbft/pbft_impl.go:56: start a new pbft
+【START A NEW PBFT】2021/09/27 23:21:13.264269 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive PrepareMsg]2021/09/27 23:21:13.266059 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[broadcast prepare]2021/09/27 23:21:13.267325 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive CommitMsg]2021/09/27 23:21:13.268277 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P3-[receive CommitMsg]2021/09/27 23:21:13.268763 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success

@@ -11,13 +11,6 @@ import (
 const F = 1       // F，容忍无效或者恶意节点数
 const N = 3*F + 1 // N=3F+1，本程序中N=4
 
-// Request消息中Operation的具体参数
-type RequestOperation struct {
-	Operation_type      []byte // 操作类型，本系统中主要是转账:transaction
-	Transaction_message []byte // 消息
-	Digest_m            []byte // 消息m的摘要值
-}
-
 // Reply消息，由各节点发往客户端
 type ReplyMsg struct {
 	View        int64                      // 当前视图编号
@@ -53,6 +46,12 @@ type CommitMsg struct {
 	Digest_m        []byte                     // 客户端请求消息中m的摘要
 	Node_i          int64                      // 当前节点编号
 	Sign_i          uss.USSToeplitzHashSignMsg // 当前从节点i对Commit消息的签名
+}
+
+//
+type ResultMsg struct {
+	TX_block qblock.Block
+	Result   bool
 }
 
 // PrePrepareMsg.signMessageEncode,对预准备消息编码，形成待签名消息

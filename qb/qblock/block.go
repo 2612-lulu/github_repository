@@ -5,8 +5,11 @@ package qblock
 
 import (
 	"bytes"
+	"crypto/sha256"
 	"encoding/gob"
 	"log"
+	"qb/merkletree"
+	"qb/qbtools"
 	"qb/qbtx"
 	"time"
 )
@@ -36,21 +39,50 @@ func NewBlock(transactions []*qbtx.Transaction, prevBlockHash []byte, height int
 		Hash:            []byte{}, // 空
 		Transactions:    transactions,
 	}
-	block.Hash = block.BlockToResolveHash()
+	block.Hash = block.BlockToResolveHash() // 生成当前区块hash值
+	//fmt.Println("hash:=", block.Hash)
 	return block
 }
 
 // NewGenesisBlock，创建创世区块
 func NewGenesisBlock(reserve *qbtx.Transaction) *Block {
-	log.Println("create a new genesis block")
+	//log.Println("create a new genesis block")
 	return NewBlock([]*qbtx.Transaction{reserve}, []byte{}, 0)
 }
 
-// NewBlock，生成新区块
+// NewBlock，生成新区块hash值
 func (b *Block) BlockToResolveHash() []byte {
-	hash := b.SerializeBlock()
+	data := b.prepareData()
+	hash := sha256.Sum256(data) // 取区块hash
+	return hash[:]
+}
 
-	return hash
+// 数据准备函数，利用join完成字节切片的组合
+func (b *Block) prepareData() []byte {
+	data := bytes.Join(
+		[][]byte{
+			qbtools.IntToHex(b.Version),
+			qbtools.IntToHex(b.Time_stamp),
+			qbtools.IntToHex(b.Height),
+			b.Prev_block_hash,
+			b.HashTransactions(),
+		},
+		[]byte{},
+	)
+
+	return data
+}
+
+// HashTransactions，构建区块交易hash值，实现一种交易转[]byte的方法
+func (b *Block) HashTransactions() []byte {
+	var transactions [][]byte
+
+	for _, tx := range b.Transactions {
+		transactions = append(transactions, tx.SerializeTX())
+	}
+	mTree := merkletree.NewMerkleTree(transactions)
+
+	return mTree.RootNode.Data
 }
 
 // SerializeBlock，区块序列化

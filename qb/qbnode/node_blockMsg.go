@@ -55,7 +55,6 @@ func (node *Node) blockWhenClock() error {
 		copy(msgs, node.TranscationMsgs) // 复制缓冲数据
 		request := qblock.NewBlock(msgs, []byte{}, 0)
 		node.TranscationMsgs = make([]*qbtx.Transaction, 0) // 清空重置
-
 		node.PBFT_consensus.MsgEntrance <- request
 	}
 	return nil

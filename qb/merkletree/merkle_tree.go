@@ -13,7 +13,7 @@ type MerkleTree struct {
 type MerkleNode struct {
 	Left  *MerkleNode
 	Right *MerkleNode
-	Data  []byte
+	Data  []byte // 默克尔树根节点
 }
 
 // NewMerkleTree，将节点组建为树

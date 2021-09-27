@@ -1,0 +1,130 @@
+P4-[receive PrePrepareMsg]2021/09/27 22:17:04.448988 /root/study/github_repository/qb/pbft/pbft_network.go:432: Msgdelivery channel get a preprepare, and handle it
+P4-[get prepareMsg]2021/09/27 22:17:04.450228 /root/study/github_repository/qb/pbft/pbft_network.go:561: put prepare message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 22:17:04.635698 /root/study/github_repository/qb/pbft/pbft_network.go:444: Msgdelivery channel get a prepare message, and handle it
+P4-[get commitMsg]2021/09/27 22:17:04.637085 /root/study/github_repository/qb/pbft/pbft_network.go:598: put commit message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 22:17:04.835742 /root/study/github_repository/qb/pbft/pbft_network.go:456: Msgdelivery channel get a commit message, and handle it
+P4-[get replyMsg]2021/09/27 22:17:04.836954 /root/study/github_repository/qb/pbft/pbft_network.go:635: put reply message into broadcast channel
+P4-[receive PrePrepareMsg]2021/09/27 22:35:30.524407 /root/study/github_repository/qb/pbft/pbft_network.go:434: Msgdelivery channel get a preprepare, and handle it
+P4-[get prepareMsg]2021/09/27 22:35:30.525577 /root/study/github_repository/qb/pbft/pbft_network.go:563: put prepare message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 22:35:30.529659 /root/study/github_repository/qb/pbft/pbft_network.go:446: Msgdelivery channel get a prepare message, and handle it
+P4-[get commitMsg]2021/09/27 22:35:30.530815 /root/study/github_repository/qb/pbft/pbft_network.go:600: put commit message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 22:35:30.530834 /root/study/github_repository/qb/pbft/pbft_network.go:446: Msgdelivery channel get a prepare message, and handle it
+P4-[receive CommitMsg]2021/09/27 22:35:30.531519 /root/study/github_repository/qb/pbft/pbft_network.go:458: Msgdelivery channel get a commit message, and handle it
+P4-[receive CommitMsg]2021/09/27 22:35:30.532173 /root/study/github_repository/qb/pbft/pbft_network.go:458: Msgdelivery channel get a commit message, and handle it
+P4-[get replyMsg]2021/09/27 22:35:30.532833 /root/study/github_repository/qb/pbft/pbft_network.go:637: put reply message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 22:35:30.532869 /root/study/github_repository/qb/pbft/pbft_network.go:458: Msgdelivery channel get a commit message, and handle it
+P4-[receive PrePrepareMsg]2021/09/27 22:41:11.039896 /root/study/github_repository/qb/pbft/pbft_network.go:439: Msgdelivery channel get a preprepare, and handle it
+P4-[get prepareMsg]2021/09/27 22:41:11.041068 /root/study/github_repository/qb/pbft/pbft_network.go:568: put prepare message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 22:41:11.043861 /root/study/github_repository/qb/pbft/pbft_network.go:451: Msgdelivery channel get a prepare message, and handle it
+P4-[get commitMsg]2021/09/27 22:41:11.045151 /root/study/github_repository/qb/pbft/pbft_network.go:605: put commit message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 22:41:11.045771 /root/study/github_repository/qb/pbft/pbft_network.go:463: Msgdelivery channel get a commit message, and handle it
+P4-[get replyMsg]2021/09/27 22:41:11.046985 /root/study/github_repository/qb/pbft/pbft_network.go:642: put reply message into broadcast channel
+P4-[receive PrePrepareMsg]2021/09/27 22:47:45.499742 /root/study/github_repository/qb/pbft/pbft_network.go:438: Msgdelivery channel get a preprepare, and handle it
+P4-[get prepareMsg]2021/09/27 22:47:45.500983 /root/study/github_repository/qb/pbft/pbft_network.go:567: put prepare message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 22:47:45.501700 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P4-[get commitMsg]2021/09/27 22:47:45.502786 /root/study/github_repository/qb/pbft/pbft_network.go:604: put commit message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 22:47:45.503681 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P4-[receive CommitMsg]2021/09/27 22:47:45.504318 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P4-[receive CommitMsg]2021/09/27 22:47:45.504886 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P4-[get replyMsg]2021/09/27 22:47:45.505581 /root/study/github_repository/qb/pbft/pbft_network.go:641: put reply message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 22:47:45.505609 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P4-[receive PrePrepareMsg]2021/09/27 22:51:30.733271 /root/study/github_repository/qb/pbft/pbft_network.go:438: Msgdelivery channel get a preprepare, and handle it
+P4-[get prepareMsg]2021/09/27 22:51:30.734457 /root/study/github_repository/qb/pbft/pbft_network.go:568: put prepare message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 22:51:30.735048 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P4-[get commitMsg]2021/09/27 22:51:30.736067 /root/study/github_repository/qb/pbft/pbft_network.go:605: put commit message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 22:51:30.737272 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P4-[receive CommitMsg]2021/09/27 22:51:30.738122 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P4-[get replyMsg]2021/09/27 22:51:30.738839 /root/study/github_repository/qb/pbft/pbft_network.go:642: put reply message into broadcast channel
+P4-[receive PrePrepareMsg]2021/09/27 22:55:05.926596 /root/study/github_repository/qb/pbft/pbft_network.go:438: Msgdelivery channel get a preprepare, and handle it
+P4-[get prepareMsg]2021/09/27 22:55:05.928017 /root/study/github_repository/qb/pbft/pbft_network.go:567: put prepare message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 22:55:05.928571 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P4-[get commitMsg]2021/09/27 22:55:05.929599 /root/study/github_repository/qb/pbft/pbft_network.go:604: put commit message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 22:55:05.929615 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P4-[receive CommitMsg]2021/09/27 22:55:05.930799 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P4-[receive CommitMsg]2021/09/27 22:55:05.931422 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P4-[get replyMsg]2021/09/27 22:55:05.932009 /root/study/github_repository/qb/pbft/pbft_network.go:641: put reply message into broadcast channel
+P4-[receive PrePrepareMsg]2021/09/27 22:59:33.107148 /root/study/github_repository/qb/pbft/pbft_network.go:438: Msgdelivery channel get a preprepare, and handle it
+P4-[get prepareMsg]2021/09/27 22:59:33.108377 /root/study/github_repository/qb/pbft/pbft_network.go:567: put prepare message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 22:59:33.108602 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P4-[get commitMsg]2021/09/27 22:59:33.109795 /root/study/github_repository/qb/pbft/pbft_network.go:604: put commit message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 22:59:33.110875 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P4-[receive CommitMsg]2021/09/27 22:59:33.111511 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P4-[get replyMsg]2021/09/27 22:59:33.112319 /root/study/github_repository/qb/pbft/pbft_network.go:641: put reply message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 22:59:33.112939 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P4-[receive PrePrepareMsg]2021/09/27 23:01:36.020246 /root/study/github_repository/qb/pbft/pbft_network.go:441: Msgdelivery channel get a preprepare, and handle it
+P4-[get prepareMsg]2021/09/27 23:01:36.021792 /root/study/github_repository/qb/pbft/pbft_network.go:570: put prepare message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 23:01:36.022665 /root/study/github_repository/qb/pbft/pbft_network.go:356: [put prepare message into MsgDelivery channel]
+P4-[receive PrepareMsg]2021/09/27 23:01:36.022670 /root/study/github_repository/qb/pbft/pbft_network.go:453: Msgdelivery channel get a prepare message, and handle it
+P4-[get commitMsg]2021/09/27 23:01:36.023698 /root/study/github_repository/qb/pbft/pbft_network.go:607: put commit message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 23:01:36.024996 /root/study/github_repository/qb/pbft/pbft_network.go:465: Msgdelivery channel get a commit message, and handle it
+P4-[receive CommitMsg]2021/09/27 23:01:36.025962 /root/study/github_repository/qb/pbft/pbft_network.go:465: Msgdelivery channel get a commit message, and handle it
+P4-[get replyMsg]2021/09/27 23:01:36.026821 /root/study/github_repository/qb/pbft/pbft_network.go:644: put reply message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 23:01:36.026849 /root/study/github_repository/qb/pbft/pbft_network.go:465: Msgdelivery channel get a commit message, and handle it
+P4-[receive PrePrepareMsg]2021/09/27 23:03:29.318699 /root/study/github_repository/qb/pbft/pbft_network.go:442: Msgdelivery channel get a preprepare, and handle it
+P4-[get prepareMsg]2021/09/27 23:03:29.320040 /root/study/github_repository/qb/pbft/pbft_network.go:571: put prepare message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 23:03:29.320434 /root/study/github_repository/qb/pbft/pbft_network.go:454: Msgdelivery channel get a prepare message, and handle it
+P4-[get commitMsg]2021/09/27 23:03:29.321527 /root/study/github_repository/qb/pbft/pbft_network.go:608: put commit message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 23:03:29.322288 /root/study/github_repository/qb/pbft/pbft_network.go:454: Msgdelivery channel get a prepare message, and handle it
+P4-[pbft.PrepareMsg]2021/09/27 23:03:29.322318 /root/study/github_repository/qb/pbft/pbft_network.go:353: [put prepare message into MsgDelivery channel]
+P4-[receive CommitMsg]2021/09/27 23:03:29.323166 /root/study/github_repository/qb/pbft/pbft_network.go:466: Msgdelivery channel get a commit message, and handle it
+P4-[receive CommitMsg]2021/09/27 23:03:29.323985 /root/study/github_repository/qb/pbft/pbft_network.go:466: Msgdelivery channel get a commit message, and handle it
+P4-[get replyMsg]2021/09/27 23:03:29.324950 /root/study/github_repository/qb/pbft/pbft_network.go:645: put reply message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 23:03:29.324994 /root/study/github_repository/qb/pbft/pbft_network.go:466: Msgdelivery channel get a commit message, and handle it
+P4-[receive PrePrepareMsg]2021/09/27 23:04:29.368772 /root/study/github_repository/qb/pbft/pbft_network.go:438: Msgdelivery channel get a preprepare, and handle it
+P4-[get prepareMsg]2021/09/27 23:04:29.369910 /root/study/github_repository/qb/pbft/pbft_network.go:569: put prepare message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 23:04:29.370088 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P4-[get commitMsg]2021/09/27 23:04:29.371156 /root/study/github_repository/qb/pbft/pbft_network.go:606: put commit message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 23:04:29.372400 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P4-[receive CommitMsg]2021/09/27 23:04:29.372932 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P4-[get replyMsg]2021/09/27 23:04:29.373590 /root/study/github_repository/qb/pbft/pbft_network.go:643: put reply message into broadcast channel
+P4-[receive PrePrepareMsg]2021/09/27 23:05:18.504183 /root/study/github_repository/qb/pbft/pbft_network.go:438: Msgdelivery channel get a preprepare, and handle it
+P4-[get prepareMsg]2021/09/27 23:05:18.505467 /root/study/github_repository/qb/pbft/pbft_network.go:570: put prepare message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 23:05:18.507765 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P4-[get commitMsg]2021/09/27 23:05:18.509254 /root/study/github_repository/qb/pbft/pbft_network.go:607: put commit message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 23:05:18.509284 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P4-[receive CommitMsg]2021/09/27 23:05:18.509846 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P4-[receive CommitMsg]2021/09/27 23:05:18.510582 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P4-[get replyMsg]2021/09/27 23:05:18.511562 /root/study/github_repository/qb/pbft/pbft_network.go:644: put reply message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 23:05:18.511613 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P4-[receive PrePrepareMsg]2021/09/27 23:06:27.166160 /root/study/github_repository/qb/pbft/pbft_network.go:438: Msgdelivery channel get a preprepare, and handle it
+P4-[get prepareMsg]2021/09/27 23:06:27.167567 /root/study/github_repository/qb/pbft/pbft_network.go:572: put prepare message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 23:06:27.357205 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P4-[get commitMsg]2021/09/27 23:06:27.358317 /root/study/github_repository/qb/pbft/pbft_network.go:609: put commit message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 23:06:27.557541 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P4-[get replyMsg]2021/09/27 23:06:27.558971 /root/study/github_repository/qb/pbft/pbft_network.go:646: put reply message into broadcast channel
+P4-[receive PrePrepareMsg]2021/09/27 23:10:24.868219 /root/study/github_repository/qb/pbft/pbft_network.go:438: Msgdelivery channel get a preprepare, and handle it
+P4-[get prepareMsg]2021/09/27 23:10:24.869486 /root/study/github_repository/qb/pbft/pbft_network.go:572: put prepare message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 23:10:24.869501 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P4-[get commitMsg]2021/09/27 23:10:24.870571 /root/study/github_repository/qb/pbft/pbft_network.go:609: put commit message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 23:10:24.872013 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P4-[get replyMsg]2021/09/27 23:10:24.873186 /root/study/github_repository/qb/pbft/pbft_network.go:646: put reply message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 23:10:24.873570 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P4-[receive PrePrepareMsg]2021/09/27 23:17:23.993676 /root/study/github_repository/qb/pbft/pbft_network.go:442: Msgdelivery channel get a preprepare, and handle it
+P4-[get prepareMsg]2021/09/27 23:17:23.994913 /root/study/github_repository/qb/pbft/pbft_network.go:573: put prepare message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 23:17:23.995437 /root/study/github_repository/qb/pbft/pbft_network.go:454: Msgdelivery channel get a prepare message, and handle it
+P4-[get commitMsg]2021/09/27 23:17:23.996416 /root/study/github_repository/qb/pbft/pbft_network.go:610: put commit message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 23:17:23.997165 /root/study/github_repository/qb/pbft/pbft_network.go:466: Msgdelivery channel get a commit message, and handle it
+P4-[receive CommitMsg]2021/09/27 23:17:23.997743 /root/study/github_repository/qb/pbft/pbft_network.go:466: Msgdelivery channel get a commit message, and handle it
+P4-[get replyMsg]2021/09/27 23:17:23.998396 /root/study/github_repository/qb/pbft/pbft_network.go:647: put reply message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 23:17:23.999417 /root/study/github_repository/qb/pbft/pbft_network.go:466: Msgdelivery channel get a commit message, and handle it
+P4-[receive PrePrepareMsg]2021/09/27 23:20:07.960626 /root/study/github_repository/qb/pbft/pbft_network.go:440: Msgdelivery channel get a preprepare, and handle it
+P4-[get prepareMsg]2021/09/27 23:20:07.961985 /root/study/github_repository/qb/pbft/pbft_network.go:579: put prepare message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 23:20:07.962541 /root/study/github_repository/qb/pbft/pbft_network.go:452: Msgdelivery channel get a prepare message, and handle it
+P4-[get commitMsg]2021/09/27 23:20:07.963552 /root/study/github_repository/qb/pbft/pbft_network.go:616: put commit message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 23:20:07.964201 /root/study/github_repository/qb/pbft/pbft_network.go:464: Msgdelivery channel get a commit message, and handle it
+P4-[receive CommitMsg]2021/09/27 23:20:07.964726 /root/study/github_repository/qb/pbft/pbft_network.go:464: Msgdelivery channel get a commit message, and handle it
+P4-[get replyMsg]2021/09/27 23:20:07.965370 /root/study/github_repository/qb/pbft/pbft_network.go:653: put reply message into broadcast channel
+P4-[receive PrePrepareMsg]2021/09/27 23:21:13.262429 /root/study/github_repository/qb/pbft/pbft_network.go:440: Msgdelivery channel get a preprepare, and handle it
+P4-[get prepareMsg]2021/09/27 23:21:13.263632 /root/study/github_repository/qb/pbft/pbft_network.go:579: put prepare message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 23:21:13.265418 /root/study/github_repository/qb/pbft/pbft_network.go:452: Msgdelivery channel get a prepare message, and handle it
+P4-[get commitMsg]2021/09/27 23:21:13.266466 /root/study/github_repository/qb/pbft/pbft_network.go:616: put commit message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 23:21:13.266499 /root/study/github_repository/qb/pbft/pbft_network.go:452: Msgdelivery channel get a prepare message, and handle it
+P4-[receive CommitMsg]2021/09/27 23:21:13.268284 /root/study/github_repository/qb/pbft/pbft_network.go:464: Msgdelivery channel get a commit message, and handle it
+P4-[get replyMsg]2021/09/27 23:21:13.269498 /root/study/github_repository/qb/pbft/pbft_network.go:653: put reply message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 23:21:13.269510 /root/study/github_repository/qb/pbft/pbft_network.go:464: Msgdelivery channel get a commit message, and handle it
+P4-[receive PrePrepareMsg]2021/09/27 23:22:46.358306 /root/study/github_repository/qb/pbft/pbft_network.go:440: Msgdelivery channel get a preprepare, and handle it
+P4-[get prepareMsg]2021/09/27 23:22:46.359490 /root/study/github_repository/qb/pbft/pbft_network.go:583: put prepare message into broadcast channel
+P4-[receive PrepareMsg]2021/09/27 23:22:46.361482 /root/study/github_repository/qb/pbft/pbft_network.go:452: Msgdelivery channel get a prepare message, and handle it
+P4-[get commitMsg]2021/09/27 23:22:46.362474 /root/study/github_repository/qb/pbft/pbft_network.go:620: put commit message into broadcast channel
+P4-[receive CommitMsg]2021/09/27 23:22:46.362556 /root/study/github_repository/qb/pbft/pbft_network.go:464: Msgdelivery channel get a commit message, and handle it
+P4-[get replyMsg]2021/09/27 23:22:46.363885 /root/study/github_repository/qb/pbft/pbft_network.go:657: put reply message into broadcast channel

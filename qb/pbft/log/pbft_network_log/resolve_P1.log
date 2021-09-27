@@ -1,0 +1,161 @@
+P1-[receive block.Block]2021/09/27 22:17:04.444008 /root/study/github_repository/qb/pbft/pbft_network.go:417: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/27 22:17:04.445337 /root/study/github_repository/qb/pbft/pbft_network.go:520: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 22:17:04.448746 /root/study/github_repository/qb/pbft/pbft_network.go:444: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/27 22:17:04.450411 /root/study/github_repository/qb/pbft/pbft_network.go:444: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/27 22:17:04.451526 /root/study/github_repository/qb/pbft/pbft_network.go:598: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 22:17:04.451561 /root/study/github_repository/qb/pbft/pbft_network.go:444: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/27 22:17:04.452887 /root/study/github_repository/qb/pbft/pbft_network.go:456: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/27 22:17:04.453409 /root/study/github_repository/qb/pbft/pbft_network.go:456: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/27 22:17:04.454085 /root/study/github_repository/qb/pbft/pbft_network.go:635: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/27 22:35:30.521820 /root/study/github_repository/qb/pbft/pbft_network.go:419: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/27 22:35:30.523364 /root/study/github_repository/qb/pbft/pbft_network.go:522: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 22:35:30.526752 /root/study/github_repository/qb/pbft/pbft_network.go:446: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/27 22:35:30.528065 /root/study/github_repository/qb/pbft/pbft_network.go:446: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/27 22:35:30.529079 /root/study/github_repository/qb/pbft/pbft_network.go:600: put commit message into broadcast channel
+P1-[receive CommitMsg]2021/09/27 22:35:30.530050 /root/study/github_repository/qb/pbft/pbft_network.go:458: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/27 22:35:30.532133 /root/study/github_repository/qb/pbft/pbft_network.go:458: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/27 22:35:30.532836 /root/study/github_repository/qb/pbft/pbft_network.go:637: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/27 22:41:11.032228 /root/study/github_repository/qb/pbft/pbft_network.go:424: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/27 22:41:11.036425 /root/study/github_repository/qb/pbft/pbft_network.go:527: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 22:41:11.041404 /root/study/github_repository/qb/pbft/pbft_network.go:451: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/27 22:41:11.042157 /root/study/github_repository/qb/pbft/pbft_network.go:451: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/27 22:41:11.043309 /root/study/github_repository/qb/pbft/pbft_network.go:605: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 22:41:11.043346 /root/study/github_repository/qb/pbft/pbft_network.go:451: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/27 22:41:11.043903 /root/study/github_repository/qb/pbft/pbft_network.go:463: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/27 22:41:11.045868 /root/study/github_repository/qb/pbft/pbft_network.go:463: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/27 22:41:11.046560 /root/study/github_repository/qb/pbft/pbft_network.go:642: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/27 22:41:11.046610 /root/study/github_repository/qb/pbft/pbft_network.go:463: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/27 22:47:45.495720 /root/study/github_repository/qb/pbft/pbft_network.go:423: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/27 22:47:45.496666 /root/study/github_repository/qb/pbft/pbft_network.go:526: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 22:47:45.500056 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/27 22:47:45.501922 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/27 22:47:45.503039 /root/study/github_repository/qb/pbft/pbft_network.go:604: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 22:47:45.503075 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/27 22:47:45.503648 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/27 22:47:45.504343 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/27 22:47:45.505039 /root/study/github_repository/qb/pbft/pbft_network.go:197: broadcast commit message
+P1-[get replyMsg]2021/09/27 22:47:45.505040 /root/study/github_repository/qb/pbft/pbft_network.go:641: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/27 22:47:45.505095 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/27 22:51:30.725370 /root/study/github_repository/qb/pbft/pbft_network.go:423: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/27 22:51:30.729765 /root/study/github_repository/qb/pbft/pbft_network.go:527: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 22:51:30.734413 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/27 22:51:30.735172 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/27 22:51:30.736324 /root/study/github_repository/qb/pbft/pbft_network.go:605: put commit message into broadcast channel
+P1-[receive CommitMsg]2021/09/27 22:51:30.737318 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/27 22:51:30.738529 /root/study/github_repository/qb/pbft/pbft_network.go:642: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/27 22:55:05.922622 /root/study/github_repository/qb/pbft/pbft_network.go:423: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/27 22:55:05.923693 /root/study/github_repository/qb/pbft/pbft_network.go:526: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 22:55:05.927094 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/27 22:55:05.928313 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/27 22:55:05.929429 /root/study/github_repository/qb/pbft/pbft_network.go:604: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 22:55:05.929463 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/27 22:55:05.930135 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/27 22:55:05.930735 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/27 22:55:05.931571 /root/study/github_repository/qb/pbft/pbft_network.go:641: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/27 22:55:05.931615 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/27 22:59:33.103566 /root/study/github_repository/qb/pbft/pbft_network.go:423: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/27 22:59:33.104470 /root/study/github_repository/qb/pbft/pbft_network.go:526: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 22:59:33.107498 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/27 22:59:33.108888 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/27 22:59:33.109951 /root/study/github_repository/qb/pbft/pbft_network.go:604: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 22:59:33.109968 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/27 22:59:33.110536 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/27 22:59:33.111250 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/27 22:59:33.111988 /root/study/github_repository/qb/pbft/pbft_network.go:641: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/27 22:59:33.112032 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/27 23:01:36.016718 /root/study/github_repository/qb/pbft/pbft_network.go:426: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/27 23:01:36.017733 /root/study/github_repository/qb/pbft/pbft_network.go:529: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 23:01:36.021570 /root/study/github_repository/qb/pbft/pbft_network.go:453: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/27 23:01:36.022247 /root/study/github_repository/qb/pbft/pbft_network.go:453: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/27 23:01:36.023232 /root/study/github_repository/qb/pbft/pbft_network.go:607: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 23:01:36.023265 /root/study/github_repository/qb/pbft/pbft_network.go:453: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/27 23:01:36.024507 /root/study/github_repository/qb/pbft/pbft_network.go:465: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/27 23:01:36.025813 /root/study/github_repository/qb/pbft/pbft_network.go:644: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/27 23:01:36.025854 /root/study/github_repository/qb/pbft/pbft_network.go:465: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/27 23:03:29.310025 /root/study/github_repository/qb/pbft/pbft_network.go:423: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/27 23:03:29.313679 /root/study/github_repository/qb/pbft/pbft_network.go:530: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 23:03:29.318522 /root/study/github_repository/qb/pbft/pbft_network.go:353: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/27 23:03:29.318528 /root/study/github_repository/qb/pbft/pbft_network.go:454: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/27 23:03:29.320314 /root/study/github_repository/qb/pbft/pbft_network.go:454: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/27 23:03:29.321507 /root/study/github_repository/qb/pbft/pbft_network.go:608: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 23:03:29.321542 /root/study/github_repository/qb/pbft/pbft_network.go:454: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/27 23:03:29.322485 /root/study/github_repository/qb/pbft/pbft_network.go:466: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/27 23:03:29.323133 /root/study/github_repository/qb/pbft/pbft_network.go:466: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/27 23:03:29.323909 /root/study/github_repository/qb/pbft/pbft_network.go:645: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/27 23:03:29.323955 /root/study/github_repository/qb/pbft/pbft_network.go:466: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/27 23:04:29.365071 /root/study/github_repository/qb/pbft/pbft_network.go:423: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/27 23:04:29.366147 /root/study/github_repository/qb/pbft/pbft_network.go:526: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 23:04:29.369222 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/27 23:04:29.370395 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/27 23:04:29.371304 /root/study/github_repository/qb/pbft/pbft_network.go:606: put commit message into broadcast channel
+P1-[receive CommitMsg]2021/09/27 23:04:29.371491 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/27 23:04:29.373055 /root/study/github_repository/qb/pbft/pbft_network.go:643: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/27 23:05:18.502270 /root/study/github_repository/qb/pbft/pbft_network.go:423: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/27 23:05:18.503350 /root/study/github_repository/qb/pbft/pbft_network.go:529: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 23:05:18.506553 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/27 23:05:18.507413 /root/study/github_repository/qb/pbft/pbft_network.go:353: [put prepare message into MsgDelivery channel]
+P1-[receive PrepareMsg]2021/09/27 23:05:18.507417 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/27 23:05:18.508742 /root/study/github_repository/qb/pbft/pbft_network.go:607: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 23:05:18.508771 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/27 23:05:18.509612 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/27 23:05:18.511145 /root/study/github_repository/qb/pbft/pbft_network.go:644: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/27 23:05:18.511184 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/27 23:06:27.162320 /root/study/github_repository/qb/pbft/pbft_network.go:423: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/27 23:06:27.163412 /root/study/github_repository/qb/pbft/pbft_network.go:530: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 23:06:27.167998 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/27 23:06:27.168487 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/27 23:06:27.169518 /root/study/github_repository/qb/pbft/pbft_network.go:609: put commit message into broadcast channel
+P1-[receive CommitMsg]2021/09/27 23:06:27.170199 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/27 23:06:27.358765 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/27 23:06:27.359582 /root/study/github_repository/qb/pbft/pbft_network.go:646: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/27 23:08:47.476561 /root/study/github_repository/qb/pbft/pbft_network.go:423: Msgdelivery channel get a new block,and create a new consensus
+P1-[receive block.Block]2021/09/27 23:09:06.126541 /root/study/github_repository/qb/pbft/pbft_network.go:423: Msgdelivery channel get a new block,and create a new consensus
+P1-[receive block.Block]2021/09/27 23:10:24.864283 /root/study/github_repository/qb/pbft/pbft_network.go:423: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/27 23:10:24.865325 /root/study/github_repository/qb/pbft/pbft_network.go:530: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 23:10:24.868932 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/27 23:10:24.869912 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/27 23:10:24.871019 /root/study/github_repository/qb/pbft/pbft_network.go:609: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 23:10:24.871064 /root/study/github_repository/qb/pbft/pbft_network.go:450: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/27 23:10:24.871755 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/27 23:10:24.872792 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/27 23:10:24.873495 /root/study/github_repository/qb/pbft/pbft_network.go:646: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/27 23:10:24.873526 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/27 23:17:08.072248 /root/study/github_repository/qb/pbft/pbft_network.go:427: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/27 23:17:08.073189 /root/study/github_repository/qb/pbft/pbft_network.go:531: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 23:17:08.076615 /root/study/github_repository/qb/pbft/pbft_network.go:454: Msgdelivery channel get a prepare message, and handle it
+P1-[receive block.Block]2021/09/27 23:17:23.990613 /root/study/github_repository/qb/pbft/pbft_network.go:427: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/27 23:17:23.991535 /root/study/github_repository/qb/pbft/pbft_network.go:531: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 23:17:23.994617 /root/study/github_repository/qb/pbft/pbft_network.go:454: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/27 23:17:23.995380 /root/study/github_repository/qb/pbft/pbft_network.go:454: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/27 23:17:23.996415 /root/study/github_repository/qb/pbft/pbft_network.go:610: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 23:17:23.996457 /root/study/github_repository/qb/pbft/pbft_network.go:454: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/27 23:17:23.997048 /root/study/github_repository/qb/pbft/pbft_network.go:466: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/27 23:17:23.997586 /root/study/github_repository/qb/pbft/pbft_network.go:466: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/27 23:17:23.998313 /root/study/github_repository/qb/pbft/pbft_network.go:647: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/27 23:17:23.998360 /root/study/github_repository/qb/pbft/pbft_network.go:466: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/27 23:20:07.956593 /root/study/github_repository/qb/pbft/pbft_network.go:425: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/27 23:20:07.957535 /root/study/github_repository/qb/pbft/pbft_network.go:532: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 23:20:07.961719 /root/study/github_repository/qb/pbft/pbft_network.go:452: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/27 23:20:07.962352 /root/study/github_repository/qb/pbft/pbft_network.go:452: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/27 23:20:07.963292 /root/study/github_repository/qb/pbft/pbft_network.go:616: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 23:20:07.963314 /root/study/github_repository/qb/pbft/pbft_network.go:452: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/27 23:20:07.963884 /root/study/github_repository/qb/pbft/pbft_network.go:464: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/27 23:20:07.964548 /root/study/github_repository/qb/pbft/pbft_network.go:464: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/27 23:20:07.965176 /root/study/github_repository/qb/pbft/pbft_network.go:653: put reply message into broadcast channel
+P1-[receive block.Block]2021/09/27 23:21:13.260451 /root/study/github_repository/qb/pbft/pbft_network.go:425: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/27 23:21:13.261489 /root/study/github_repository/qb/pbft/pbft_network.go:532: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 23:21:13.264142 /root/study/github_repository/qb/pbft/pbft_network.go:452: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/27 23:21:13.265944 /root/study/github_repository/qb/pbft/pbft_network.go:452: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/27 23:21:13.266975 /root/study/github_repository/qb/pbft/pbft_network.go:616: put commit message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 23:21:13.266990 /root/study/github_repository/qb/pbft/pbft_network.go:452: Msgdelivery channel get a prepare message, and handle it
+P1-[receive CommitMsg]2021/09/27 23:21:13.267821 /root/study/github_repository/qb/pbft/pbft_network.go:464: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/27 23:21:13.269077 /root/study/github_repository/qb/pbft/pbft_network.go:653: put reply message into broadcast channel
+P1-[receive CommitMsg]2021/09/27 23:21:13.269105 /root/study/github_repository/qb/pbft/pbft_network.go:464: Msgdelivery channel get a commit message, and handle it
+P1-[receive block.Block]2021/09/27 23:22:46.356539 /root/study/github_repository/qb/pbft/pbft_network.go:425: Msgdelivery channel get a new block,and create a new consensus
+P1-[get pre-prepareMsg]2021/09/27 23:22:46.357507 /root/study/github_repository/qb/pbft/pbft_network.go:534: put pre-prepare message into broadcast channel
+P1-[receive PrepareMsg]2021/09/27 23:22:46.360099 /root/study/github_repository/qb/pbft/pbft_network.go:452: Msgdelivery channel get a prepare message, and handle it
+P1-[receive PrepareMsg]2021/09/27 23:22:46.360704 /root/study/github_repository/qb/pbft/pbft_network.go:452: Msgdelivery channel get a prepare message, and handle it
+P1-[get commitMsg]2021/09/27 23:22:46.361655 /root/study/github_repository/qb/pbft/pbft_network.go:620: put commit message into broadcast channel
+P1-[receive CommitMsg]2021/09/27 23:22:46.362288 /root/study/github_repository/qb/pbft/pbft_network.go:464: Msgdelivery channel get a commit message, and handle it
+P1-[receive CommitMsg]2021/09/27 23:22:46.362902 /root/study/github_repository/qb/pbft/pbft_network.go:464: Msgdelivery channel get a commit message, and handle it
+P1-[get replyMsg]2021/09/27 23:22:46.363599 /root/study/github_repository/qb/pbft/pbft_network.go:657: put reply message into broadcast channel

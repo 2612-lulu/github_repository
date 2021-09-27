@@ -1,12 +1,8 @@
 package main
 
-import (
-	"os"
-	"qb/qbcli"
-)
+import "qb/qbcommand"
 
 func main() {
-	os.Setenv("NODE_NAME", "C1")
-	cli := qbcli.CLI{}
+	cli := qbcommand.COMM{}
 	cli.Run()
 }

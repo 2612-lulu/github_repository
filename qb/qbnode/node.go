@@ -4,7 +4,6 @@ import (
 	"qb/pbft"
 	"qb/qbtools"
 	"qb/qbtx"
-	"qb/qkdserv"
 	"time"
 )
 
@@ -20,6 +19,7 @@ type Node struct {
 	Node_ID      [16]byte          // 联盟节点ID，16字节QKD设备号
 	Node_table   map[string]string // 节点索引表，key=Node_name, value=url
 	Client_table map[string]string // 客户端索引表，key=Client_name, value=url
+	Addr_table   map[string]string
 
 	PBFT_consensus *pbft.NodeConsensus
 
@@ -36,16 +36,13 @@ type Node struct {
 // 参数：节点名称string
 // 返回值：经初始化的节点*Node
 func NewNode(node_name string) *Node {
-	qkdserv.Node_name = node_name // 调用此程序的当前节点或客户端名称
-	// 初始化签名密钥池
-	qkdserv.QKD_sign_random_matrix_pool = make(map[qkdserv.QKDSignMatrixIndex]qkdserv.QKDSignRandomsMatrix)
-
 	// 初始化节点
 	node := &Node{
 		Node_name:    node_name,                                                   // 联盟节点或客户段名称，形式为P1、P2...
 		Node_ID:      qbtools.GetNodeIDTable(node_name),                           // 客户端ID，16字节QKD设备号
 		Node_table:   qbtools.InitConfig("./qbtools/config/node_localhost.txt"),   // 联盟节点节点索引表，key=Node_name, value=url
 		Client_table: qbtools.InitConfig("./qbtools/config/client_localhost.txt"), // 客户端索引表，key=Client_name, value=url
+		Addr_table:   make(map[string]string),
 
 		// 初始化通道Channels
 		MsgBroadcast: make(chan interface{}), // 信息发送通道
@@ -59,9 +56,12 @@ func NewNode(node_name string) *Node {
 	// 开启线程goroutine
 	go node.blockMsg() // 打包通道
 	go node.clockToBlock()
+	go node.resolveMsg()
+	go node.broadcastMsg()
+	go node.pbftResolveResult()
 
 	node.PBFT_consensus = pbft.NewNodeConsensus(node_name) // 开启共识
 
-	node.httplisten() // 开启http
+	//node.httplisten() // 开启http
 	return node
 }

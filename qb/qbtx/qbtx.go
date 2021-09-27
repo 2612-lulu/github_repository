@@ -25,6 +25,12 @@ type Transaction struct {
 	Vout []TXOutput // 交易输出项
 }
 
+type ToGenTx struct {
+	From  string
+	To    string
+	Value int
+}
+
 // SetID，根据交易输入与输出项生成交易ID。
 func (tx *Transaction) SetID() []byte {
 	var hash [32]byte
@@ -63,29 +69,18 @@ func DeserializeTX(data []byte) Transaction {
 
 // SignTX，对交易输入项签名
 func (tx *Transaction) SignTX(nodeName string) {
-	/*// 检验输入项交易中是否都是存在的交易
-	for _, vin := range tx.Vin {
-		if prevTXs[hex.EncodeToString(vin.Txid)].ID == nil {
-			log.Println("ERROR: Previous transaction is not exit")
-		}
-	}*/
-
 	txCopy := tx.TrimmedCopyTX() // 复制并修剪交易以得到待签名数据
 
 	for inID, _ := range txCopy.Vin { // 循环向输入项签名
-		//prevTx := prevTXs[hex.EncodeToString(vin.Txid)]
 		txCopy.Vin[inID].Signature = uss.USSToeplitzHashSignMsg{} // 置空
-		//txCopy.Vin[inID].From = prevTx.Vout[vin.Vout].To
-
-		dataToSign := txCopy.Vin[inID].SerializeInput() // 待签名数据
-
+		dataToSign := txCopy.Vin[inID].SerializeInput()           // 待签名数据
 		signature := uss.USSToeplitzHashSignMsg{
 			Sign_index: qkdserv.QKDSignMatrixIndex{
-				Sign_dev_id:  qbtools.GetNodeIDTable(qkdserv.Node_name),
+				Sign_dev_id:  qbtools.GetNodeIDTable(nodeName),
 				Sign_task_sn: uss.GenSignTaskSN(16),
 			},
 			Main_row_num: qkdserv.QKDSignRandomMainRowNum{
-				Sign_Node_Name: qkdserv.Node_name,
+				Sign_Node_Name: nodeName,
 				Main_Row_Num:   0, // 签名主行号，签名时默认为0
 			},
 			Sign_counts: N,
@@ -94,8 +89,7 @@ func (tx *Transaction) SignTX(nodeName string) {
 		}
 		signature = uss.Sign(signature.Sign_index, signature.Sign_counts, signature.Sign_len, signature.Message)
 		tx.Vin[inID].Signature = signature
-		txCopy.Vin[inID].From = "" // 将From置空\
-		//fmt.Println(signature)
+		txCopy.Vin[inID].From = "" // 将From置空
 	}
 }
 
@@ -140,28 +134,34 @@ func (tx *Transaction) TrimmedCopyTX() Transaction {
 }
 
 // NewReserveTX，发放准备金：只有输出，没有输入，输出来自于准备金
-func NewReserveTX(to, data string) *Transaction {
+func NewReserveTX(to []string, data string) *Transaction {
 	if data == "" { // 如果输入data为0，则生成一串随机数作data
 		randData := make([]byte, 20)  // 初始化一个长度为20的字节数组
 		_, err := rand.Read(randData) // 取伪随机数
 		if err != nil {
 			log.Panic(err)
 		}
-
 		data = string(randData) // 格式化输出：[]byte转string
 	}
 	// 创建一个输入项：空
-	txin := TXInput{[]byte{}, -1, uss.USSToeplitzHashSignMsg{}, ""}
+	txin := TXInput{[]byte{}, -1, uss.USSToeplitzHashSignMsg{}, data}
 	// 创建输出项
-	txout := NewTXOutput(RESERVE, to) // 交易金额=RESERVE，接收方地址=to
-	tx := Transaction{nil, []TXInput{txin}, []TXOutput{*txout}}
+	txout := make([]TXOutput, 0)
+	for _, addr := range to {
+		out := NewTXOutput(RESERVE, addr) // 交易金额=RESERVE，接收方地址=to
+		txout = append(txout, *out)
+	}
+	tx := Transaction{nil, []TXInput{txin}, txout}
 	tx.ID = tx.SetID()
-	log.Println("create a new reserve tx")
+	/*if tx.IsReserveTX() {
+		log.Println("create a new reserve tx")
+	}*/
 	return &tx
 }
 
-// IsReserveTX,检查交易是否是铸币交易
+// IsReserveTX,检查交易是否是发放准备金
 func (tx Transaction) IsReserveTX() bool {
+	// 判断依据：1.输入项只有一条；2.引用的交易输出编号为-1；3.引用的交易ID为空
 	if len(tx.Vin) == 1 && len(tx.Vin[0].Txid) == 0 && tx.Vin[0].Vout == -1 {
 		return true
 	}

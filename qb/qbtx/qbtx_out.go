@@ -15,13 +15,11 @@ type TXOutput struct {
 // NewTXOutput，初始化交易输出项
 // 参数：交易数值int，接收方地址string
 func NewTXOutput(value int, address string) *TXOutput {
-	txo := &TXOutput{value, ""}
-	//txo.Lock([]byte(address))
-
+	txo := &TXOutput{value, address}
 	return txo
 }
 
-// TXOutputs collects TXOutput
+// TXOutputs
 type TXOutputs struct {
 	Outputs []TXOutput
 }
@@ -38,7 +36,7 @@ func (outs TXOutputs) SerializeOutputs() []byte {
 	return buff.Bytes()
 }
 
-// DeserializeOutput，交易输出项反序列化
+// DeserializeOutputs，交易输出项反序列化
 func DeserializeOutputs(data []byte) TXOutputs {
 	var outputs TXOutputs
 

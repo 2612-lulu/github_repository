@@ -1,0 +1,74 @@
+P1-[block.Block]2021/09/27 22:17:04.443973 /root/study/github_repository/qb/pbft/pbft_network.go:307: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[pbft.CommitMsg]2021/09/27 22:17:04.452839 /root/study/github_repository/qb/pbft/pbft_network.go:364: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 22:17:04.453535 /root/study/github_repository/qb/pbft/pbft_network.go:364: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 22:17:04.637704 /root/study/github_repository/qb/pbft/pbft_network.go:355: [get a commit message,but don't put it into channel]
+P1-[block.Block]2021/09/27 22:35:30.521763 /root/study/github_repository/qb/pbft/pbft_network.go:309: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[pbft.PrepareMsg]2021/09/27 22:35:30.529882 /root/study/github_repository/qb/pbft/pbft_network.go:340: [get a prepare message,but don't put it into channel]
+P1-[pbft.CommitMsg]2021/09/27 22:35:30.530041 /root/study/github_repository/qb/pbft/pbft_network.go:366: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 22:35:30.532118 /root/study/github_repository/qb/pbft/pbft_network.go:366: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 22:35:30.532978 /root/study/github_repository/qb/pbft/pbft_network.go:357: [get a commit message,but don't put it into channel]
+P1-[block.Block]2021/09/27 22:41:11.032075 /root/study/github_repository/qb/pbft/pbft_network.go:314: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[pbft.CommitMsg]2021/09/27 22:41:11.043918 /root/study/github_repository/qb/pbft/pbft_network.go:371: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 22:41:11.045851 /root/study/github_repository/qb/pbft/pbft_network.go:371: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 22:41:11.046737 /root/study/github_repository/qb/pbft/pbft_network.go:371: [put commit message into MsgDelivery channel]
+P1-[block.Block]2021/09/27 22:47:45.495689 /root/study/github_repository/qb/pbft/pbft_network.go:313: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[pbft.CommitMsg]2021/09/27 22:47:45.503667 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 22:47:45.504355 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 22:47:45.505354 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 22:47:45.505552 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P1-[block.Block]2021/09/27 22:51:30.725173 /root/study/github_repository/qb/pbft/pbft_network.go:313: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[pbft.CommitMsg]2021/09/27 22:51:30.736291 /root/study/github_repository/qb/pbft/pbft_network.go:361: [get a commit message,but don't put it into channel]
+P1-[pbft.CommitMsg]2021/09/27 22:51:30.737308 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[block.Block]2021/09/27 22:55:05.922603 /root/study/github_repository/qb/pbft/pbft_network.go:313: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[pbft.CommitMsg]2021/09/27 22:55:05.930291 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 22:55:05.930808 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 22:55:05.932294 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[block.Block]2021/09/27 22:59:33.103528 /root/study/github_repository/qb/pbft/pbft_network.go:313: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[pbft.CommitMsg]2021/09/27 22:59:33.110821 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 22:59:33.111425 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 22:59:33.112287 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 22:59:33.112368 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P1-[block.Block]2021/09/27 23:01:36.016675 /root/study/github_repository/qb/pbft/pbft_network.go:316: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[pbft.CommitMsg]2021/09/27 23:01:36.024464 /root/study/github_repository/qb/pbft/pbft_network.go:373: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 23:01:36.026029 /root/study/github_repository/qb/pbft/pbft_network.go:373: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 23:01:36.026163 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P1-[block.Block]2021/09/27 23:03:29.309957 /root/study/github_repository/qb/pbft/pbft_network.go:313: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[pbft.CommitMsg]2021/09/27 23:03:29.322657 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 23:03:29.324107 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 23:03:29.324312 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P1-[block.Block]2021/09/27 23:04:29.365026 /root/study/github_repository/qb/pbft/pbft_network.go:313: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[pbft.CommitMsg]2021/09/27 23:04:29.371429 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 23:04:29.372399 /root/study/github_repository/qb/pbft/pbft_network.go:462: Msgdelivery channel get a commit message, and handle it
+P1-[pbft.CommitMsg]2021/09/27 23:04:29.372403 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[block.Block]2021/09/27 23:05:18.502229 /root/study/github_repository/qb/pbft/pbft_network.go:313: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[pbft.CommitMsg]2021/09/27 23:05:18.507860 /root/study/github_repository/qb/pbft/pbft_network.go:361: [get a commit message,but don't put it into channel]
+P1-[pbft.CommitMsg]2021/09/27 23:05:18.509597 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 23:05:18.511351 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 23:05:18.511546 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P1-[block.Block]2021/09/27 23:06:27.162288 /root/study/github_repository/qb/pbft/pbft_network.go:313: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[pbft.CommitMsg]2021/09/27 23:06:27.170184 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 23:06:27.358752 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[block.Block]2021/09/27 23:08:47.476482 /root/study/github_repository/qb/pbft/pbft_network.go:313: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/27 23:09:06.126507 /root/study/github_repository/qb/pbft/pbft_network.go:313: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/27 23:10:24.864261 /root/study/github_repository/qb/pbft/pbft_network.go:313: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[pbft.CommitMsg]2021/09/27 23:10:24.872327 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 23:10:24.872856 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 23:10:24.873721 /root/study/github_repository/qb/pbft/pbft_network.go:370: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 23:10:24.873826 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P1-[block.Block]2021/09/27 23:17:08.072212 /root/study/github_repository/qb/pbft/pbft_network.go:317: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[block.Block]2021/09/27 23:17:23.990591 /root/study/github_repository/qb/pbft/pbft_network.go:317: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[pbft.CommitMsg]2021/09/27 23:17:23.997133 /root/study/github_repository/qb/pbft/pbft_network.go:374: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 23:17:23.998147 /root/study/github_repository/qb/pbft/pbft_network.go:374: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 23:17:23.998748 /root/study/github_repository/qb/pbft/pbft_network.go:374: [put commit message into MsgDelivery channel]
+P1-[block.Block]2021/09/27 23:20:07.956578 /root/study/github_repository/qb/pbft/pbft_network.go:315: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[pbft.CommitMsg]2021/09/27 23:20:07.964199 /root/study/github_repository/qb/pbft/pbft_network.go:372: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 23:20:07.965194 /root/study/github_repository/qb/pbft/pbft_network.go:372: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 23:20:07.965204 /root/study/github_repository/qb/pbft/pbft_network.go:363: [get a commit message,but don't put it into channel]
+P1-[block.Block]2021/09/27 23:21:13.260431 /root/study/github_repository/qb/pbft/pbft_network.go:315: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[pbft.CommitMsg]2021/09/27 23:21:13.266458 /root/study/github_repository/qb/pbft/pbft_network.go:363: [get a commit message,but don't put it into channel]
+P1-[pbft.CommitMsg]2021/09/27 23:21:13.267696 /root/study/github_repository/qb/pbft/pbft_network.go:372: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 23:21:13.269393 /root/study/github_repository/qb/pbft/pbft_network.go:372: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 23:21:13.269533 /root/study/github_repository/qb/qbtx/qbtx.go:109: verify of tx success
+P1-[block.Block]2021/09/27 23:22:46.356473 /root/study/github_repository/qb/pbft/pbft_network.go:315: there no pbft on going, now create a new one and put the new block into MsgDelivery channel
+P1-[pbft.CommitMsg]2021/09/27 23:22:46.362147 /root/study/github_repository/qb/pbft/pbft_network.go:372: [put commit message into MsgDelivery channel]
+P1-[pbft.CommitMsg]2021/09/27 23:22:46.363373 /root/study/github_repository/qb/pbft/pbft_network.go:372: [put commit message into MsgDelivery channel]
