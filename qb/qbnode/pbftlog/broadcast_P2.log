@@ -1,43 +1,50 @@
-P2-[broadcast prepare]2021/09/28 14:42:34.599906 /root/study/github_repository/qb/qbnode/routine_broadcastMsg.go:34: broadcast prepare message
-P2-[broadcast commit]2021/09/28 14:42:34.602982 /root/study/github_repository/qb/qbnode/routine_broadcastMsg.go:42: broadcast commit message
-P2-[broadcast commit]2021/09/28 14:42:34.603092 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
-P2-[broadcast prepare]2021/09/28 14:59:58.939349 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
-P2-[broadcast commit]2021/09/28 14:59:58.942284 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
-P2-[broadcast prepare]2021/09/28 15:13:42.449973 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
-P2-[broadcast commit]2021/09/28 15:13:42.452666 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
-P2-[broadcast prepare]2021/09/28 15:20:58.342315 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
-P2-[broadcast commit]2021/09/28 15:20:58.345817 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
-P2-[broadcast prepare]2021/09/28 15:21:43.971303 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
-P2-[broadcast prepare]2021/09/28 15:21:43.971359 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
-P2-[broadcast commit]2021/09/28 15:21:43.974675 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
-P2-[broadcast prepare]2021/09/28 15:49:09.659004 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
-P2-[broadcast prepare]2021/09/28 15:49:09.659274 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
-P2-[broadcast commit]2021/09/28 15:49:09.664128 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
-P2-[broadcast prepare]2021/09/28 15:51:41.990302 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
-P2-[broadcast commit]2021/09/28 15:51:41.994265 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
-P2-[broadcast reply]2021/09/28 15:51:41.999887 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:59: broadcast reply message
-P2-[broadcast prepare]2021/09/28 15:51:47.988472 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
-P2-[broadcast commit]2021/09/28 15:51:47.993717 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
-P2-[broadcast commit]2021/09/28 15:51:47.995281 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
-P2-[broadcast commit]2021/09/28 15:51:47.995574 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
-P2-[broadcast commit]2021/09/28 15:51:47.995873 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
-P2-[broadcast commit]2021/09/28 15:51:47.996210 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
-P2-[broadcast reply]2021/09/28 15:51:47.999487 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:59: broadcast reply message
-P2-[broadcast prepare]2021/09/28 15:51:57.997137 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
-P2-[broadcast commit]2021/09/28 15:51:58.001331 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
-P2-[broadcast commit]2021/09/28 15:51:58.001419 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
-P2-[broadcast commit]2021/09/28 15:51:58.001698 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
-P2-[broadcast commit]2021/09/28 15:51:58.001946 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
-P2-[broadcast commit]2021/09/28 15:51:58.002201 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
-P2-[broadcast reply]2021/09/28 15:51:58.005946 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:59: broadcast reply message
-P2-[broadcast prepare]2021/09/28 18:53:03.659912 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
-P2-[broadcast commit]2021/09/28 18:53:03.662839 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
-P2-[broadcast commit]2021/09/28 18:53:03.662918 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
-P2-[broadcast reply]2021/09/28 18:53:03.666853 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:59: broadcast reply message
-P2-[broadcast prepare]2021/09/28 18:55:32.915233 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
-P2-[broadcast commit]2021/09/28 18:55:32.920793 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
-P2-[broadcast commit]2021/09/28 18:55:32.921030 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
-P2-[broadcast commit]2021/09/28 18:55:32.921285 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
-P2-[broadcast commit]2021/09/28 18:55:32.921563 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
-P2-[broadcast commit]2021/09/28 18:55:32.921866 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
-P2-[broadcast reply]2021/09/28 18:55:32.925413 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:59: broadcast reply message
+P2-[broadcast prepare]2021/09/28 21:13:18.296404 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
+P2-[broadcast prepare]2021/09/28 21:13:18.296530 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P2-[broadcast commit]2021/09/28 21:13:18.302533 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
+P2-[broadcast reply]2021/09/28 21:13:18.304023 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:53: broadcast reply message
+P2-[broadcast prepare]2021/09/28 21:13:20.293754 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
+P2-[broadcast commit]2021/09/28 21:13:20.311024 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
+P2-[broadcast reply]2021/09/28 21:13:20.311694 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:53: broadcast reply message
+P2-[broadcast prepare]2021/09/28 21:14:10.340101 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
+P2-[broadcast prepare]2021/09/28 21:14:10.340326 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P2-[broadcast prepare]2021/09/28 21:14:10.340622 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P2-[broadcast commit]2021/09/28 21:14:10.345992 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
+P2-[broadcast reply]2021/09/28 21:14:10.352447 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:53: broadcast reply message
+P2-[broadcast prepare]2021/09/28 21:14:18.322245 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
+P2-[broadcast commit]2021/09/28 21:14:18.326319 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
+P2-[broadcast commit]2021/09/28 21:14:18.326395 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P2-[broadcast reply]2021/09/28 21:14:18.329624 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:53: broadcast reply message
+P2-[broadcast prepare]2021/09/28 21:14:36.327983 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
+P2-[broadcast prepare]2021/09/28 21:14:36.328090 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P2-[broadcast prepare]2021/09/28 21:14:36.328374 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P2-[broadcast commit]2021/09/28 21:14:36.331533 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
+P2-[broadcast reply]2021/09/28 21:14:36.337169 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:53: broadcast reply message
+P2-[broadcast prepare]2021/09/28 21:18:18.415312 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
+P2-[broadcast commit]2021/09/28 21:18:18.419179 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
+P2-[broadcast commit]2021/09/28 21:18:18.419338 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P2-[broadcast commit]2021/09/28 21:18:18.419568 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P2-[broadcast reply]2021/09/28 21:18:18.423264 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:53: broadcast reply message
+P2-[broadcast prepare]2021/09/28 21:18:26.415042 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
+P2-[broadcast prepare]2021/09/28 21:18:26.415302 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P2-[broadcast commit]2021/09/28 21:18:26.419271 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
+P2-[broadcast reply]2021/09/28 21:18:26.419807 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:53: broadcast reply message
+P2-[broadcast reply]2021/09/28 21:18:26.419977 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P2-[broadcast prepare]2021/09/28 21:18:42.421076 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
+P2-[broadcast prepare]2021/09/28 21:18:42.421102 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P2-[broadcast prepare]2021/09/28 21:18:42.421353 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P2-[broadcast commit]2021/09/28 21:18:42.424965 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
+P2-[broadcast commit]2021/09/28 21:18:42.425138 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P2-[broadcast reply]2021/09/28 21:18:42.427698 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:53: broadcast reply message
+P2-[broadcast prepare]2021/09/28 21:18:44.421787 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
+P2-[broadcast commit]2021/09/28 21:18:44.425246 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
+P2-[broadcast reply]2021/09/28 21:18:44.426442 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:53: broadcast reply message
+P2-[broadcast prepare]2021/09/28 21:19:20.445203 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
+P2-[broadcast commit]2021/09/28 21:19:20.456961 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
+P2-[broadcast reply]2021/09/28 21:19:20.659876 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:53: broadcast reply message
+P2-[broadcast prepare]2021/09/28 21:19:51.359746 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:34: broadcast prepare message
+P2-[broadcast commit]2021/09/28 21:19:51.361595 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:42: broadcast commit message
+P2-[broadcast commit]2021/09/28 21:19:51.361776 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P2-[broadcast commit]2021/09/28 21:19:51.362133 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P2-[broadcast commit]2021/09/28 21:19:51.362457 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P2-[broadcast commit]2021/09/28 21:19:51.362798 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P2-[broadcast reply]2021/09/28 21:19:51.367345 /root/study/github_repository/qb/qbnode/pbft_routine_broadcastMsg.go:53: broadcast reply message

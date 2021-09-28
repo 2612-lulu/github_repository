@@ -3,6 +3,7 @@ package qbcli
 import (
 	"qb/pbft"
 	"qb/qbtools"
+	"qb/qbtx"
 	"time"
 )
 
@@ -18,9 +19,10 @@ type Client struct {
 	Client_table map[string]string // 客户端索引表，key=Client_name, value=url
 	Node_table   map[string]string // 节点索引表，key=Node_name, value=url
 
-	View         *pbft.View       // 视图号
-	ReplyMsgs    []*pbft.ReplyMsg // 接收的reply消息缓冲列表
-	CurrentState *pbft.State
+	View         *pbft.View        // 视图号
+	Transaction  *qbtx.Transaction // 待进行的交易
+	ReplyMsgs    []*pbft.ReplyMsg  // 接收的reply消息缓冲列表
+	CurrentState pbft.Stage
 
 	MsgBroadcast chan interface{} // 信息发送通道
 	MsgEntrance  chan interface{}
@@ -40,12 +42,13 @@ func NewClient(client_name string) *Client {
 		Client_ID:    qbtools.GetNodeIDTable(client_name),                            // 客户端ID，16字节QKD设备号
 		Client_table: qbtools.InitConfig(qbtools.INIT_PATH + "client_localhost.txt"), // 客户端索引表，key=Node_name, value=url
 		Node_table:   qbtools.InitConfig(qbtools.INIT_PATH + "node_localhost.txt"),   // 联盟节点节点索引表，key=Node_name, value=url
+
 		View: &pbft.View{ // 视图号信息，视图号=主节点下标
 			ID:      view, // 视图号
 			Primary: "P1", // 主节点,暂设为P1
 		},
-
-		CurrentState: nil,
+		Transaction:  new(qbtx.Transaction),
+		CurrentState: pbft.Idle,
 		ReplyMsgs:    make([]*pbft.ReplyMsg, 0),
 
 		// 初始化通道Channels

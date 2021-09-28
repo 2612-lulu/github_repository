@@ -15,7 +15,7 @@ const N = 3*F + 1 // N=3F+1，本程序中N=4
 type ReplyMsg struct {
 	View        int64                      // 当前视图编号
 	Time_stamp  int64                      // 相应request的时间戳
-	Client_name [2]byte                    // 客户端名称
+	Client_name string                     // 客户端名称
 	Node_i      int64                      // 当前节点编号
 	Result      bool                       // 执行request操作的结果
 	Sign_i      uss.USSToeplitzHashSignMsg // 当前节点对Commit消息中v,t,c,i,r的签名
@@ -99,7 +99,7 @@ func (obj *ReplyMsg) signMessageEncode() ([]byte, error) {
 
 	binary.Write(buf, binary.LittleEndian, obj.View)
 	binary.Write(buf, binary.LittleEndian, obj.Time_stamp)
-	binary.Write(buf, binary.LittleEndian, obj.Client_name)
+	binary.Write(buf, binary.LittleEndian, []byte(obj.Client_name))
 	binary.Write(buf, binary.LittleEndian, obj.Node_i)
 	binary.Write(buf, binary.LittleEndian, obj.Result)
 	return buf.Bytes(), nil

@@ -1,84 +1,85 @@
-P4-[resolve PrePrepareMsg]2021/09/28 14:42:34.598540 /root/study/github_repository/qb/qbnode/routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
-P4-[resolve pre-prepareMsg success]2021/09/28 14:42:34.599699 /root/study/github_repository/qb/qbnode/routine_resolveMsg.go:172: put prepare message into broadcast channel
-P4-[resolve PrepareMsg]2021/09/28 14:42:34.599921 /root/study/github_repository/qb/qbnode/routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
-P4-[resolve prepareMsg success]2021/09/28 14:42:34.601055 /root/study/github_repository/qb/qbnode/routine_resolveMsg.go:209: put commit message into broadcast channel
-P4-[resolve CommitMsg]2021/09/28 14:42:34.602818 /root/study/github_repository/qb/qbnode/routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve CommitMsg]2021/09/28 14:42:34.603719 /root/study/github_repository/qb/qbnode/routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve commitMsg success]2021/09/28 14:42:34.604598 /root/study/github_repository/qb/qbnode/routine_resolveMsg.go:246: put reply message into broadcast channel
-P4-[resolve CommitMsg]2021/09/28 14:42:34.604635 /root/study/github_repository/qb/qbnode/routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve PrePrepareMsg]2021/09/28 14:59:58.935338 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
-P4-[resolve pre-prepareMsg success]2021/09/28 14:59:58.936673 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:172: put prepare message into broadcast channel
-P4-[resolve PrepareMsg]2021/09/28 14:59:58.939340 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
-P4-[resolve prepareMsg success]2021/09/28 14:59:58.940563 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:209: put commit message into broadcast channel
-P4-[resolve PrepareMsg]2021/09/28 14:59:58.940596 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
-P4-[resolve CommitMsg]2021/09/28 14:59:58.941379 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve CommitMsg]2021/09/28 14:59:58.942029 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve commitMsg success]2021/09/28 14:59:58.942688 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:246: put reply message into broadcast channel
-P4-[resolve CommitMsg]2021/09/28 14:59:58.942718 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve PrePrepareMsg]2021/09/28 15:13:42.448912 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
-P4-[resolve pre-prepareMsg success]2021/09/28 15:13:42.450165 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:172: put prepare message into broadcast channel
-P4-[resolve PrepareMsg]2021/09/28 15:13:42.450871 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
-P4-[resolve prepareMsg success]2021/09/28 15:13:42.452071 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:209: put commit message into broadcast channel
-P4-[resolve CommitMsg]2021/09/28 15:13:42.453082 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve commitMsg success]2021/09/28 15:13:42.454626 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:246: put reply message into broadcast channel
-P4-[resolve CommitMsg]2021/09/28 15:13:42.454665 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve PrePrepareMsg]2021/09/28 15:20:58.341322 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
-P4-[resolve pre-prepareMsg success]2021/09/28 15:20:58.342659 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:172: put prepare message into broadcast channel
-P4-[resolve PrepareMsg]2021/09/28 15:20:58.536937 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
-P4-[resolve prepareMsg success]2021/09/28 15:20:58.537963 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:209: put commit message into broadcast channel
-P4-[resolve CommitMsg]2021/09/28 15:20:58.737416 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve commitMsg success]2021/09/28 15:20:58.738574 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:246: put reply message into broadcast channel
-P4-[resolve PrePrepareMsg]2021/09/28 15:21:43.968825 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
-P4-[resolve pre-prepareMsg success]2021/09/28 15:21:43.970363 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:172: put prepare message into broadcast channel
-P4-[resolve PrepareMsg]2021/09/28 15:21:43.970755 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
-P4-[resolve prepareMsg success]2021/09/28 15:21:43.972174 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:209: put commit message into broadcast channel
-P4-[resolve CommitMsg]2021/09/28 15:21:43.973911 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve CommitMsg]2021/09/28 15:21:43.974523 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve commitMsg success]2021/09/28 15:21:43.975220 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:246: put reply message into broadcast channel
-P4-[resolve CommitMsg]2021/09/28 15:21:43.975416 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve PrePrepareMsg]2021/09/28 15:49:09.654575 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
-P4-[resolve pre-prepareMsg success]2021/09/28 15:49:09.656604 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:172: put prepare message into broadcast channel
-P4-[resolve PrepareMsg]2021/09/28 15:49:09.657179 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
-P4-[resolve prepareMsg success]2021/09/28 15:49:09.659308 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:209: put commit message into broadcast channel
-P4-[resolve PrepareMsg]2021/09/28 15:49:09.659339 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
-P4-[resolve CommitMsg]2021/09/28 15:49:09.660770 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve CommitMsg]2021/09/28 15:49:09.662040 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve commitMsg success]2021/09/28 15:49:09.663568 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:246: put reply message into broadcast channel
-P4-[resolve CommitMsg]2021/09/28 15:49:09.663622 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve PrePrepareMsg]2021/09/28 15:51:41.988763 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
-P4-[resolve pre-prepareMsg success]2021/09/28 15:51:41.990932 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:172: put prepare message into broadcast channel
-P4-[resolve PrepareMsg]2021/09/28 15:51:41.991584 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
-P4-[resolve prepareMsg success]2021/09/28 15:51:41.993474 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:209: put commit message into broadcast channel
-P4-[resolve CommitMsg]2021/09/28 15:51:41.994881 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve commitMsg success]2021/09/28 15:51:41.997782 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:246: put reply message into broadcast channel
-P4-[resolve CommitMsg]2021/09/28 15:51:41.997800 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve PrePrepareMsg]2021/09/28 15:51:47.986442 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
-P4-[resolve pre-prepareMsg success]2021/09/28 15:51:47.988317 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:172: put prepare message into broadcast channel
-P4-[resolve PrepareMsg]2021/09/28 15:51:47.988781 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
-P4-[resolve prepareMsg success]2021/09/28 15:51:47.990762 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:209: put commit message into broadcast channel
-P4-[resolve CommitMsg]2021/09/28 15:51:47.992417 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve CommitMsg]2021/09/28 15:51:47.995438 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve commitMsg success]2021/09/28 15:51:47.996858 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:246: put reply message into broadcast channel
-P4-[resolve CommitMsg]2021/09/28 15:51:47.996893 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve PrePrepareMsg]2021/09/28 15:51:57.996195 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
-P4-[resolve pre-prepareMsg success]2021/09/28 15:51:57.998038 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:172: put prepare message into broadcast channel
-P4-[resolve PrepareMsg]2021/09/28 15:51:58.066102 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
-P4-[resolve prepareMsg success]2021/09/28 15:51:58.067907 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:209: put commit message into broadcast channel
-P4-[resolve CommitMsg]2021/09/28 15:51:58.266780 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve commitMsg success]2021/09/28 15:51:58.274338 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:246: put reply message into broadcast channel
-P4-[resolve PrePrepareMsg]2021/09/28 18:53:03.655048 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
-P4-[resolve pre-prepareMsg success]2021/09/28 18:53:03.657159 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:172: put prepare message into broadcast channel
-P4-[resolve PrepareMsg]2021/09/28 18:53:03.659842 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
-P4-[resolve prepareMsg success]2021/09/28 18:53:03.661676 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:209: put commit message into broadcast channel
-P4-[resolve PrepareMsg]2021/09/28 18:53:03.661704 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
-P4-[resolve CommitMsg]2021/09/28 18:53:03.663019 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve CommitMsg]2021/09/28 18:53:03.664834 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve commitMsg success]2021/09/28 18:53:03.666542 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:246: put reply message into broadcast channel
-P4-[resolve CommitMsg]2021/09/28 18:53:03.666572 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve PrePrepareMsg]2021/09/28 18:55:32.912617 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
-P4-[resolve pre-prepareMsg success]2021/09/28 18:55:32.915191 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:172: put prepare message into broadcast channel
-P4-[resolve PrepareMsg]2021/09/28 18:55:32.915772 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
-P4-[resolve prepareMsg success]2021/09/28 18:55:32.917567 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:209: put commit message into broadcast channel
-P4-[resolve CommitMsg]2021/09/28 18:55:32.919065 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve CommitMsg]2021/09/28 18:55:32.920527 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
-P4-[resolve commitMsg success]2021/09/28 18:55:32.922081 /root/study/github_repository/qb/qbnode/pnft_routine_resolveMsg.go:246: put reply message into broadcast channel
+P4-[resolve PrePrepareMsg]2021/09/28 21:13:18.293064 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
+P4-[resolve pre-prepareMsg success]2021/09/28 21:13:18.294973 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:172: put prepare message into broadcast channel
+P4-[resolve PrepareMsg]2021/09/28 21:13:18.295277 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
+P4-[resolve prepareMsg success]2021/09/28 21:13:18.297182 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:209: put commit message into broadcast channel
+P4-[resolve PrepareMsg]2021/09/28 21:13:18.297217 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
+P4-[resolve CommitMsg]2021/09/28 21:13:18.298838 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve CommitMsg]2021/09/28 21:13:18.300074 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve commitMsg success]2021/09/28 21:13:18.302027 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:246: put reply message into broadcast channel
+P4-[resolve PrePrepareMsg]2021/09/28 21:13:20.292314 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
+P4-[resolve PrepareMsg]2021/09/28 21:13:20.293568 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
+P4-[resolve prepareMsg success]2021/09/28 21:13:20.294676 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:209: put commit message into broadcast channel
+P4-[resolve CommitMsg]2021/09/28 21:13:20.309671 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve CommitMsg]2021/09/28 21:13:20.310372 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve commitMsg success]2021/09/28 21:13:20.311178 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:246: put reply message into broadcast channel
+P4-[resolve CommitMsg]2021/09/28 21:13:20.313442 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve PrePrepareMsg]2021/09/28 21:14:10.317473 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
+P4-[resolve pre-prepareMsg success]2021/09/28 21:14:10.322040 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:172: put prepare message into broadcast channel
+P4-[resolve PrepareMsg]2021/09/28 21:14:10.357995 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
+P4-[resolve prepareMsg success]2021/09/28 21:14:10.359703 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:209: put commit message into broadcast channel
+P4-[resolve CommitMsg]2021/09/28 21:14:10.559229 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve commitMsg success]2021/09/28 21:14:10.562133 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:246: put reply message into broadcast channel
+P4-[resolve PrePrepareMsg]2021/09/28 21:14:18.317323 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
+P4-[resolve pre-prepareMsg success]2021/09/28 21:14:18.319208 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:172: put prepare message into broadcast channel
+P4-[resolve PrepareMsg]2021/09/28 21:14:18.320416 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
+P4-[resolve prepareMsg success]2021/09/28 21:14:18.322438 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:209: put commit message into broadcast channel
+P4-[resolve PrepareMsg]2021/09/28 21:14:18.322467 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
+P4-[resolve CommitMsg]2021/09/28 21:14:18.324451 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve CommitMsg]2021/09/28 21:14:18.326292 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve commitMsg success]2021/09/28 21:14:18.328505 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:246: put reply message into broadcast channel
+P4-[resolve PrePrepareMsg]2021/09/28 21:14:36.324910 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
+P4-[resolve pre-prepareMsg success]2021/09/28 21:14:36.326678 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:172: put prepare message into broadcast channel
+P4-[resolve PrepareMsg]2021/09/28 21:14:36.326733 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
+P4-[resolve prepareMsg success]2021/09/28 21:14:36.329340 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:209: put commit message into broadcast channel
+P4-[resolve PrepareMsg]2021/09/28 21:14:36.329380 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
+P4-[resolve CommitMsg]2021/09/28 21:14:36.331088 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve CommitMsg]2021/09/28 21:14:36.332456 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve commitMsg success]2021/09/28 21:14:36.334232 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:246: put reply message into broadcast channel
+P4-[resolve CommitMsg]2021/09/28 21:14:36.334262 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve PrePrepareMsg]2021/09/28 21:18:18.413288 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
+P4-[resolve pre-prepareMsg success]2021/09/28 21:18:18.415110 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:172: put prepare message into broadcast channel
+P4-[resolve PrepareMsg]2021/09/28 21:18:18.415273 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
+P4-[resolve prepareMsg success]2021/09/28 21:18:18.417144 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:209: put commit message into broadcast channel
+P4-[resolve PrepareMsg]2021/09/28 21:18:18.417171 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
+P4-[resolve CommitMsg]2021/09/28 21:18:18.418471 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve CommitMsg]2021/09/28 21:18:18.419795 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve commitMsg success]2021/09/28 21:18:18.421785 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:246: put reply message into broadcast channel
+P4-[resolve CommitMsg]2021/09/28 21:18:18.421818 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve PrePrepareMsg]2021/09/28 21:18:26.413711 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
+P4-[resolve pre-prepareMsg success]2021/09/28 21:18:26.414957 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:172: put prepare message into broadcast channel
+P4-[resolve PrepareMsg]2021/09/28 21:18:26.414994 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
+P4-[resolve prepareMsg success]2021/09/28 21:18:26.416226 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:209: put commit message into broadcast channel
+P4-[resolve PrepareMsg]2021/09/28 21:18:26.416268 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
+P4-[resolve CommitMsg]2021/09/28 21:18:26.417227 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve CommitMsg]2021/09/28 21:18:26.418644 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve commitMsg success]2021/09/28 21:18:26.419593 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:246: put reply message into broadcast channel
+P4-[resolve CommitMsg]2021/09/28 21:18:26.419627 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve PrePrepareMsg]2021/09/28 21:18:42.418215 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
+P4-[resolve pre-prepareMsg success]2021/09/28 21:18:42.419856 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:172: put prepare message into broadcast channel
+P4-[resolve PrepareMsg]2021/09/28 21:18:42.420644 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
+P4-[resolve prepareMsg success]2021/09/28 21:18:42.422110 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:209: put commit message into broadcast channel
+P4-[resolve CommitMsg]2021/09/28 21:18:42.423211 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve CommitMsg]2021/09/28 21:18:42.424351 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve commitMsg success]2021/09/28 21:18:42.425793 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:246: put reply message into broadcast channel
+P4-[resolve CommitMsg]2021/09/28 21:18:42.425828 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve PrePrepareMsg]2021/09/28 21:18:44.419949 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
+P4-[resolve pre-prepareMsg success]2021/09/28 21:18:44.420975 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:172: put prepare message into broadcast channel
+P4-[resolve PrepareMsg]2021/09/28 21:18:44.421533 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
+P4-[resolve prepareMsg success]2021/09/28 21:18:44.422622 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:209: put commit message into broadcast channel
+P4-[resolve PrepareMsg]2021/09/28 21:18:44.423306 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
+P4-[resolve CommitMsg]2021/09/28 21:18:44.424017 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve commitMsg success]2021/09/28 21:18:44.425532 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:246: put reply message into broadcast channel
+P4-[resolve CommitMsg]2021/09/28 21:18:44.425575 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve PrePrepareMsg]2021/09/28 21:19:20.441989 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
+P4-[resolve pre-prepareMsg success]2021/09/28 21:19:20.444076 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:172: put prepare message into broadcast channel
+P4-[resolve PrepareMsg]2021/09/28 21:19:20.444587 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
+P4-[resolve prepareMsg success]2021/09/28 21:19:20.446300 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:209: put commit message into broadcast channel
+P4-[resolve CommitMsg]2021/09/28 21:19:20.447791 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve CommitMsg]2021/09/28 21:19:20.449127 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve commitMsg success]2021/09/28 21:19:20.451637 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:246: put reply message into broadcast channel
+P4-[resolve PrePrepareMsg]2021/09/28 21:19:51.354951 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:41: Msgdelivery channel get a preprepare, and handle it
+P4-[resolve pre-prepareMsg success]2021/09/28 21:19:51.356968 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:172: put prepare message into broadcast channel
+P4-[resolve PrepareMsg]2021/09/28 21:19:51.359631 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:53: Msgdelivery channel get a prepare message, and handle it
+P4-[resolve prepareMsg success]2021/09/28 21:19:51.361683 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:209: put commit message into broadcast channel
+P4-[resolve CommitMsg]2021/09/28 21:19:51.382758 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:65: Msgdelivery channel get a commit message, and handle it
+P4-[resolve commitMsg success]2021/09/28 21:19:51.386350 /root/study/github_repository/qb/qbnode/pbft_routine_resolveMsg.go:246: put reply message into broadcast channel

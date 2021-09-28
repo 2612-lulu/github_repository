@@ -14,10 +14,36 @@ func (client *Client) resolveMsg() {
 		msgs := <-client.MsgDelivery // 从调度器通道中获取缓存信息
 		switch msgs := msgs.(type) {
 		case []*pbft.ReplyMsg:
-			qbtools.Init_log(CLIENT_LOG_PATH + "result.log")
-			fmt.Println(msgs)
-			log.SetPrefix("【transaction succes】")
-			log.Println("transcation success")
+			i := 0
+			for _, reply := range msgs {
+				if reply.Result {
+					i++
+				}
+			}
+			if i >= 3 {
+				fmt.Println("====================【transaction success】==============================")
+				from := client.Transaction.Vin[0].From
+				for index, vout := range client.Transaction.Vout {
+					if from != vout.To {
+						fmt.Printf("==transaction %d\n", index+1)
+						fmt.Printf("\tFrom: %s\n", from)
+						fmt.Printf("\tTo:   %s\n", vout.To)
+						fmt.Printf("\tValue:%d\n", vout.Value)
+					}
+				}
+				qbtools.Init_log(CLIENT_LOG_PATH + "resolve_" + client.Client_name + ".log")
+				log.SetPrefix("【transaction succes】")
+				log.Println("transcation success")
+
+				client.Transaction = new(qbtx.Transaction) // 清空待交易列表
+				client.ReplyMsgs = make([]*pbft.ReplyMsg, 0)
+				client.CurrentState = pbft.Idle // 更改状态，此后可以发送新的交易
+			} else {
+				qbtools.Init_log(CLIENT_LOG_PATH + "resolve_" + client.Client_name + ".log")
+				log.SetPrefix("【transaction error】")
+				log.Println("number of reply is wrong")
+				client.ReplyMsgs = make([]*pbft.ReplyMsg, 0)
+			}
 		case *qbtx.Transaction:
 			qbtools.Init_log(CLIENT_LOG_PATH + "resolve_" + client.Client_name + ".log")
 			log.SetPrefix("【generate tx】")

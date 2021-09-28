@@ -24,6 +24,7 @@ type State struct {
 	Last_sequence_number int64      // 上次共识序列号
 	Current_stage        Stage      // 当前状态
 	CommittedMessage     *CommitMsg // 达成共识的commit消息
+	Addr_table           map[string]string
 }
 
 // pbft缓存数据，用于存放pbft过程中的各类消息
@@ -31,7 +32,7 @@ type MsgLogs struct {
 	ReqMsg        *qblock.Block         // 存放request消息
 	PreparedMsgs  map[int64]*PrepareMsg // 存放prepared消息
 	CommittedMsgs map[int64]*CommitMsg  // 存放committed消息
-	ReplyMsgs     map[int64]*ReplyMsg   // 存放Reply消息
+	ReplyMsgs     map[int64][]*ReplyMsg // 存放Reply消息
 }
 
 // 视图号
@@ -63,11 +64,12 @@ func CreateState(view int64, lastSequenceNumber int64) *State {
 			ReqMsg:        new(qblock.Block),
 			PreparedMsgs:  make(map[int64]*PrepareMsg),
 			CommittedMsgs: make(map[int64]*CommitMsg),
-			ReplyMsgs:     make(map[int64]*ReplyMsg),
+			ReplyMsgs:     make(map[int64][]*ReplyMsg),
 		},
 		CommittedMessage:     nil,
 		Last_sequence_number: lastSequenceNumber, // 上一个序列号
 		Current_stage:        Idle,               // 目前状态，节点创立，即将进入共识
+		Addr_table:           qbtools.InitConfig(qbtools.INIT_PATH + "wallet_addr.txt"),
 	}
 }
 
@@ -316,7 +318,7 @@ func (state *State) prepared() bool {
 //  State.ReplyMsg，获取reply消息，当收到2f+1个满足要求的commit时，调用此函数
 // 参数：提交消息*CommitMsg
 // 返回值：应答消息*ReplyMsg，处理错误error
-func (state *State) Reply(commit *CommitMsg) (*ReplyMsg, error) {
+func (state *State) Reply(commit *CommitMsg) ([]*ReplyMsg, error) {
 	if !state.verifyCommitMsg(commit) {
 		//return nil, errors.New("commit message is corrupted")
 		qbtools.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
@@ -324,37 +326,21 @@ func (state *State) Reply(commit *CommitMsg) (*ReplyMsg, error) {
 		log.Println("commit message is corrupted")
 		return nil, nil
 	} else if state.committed() {
+
 		i, _ := strconv.ParseInt(qkdserv.Node_name[1:], 10, 64)
 		_, ok := state.Msg_logs.ReplyMsgs[i] // 检查是否发送过reply消息
 		if !ok {                             // 如果未发送过reply消息
-			reply := &ReplyMsg{
-				View:       commit.View,                      // 获取视图号
-				Time_stamp: state.Msg_logs.ReqMsg.Time_stamp, // 相应request消息的时间戳
-				// 客户端名称在区块里
-				Node_i: i, // 获取节点编号
-				Result: true,
-				Sign_i: uss.USSToeplitzHashSignMsg{ // 签名信息
-					Sign_index: qkdserv.QKDSignMatrixIndex{ // 签名索引
-						Sign_dev_id:  qbtools.GetNodeIDTable(qkdserv.Node_name), // 签名者ID
-						Sign_task_sn: uss.GenSignTaskSN(16),                     // 签名序列号
-					},
-					Main_row_num: qkdserv.QKDSignRandomMainRowNum{
-						Sign_Node_Name: qkdserv.Node_name, // 签名者节点号
-						Main_Row_Num:   0,                 // 签名主行号，签名时默认为0
-					},
-					Sign_counts: 1,  // 验签者的数量，客户端验签
-					Sign_len:    16, // 签名的单位长度，一般默认为16
-				},
+			replys := make([]*ReplyMsg, 0)
+			for _, tx := range state.Msg_logs.ReqMsg.Transactions {
+				addr := tx.Vin[0].From
+				node_name := state.Addr_table[addr]
+				reply := state.getUnitReply(commit.View, i, node_name)
+				replys = append(replys, reply)
 			}
-			reply.Sign_i.Message, _ = reply.signMessageEncode()
-			// reply消息的签名
-			reply.Sign_i = uss.Sign(reply.Sign_i.Sign_index,
-				reply.Sign_i.Sign_counts, reply.Sign_i.Sign_len, reply.Sign_i.Message)
-
-			state.Msg_logs.ReplyMsgs[i] = reply
+			state.Msg_logs.ReplyMsgs[i] = replys
 			state.CommittedMessage = commit
 			state.Current_stage = Committed
-			return reply, nil
+			return replys, nil
 		} else {
 			return nil, nil
 		}
@@ -411,4 +397,30 @@ func (state *State) committed() bool {
 		return false
 	}
 	return true
+}
+func (state *State) getUnitReply(i, v int64, node_name string) *ReplyMsg {
+	reply := &ReplyMsg{
+		View:        v,                                // 获取视图号
+		Time_stamp:  state.Msg_logs.ReqMsg.Time_stamp, // 相应request消息的时间戳
+		Client_name: node_name,                        // 客户端名称
+		Node_i:      i,                                // 获取节点编号
+		Result:      true,
+		Sign_i: uss.USSToeplitzHashSignMsg{ // 签名信息
+			Sign_index: qkdserv.QKDSignMatrixIndex{ // 签名索引
+				Sign_dev_id:  qbtools.GetNodeIDTable(qkdserv.Node_name), // 签名者ID
+				Sign_task_sn: uss.GenSignTaskSN(16),                     // 签名序列号
+			},
+			Main_row_num: qkdserv.QKDSignRandomMainRowNum{
+				Sign_Node_Name: qkdserv.Node_name, // 签名者节点号
+				Main_Row_Num:   0,                 // 签名主行号，签名时默认为0
+			},
+			Sign_counts: 1,  // 验签者的数量，客户端验签
+			Sign_len:    16, // 签名的单位长度，一般默认为16
+		},
+	}
+	reply.Sign_i.Message, _ = reply.signMessageEncode()
+	// reply消息的签名
+	reply.Sign_i = uss.Sign(reply.Sign_i.Sign_index,
+		reply.Sign_i.Sign_counts, reply.Sign_i.Sign_len, reply.Sign_i.Message)
+	return reply
 }

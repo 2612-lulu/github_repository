@@ -1,16 +1,17 @@
-【send togentx】2021/09/28 15:49:09.273716 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:25: send a transcation message to the Primary node to get utxo
-【send transaction】2021/09/28 15:49:09.275827 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:35: send a transcation to the Primary node
-【send togentx】2021/09/28 15:49:28.231425 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:25: send a transcation message to the Primary node to get utxo
-【send transaction】2021/09/28 15:49:28.233655 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:35: send a transcation to the Primary node
-【send togentx】2021/09/28 15:50:08.428448 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:25: send a transcation message to the Primary node to get utxo
-【send transaction】2021/09/28 15:50:08.431104 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:35: send a transcation to the Primary node
-【send togentx】2021/09/28 15:51:41.420962 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:25: send a transcation message to the Primary node to get utxo
-【send transaction】2021/09/28 15:51:41.423630 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:35: send a transcation to the Primary node
-【send togentx】2021/09/28 15:51:47.586074 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:25: send a transcation message to the Primary node to get utxo
-【send transaction】2021/09/28 15:51:47.588596 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:35: send a transcation to the Primary node
-【send togentx】2021/09/28 15:51:56.897933 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:25: send a transcation message to the Primary node to get utxo
-【send transaction】2021/09/28 15:51:56.900768 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:35: send a transcation to the Primary node
-【send togentx】2021/09/28 18:53:02.873511 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:25: send a transcation message to the Primary node to get utxo
-【send transaction】2021/09/28 18:53:02.877510 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:35: send a transcation to the Primary node
-【send togentx】2021/09/28 18:55:32.106172 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:25: send a transcation message to the Primary node to get utxo
-【send transaction】2021/09/28 18:55:32.108712 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:35: send a transcation to the Primary node
+【send togentx】2021/09/28 21:13:18.125067 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:26: send a transcation message to the Primary node to get utxo
+【send transaction】2021/09/28 21:13:18.127522 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:38: send a transcation to the Primary node
+【send togentx】2021/09/28 21:14:09.836719 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:26: send a transcation message to the Primary node to get utxo
+【send transaction】2021/09/28 21:14:09.839266 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:38: send a transcation to the Primary node
+【send togentx】2021/09/28 21:14:17.276898 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:26: send a transcation message to the Primary node to get utxo
+【send transaction】2021/09/28 21:14:17.279459 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:38: send a transcation to the Primary node
+【send togentx】2021/09/28 21:14:35.899363 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:26: send a transcation message to the Primary node to get utxo
+【send transaction】2021/09/28 21:14:35.901912 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:38: send a transcation to the Primary node
+【send togentx】2021/09/28 21:18:17.250288 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:26: send a transcation message to the Primary node to get utxo
+【send transaction】2021/09/28 21:18:17.252805 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:38: send a transcation to the Primary node
+【send transaction】2021/09/28 21:18:26.114919 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:38: send a transcation to the Primary node
+【send togentx】2021/09/28 21:18:42.198557 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:26: send a transcation message to the Primary node to get utxo
+【send transaction】2021/09/28 21:18:42.201159 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:38: send a transcation to the Primary node
+【send togentx】2021/09/28 21:19:19.878463 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:26: send a transcation message to the Primary node to get utxo
+【send transaction】2021/09/28 21:19:19.881047 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:38: send a transcation to the Primary node
+【send togentx】2021/09/28 21:19:49.609013 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:26: send a transcation message to the Primary node to get utxo
+【send transaction】2021/09/28 21:19:49.611973 /root/study/github_repository/qb/qbcli/routine_broadcastMsg.go:38: send a transcation to the Primary node

@@ -14,7 +14,7 @@ func (node *NodeConsensus) broadcastMsg() {
 		msg := <-node.MsgBroadcast
 		switch msg := msg.(type) {
 		case *pbft.PrePrepareMsg:
-			fmt.Println("------------------[START NEW PBFT]-----------------")
+			fmt.Println("====================[START NEW PBFT]==============================")
 			qbtools.LogStage("Request", false)
 			qbtools.LogStage("Request", true)
 			qbtools.LogStage("Pre-Prepare", false)
@@ -24,7 +24,7 @@ func (node *NodeConsensus) broadcastMsg() {
 			log.SetPrefix(node.Node_name + "-[broadcast preprepare]")
 			log.Println("broadcast preprepare message")
 		case *pbft.PrepareMsg:
-			fmt.Println("------------------[START NEW PBFT]-----------------")
+			fmt.Println("====================[START NEW PBFT]==============================")
 			qbtools.LogStage("Pre-prepare", true)
 			qbtools.LogStage("Prepare", false)
 			node.broadcast(msg, "/prepare") // 发送prepare信息给其他节点
@@ -40,17 +40,11 @@ func (node *NodeConsensus) broadcastMsg() {
 			qbtools.Init_log(PBFT_LOG_PATH + "broadcast_" + node.Node_name + ".log")
 			log.SetPrefix(node.Node_name + "-[broadcast commit]")
 			log.Println("broadcast commit message")
-		case *pbft.ReplyMsg:
+		case []*pbft.ReplyMsg:
 			qbtools.LogStage("Commit", true)
 			qbtools.LogStage("Reply", false)
 			node.broadcastReply(msg, "/reply")
 			qbtools.LogStage("Reply", true)
-
-			/*	result := pbft.ResultMsg{
-				TX_block: *node.Req,
-				Result:   true,
-			}*/
-			//node.Result <- result // 向节点返回共识结果，区块上链
 
 			node.PBFT.CurrentState = nil
 
@@ -92,23 +86,19 @@ func (node *NodeConsensus) broadcast(msg interface{}, path string) map[string]er
 // node.broadcastReply，节点广播函数,用于广播应答消息
 // 参数：待广播消息，
 // 返回值：广播错误map[string]error，广播无误len(errorMap) == 0
-func (node *NodeConsensus) broadcastReply(msg interface{}, path string) map[string]error {
+func (node *NodeConsensus) broadcastReply(msg []*pbft.ReplyMsg, path string) map[string]error {
 	errorMap := make(map[string]error) // 存放广播结果
 
 	// 将Reply消息广播给相应的客户端
-	for _, tx := range node.Req.Transactions {
-		for _, vin := range tx.Vin {
-			jsonMsg, err := json.Marshal(msg) // 将msg信息编码成json格式
-			if err != nil {
-				errorMap[vin.From] = err
-				continue
-			}
-			addr := vin.From
-			name := node.Addr_table[addr]
-			url := node.Client_table[name]
-			// 将json格式发送到相应客户端
-			qbtools.Send(url+path, jsonMsg) // url：localhost:1111  path：/prepare等等
+	for _, reply := range msg {
+		jsonMsg, err := json.Marshal(reply) // 将msg信息编码成json格式
+		if err != nil {
+			errorMap[reply.Client_name] = err
+			continue
 		}
+		url := node.Client_table[reply.Client_name]
+		// 将json格式发送到相应客户端
+		qbtools.Send(url+path, jsonMsg) // url：localhost:1111  path：/prepare等等
 	}
 
 	if len(errorMap) == 0 { // 如果转发消息均成功

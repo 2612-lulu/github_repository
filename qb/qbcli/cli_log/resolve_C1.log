@@ -1,13 +1,27 @@
-【generate tx】2021/09/28 14:42:33.820154 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-【generate tx】2021/09/28 14:59:58.600223 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-【generate tx】2021/09/28 15:13:40.684736 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-【generate tx】2021/09/28 15:20:56.905513 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-【generate tx】2021/09/28 15:21:43.024637 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-【generate tx】2021/09/28 15:49:09.156972 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-【generate tx】2021/09/28 15:49:28.112700 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-【generate tx】2021/09/28 15:50:08.312006 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-【generate tx】2021/09/28 15:51:41.302072 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-【generate tx】2021/09/28 15:51:47.468632 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-【generate tx】2021/09/28 15:51:56.774043 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-【generate tx】2021/09/28 18:53:02.749766 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-【generate tx】2021/09/28 18:55:31.985329 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
+【generate tx】2021/09/28 21:13:18.008151 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:48: get a tx and prepare to send it to the Primary
+【transaction succes】2021/09/28 21:13:18.302964 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:36: transcation success
+【transaction error】2021/09/28 21:13:18.308723 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:43: number of reply is wrong
+【generate tx】2021/09/28 21:14:09.715021 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:48: get a tx and prepare to send it to the Primary
+【transaction succes】2021/09/28 21:14:10.365347 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:36: transcation success
+【transaction error】2021/09/28 21:14:10.621110 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:43: number of reply is wrong
+【generate tx】2021/09/28 21:14:17.153237 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:48: get a tx and prepare to send it to the Primary
+【transaction succes】2021/09/28 21:14:18.329063 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:36: transcation success
+【transaction error】2021/09/28 21:14:18.767812 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:43: number of reply is wrong
+【generate tx】2021/09/28 21:14:35.775406 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:48: get a tx and prepare to send it to the Primary
+【transaction succes】2021/09/28 21:14:36.335804 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:36: transcation success
+【transaction error】2021/09/28 21:14:36.379611 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:43: number of reply is wrong
+【generate tx】2021/09/28 21:18:17.129704 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:48: get a tx and prepare to send it to the Primary
+【transaction succes】2021/09/28 21:18:18.422290 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:36: transcation success
+【transaction error】2021/09/28 21:18:18.438738 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:43: number of reply is wrong
+【generate tx】2021/09/28 21:18:25.989570 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:48: get a tx and prepare to send it to the Primary
+【transaction succes】2021/09/28 21:18:26.420067 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:36: transcation success
+【transaction error】2021/09/28 21:18:26.433631 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:43: number of reply is wrong
+【generate tx】2021/09/28 21:18:42.079329 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:48: get a tx and prepare to send it to the Primary
+【transaction succes】2021/09/28 21:18:42.427017 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:36: transcation success
+【transaction error】2021/09/28 21:18:42.482898 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:43: number of reply is wrong
+【generate tx】2021/09/28 21:19:19.755874 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:48: get a tx and prepare to send it to the Primary
+【transaction succes】2021/09/28 21:19:20.452511 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:36: transcation success
+【transaction error】2021/09/28 21:19:20.659267 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:43: number of reply is wrong
+【generate tx】2021/09/28 21:19:49.488130 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:48: get a tx and prepare to send it to the Primary
+【transaction succes】2021/09/28 21:19:51.387245 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:36: transcation success
+【transaction error】2021/09/28 21:19:51.718331 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:43: number of reply is wrong
