@@ -1,21 +1,13 @@
-[genTX]2021/09/27 22:14:40.695104 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 22:17:03.660754 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 22:35:29.643590 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 22:41:10.689641 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 22:47:45.224867 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 22:51:30.498381 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 22:55:04.144307 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:25: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 22:59:31.363688 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 23:01:34.953527 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 23:03:29.060411 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 23:04:28.945250 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 23:05:17.718477 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 23:06:25.895846 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 23:08:47.139739 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 23:09:04.273056 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 23:10:22.957993 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 23:17:07.361331 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 23:17:23.457249 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 23:20:07.871178 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 23:21:13.042674 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
-[genTX]2021/09/27 23:22:45.366899 /root/study/github_repository/qb/qbcli/cli_resolveMsg.go:24: get a tx and prepare to send it to the Primary
+【generate tx】2021/09/28 14:42:33.820154 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
+【generate tx】2021/09/28 14:59:58.600223 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
+【generate tx】2021/09/28 15:13:40.684736 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
+【generate tx】2021/09/28 15:20:56.905513 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
+【generate tx】2021/09/28 15:21:43.024637 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
+【generate tx】2021/09/28 15:49:09.156972 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
+【generate tx】2021/09/28 15:49:28.112700 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
+【generate tx】2021/09/28 15:50:08.312006 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
+【generate tx】2021/09/28 15:51:41.302072 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
+【generate tx】2021/09/28 15:51:47.468632 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
+【generate tx】2021/09/28 15:51:56.774043 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
+【generate tx】2021/09/28 18:53:02.749766 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary
+【generate tx】2021/09/28 18:55:31.985329 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:24: get a tx and prepare to send it to the Primary

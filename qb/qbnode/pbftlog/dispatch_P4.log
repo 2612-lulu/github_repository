@@ -1,0 +1,27 @@
+P4-[dispatch PrePrepareMsg]2021/09/28 14:42:34.598512 /root/study/github_repository/qb/qbnode/routine_dispatchMsg.go:62: [put pre-prepare message into MsgDelivery channel]
+P4-[dispatch PrepareMsg error]2021/09/28 14:42:34.601622 /root/study/github_repository/qb/qbnode/routine_dispatchMsg.go:75: [get a prepare message,but don't put it into channel]
+P4-[dispatch CommitMsg]2021/09/28 14:42:34.602803 /root/study/github_repository/qb/qbnode/routine_dispatchMsg.go:101: [put commit message into MsgDelivery channel]
+P4-[dispatch CommitMsg]2021/09/28 14:42:34.603676 /root/study/github_repository/qb/qbnode/routine_dispatchMsg.go:101: [put commit message into MsgDelivery channel]
+P4-[dispatch CommitMsg]2021/09/28 14:42:34.604870 /root/study/github_repository/qb/qbnode/routine_dispatchMsg.go:101: [put commit message into MsgDelivery channel]
+P4-[dispatch CommitMsg]2021/09/28 14:42:34.604964 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P4-[dispatch PrepareMsg error]2021/09/28 15:13:42.449927 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:68: [get a prepare message,but don't put it into channel]
+P4-[dispatch CommitMsg error]2021/09/28 15:13:42.451433 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:82: [get a commit message,but don't put it into channel]
+P4-[dispatch PrepareMsg error]2021/09/28 15:20:58.340410 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:68: [get a prepare message,but don't put it into channel]
+P4-[dispatch PrepareMsg error]2021/09/28 15:20:58.342268 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:68: [get a prepare message,but don't put it into channel]
+P4-[dispatch CommitMsg error]2021/09/28 15:20:58.344815 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:82: [get a commit message,but don't put it into channel]
+P4-[dispatch CommitMsg error]2021/09/28 15:20:58.345197 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:82: [get a commit message,but don't put it into channel]
+P4-[dispatch CommitMsg error]2021/09/28 15:20:58.345695 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:82: [get a commit message,but don't put it into channel]
+P4-[dispatch PrepareMsg error]2021/09/28 15:21:43.974035 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:68: [get a prepare message,but don't put it into channel]
+P4-[dispatch PrepareMsg error]2021/09/28 15:51:41.990391 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:68: [get a prepare message,but don't put it into channel]
+P4-[dispatch CommitMsg error]2021/09/28 15:51:41.992766 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:82: [get a commit message,but don't put it into channel]
+P4-[dispatch CommitMsg error]2021/09/28 15:51:41.992794 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P4-[dispatch PrepareMsg error]2021/09/28 15:51:47.988039 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:68: [get a prepare message,but don't put it into channel]
+P4-[dispatch PrepareMsg error]2021/09/28 15:51:57.997015 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:68: [get a prepare message,but don't put it into channel]
+P4-[dispatch PrepareMsg error]2021/09/28 15:51:57.997085 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P4-[dispatch PrepareMsg error]2021/09/28 15:51:57.997387 /root/study/github_repository/qb/qbtx/qbtx.go:103: verify of tx success
+P4-[dispatch PrepareMsg error]2021/09/28 15:51:57.997601 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:68: [get a prepare message,but don't put it into channel]
+P4-[dispatch CommitMsg error]2021/09/28 15:51:58.001251 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:82: [get a commit message,but don't put it into channel]
+P4-[dispatch CommitMsg error]2021/09/28 15:51:58.003310 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:82: [get a commit message,but don't put it into channel]
+P4-[dispatch CommitMsg error]2021/09/28 15:51:58.003342 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:82: [get a commit message,but don't put it into channel]
+P4-[dispatch PrepareMsg error]2021/09/28 18:55:32.914772 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:68: [get a prepare message,but don't put it into channel]
+P4-[dispatch CommitMsg error]2021/09/28 18:55:32.922583 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:82: [get a commit message,but don't put it into channel]

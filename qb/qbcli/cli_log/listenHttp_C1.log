@@ -1,27 +1,41 @@
-C1receive tx_message2021/09/27 21:52:11.085329 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 22:04:50.044275 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 22:06:09.217973 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 22:07:21.317853 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 22:09:46.083625 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 22:10:14.314376 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 22:14:40.694990 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 22:17:03.660702 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 22:35:29.643509 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 22:41:10.689562 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 22:47:45.224774 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 22:51:30.498314 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 22:55:04.144223 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 22:59:31.363635 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 23:01:34.953404 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 23:03:29.060344 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 23:04:28.945186 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 23:05:17.718415 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 23:06:25.895767 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 23:08:47.139663 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 23:09:04.272971 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 23:10:22.957916 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 23:17:07.361257 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 23:17:23.457185 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 23:20:07.871114 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 23:21:13.042534 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
-C1receive tx_message2021/09/27 23:22:45.366830 /root/study/github_repository/qb/qbcli/cli_network.go:34: receive a transcation message
+【receive txmessage】2021/09/28 14:42:33.820045 /root/study/github_repository/qb/qbcli/network.go:35: receive a transcation message
+【receive txmessage】2021/09/28 14:59:58.600150 /root/study/github_repository/qb/qbcli/network.go:35: receive a transcation message
+【receive txmessage】2021/09/28 15:13:40.684532 /root/study/github_repository/qb/qbcli/network.go:35: receive a transcation message
+【receive txmessage】2021/09/28 15:20:56.905418 /root/study/github_repository/qb/qbcli/network.go:35: receive a transcation message
+【receive txmessage】2021/09/28 15:21:43.024568 /root/study/github_repository/qb/qbcli/network.go:35: receive a transcation message
+【receive reply】2021/09/28 15:21:43.975171 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 15:21:43.975382 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 15:21:43.975747 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 15:21:43.976096 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive txmessage】2021/09/28 15:49:09.156906 /root/study/github_repository/qb/qbcli/network.go:35: receive a transcation message
+【receive reply】2021/09/28 15:49:09.664480 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 15:49:09.664504 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 15:49:09.665767 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 15:49:09.844730 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive txmessage】2021/09/28 15:49:28.112641 /root/study/github_repository/qb/qbcli/network.go:35: receive a transcation message
+【receive txmessage】2021/09/28 15:50:08.311914 /root/study/github_repository/qb/qbcli/network.go:35: receive a transcation message
+【receive txmessage】2021/09/28 15:51:41.302006 /root/study/github_repository/qb/qbcli/network.go:35: receive a transcation message
+【receive reply】2021/09/28 15:51:41.997085 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 15:51:41.998336 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 15:51:41.998352 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 15:51:41.999413 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive txmessage】2021/09/28 15:51:47.468573 /root/study/github_repository/qb/qbcli/network.go:35: receive a transcation message
+【receive reply】2021/09/28 15:51:47.995747 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 15:51:47.997444 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 15:51:47.997620 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 15:51:48.075968 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive txmessage】2021/09/28 15:51:56.773982 /root/study/github_repository/qb/qbcli/network.go:35: receive a transcation message
+【receive reply】2021/09/28 15:51:58.004333 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 15:51:58.005257 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 15:51:58.005274 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 15:51:58.274999 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive txmessage】2021/09/28 18:53:02.749639 /root/study/github_repository/qb/qbcli/network.go:35: receive a transcation message
+【receive reply】2021/09/28 18:53:03.665216 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 18:53:03.666147 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 18:53:03.666882 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 18:53:03.667156 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive txmessage】2021/09/28 18:55:31.985260 /root/study/github_repository/qb/qbcli/network.go:35: receive a transcation message
+【receive reply】2021/09/28 18:55:32.922916 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 18:55:32.923523 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 18:55:32.923950 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx
+【receive reply】2021/09/28 18:55:32.925364 /root/study/github_repository/qb/qbcli/network.go:50: receive the result of tx

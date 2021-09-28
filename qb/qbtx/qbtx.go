@@ -5,6 +5,7 @@ import (
 	"crypto/rand"
 	"crypto/sha256"
 	"encoding/gob"
+	"fmt"
 	"log"
 	"qb/qbtools"
 	"qb/qkdserv"
@@ -95,22 +96,14 @@ func (tx *Transaction) SignTX(nodeName string) {
 
 // VerifyTX,交易输入项验签
 func (tx *Transaction) VerifyTX() bool {
-	/*for _, vin := range tx.Vin {
-		if prevTXs[hex.EncodeToString(vin.Txid)].ID == nil {
-			log.Panic("ERROR: Previous transaction is not exit")
-		}
-	}*/
 	txCopy := tx
 
 	for inID, _ := range tx.Vin {
-		//prevTx := prevTXs[hex.EncodeToString(vin.Txid)]
-		//txCopy.Vin[inID].From = prevTx.Vout[vin.Vout].To
 		if uss.VerifySign(txCopy.Vin[inID].Signature) {
 			log.Println("verify of tx success")
 		} else {
 			log.Println("verify of tx wrong")
 		}
-		txCopy.Vin[inID].From = ""
 	}
 
 	return true
@@ -166,4 +159,22 @@ func (tx Transaction) IsReserveTX() bool {
 		return true
 	}
 	return false
+}
+
+func (tx Transaction) PrintTransaction() {
+	fmt.Printf("ID:%x\n", tx.ID)
+
+	for i, vin := range tx.Vin {
+		fmt.Printf("Vin:%d\n", i)
+		fmt.Printf("\tTxid.:%x\n", vin.Txid)
+		fmt.Printf("\tVoutIndex.:%d\n", vin.Vout)
+		fmt.Printf("\tSign:%x\n", vin.Signature)
+		fmt.Printf("\tFrom:%s\n", vin.From)
+	}
+	for j, vout := range tx.Vout {
+		fmt.Printf("Vout:%d\n", j)
+		fmt.Printf("\tValue:%d\n", vout.Value)
+		fmt.Printf("\tTo:%s\n", vout.To)
+	}
+	fmt.Printf("\n")
 }

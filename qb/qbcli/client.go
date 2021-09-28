@@ -3,9 +3,13 @@ package qbcli
 import (
 	"qb/pbft"
 	"qb/qbtools"
+	"time"
 )
 
-const LOG_PATH = "/root/study/github_repository/qb/qbcli/cli_log/"
+const CLIENT_LOG_PATH = "/root/study/github_repository/qb/qbcli/cli_log/"
+
+// 数据处理时间限制
+const ResolvingTimeDuration = time.Millisecond * 100 // 0.1 second.
 
 // 客户端
 type Client struct {
@@ -13,14 +17,15 @@ type Client struct {
 	Client_ID    [16]byte          // 客户端ID，16字节QKD设备号
 	Client_table map[string]string // 客户端索引表，key=Client_name, value=url
 	Node_table   map[string]string // 节点索引表，key=Node_name, value=url
-	View         *pbft.View        // 视图号
 
+	View         *pbft.View       // 视图号
 	ReplyMsgs    []*pbft.ReplyMsg // 接收的reply消息缓冲列表
 	CurrentState *pbft.State
 
 	MsgBroadcast chan interface{} // 信息发送通道
 	MsgEntrance  chan interface{}
 	MsgDelivery  chan interface{}
+	Alarm        chan bool
 }
 
 // NewClient，客户端初始化
@@ -47,6 +52,7 @@ func NewClient(client_name string) *Client {
 		MsgBroadcast: make(chan interface{}), // 信息发送通道
 		MsgEntrance:  make(chan interface{}),
 		MsgDelivery:  make(chan interface{}), // 无缓冲的信息发送通道
+		Alarm:        make(chan bool),        // 警告通道
 	}
 
 	client.setRoute() // 设置路由
@@ -55,6 +61,7 @@ func NewClient(client_name string) *Client {
 	go client.broadcastMsg()
 	go client.dispatchMsg()
 	go client.resolveMsg()
+	go client.alarmToDispatcher()
 
 	return client
 }

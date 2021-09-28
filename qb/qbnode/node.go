@@ -1,7 +1,6 @@
 package qbnode
 
 import (
-	"qb/pbft"
 	"qb/qbtools"
 	"qb/qbtx"
 	"time"
@@ -11,7 +10,7 @@ import (
 const BlockTimeDuration = time.Millisecond * 2000 // 1 second.
 
 // log存放路径
-const LOG_PATH = "/root/study/github_repository/qb/qbnode/node_log/"
+const NODE_LOG_PATH = "./qbnode/nodelog/"
 
 // 节点
 type Node struct {
@@ -21,7 +20,7 @@ type Node struct {
 	Client_table map[string]string // 客户端索引表，key=Client_name, value=url
 	Addr_table   map[string]string
 
-	PBFT_consensus *pbft.NodeConsensus
+	PBFT_consensus *NodeConsensus
 
 	TranscationMsgs []*qbtx.Transaction
 
@@ -58,10 +57,9 @@ func NewNode(node_name string) *Node {
 	go node.clockToBlock()
 	go node.resolveMsg()
 	go node.broadcastMsg()
-	go node.pbftResolveResult()
+	//go node.pbftResolveResult()
 
-	node.PBFT_consensus = pbft.NewNodeConsensus(node_name) // 开启共识
-
+	node.PBFT_consensus = NewNodeConsensus(node_name) // 开启共识
 	//node.httplisten() // 开启http
 	return node
 }
