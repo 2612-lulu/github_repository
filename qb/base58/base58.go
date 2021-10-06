@@ -6,7 +6,7 @@ package base58
 import (
 	"bytes"
 	"math/big"
-	"qb/qbtools"
+	"utils"
 )
 
 // base58编码基础数组，去掉了l、I、0、O这几个书写时容易混淆的字母
@@ -35,7 +35,7 @@ func Base58Encode(input []byte) []byte {
 		result = append(result, b58Alphabet[0])
 	}
 	// 将结果逆序
-	qbtools.ReverseBytes(result)
+	utils.ReverseBytes(result)
 
 	return result
 }

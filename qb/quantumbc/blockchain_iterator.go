@@ -2,7 +2,7 @@ package quantumbc
 
 import (
 	"log"
-	"qb/qblock"
+	"qblock"
 
 	"github.com/boltdb/bolt"
 )

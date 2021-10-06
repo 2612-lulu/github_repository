@@ -1,27 +1,4 @@
-【generate tx】2021/09/28 21:13:18.126067 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:48: get a tx and prepare to send it to the Primary
-【transaction succes】2021/09/28 21:13:18.303646 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:36: transcation success
-【transaction error】2021/09/28 21:13:18.324652 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:43: number of reply is wrong
-【generate tx】2021/09/28 21:14:09.837685 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:48: get a tx and prepare to send it to the Primary
-【transaction succes】2021/09/28 21:14:10.365687 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:36: transcation success
-【transaction error】2021/09/28 21:14:10.643997 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:43: number of reply is wrong
-【generate tx】2021/09/28 21:14:17.277943 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:48: get a tx and prepare to send it to the Primary
-【transaction succes】2021/09/28 21:14:18.329542 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:36: transcation success
-【transaction error】2021/09/28 21:14:18.692568 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:43: number of reply is wrong
-【generate tx】2021/09/28 21:14:35.900447 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:48: get a tx and prepare to send it to the Primary
-【transaction succes】2021/09/28 21:14:36.336018 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:36: transcation success
-【transaction error】2021/09/28 21:14:36.403548 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:43: number of reply is wrong
-【generate tx】2021/09/28 21:18:17.251408 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:48: get a tx and prepare to send it to the Primary
-【transaction succes】2021/09/28 21:18:18.422774 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:36: transcation success
-【transaction error】2021/09/28 21:18:18.461002 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:43: number of reply is wrong
-【generate tx】2021/09/28 21:18:26.113739 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:48: get a tx and prepare to send it to the Primary
-【transaction succes】2021/09/28 21:18:26.420271 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:36: transcation success
-【transaction error】2021/09/28 21:18:26.455644 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:43: number of reply is wrong
-【generate tx】2021/09/28 21:18:42.199782 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:48: get a tx and prepare to send it to the Primary
-【transaction succes】2021/09/28 21:18:42.427540 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:36: transcation success
-【transaction error】2021/09/28 21:18:42.500554 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:43: number of reply is wrong
-【generate tx】2021/09/28 21:19:19.879562 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:48: get a tx and prepare to send it to the Primary
-【transaction succes】2021/09/28 21:19:20.452926 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:36: transcation success
-【transaction error】2021/09/28 21:19:20.688204 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:43: number of reply is wrong
-【generate tx】2021/09/28 21:19:49.610484 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:48: get a tx and prepare to send it to the Primary
-【transaction succes】2021/09/28 21:19:51.387714 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:36: transcation success
-【transaction error】2021/09/28 21:19:51.740285 /root/study/github_repository/qb/qbcli/routine_resolveMsg.go:43: number of reply is wrong
+[resolve tx error]2021/10/06 21:22:39.977426 /root/study/github_repository/qb/qbutxo/utxo.go:66: create a new utxo tx
+[resolve tx error]2021/10/06 21:23:46.047541 /root/study/github_repository/qb/qbutxo/utxo.go:66: create a new utxo tx
+[resolve tx error]2021/10/06 21:23:54.401209 /root/study/github_repository/qb/qbutxo/utxo.go:66: create a new utxo tx
+[resolve tx error]2021/10/06 21:24:01.422005 /root/study/github_repository/qb/qbutxo/utxo.go:66: create a new utxo tx

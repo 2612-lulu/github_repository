@@ -1,102 +1,256 @@
-P1listen-tx_message2021/09/28 21:13:18.006604 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:13:18.007302 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:13:18.009341 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:13:18.124617 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:13:18.125388 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:13:18.127421 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:13:18.244199 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:13:18.244934 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:13:18.247539 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:13:18.373350 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:13:18.373947 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:13:18.375813 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:14:09.713465 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:14:09.714141 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:14:09.716309 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:14:09.836529 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:14:09.837066 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:14:09.839128 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:14:09.962769 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:14:09.963418 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:14:09.965260 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:14:10.084357 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:14:10.084829 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:14:10.086668 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:14:17.151462 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:14:17.152228 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:14:17.155176 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:14:17.276741 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:14:17.277393 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:14:17.279189 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:14:17.397498 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:14:17.398237 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:14:17.400069 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:14:17.517640 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:14:17.518169 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:14:17.519928 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:14:35.773876 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:14:35.774634 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:14:35.776754 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:14:35.899259 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:14:35.899804 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:14:35.901729 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:14:36.023726 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:14:36.024298 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:14:36.026110 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:14:36.148477 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:14:36.149122 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:14:36.150864 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:18:17.128256 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:18:17.128940 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:18:17.131071 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:18:17.250112 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:18:17.250746 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:18:17.252650 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:18:17.371241 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:18:17.371803 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:18:17.373797 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:18:17.493004 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:18:17.493589 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:18:17.495526 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:18:25.988380 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:18:25.989061 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:18:25.990731 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:18:26.112851 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:18:26.113476 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:18:26.114767 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:18:42.077974 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:18:42.078679 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:18:42.080667 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:18:42.198408 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:18:42.199161 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:18:42.201035 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:18:42.316683 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:18:42.317411 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:18:42.319394 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:18:42.442410 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:18:42.442899 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:18:42.444649 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:19:19.754579 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:19:19.755298 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:19:19.757333 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:19:19.878168 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:19:19.878844 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:19:19.880894 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:19:19.999527 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:19:20.000164 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:19:20.002055 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:19:20.121358 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:19:20.121997 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:19:20.124038 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:19:49.486877 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:19:49.487529 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:19:49.489366 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:19:49.608894 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:19:49.609723 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:19:49.611872 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:19:49.726419 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:19:49.727994 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:19:49.730021 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
-P1listen-tx_message2021/09/28 21:19:49.845400 /root/study/github_repository/qb/qbnode/node_routine_network.go:30: receive a transcation esstencial message
-P1listen-tx_message2021/09/28 21:19:49.845955 /root/study/github_repository/qb/qbutxo/utxo.go:65: create a new utxo tx
-P1-listentranscation2021/09/28 21:19:49.847901 /root/study/github_repository/qb/qbnode/node_routine_network.go:45: receive a transcation message
+P1-listentranscation2021/09/30 11:06:00.428173 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:06:00.543284 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:06:00.659835 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:06:00.774635 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:14:02.367573 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:14:02.482785 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:14:02.595650 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:14:02.710044 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:15:53.216274 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:15:53.330806 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:15:53.449320 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:15:53.565292 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:17:00.717865 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:17:00.839066 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:17:00.955358 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:17:01.071544 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:33:05.329188 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:33:05.474098 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:33:05.589308 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:33:05.700405 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:35:35.857765 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:35:35.974552 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:35:36.088309 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:35:36.201538 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:38:07.972798 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:38:08.119664 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:38:08.235337 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:38:08.349963 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:40:35.929812 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:40:36.044835 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:40:36.161053 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:40:36.276838 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:42:46.856564 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:42:46.977821 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:42:47.095824 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:42:47.212065 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:47:12.871614 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:47:12.989667 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:47:13.106549 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:47:13.225940 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:47:29.767930 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:47:29.890504 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:47:30.006409 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 11:47:30.120549 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 16:07:14.476507 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 16:07:14.592481 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 16:07:14.706573 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/09/30 16:07:14.824022 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 13:49:12.150798 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 13:49:12.274895 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 13:49:12.392625 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 13:49:12.511007 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 13:49:29.256059 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 13:49:29.381486 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 13:49:29.498114 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 13:49:29.616502 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:08:35.131956 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:08:35.258032 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:08:35.380452 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:08:35.499021 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:14:46.355159 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:14:46.477125 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:14:46.592463 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:14:46.721710 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:16:50.935493 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:16:51.051578 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:16:51.165268 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:16:51.281959 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:21:00.601978 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:21:00.721244 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:21:00.842271 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:21:00.963284 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:23:53.360492 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:23:53.489717 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:23:53.613823 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/02 14:23:53.732225 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:34:40.998639 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:34:41.120856 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:34:41.237834 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:34:41.354367 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:53:25.246978 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:53:25.368206 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:53:25.487565 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:53:25.609847 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:53:35.190759 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:53:35.312556 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:53:35.434110 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:53:35.554945 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:53:44.736668 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:53:44.863185 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:53:44.984618 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:53:45.106022 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:54:01.276683 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:54:01.396351 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:54:01.513321 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 19:54:01.633157 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 20:04:45.807628 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 20:04:45.928690 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 20:04:46.046590 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 20:04:46.168564 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 20:10:19.032386 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 20:10:19.167401 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 20:10:19.288050 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 20:10:19.404876 /root/study/github_repository/qb/qbnode/node_routine_network.go:28: receive a transcation message
+P1-listentranscation2021/10/06 20:22:22.689462 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:22:22.811164 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:22:22.933237 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:22:23.052037 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:22:23.735376 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:22:23.735413 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:22:23.735849 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:22:23.737755 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:25:05.820519 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:25:05.940310 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:25:06.063362 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:25:06.187974 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:25:06.697968 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:25:06.698056 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:25:06.698117 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:25:06.698956 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:26:26.161688 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:26:26.290124 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:26:26.415990 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:26:26.534862 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:26:26.889993 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:26:26.890316 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:26:26.890696 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:26:26.890819 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:28:51.872726 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:28:51.999035 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:28:52.120790 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:28:52.239267 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:28:52.391782 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:28:52.392032 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:28:52.392464 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:28:52.393382 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:29:46.506806 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:29:46.634263 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:29:46.756461 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:29:46.875502 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:29:47.475866 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:29:47.477158 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:29:47.477492 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:29:47.477606 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:29:57.193912 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:29:57.319518 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:29:57.437610 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:29:57.477626 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:29:57.477820 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:29:57.480540 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:29:57.481513 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:29:57.560292 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:29:59.474907 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:29:59.475255 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:29:59.477564 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:29:59.724323 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:30:13.324944 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:30:13.451150 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:30:13.489468 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:30:13.489597 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:30:13.489658 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:30:13.490188 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:30:13.572780 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:30:13.694762 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:30:15.489857 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:30:15.490135 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:30:15.490363 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:30:15.490523 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:30:47.474564 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:30:47.593512 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:30:47.713068 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:30:47.832121 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:30:48.224018 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:30:48.224107 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:30:48.224652 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:30:48.224777 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:30:58.156250 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:30:58.277664 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:30:58.318180 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:30:58.319584 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:30:58.400109 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:30:58.517716 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:30:58.524185 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:31:00.224606 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:31:00.224716 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:31:00.224852 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:31:07.910081 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:31:08.028603 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:31:08.148994 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:31:08.231434 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:31:08.231502 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:31:08.269810 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:31:08.346743 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:31:10.228007 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:31:10.228110 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:31:10.355705 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:31:19.669454 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:31:19.789384 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:31:19.909967 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:31:20.032025 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:38:50.286691 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:38:50.409391 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:38:50.531982 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:38:50.653209 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+P1-listentranscation2021/10/06 20:38:50.749744 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:38:50.750217 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:38:50.750699 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+P1-listentranscation2021/10/06 20:38:50.751118 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+[listen transcation]2021/10/06 20:48:11.127590 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 20:48:11.248667 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 20:48:11.367248 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen reply]2021/10/06 20:48:11.434037 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+[listen reply]2021/10/06 20:48:11.437151 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+[listen reply]2021/10/06 20:48:11.439504 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+[listen reply]2021/10/06 20:48:11.441281 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+[listen transcation]2021/10/06 20:48:11.491961 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen reply]2021/10/06 20:48:13.429292 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+[listen reply]2021/10/06 20:48:13.432769 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+[listen reply]2021/10/06 20:48:13.435013 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+[listen reply]2021/10/06 20:48:13.437792 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+[listen transcation]2021/10/06 20:55:35.747617 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 20:55:35.868379 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 20:55:35.988496 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 20:55:36.110625 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen reply]2021/10/06 20:55:36.207049 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+[listen transcation]2021/10/06 21:11:11.425073 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 21:11:11.550898 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 21:11:11.678659 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 21:11:11.807573 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen reply]2021/10/06 21:11:11.976491 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+[listen transcation]2021/10/06 21:15:10.254131 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 21:15:10.374682 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 21:15:10.495271 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 21:15:10.615998 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen reply]2021/10/06 21:15:11.220083 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+[listen transcation]2021/10/06 21:22:39.851924 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 21:22:39.978844 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen reply]2021/10/06 21:22:40.066334 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+[listen transcation]2021/10/06 21:22:40.099065 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 21:22:40.220810 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen reply]2021/10/06 21:22:42.064404 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+[listen transcation]2021/10/06 21:23:45.930129 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 21:23:46.048749 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 21:23:46.167886 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 21:23:46.286284 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen reply]2021/10/06 21:23:47.310492 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+[listen transcation]2021/10/06 21:23:54.284593 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 21:23:54.402341 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 21:23:54.521048 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 21:23:54.637341 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen reply]2021/10/06 21:23:55.317623 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message
+[listen transcation]2021/10/06 21:24:01.297054 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 21:24:01.423623 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 21:24:01.548800 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen transcation]2021/10/06 21:24:01.668516 /root/study/github_repository/qb/qbnode/node_network.go:30: receive a transcation message
+[listen reply]2021/10/06 21:24:03.317759 /root/study/github_repository/qb/qbnode/node_network.go:44: receive a transcation message

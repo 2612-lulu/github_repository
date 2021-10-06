@@ -3,7 +3,7 @@ package qbwallet
 import (
 	"fmt"
 	"log"
-	"qb/qkdserv"
+	"qkdserv"
 	"testing"
 )
 

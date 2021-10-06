@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"qb/qkdserv"
+	"qkdserv"
 )
 
 // CLI responsible for processing command line arguments
@@ -91,7 +91,7 @@ func (command *COMM) Run() {
 			txCmd.Usage()
 			os.Exit(1)
 		}
-		command.genTX(*txFrom, *txTo, nodeName, *txAmount)
+		command.transaction(*txFrom, *txTo, nodeName, *txAmount)
 	}
 	if startNodeCmd.Parsed() {
 		command.startNode(nodeName)

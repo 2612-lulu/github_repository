@@ -1,11 +1,55 @@
-P1-[block a block success]2021/09/28 21:13:18.288865 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:47: create a new block, and put it into MsgEntrance channel
-P1-[block a block success]2021/09/28 21:13:20.290126 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:47: create a new block, and put it into MsgEntrance channel
-P1-[block a block success]2021/09/28 21:14:10.312128 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:47: create a new block, and put it into MsgEntrance channel
-P1-[block a block success]2021/09/28 21:14:18.314934 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:47: create a new block, and put it into MsgEntrance channel
-P1-[block a block success]2021/09/28 21:14:36.317973 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:47: create a new block, and put it into MsgEntrance channel
-P1-[block a block success]2021/09/28 21:18:18.408053 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:47: create a new block, and put it into MsgEntrance channel
-P1-[block a block success]2021/09/28 21:18:26.410979 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:47: create a new block, and put it into MsgEntrance channel
-P1-[block a block success]2021/09/28 21:18:42.415483 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:47: create a new block, and put it into MsgEntrance channel
-P1-[block a block success]2021/09/28 21:18:44.415752 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:47: create a new block, and put it into MsgEntrance channel
-P1-[block a block success]2021/09/28 21:19:20.437145 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:47: create a new block, and put it into MsgEntrance channel
-P1-[block a block success]2021/09/28 21:19:51.351840 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:47: create a new block, and put it into MsgEntrance channel
+P1-[block a block success]2021/09/30 11:06:01.407115 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:48: create a new block, and put it into MsgEntrance channel
+P1-[block a block success]2021/09/30 11:14:03.563413 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:48: create a new block, and put it into MsgEntrance channel
+P1-[block a block success]2021/09/30 11:15:54.458520 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/09/30 11:17:02.672686 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/09/30 11:33:06.239340 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/09/30 11:35:36.649110 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/09/30 11:38:08.357004 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/09/30 11:40:36.200063 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/09/30 11:40:38.200563 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/09/30 11:42:48.281890 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/09/30 11:47:13.385073 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/09/30 11:47:31.399328 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/09/30 16:07:15.891076 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/02 13:49:13.162327 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/02 13:49:31.172477 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/02 14:08:35.587356 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/02 14:14:46.612171 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/02 14:14:48.612950 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/02 14:16:52.438571 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/02 14:21:01.011403 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/02 14:23:53.566998 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/02 14:23:55.570538 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 19:34:42.244824 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 19:53:25.992395 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 19:53:35.998011 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 19:53:46.006000 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 19:54:02.018784 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:04:47.779826 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:10:20.532451 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:22:23.720402 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:25:06.682931 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:26:26.875186 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:28:52.374979 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:29:47.460627 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:29:57.467077 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:29:59.468375 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:30:13.480516 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:30:15.482066 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:30:48.208018 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:30:58.211280 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:31:00.212905 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:31:08.219411 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:31:10.221398 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:31:20.230484 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:38:50.734235 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:48:11.420710 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:48:13.422378 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+P1-[block a block success]2021/10/06 20:55:36.191554 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+[block a block success]2021/10/06 21:11:11.960981 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+[block a block success]2021/10/06 21:15:11.205769 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+[block a block success]2021/10/06 21:22:40.053477 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+[block a block success]2021/10/06 21:22:42.054423 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+[block a block success]2021/10/06 21:23:47.292002 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+[block a block success]2021/10/06 21:23:55.297322 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel
+[block a block success]2021/10/06 21:24:03.301120 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:53: create a new block, and put it into channel

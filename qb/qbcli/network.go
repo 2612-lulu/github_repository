@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"qb/pbft"
-	"qb/qbtools"
-	"qb/qbtx"
+	"pbft"
+	"qbtx"
+	"utils"
 )
 
 // client.setRoute,设置路由规则，在启动http服务之前设置
@@ -15,7 +15,7 @@ import (
 // 返回值：无
 func (client *Client) setRoute() {
 	http.HandleFunc("/txmessage", client.getTXmessage)
-	http.HandleFunc("/reply", client.getReply)
+	http.HandleFunc("/txreply", client.getTXReply)
 }
 
 // server.getTXmessage,reply消息解码
@@ -30,25 +30,27 @@ func (client *Client) getTXmessage(writer http.ResponseWriter, request *http.Req
 	}
 	client.MsgDelivery <- &msg
 
-	qbtools.Init_log(CLIENT_LOG_PATH + "listenHttp_" + client.Client_name + ".log")
+	file, _ := utils.Init_log(CLIENT_LOG_PATH + "listenHttp_" + client.Client_name + ".log")
 	log.SetPrefix("【receive txmessage】")
 	log.Println("receive a transcation message")
+	defer file.Close()
 }
 
 // server.getReply,reply消息解码
 // 参数：
 // 返回值：无
-func (client *Client) getReply(writer http.ResponseWriter, request *http.Request) {
+func (client *Client) getTXReply(writer http.ResponseWriter, request *http.Request) {
 	var msg pbft.ReplyMsg
 	err := json.NewDecoder(request.Body).Decode(&msg)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
-	qbtools.Init_log(CLIENT_LOG_PATH + "listenHttp_" + client.Client_name + ".log")
+	file, _ := utils.Init_log(CLIENT_LOG_PATH + "listenHttp_" + client.Client_name + ".log")
 	log.SetPrefix("【receive reply】")
 	log.Println("receive the result of tx")
-	client.MsgEntrance <- &msg
+	defer file.Close()
+	client.MsgDelivery <- &msg
 }
 
 // client.httplisten，开启Http服务器

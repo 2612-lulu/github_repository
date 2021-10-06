@@ -3,10 +3,10 @@ package qbutxo
 import (
 	"encoding/hex"
 	"log"
-	"qb/qblock"
-	"qb/qbtx"
 	"qb/quantumbc"
-	"qb/uss"
+	"qblock"
+	"qbtx"
+	"uss"
 
 	"github.com/boltdb/bolt"
 )
@@ -19,7 +19,7 @@ type UTXOSet struct {
 }
 
 // NewUTXOTransaction，创建普通交易
-func NewUTXOTransaction(from, to string, amount int, UTXOSet *UTXOSet) *qbtx.Transaction {
+func NewUTXOTransaction(from, to, nodeID string, amount int, UTXOSet *UTXOSet) *qbtx.Transaction {
 	// 需要组合输入项和输出项
 	var inputs []qbtx.TXInput
 	var outputs []qbtx.TXOutput
@@ -61,6 +61,7 @@ func NewUTXOTransaction(from, to string, amount int, UTXOSet *UTXOSet) *qbtx.Tra
 		Vin:  inputs,
 		Vout: outputs,
 	}
+	tx.SignTX(nodeID) // 输入项签名
 	tx.ID = tx.SetID()
 	log.Println("create a new utxo tx")
 	return &tx

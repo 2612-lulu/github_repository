@@ -1,0 +1,7 @@
+[dispatch PrepareMsg error]2021/10/06 20:48:11.429508 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:70: [get a prepare message,but don't put it into channel]
+[dispatch CommitMsg error]2021/10/06 20:48:11.434315 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:85: [get a commit message,but don't put it into channel]
+[dispatch PrepareMsg error]2021/10/06 21:22:40.062361 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:70: [get a prepare message,but don't put it into channel]
+[dispatch CommitMsg error]2021/10/06 21:22:42.062865 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:85: [get a commit message,but don't put it into channel]
+[dispatch PrepareMsg error]2021/10/06 21:23:47.302262 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:70: [get a prepare message,but don't put it into channel]
+[dispatch CommitMsg error]2021/10/06 21:23:55.425153 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:85: [get a commit message,but don't put it into channel]
+[dispatch PrepareMsg error]2021/10/06 21:24:03.311912 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:70: [get a prepare message,but don't put it into channel]

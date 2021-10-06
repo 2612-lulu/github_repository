@@ -1,5 +1,0 @@
-P1-[dispatch PrepareMsg error]2021/09/28 21:14:10.322319 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:68: [get a prepare message,but don't put it into channel]
-P1-[dispatch CommitMsg error]2021/09/28 21:14:10.360175 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:82: [get a commit message,but don't put it into channel]
-P1-[dispatch CommitMsg error]2021/09/28 21:14:18.464698 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:82: [get a commit message,but don't put it into channel]
-P1-[dispatch CommitMsg error]2021/09/28 21:19:20.456295 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:82: [get a commit message,but don't put it into channel]
-P1-[dispatch CommitMsg error]2021/09/28 21:19:51.479734 /root/study/github_repository/qb/qbnode/pbft_routine_dispatchMsg.go:82: [get a commit message,but don't put it into channel]

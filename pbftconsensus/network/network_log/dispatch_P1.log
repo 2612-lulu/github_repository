@@ -1,0 +1,3 @@
+[dispatch CommitMsg error]2021/10/06 20:55:36.206697 /root/study/github_repository/pbftconsensus/network/network_http.go:87: receive a commit message
+[dispatch CommitMsg error]2021/10/06 20:55:36.206699 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:85: [get a commit message,but don't put it into channel]
+[dispatch CommitMsg error]2021/10/06 21:23:55.424528 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:85: [get a commit message,but don't put it into channel]

@@ -2,11 +2,12 @@ package quantumbc
 
 import (
 	"encoding/hex"
+	"errors"
 	"fmt"
 	"log"
 	"os"
-	"qb/qblock"
-	"qb/qbtx"
+	"qblock"
+	"qbtx"
 
 	"github.com/boltdb/bolt"
 )
@@ -79,8 +80,7 @@ func CreateBlockchain(addresses []string, nodeID string) *Blockchain {
 // 打印区块链
 func PrintBlockChain(nodeID string) {
 	bc := NewBlockchain(nodeID) // 1.获取当前区块链信息
-	defer bc.DB.Close()
-	bci := bc.Iterator() // 2.设置迭代器
+	bci := bc.Iterator()        // 2.设置迭代器
 	for {
 		b := bci.Next()                                                                            // 3.获取当前区块信息，并变更为前一区块以迭代
 		fmt.Printf("==================== Block %d ==================================\n", b.Height) // 4，打印当前区块信息
@@ -91,10 +91,7 @@ func PrintBlockChain(nodeID string) {
 		fmt.Printf("CurrentHash: %x\n", b.Hash)
 		fmt.Printf("Transactions:\n")
 		for _, tx := range b.Transactions {
-			fmt.Printf("\tID:%x\n", tx.ID)
-			fmt.Println("\tVin:", tx.Vin)
-			fmt.Println("\tVout:", tx.Vout)
-			fmt.Printf("\n")
+			tx.PrintTransaction()
 		}
 		fmt.Printf("\n\n")
 
@@ -102,6 +99,7 @@ func PrintBlockChain(nodeID string) {
 			break
 		}
 	}
+	bc.DB.Close()
 }
 
 // NewBlockchain,读取当前区块
@@ -183,42 +181,128 @@ func (bc *Blockchain) Iterator() *BlockchainIterator {
 	return bci
 }
 
-/*
 // AddBlock，向区块链中添加新区块
-func (bc *Blockchain) AddBlock(blockb *block.Block) {
-	err := bc.DB.Update(func(tx *bolt.Tx) error {
+func (bc *Blockchain) AddBlock(block *qblock.Block) {
+	var tip []byte
+	var lastblock *qblock.Block
+	err := bc.DB.View(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(blocksBucket))
-		blockInDb := b.Get(blockb.Hash)
-
-		if blockInDb != nil {
-			return nil
-		}
-
-		blockData := blockb.Serialize()
-		err := b.Put(blockb.Hash, blockData)
-		if err != nil {
-			log.Panic(err)
-		}
-
-		lastHash := b.Get([]byte("l"))
-		lastBlockData := b.Get(lastHash)
-		lastBlock := block.DeserializeBlock(lastBlockData)
-
-		if blockb.Height > lastBlock.Height {
-			err = b.Put([]byte("l"), blockb.Hash)
-			if err != nil {
-				log.Panic(err)
-			}
-			bc.tip = blockb.Hash
-		}
-
+		tip = b.Get([]byte("last"))
+		blockData := b.Get(tip)
+		lastblock = qblock.DeserializeBlock(blockData)
 		return nil
 	})
 	if err != nil {
 		log.Panic(err)
 	}
+	if block.Height > lastblock.Height {
+		err = bc.DB.Update(func(tx *bolt.Tx) error {
+			b := tx.Bucket([]byte(blocksBucket))
+			err := b.Put(block.Hash, block.SerializeBlock())
+			if err != nil {
+				log.Panic(err)
+			}
+
+			err = b.Put([]byte("last"), block.Hash)
+			if err != nil {
+				log.Panic(err)
+			}
+
+			bc.tip = block.Hash
+			return nil
+		})
+		if err != nil {
+			log.Panic(err)
+		}
+	}
 }
 
+// GetBestHeight returns the height of the latest block
+func (bc *Blockchain) GetlastHeight() int64 {
+	var lastBlock qblock.Block
+
+	err := bc.DB.View(func(tx *bolt.Tx) error { // 查询账本
+		b := tx.Bucket([]byte(blocksBucket))
+		lastHash := b.Get([]byte("last"))
+		blockData := b.Get(lastHash)
+		lastBlock = *qblock.DeserializeBlock(blockData)
+		return nil
+	})
+	if err != nil {
+		log.Panic(err)
+	}
+	return lastBlock.Height
+}
+
+//
+func (bc *Blockchain) GetlastHash() []byte {
+	var lastBlock qblock.Block
+
+	err := bc.DB.View(func(tx *bolt.Tx) error { // 查询账本
+		b := tx.Bucket([]byte(blocksBucket))
+		lastHash := b.Get([]byte("last"))
+		blockData := b.Get(lastHash)
+		lastBlock = *qblock.DeserializeBlock(blockData)
+		return nil
+	})
+	if err != nil {
+		log.Panic(err)
+	}
+	return lastBlock.Hash
+}
+
+// GetBlock finds a block by its hash and returns it
+func (bc *Blockchain) GetBlock(blockHash []byte) (qblock.Block, error) {
+	var block qblock.Block
+
+	err := bc.DB.View(func(tx *bolt.Tx) error {
+		b := tx.Bucket([]byte(blocksBucket))
+
+		blockData := b.Get(blockHash)
+
+		if blockData == nil {
+			return errors.New("block is not found")
+		}
+
+		block = *qblock.DeserializeBlock(blockData)
+
+		return nil
+	})
+	if err != nil {
+		return block, err
+	}
+
+	return block, nil
+}
+
+// GetBlockHashes returns a list of hashes of all the blocks in the chain
+func (bc *Blockchain) GetBlockHashes() [][]byte {
+	var blocks [][]byte
+	bci := bc.Iterator()
+
+	for {
+		block := bci.Next()
+
+		blocks = append(blocks, block.Hash)
+
+		if len(block.Prev_block_hash) == 0 {
+			break
+		}
+	}
+
+	return blocks
+}
+
+// 判断数据库文件/区块链是否存在
+func DBExists(dbFile string) bool {
+	if _, err := os.Stat(dbFile); os.IsNotExist(err) {
+		return false
+	}
+
+	return true
+}
+
+/*
 // FindTransaction finds a transaction by its ID
 func (bc *Blockchain) FindTransaction(ID []byte) (transaction.Transaction, error) {
 	bci := bc.Iterator()
@@ -238,70 +322,6 @@ func (bc *Blockchain) FindTransaction(ID []byte) (transaction.Transaction, error
 	}
 
 	return transaction.Transaction{}, errors.New("Transaction is not found")
-}
-
-
-
-
-// GetBestHeight returns the height of the latest block
-func (bc *Blockchain) GetBestHeight() int {
-	var lastBlock block.Block
-
-	err := bc.DB.View(func(tx *bolt.Tx) error {
-		b := tx.Bucket([]byte(blocksBucket))
-		lastHash := b.Get([]byte("l"))
-		blockData := b.Get(lastHash)
-		lastBlock = *block.DeserializeBlock(blockData)
-
-		return nil
-	})
-	if err != nil {
-		log.Panic(err)
-	}
-
-	return lastBlock.Height
-}
-
-// GetBlock finds a block by its hash and returns it
-func (bc *Blockchain) GetBlock(blockHash []byte) (block.Block, error) {
-	var blockb block.Block
-
-	err := bc.DB.View(func(tx *bolt.Tx) error {
-		b := tx.Bucket([]byte(blocksBucket))
-
-		blockData := b.Get(blockHash)
-
-		if blockData == nil {
-			return errors.New("Block is not found.")
-		}
-
-		blockb = *block.DeserializeBlock(blockData)
-
-		return nil
-	})
-	if err != nil {
-		return blockb, err
-	}
-
-	return blockb, nil
-}
-
-// GetBlockHashes returns a list of hashes of all the blocks in the chain
-func (bc *Blockchain) GetBlockHashes() [][]byte {
-	var blocks [][]byte
-	bci := bc.Iterator()
-
-	for {
-		block := bci.Next()
-
-		blocks = append(blocks, block.Hash)
-
-		if len(block.PrevBlockHash) == 0 {
-			break
-		}
-	}
-
-	return blocks
 }
 
 // MineBlock mines a new block with the provided transactions
@@ -356,46 +376,4 @@ func (bc *Blockchain) MineBlock(transactions []*transaction.Transaction) *block.
 
 	return newBlock
 }
-
-// SignTransaction signs inputs of a Transaction
-func (bc *Blockchain) SignTransaction(tx *qbtx.Transaction) {
-	prevTXs := make(map[string]qbtx.Transaction)
-
-	for _, vin := range tx.Vin {
-		prevTX, err := bc.FindTransaction(vin.Txid)
-		if err != nil {
-			log.Panic(err)
-		}
-		prevTXs[hex.EncodeToString(prevTX.ID)] = prevTX
-	}
-
-	tx.Sign(privKey, prevTXs)
-}
-
-// VerifyTransaction verifies transaction input signatures
-func (bc *Blockchain) VerifyTransaction(tx *transaction.Transaction) bool {
-	if tx.IsCoinbase() {
-		return true
-	}
-
-	prevTXs := make(map[string]transaction.Transaction)
-
-	for _, vin := range tx.Vin {
-		prevTX, err := bc.FindTransaction(vin.Txid)
-		if err != nil {
-			log.Panic(err)
-		}
-		prevTXs[hex.EncodeToString(prevTX.ID)] = prevTX
-	}
-
-	return tx.Verify(prevTXs)
-}
 */
-// 判断数据库文件/区块链是否存在
-func DBExists(dbFile string) bool {
-	if _, err := os.Stat(dbFile); os.IsNotExist(err) {
-		return false
-	}
-
-	return true
-}

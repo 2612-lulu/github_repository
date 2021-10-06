@@ -21,19 +21,20 @@ func (command *COMM) startNode(nodeID string) {
 	// 获取区块链数据库名称
 	dbFile := fmt.Sprintf(quantumbc.DBFile, nodeID)
 	// 检查是否已创建数据库，如未创建则现在创建
+	qbc := quantumbc.Blockchain{}
 	if !quantumbc.DBExists(dbFile) {
-		qbc := quantumbc.CreateBlockchain(addresses, nodeID)
-		defer qbc.DB.Close()
+		qbc = *quantumbc.CreateBlockchain(addresses, nodeID)
 
 		// utxo初始化
 		UTXOSet := qbutxo.UTXOSet{
-			Blockchain: qbc,
+			Blockchain: &qbc,
 		}
 		UTXOSet.Reindex()
 		log.Println("Blockchain didn't exists，have create a new one.")
+		qbc.DB.Close() // 关闭账本
 	} else {
 		log.Println("Blockchain already exists.")
 	}
-	quantumbc.PrintBlockChain(nodeID) // 打印当前区块链信息
+	//quantumbc.PrintBlockChain(nodeID) // 打印当前区块链信息
 	node.Httplisten()
 }
