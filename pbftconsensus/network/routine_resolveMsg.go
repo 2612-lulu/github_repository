@@ -96,7 +96,6 @@ func (consensus *NodeConsensus) resolveRequestMsg(msgs []*qblock.Block) []error 
 // 参数：区块*block.Block
 // 返回值：处理错误error，默认为nil
 func (consensus *NodeConsensus) resolveRequest(msgs *qblock.Block) error {
-	consensus.Req = msgs
 	prePrepareMsg, err := consensus.PBFT.CurrentState.PrePrePare(msgs) // 进入共识，获得preprepare消息
 	if err != nil {
 		return err
@@ -138,7 +137,6 @@ func (consensus *NodeConsensus) resolvePrePrepareMsg(msgs []*pbft.PrePrepareMsg)
 // 参数：预准备消息*pbft.PrePrepareMsg
 // 返回值：处理错误error，默认为nil
 func (consensus *NodeConsensus) resolvePrePrepare(prePrepareMsg *pbft.PrePrepareMsg) error {
-	consensus.Req = prePrepareMsg.Request
 	prePareMsg, err := consensus.PBFT.CurrentState.PrePare(prePrepareMsg) // 获得prepare信息
 	if err != nil {
 		return err

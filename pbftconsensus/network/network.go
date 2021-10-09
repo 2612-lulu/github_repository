@@ -1,6 +1,8 @@
 package network
 
 import (
+	"encoding/json"
+	"os"
 	"pbft"
 	"qblock"
 	"qbtx"
@@ -26,7 +28,6 @@ type NodeConsensus struct {
 	View      *pbft.View // 视图号
 	PBFT      *Consensus
 	Committed []*pbft.CommitMsg
-	Req       *qblock.Block
 
 	MsgBroadcast chan interface{} // 广播通道
 	MsgEntrance  chan interface{} // 无缓冲的信息接收通道
@@ -54,8 +55,6 @@ type MsgBuffer struct {
 // 参数：节点名称string
 // 返回值：经初始化的节点*Node
 func NewNodeConsensus(node_name string) *NodeConsensus {
-	const view = 1 // 暂设视图号为1
-
 	// 初始化节点
 	node_consensus := &NodeConsensus{
 		Node_name:            node_name,                                                // 联盟节点或客户段名称，形式为P1、P2...
@@ -63,11 +62,7 @@ func NewNodeConsensus(node_name string) *NodeConsensus {
 		Node_consensus_table: utils.InitConfig(utils.INIT_PATH + "pbft_localhost.txt"), // 联盟节点节点索引表，key=Node_name, value=url
 		Node_table:           utils.InitConfig(utils.INIT_PATH + "node_localhost.txt"), // 联盟节点节点索引表，key=Node_name, value=url
 
-		View: &pbft.View{ // 视图号信息，视图号=主节点下标
-			ID:      view, // 视图号
-			Primary: "P1", // 主节点,暂设为P1
-		},
-
+		View: new(pbft.View),
 		PBFT: &Consensus{
 			CurrentState: nil,
 			MsgBuffer: &MsgBuffer{ // 初始化
@@ -78,7 +73,6 @@ func NewNodeConsensus(node_name string) *NodeConsensus {
 			},
 		},
 		Committed: make([]*pbft.CommitMsg, 0),
-		Req:       new(qblock.Block),
 
 		// 初始化通道Channels
 		MsgBroadcast: make(chan interface{}), // 信息发送通道
@@ -87,6 +81,16 @@ func NewNodeConsensus(node_name string) *NodeConsensus {
 		Alarm:        make(chan bool),        // 警告通道
 		Result:       make(chan interface{}),
 	}
+
+	file, _ := os.Open("../config/view.json") // 打开文件
+	defer file.Close()                        // 关闭文件
+	decoder := json.NewDecoder(file)          // NewDecoder创建一个从file读取并解码json对象的*Decoder，解码器有自己的缓冲，并可能超前读取部分json数据。
+	var view pbft.View
+	err := decoder.Decode(&view) //Decode从输入流读取下一个json编码值并保存在v指向的值里
+	if err != nil {
+		panic(err)
+	}
+	node_consensus.View = &view
 	pbft_bc = utils.InitConfig(utils.INIT_PATH + "pbft_bc.txt")
 	pbft_url := node_consensus.Node_consensus_table[node_consensus.Node_name]
 	url, ok := pbft_bc[pbft_url]

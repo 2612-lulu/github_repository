@@ -18,6 +18,8 @@ export NODE_NAME="C4"
 echo "getbalance of C4!"
 gnome-terminal -t "C4" -x bash -c "./qbrun.exe getbalance -address 1sJT4CzXPViuT59FY6iQ8XpEhTYNz1BpK;exec bash"
 
+
+:<<!
 export NODE_NAME="C5"
 echo "getbalance of C5!"
 gnome-terminal -t "C5" -x bash -c "./qbrun.exe getbalance -address 13FuRvBvNNWLGfofoNU2s53WSjRJMdMuwt;exec bash"
@@ -81,3 +83,4 @@ gnome-terminal -t "C19" -x bash -c "./qbrun.exe getbalance -address 1CeaEse37tLN
 export NODE_NAME="C20"
 echo "getbalance of C20!"
 gnome-terminal -t "C20" -x bash -c "./qbrun.exe getbalance -address 1PaBnTB7KkFpzcZ37U64J76kLtZyEL9hy6;exec bash"
+!

@@ -25,7 +25,7 @@ const version = byte(0x00)
 const addressChecksumLen = 4
 
 // 存储钱包地址的文件
-const walletFile = "/root/study/github_repository/qb/qbwallet/wallets/wallet_%s.dat"
+const walletFile = "../qb/qbwallet/wallets/wallet_%s.dat"
 
 //钱包结构
 type Wallet struct {

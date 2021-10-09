@@ -21,26 +21,17 @@ const N = 4
 // Transaction，交易结构，多入多处：
 // 有一些输出并没有被关联到某个输入上；一笔交易的输入可以引用之前多笔交易的输出；一个输入必须引用一个输出
 type Transaction struct {
-	ID   []byte     // 交易ID，非常重要的Hash值，是在input签名之前计算出来的，作为UTXOSet.map的key存在
-	Vin  []TXInput  // 交易输入项
-	Vout []TXOutput // 交易输出项
-}
-
-type ToGenTx struct {
-	From  string
-	To    string
-	Value int
+	ID   []byte     `json:"txid"` // 交易ID，非常重要的Hash值，是在input签名之前计算出来的，作为UTXOSet.map的key存在
+	Vin  []TXInput  `json:"vin"`  // 交易输入项
+	Vout []TXOutput `json:"vout"` // 交易输出项
 }
 
 // SetID，根据交易输入与输出项生成交易ID。
 func (tx *Transaction) SetID() []byte {
 	var hash [32]byte
-
 	txCopy := *tx
 	txCopy.ID = []byte{}
-
 	hash = sha256.Sum256(txCopy.SerializeTX())
-
 	return hash[:]
 }
 
@@ -146,9 +137,7 @@ func NewReserveTX(to []string, data string) *Transaction {
 	}
 	tx := Transaction{nil, []TXInput{txin}, txout}
 	tx.ID = tx.SetID()
-	/*if tx.IsReserveTX() {
-		log.Println("create a new reserve tx")
-	}*/
+
 	return &tx
 }
 

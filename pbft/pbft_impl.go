@@ -19,7 +19,7 @@ import (
 
 // pbft状态标识
 type State struct {
-	View                 int64      // 视图号
+	View                 View       // 视图号
 	Msg_logs             MsgLogs    // 缓存数据
 	Last_sequence_number int64      // 上次共识序列号
 	Current_stage        Stage      // 当前状态
@@ -36,8 +36,8 @@ type MsgLogs struct {
 
 // 视图号
 type View struct {
-	ID      int64  // 视图号
-	Primary string // 主节点
+	ID      int64  `json:"viewid"`  // 视图号
+	Primary string `json:"primary"` // 主节点
 }
 
 type Stage int
@@ -58,7 +58,9 @@ const LOG_ERROR_PATH = "../pbft/errorlog/error_"
 // 返回值：pbft状态State
 func CreateState(view int64, lastSequenceNumber int64) *State {
 	return &State{
-		View: view, // 当前视图号，为主节点编号
+		View: View{
+			ID: view, // 当前视图号，为主节点编号
+		},
 		Msg_logs: MsgLogs{ // 初始化
 			ReqMsg:        new(qblock.Block),
 			PreparedMsgs:  make(map[int64]*PrepareMsg),
@@ -85,7 +87,7 @@ func (state *State) PrePrePare(request *qblock.Block) (*PrePrepareMsg, error) {
 		digest_msg, _ := json.Marshal(msg)
 		// 定义一个preprepare消息
 		preprepare := &PrePrepareMsg{
-			View:            state.View,               // 获取视图号
+			View:            state.View.ID,            // 获取视图号
 			Sequence_number: sequenceID,               // 为其分配序列号
 			Digest_m:        utils.Digest(digest_msg), // 交易信息摘要
 			Sign_p: uss.USSToeplitzHashSignMsg{ // 签名信息
@@ -183,7 +185,7 @@ func (state *State) verifyPrePrepareMsg(preprepare *PrePrepareMsg) bool {
 	log.SetPrefix("[Prepare error]")
 	defer file.Close()
 	// 判断是否符合校验条件
-	if state.View != preprepare.View {
+	if state.View.ID != preprepare.View {
 		log.Println("the view of preprepare message is wrong!")
 		result = false
 	} else if state.Last_sequence_number >= preprepare.Sequence_number {
@@ -257,7 +259,7 @@ func (state *State) verifyPrepareMsg(prepare *PrepareMsg) bool {
 	file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 	log.SetPrefix("[Commit error]")
 	defer file.Close()
-	if state.View != prepare.View {
+	if state.View.ID != prepare.View {
 		log.Println("the view of prepare message is wrong!")
 		result = false
 	} else if state.Last_sequence_number >= prepare.Sequence_number {
@@ -354,7 +356,7 @@ func (state *State) verifyCommitMsg(commit *CommitMsg) bool {
 	file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 	log.SetPrefix("[Reply error]")
 	defer file.Close()
-	if state.View != commit.View {
+	if state.View.ID != commit.View {
 		log.Println("the view is wrong!")
 		result = false
 	} else if state.Last_sequence_number != -1 && state.Last_sequence_number >= commit.Sequence_number {

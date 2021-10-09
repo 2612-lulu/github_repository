@@ -8,8 +8,8 @@ import (
 
 // TXOutput，交易输出结构
 type TXOutput struct {
-	Value int    // 输出金额
-	To    string // 接收方
+	Value int    `json:"value"` // 输出金额
+	To    string `json:"to"`    // 接收方
 }
 
 // NewTXOutput，初始化交易输出项

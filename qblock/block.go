@@ -7,8 +7,10 @@ import (
 	"bytes"
 	"crypto/sha256"
 	"encoding/gob"
+	"encoding/json"
 	"log"
 	"merkletree"
+	"os"
 	"qbtx"
 	"time"
 	"utils"
@@ -19,13 +21,13 @@ const BLOCK_LENGTH = 1
 
 // 区块结构
 type Block struct {
-	Version    int64 // 当前版本
-	Time_stamp int64 // 系统当前时间
-	Height     int64 // 区块高度
+	Version    int64 `json:"version"`   // 当前版本
+	Time_stamp int64 `json:"timestamp"` // 系统当前时间
+	Height     int64 `json:"height"`    // 区块高度
 
-	Prev_block_hash []byte // 前一区块hash值
-	Hash            []byte
-	Transactions    []*qbtx.Transaction // 用于共识的交易信息
+	Prev_block_hash []byte              `json:"prevblockhash"` // 前一区块hash值
+	Hash            []byte              `json:"currentblockhash"`
+	Transactions    []*qbtx.Transaction `json:"transactions"` // 用于共识的交易信息
 }
 
 // NewBlock，生成新区块
@@ -40,14 +42,21 @@ func NewBlock(transactions []*qbtx.Transaction, prevBlockHash []byte, height int
 		Transactions:    transactions,
 	}
 	block.Hash = block.BlockToResolveHash() // 生成当前区块hash值
-	//fmt.Println("hash:=", block.Hash)
 	return block
 }
 
 // NewGenesisBlock，创建创世区块
 func NewGenesisBlock(reserve *qbtx.Transaction) *Block {
-	//log.Println("create a new genesis block")
-	return NewBlock([]*qbtx.Transaction{reserve}, []byte{}, 0)
+	file, _ := os.Open("../config/genesisblock.json") // 打开文件
+	defer file.Close()                                // 关闭文件
+	// NewDecoder创建一个从file读取并解码json对象的*Decoder，解码器有自己的缓冲，并可能超前读取部分json数据。
+	decoder := json.NewDecoder(file)
+	var block Block
+	err := decoder.Decode(&block) //Decode从输入流读取下一个json编码值并保存在v指向的值里
+	if err != nil {
+		panic(err)
+	}
+	return &block
 }
 
 // NewBlock，生成新区块hash值
@@ -104,7 +113,7 @@ func DeserializeBlock(d []byte) *Block {
 	decoder := gob.NewDecoder(bytes.NewReader(d)) // 创建解码器
 	err := decoder.Decode(&block)                 // 解析区块数据
 	if err != nil {
-		log.Panic(err)
+		log.Println(err)
 	}
 
 	return &block
