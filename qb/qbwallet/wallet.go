@@ -36,9 +36,9 @@ type Wallet struct {
 // NewWallet，创建钱包
 func NewWallet(nodeID string) *Wallet {
 	var wallet Wallet
-	wallet.Node_id = utils.GetNodeIDTable(nodeID) // 获取设备ID用于生成钱包地址
-	wallet.Addr = wallet.getAddress()             // 生成钱包地址
-	wallet.saveToFile(qkdserv.Node_name)          // 将钱包地址存入文件
+	wallet.Node_id = utils.GetNodeID(nodeID) // 获取设备ID用于生成钱包地址
+	wallet.Addr = wallet.getAddress()        // 生成钱包地址
+	wallet.saveToFile(qkdserv.Node_name)     // 将钱包地址存入文件
 	return &wallet
 }
 

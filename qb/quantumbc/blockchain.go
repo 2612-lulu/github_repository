@@ -34,7 +34,7 @@ func CreateBlockchain(addresses []string, nodeID string) *Blockchain {
 
 	// 只能第一次创建，所以需要查找是否存在相应的区块链数据库文件
 	if DBExists(dbFile) {
-		log.Println("Blockchain already exists.")
+		fmt.Println("Blockchain already exists.")
 		return nil
 	} else {
 		var tip []byte
@@ -82,8 +82,8 @@ func PrintBlockChain(nodeID string) {
 	bc := NewBlockchain(nodeID) // 1.获取当前区块链信息
 	bci := bc.Iterator()        // 2.设置迭代器
 	for {
-		b := bci.Next()                                                                            // 3.获取当前区块信息，并变更为前一区块以迭代
-		fmt.Printf("==================== Block %d ==================================\n", b.Height) // 4，打印当前区块信息
+		b := bci.Next()                                                                                 // 3.获取当前区块信息，并变更为前一区块以迭代
+		fmt.Printf("========================= Block %d ==================================\n", b.Height) // 4，打印当前区块信息
 		fmt.Printf("Version: %d\n", b.Version)
 		fmt.Printf("Height: %d\n", b.Height)
 		fmt.Printf("TimeStamp: %d\n", b.Time_stamp)
@@ -107,7 +107,7 @@ func NewBlockchain(nodeID string) *Blockchain {
 	dbFile := fmt.Sprintf(DBFile, nodeID)
 	// 判断账本/数据库是否存在
 	if !DBExists(dbFile) {
-		fmt.Println("No existing blockchain found. Create one first.")
+		fmt.Println("No existing blockchain found. Please create one first.")
 		os.Exit(1)
 	}
 
@@ -140,10 +140,10 @@ func (bc *Blockchain) FindUTXO() map[string]qbtx.TXOutputs {
 		block := bci.Next() // 从最后一区块逐一向前迭代
 
 		for _, tx := range block.Transactions { // 遍历当前区块存储的交易信息
-			txID := hex.EncodeToString(tx.ID) // 转换为string格式
+			txID := hex.EncodeToString(tx.TX_id) // 转换为string格式
 
 		Outputs: // label语法，适用于多级嵌套
-			for outIdx, out := range tx.Vout { // 遍历该交易信息的交易输出
+			for outIdx, out := range tx.TX_vout { // 遍历该交易信息的交易输出
 				if spentTXOs[txID] != nil { // 如果交易已经被花费，直接跳过此交易
 					for _, spentOutIdx := range spentTXOs[txID] {
 						if spentOutIdx == outIdx {
@@ -158,9 +158,9 @@ func (bc *Blockchain) FindUTXO() map[string]qbtx.TXOutputs {
 			}
 
 			if !tx.IsReserveTX() { // 如果该交易信息不是准备金发放交易
-				for _, in := range tx.Vin {
-					inTxID := hex.EncodeToString(in.Txid)
-					spentTXOs[inTxID] = append(spentTXOs[inTxID], in.Vout)
+				for _, in := range tx.TX_vin {
+					inTxID := hex.EncodeToString(in.Refer_tx_id)
+					spentTXOs[inTxID] = append(spentTXOs[inTxID], in.Refer_tx_id_index)
 				}
 			}
 		}
@@ -298,7 +298,6 @@ func DBExists(dbFile string) bool {
 	if _, err := os.Stat(dbFile); os.IsNotExist(err) {
 		return false
 	}
-
 	return true
 }
 
@@ -322,58 +321,5 @@ func (bc *Blockchain) FindTransaction(ID []byte) (transaction.Transaction, error
 	}
 
 	return transaction.Transaction{}, errors.New("Transaction is not found")
-}
-
-// MineBlock mines a new block with the provided transactions
-func (bc *Blockchain) MineBlock(transactions []*transaction.Transaction) *block.Block {
-	var lastHash []byte
-	var lastHeight int
-
-	for _, tx := range transactions {
-		// TODO: ignore transaction if it's not valid
-		//if bc.VerifyTransaction(tx) != true {
-		if !bc.VerifyTransaction(tx) {
-			log.Panic("ERROR: Invalid transaction")
-		}
-	}
-
-	err := bc.DB.View(func(tx *bolt.Tx) error {
-		b := tx.Bucket([]byte(blocksBucket))
-		lastHash = b.Get([]byte("l"))
-
-		blockData := b.Get(lastHash)
-		blockb := block.DeserializeBlock(blockData)
-
-		lastHeight = blockb.Height
-
-		return nil
-	})
-	if err != nil {
-		log.Panic(err)
-	}
-
-	newBlock := block.NewBlock(transactions, lastHash, lastHeight+1)
-
-	err = bc.DB.Update(func(tx *bolt.Tx) error {
-		b := tx.Bucket([]byte(blocksBucket))
-		err := b.Put(newBlock.Hash, newBlock.Serialize())
-		if err != nil {
-			log.Panic(err)
-		}
-
-		err = b.Put([]byte("l"), newBlock.Hash)
-		if err != nil {
-			log.Panic(err)
-		}
-
-		bc.tip = newBlock.Hash
-
-		return nil
-	})
-	if err != nil {
-		log.Panic(err)
-	}
-
-	return newBlock
 }
 */

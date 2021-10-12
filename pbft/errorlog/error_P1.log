@@ -1,545 +1,285 @@
-[Commit error]2021/10/06 20:29:47.468017 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:29:47.468332 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:29:47.468661 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:29:47.468971 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:29:47.473979 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:29:47.475573 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:29:47.475884 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:29:47.476173 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:29:47.476449 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:29:57.474568 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:29:57.481492 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:29:57.481809 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:29:57.482071 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:29:59.471692 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:29:59.472436 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:29:59.473748 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:29:59.474283 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:30:13.484287 /root/study/github_repository/pbft/pbft_impl.go:264: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/06 20:30:13.484300 /root/study/github_repository/pbft/pbft_impl.go:265: Last_sequence_number= 1633523387462679297
-[Commit error]2021/10/06 20:30:13.484303 /root/study/github_repository/pbft/pbft_impl.go:266: prepare.Sequence_number= 1633523387462679297
-[Reply error]2021/10/06 20:30:13.487346 /root/study/github_repository/pbft/pbft_impl.go:360: the sequenceID of commit message is wrong!
-[Reply error]2021/10/06 20:30:13.489810 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:30:13.490129 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:30:15.485689 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:30:15.485963 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:30:15.488965 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:30:15.489213 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:30:15.489893 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:30:15.490164 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:30:48.214997 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:30:48.215334 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:30:48.216697 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:30:48.216995 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:30:48.220237 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:30:48.220549 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:30:48.220851 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:30:48.221109 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:30:48.222242 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:30:48.222551 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:30:48.224119 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:30:48.224497 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:30:48.224874 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:30:48.225235 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:30:58.215101 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:30:58.215676 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:30:58.217021 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:30:58.316979 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:31:00.217613 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:31:00.217875 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:31:00.218852 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:31:00.219205 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:31:00.219456 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:31:00.220886 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:31:00.221263 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:31:00.221595 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:31:00.223161 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:31:00.223503 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:31:00.223845 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:31:08.227060 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:31:08.227413 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:31:08.227760 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:31:08.344702 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:31:08.344984 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:31:08.345214 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:31:08.345666 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:31:08.345899 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:31:08.346137 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:31:10.225063 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:31:10.225932 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:31:10.354247 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:31:10.354984 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:31:20.235246 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:31:20.235560 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:31:20.235793 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:31:20.236066 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:38:50.741056 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:38:50.741325 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:38:50.741590 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:38:50.741858 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:38:50.744722 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:38:50.749982 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:38:50.750256 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:38:50.750523 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:38:50.750764 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:48:11.428884 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:48:11.431342 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:48:11.431734 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:48:11.432153 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:48:11.435979 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:48:11.436328 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:48:11.436677 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:48:13.426101 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:48:13.427413 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:48:13.429737 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:55:36.199184 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:55:36.199456 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:55:36.199794 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:55:36.200660 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:55:36.200925 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 20:55:36.201176 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:55:36.204094 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:55:36.204345 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:55:36.204616 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:55:36.205397 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:55:36.205660 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:55:36.205917 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 20:55:36.206165 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:11:11.967279 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:11:11.967557 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:11:11.967858 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:11:11.971018 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:11:11.972669 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:11:11.974148 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:11:11.974539 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:11:11.976393 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:11:11.976780 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:11:11.977171 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:11:11.977551 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:15:11.212434 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:15:11.213902 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:15:11.215841 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:15:11.218384 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:15:11.219957 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:15:11.220297 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:15:11.220641 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:15:11.220989 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:22:40.059690 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:22:40.059973 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:22:40.061681 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:22:40.063310 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:22:40.063561 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:22:40.064094 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:22:40.066118 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:22:40.066434 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:22:42.058400 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:22:42.062331 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:22:42.064462 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:22:42.064724 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:23:47.302045 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:23:47.302362 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:23:47.303798 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:23:47.304087 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:23:47.304342 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:23:47.305697 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:23:47.305987 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:23:47.307097 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:23:47.307428 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:23:47.310296 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:23:47.310744 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:23:47.311072 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:23:47.311378 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:23:55.308200 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:23:55.308495 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:23:55.308772 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:23:55.309042 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:23:55.309595 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:23:55.311422 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:23:55.311688 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:23:55.311962 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:23:55.312264 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:23:55.312926 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:23:55.313178 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:23:55.313425 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:23:55.315091 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:23:55.316291 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:23:55.316559 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:23:55.316808 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:23:55.317046 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:24:03.309410 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:24:03.310884 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:24:03.311125 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:24:03.311355 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:24:03.311600 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:24:03.312540 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:24:03.313921 /root/study/github_repository/pbft/pbft_impl.go:360: the sequenceID of commit message is wrong!
-[Reply error]2021/10/06 21:24:03.315935 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:24:03.317812 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:24:03.318077 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:24:03.318349 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:24:03.318653 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 21:26:25.542886 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 21:26:25.543859 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:02:51.324012 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:02:51.324313 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:02:51.325003 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:02:51.325300 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:02:51.326531 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:02:51.326873 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:02:51.328163 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:02:51.328527 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:02:51.329471 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:02:51.329802 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:02:53.322814 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:02:53.323120 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:02:53.323628 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:02:53.325334 /root/study/github_repository/pbft/pbft_impl.go:360: the sequenceID of commit message is wrong!
-[Reply error]2021/10/06 22:02:53.326389 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:02:53.326635 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:02:53.327407 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:02:53.327723 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:07:21.237246 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:07:21.242291 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:07:21.242550 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:07:21.245432 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:07:21.245854 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:07:21.246246 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:07:21.246647 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:10:43.989675 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:10:43.989939 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:10:43.990183 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:10:43.990425 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:10:43.990914 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:10:43.992971 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:10:43.993285 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:10:43.994394 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:10:43.994640 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:10:43.995690 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:10:43.995950 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:10:43.996196 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:10:43.997168 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:10:43.997470 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:10:43.997766 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:10:43.998069 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:12:10.547761 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:12:10.548015 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:12:10.549501 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:12:10.549782 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:12:10.552111 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:12:10.552388 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:12:10.553088 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:12:10.553371 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:12:12.548710 /root/study/github_repository/pbft/pbft_impl.go:264: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/06 22:12:12.548718 /root/study/github_repository/pbft/pbft_impl.go:265: Last_sequence_number= 1633529530543019727
-[Commit error]2021/10/06 22:12:12.548728 /root/study/github_repository/pbft/pbft_impl.go:266: prepare.Sequence_number= 1633529530543019727
-[Commit error]2021/10/06 22:12:12.550081 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:12:12.552011 /root/study/github_repository/pbft/pbft_impl.go:360: the sequenceID of commit message is wrong!
-[Reply error]2021/10/06 22:12:12.552376 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:12:12.552636 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:12:12.553173 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:12:12.554278 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:12:12.554538 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:12:42.575912 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:12:42.577350 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:12:42.577605 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:12:42.577893 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:12:42.585407 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:12:42.585689 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:12:42.586004 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:12:42.586329 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:13:41.960458 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:13:41.960707 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:13:41.961734 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:13:41.961966 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:13:41.962194 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:13:41.962426 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:13:41.962936 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:13:41.963180 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:13:41.963418 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:13:41.963694 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:15:06.897545 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:15:06.897831 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:15:06.898118 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:15:06.898373 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:15:06.898996 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:15:06.902229 /root/study/github_repository/pbft/pbft_impl.go:360: the sequenceID of commit message is wrong!
-[Reply error]2021/10/06 22:15:06.905914 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:15:06.906255 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:15:06.906590 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:15:06.906876 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:15:46.596521 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:15:46.600479 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:15:46.600826 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:15:46.605756 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:15:46.606095 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:15:46.606373 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:15:46.607328 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:17:51.893273 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:17:51.893530 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:17:51.893780 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:17:51.894613 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:17:51.894861 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:17:51.897711 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:17:51.901266 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:17:51.901670 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:17:51.902015 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:17:51.902466 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:19:36.679431 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:19:36.679868 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:19:36.680203 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:19:36.681583 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:19:36.681839 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:19:36.682132 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:19:36.684503 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:19:36.684772 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:19:36.685056 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:19:36.685704 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:19:36.686046 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:19:36.686321 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:19:38.679693 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:19:38.680871 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:19:38.682043 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:19:38.682359 /root/study/github_repository/pbft/pbft_impl.go:361: the sequenceID of commit message is wrong!
-[Reply error]2021/10/06 22:19:38.683130 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:20:57.413126 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:20:57.413419 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:20:57.413678 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:20:57.413942 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:20:57.414892 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/06 22:20:57.415149 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:20:57.419738 /root/study/github_repository/pbft/pbft_impl.go:361: the sequenceID of commit message is wrong!
-[Reply error]2021/10/06 22:20:57.420138 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:20:57.420411 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:20:57.420653 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:20:57.420911 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:20:57.421466 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:20:57.421714 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:20:57.421978 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/06 22:20:57.422227 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:07:57.761257 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:07:57.761938 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:07:57.763890 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:07:57.765423 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:07:57.766279 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:08:59.143775 /root/study/github_repository/pbft/pbft_impl.go:264: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/08 20:08:59.143821 /root/study/github_repository/pbft/pbft_impl.go:265: Last_sequence_number= 1633694877756874407
-[Commit error]2021/10/08 20:08:59.143826 /root/study/github_repository/pbft/pbft_impl.go:266: prepare.Sequence_number= 1633694877756874407
-[Reply error]2021/10/08 20:08:59.146268 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:08:59.146851 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:10:02.610415 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:10:02.610688 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:10:02.611754 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:10:02.611997 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:10:02.612241 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:10:02.614653 /root/study/github_repository/pbft/pbft_impl.go:361: the sequenceID of commit message is wrong!
-[Reply error]2021/10/08 20:10:02.614933 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:10:02.615173 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:10:02.615440 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:10:02.616223 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:10:02.618016 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:10:02.618909 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:10:02.619161 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:13:10.314774 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:13:10.315076 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:13:10.315346 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:13:10.315591 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:13:10.317110 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:13:10.317348 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:13:10.317575 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:13:10.317799 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:13:10.320114 /root/study/github_repository/pbft/pbft_impl.go:361: the sequenceID of commit message is wrong!
-[Reply error]2021/10/08 20:13:10.320423 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:13:10.320652 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:13:10.320881 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:13:10.321667 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:13:10.321905 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:13:10.322208 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:13:10.322440 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:15:01.329104 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:15:01.330279 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:15:01.330520 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:15:01.330748 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:15:01.330987 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:15:01.331888 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:15:01.332825 /root/study/github_repository/pbft/pbft_impl.go:361: the sequenceID of commit message is wrong!
-[Reply error]2021/10/08 20:15:01.333084 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:15:01.333330 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:15:01.333568 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:15:01.333793 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:15:01.334886 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:15:01.335141 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:15:01.335397 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:15:01.335633 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:25:45.879370 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 20:25:45.880749 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:25:45.883486 /root/study/github_repository/pbft/pbft_impl.go:361: the sequenceID of commit message is wrong!
-[Reply error]2021/10/08 20:25:45.883768 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:25:45.884017 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:25:45.884278 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:25:45.887385 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:25:45.887771 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:25:45.888160 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Reply error]2021/10/08 20:25:45.888625 /root/study/github_repository/qbtx/transaction.go:103: verify of tx success
-[Commit error]2021/10/08 21:57:53.262156 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 21:57:53.262479 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 21:57:53.263387 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 21:57:53.263665 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 21:57:53.266923 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 21:57:53.267266 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 21:57:53.268184 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 21:57:53.269468 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 21:57:53.269805 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 21:57:53.270163 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 21:57:55.262382 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 21:57:55.263350 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 21:57:55.264526 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 21:58:32.703298 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 21:58:32.703585 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 21:58:32.703834 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 21:58:32.704671 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 21:58:32.704922 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 21:58:32.708338 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 21:58:32.708640 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 21:58:32.709015 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 21:58:32.709290 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 21:58:32.709603 /root/study/github_repository/pbft/pbft_impl.go:361: the sequenceID of commit message is wrong!
-[Reply error]2021/10/08 21:58:32.709896 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 21:58:32.710124 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 21:58:32.711276 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 21:58:32.711564 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 21:58:32.711793 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 21:58:32.712079 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:04:00.381615 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:04:00.383729 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:04:00.389209 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:04:00.389570 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:04:00.389914 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:04:00.390332 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:21:44.294581 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:21:44.294856 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:21:44.295132 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:21:44.295493 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:21:44.298326 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:21:44.298608 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:21:44.300948 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:21:44.301186 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:21:44.301438 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:21:44.301674 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:23:25.965858 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:23:25.966134 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:23:25.967391 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:23:25.967615 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:23:25.967846 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:23:25.968064 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:23:25.969074 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:23:25.970278 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:23:25.970512 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:23:25.970733 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:23:25.970967 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[committed error]2021/10/08 22:23:25.971256 /root/study/github_repository/pbftconsensus/network/network_http.go:87: receive a commit message
-[Reply error]2021/10/08 22:23:25.971579 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:23:25.971861 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:23:25.972112 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:23:25.972381 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:24:10.327654 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:24:10.327905 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:24:10.329433 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:24:10.330590 /root/study/github_repository/pbft/pbft_impl.go:361: the sequenceID of commit message is wrong!
-[Reply error]2021/10/08 22:24:10.335731 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:24:10.336015 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:24:10.336254 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:24:10.336497 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:24:24.336591 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:24:24.336827 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:24:24.337077 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:24:24.337846 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:24:24.338119 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:24:24.338383 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:24:24.338628 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:24:24.343511 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:24:24.343742 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:24:24.343992 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:24:24.344231 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:24:24.344703 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:24:24.344962 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:24:24.345198 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:24:24.345527 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:27:20.000555 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:27:20.000816 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:27:20.001100 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:27:20.001337 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:27:20.001801 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:27:20.002078 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:27:20.003720 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/08 22:27:20.004004 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:27:20.005082 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:27:20.005369 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:27:20.006476 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:27:20.006750 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:27:20.006988 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:27:20.007332 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:27:20.008091 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:27:20.008352 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:27:20.008638 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/08 22:27:20.008904 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:09:17.141029 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:09:17.141350 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:09:17.141655 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:09:17.142580 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:09:17.144640 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:09:17.144920 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:09:17.145243 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:09:17.145535 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:09:17.146134 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:09:17.146378 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:09:17.146621 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:09:17.146894 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:09:17.149473 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:09:17.149808 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:09:17.150086 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:09:17.150545 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:13:37.001849 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:13:37.002106 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:13:37.003217 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:13:37.004983 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:13:37.005258 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:13:37.005499 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:13:37.007970 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:13:37.008211 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:13:37.008444 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:13:37.009467 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:13:37.009882 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:13:37.010160 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:13:37.010419 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Prepare error]2021/10/09 10:15:23.701202 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Prepare error]2021/10/09 10:15:23.701475 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Prepare error]2021/10/09 10:15:23.701709 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Prepare error]2021/10/09 10:15:23.701936 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:15:23.704656 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:15:23.708206 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:15:23.709509 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:15:23.710956 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:15:23.711195 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:15:23.711493 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:15:23.711736 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:18:04.272397 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:18:04.274335 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:18:04.275625 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:18:04.276823 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Prepare error]2021/10/09 10:18:06.276737 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Prepare error]2021/10/09 10:18:06.276996 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:18:06.469570 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:18:06.471006 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:18:06.472382 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:18:06.476592 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:18:06.477486 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Commit error]2021/10/09 10:18:06.478305 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:18:06.670166 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:18:06.671710 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:18:06.673117 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:18:06.674005 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:18:06.674347 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:18:06.674603 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:18:06.675590 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:18:06.676507 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
-[Reply error]2021/10/09 10:18:06.677442 /root/study/github_repository/qbtx/transaction.go:94: verify of tx success
+[Commit error]2021/10/12 17:53:17.193606 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [into prepare]
+[Commit error]2021/10/12 17:53:17.196354 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:53:17.196363 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303083
+[Commit error]2021/10/12 17:53:17.196367 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303083
+[Commit error]2021/10/12 17:53:17.196486 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:53:17.196492 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303083
+[Commit error]2021/10/12 17:53:17.196496 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303083
+[Commit error]2021/10/12 17:53:17.196671 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:53:17.196680 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303083
+[Commit error]2021/10/12 17:53:17.196683 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303083
+[Reply error]2021/10/12 17:53:17.283486 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:53:17.283601 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:53:17.283706 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:53:17.283818 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:53:17.283921 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 17:53:42.210665 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:53:42.210679 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303084
+[Commit error]2021/10/12 17:53:42.210684 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303084
+[Commit error]2021/10/12 17:53:42.210834 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:53:42.210840 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303084
+[Commit error]2021/10/12 17:53:42.210844 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303084
+[Commit error]2021/10/12 17:53:42.210990 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:53:42.210995 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303084
+[Commit error]2021/10/12 17:53:42.210999 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303084
+[Reply error]2021/10/12 17:53:42.300637 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:53:42.300863 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:53:42.301276 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 17:54:07.231324 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:54:07.231338 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303085
+[Commit error]2021/10/12 17:54:07.231342 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303085
+[Commit error]2021/10/12 17:54:07.231504 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:54:07.231514 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303085
+[Commit error]2021/10/12 17:54:07.231518 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303085
+[Commit error]2021/10/12 17:54:07.231656 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:54:07.231662 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303085
+[Commit error]2021/10/12 17:54:07.231665 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303085
+[Commit error]2021/10/12 17:54:07.232026 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:54:07.232039 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303085
+[Commit error]2021/10/12 17:54:07.232043 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303085
+[Reply error]2021/10/12 17:54:07.317471 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:54:07.317583 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:54:07.317663 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 17:54:35.128263 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:54:35.128277 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303086
+[Commit error]2021/10/12 17:54:35.128282 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303086
+[Commit error]2021/10/12 17:54:35.128401 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:54:35.128411 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303086
+[Commit error]2021/10/12 17:54:35.128415 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303086
+[Commit error]2021/10/12 17:54:35.128549 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:54:35.128555 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303086
+[Commit error]2021/10/12 17:54:35.128559 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303086
+[Commit error]2021/10/12 17:54:35.128662 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:54:35.128668 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303086
+[Commit error]2021/10/12 17:54:35.128671 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303086
+[Reply error]2021/10/12 17:54:35.236715 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:54:35.236856 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:54:35.236978 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:54:35.237088 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 17:54:50.151482 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:54:50.151500 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303087
+[Commit error]2021/10/12 17:54:50.151513 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303087
+[Commit error]2021/10/12 17:54:50.151671 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:54:50.151682 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303087
+[Commit error]2021/10/12 17:54:50.151685 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303087
+[Commit error]2021/10/12 17:54:50.151813 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:54:50.151819 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303087
+[Commit error]2021/10/12 17:54:50.151823 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303087
+[Commit error]2021/10/12 17:54:50.151923 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:54:50.151929 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303087
+[Commit error]2021/10/12 17:54:50.151932 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303087
+[Reply error]2021/10/12 17:54:50.240712 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:54:50.241041 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:54:50.241146 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 17:55:00.140773 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:55:00.140786 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303088
+[Commit error]2021/10/12 17:55:00.140790 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303088
+[Commit error]2021/10/12 17:55:00.142199 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:55:00.142218 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303088
+[Commit error]2021/10/12 17:55:00.142223 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303088
+[Commit error]2021/10/12 17:55:00.142828 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:55:00.142845 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303088
+[Commit error]2021/10/12 17:55:00.142850 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303088
+[Commit error]2021/10/12 17:55:00.143016 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:55:00.143023 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303088
+[Commit error]2021/10/12 17:55:00.143028 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303088
+[Reply error]2021/10/12 17:55:00.263067 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:55:00.263297 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:55:00.263387 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:55:00.263458 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 17:55:10.146261 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:55:10.146280 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303089
+[Commit error]2021/10/12 17:55:10.146284 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303089
+[Commit error]2021/10/12 17:55:10.146389 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:55:10.146394 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303089
+[Commit error]2021/10/12 17:55:10.146398 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303089
+[Commit error]2021/10/12 17:55:10.146500 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:55:10.146506 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303089
+[Commit error]2021/10/12 17:55:10.146510 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303089
+[Commit error]2021/10/12 17:55:10.146859 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:55:10.146871 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303089
+[Commit error]2021/10/12 17:55:10.146875 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303089
+[Reply error]2021/10/12 17:55:10.286599 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:55:10.286691 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:55:10.286769 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:55:10.286843 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 17:55:20.152718 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:55:20.152730 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303090
+[Commit error]2021/10/12 17:55:20.152734 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303090
+[Commit error]2021/10/12 17:55:20.152849 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:55:20.152856 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303090
+[Commit error]2021/10/12 17:55:20.152860 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303090
+[Commit error]2021/10/12 17:55:20.153024 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:55:20.153034 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303090
+[Commit error]2021/10/12 17:55:20.153038 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303090
+[Commit error]2021/10/12 17:55:20.153169 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:55:20.153175 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303090
+[Commit error]2021/10/12 17:55:20.153178 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303090
+[Reply error]2021/10/12 17:55:20.248614 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:55:20.248740 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:55:20.248847 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 17:55:30.157676 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:55:30.157694 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303091
+[Commit error]2021/10/12 17:55:30.157698 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303091
+[Commit error]2021/10/12 17:55:30.157844 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:55:30.157851 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303091
+[Commit error]2021/10/12 17:55:30.157872 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303091
+[Commit error]2021/10/12 17:55:30.158173 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:55:30.158185 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303091
+[Commit error]2021/10/12 17:55:30.158189 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303091
+[Reply error]2021/10/12 17:55:30.270636 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:55:30.270787 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:55:30.270914 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 17:55:40.157252 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:55:40.157267 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303092
+[Commit error]2021/10/12 17:55:40.157272 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303092
+[Commit error]2021/10/12 17:55:40.157341 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:55:40.157346 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303092
+[Commit error]2021/10/12 17:55:40.157351 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303092
+[Commit error]2021/10/12 17:55:40.157444 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 17:55:40.157455 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303092
+[Commit error]2021/10/12 17:55:40.157459 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303092
+[Reply error]2021/10/12 17:55:40.217459 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:55:40.217537 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 17:55:40.217602 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 18:00:35.483310 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:00:35.483326 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032820454357504
+[Commit error]2021/10/12 18:00:35.483331 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032820454357504
+[Commit error]2021/10/12 18:00:35.483422 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:00:35.483429 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032820454357504
+[Commit error]2021/10/12 18:00:35.483434 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032820454357504
+[Commit error]2021/10/12 18:00:35.483544 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:00:35.483552 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032820454357504
+[Commit error]2021/10/12 18:00:35.483557 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032820454357504
+[Commit error]2021/10/12 18:00:35.483638 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:00:35.483643 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032820454357504
+[Commit error]2021/10/12 18:00:35.483647 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032820454357504
+[Reply error]2021/10/12 18:00:35.552608 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:00:35.552686 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:00:35.552759 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:00:35.552828 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 18:01:53.378993 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:01:53.379007 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307888
+[Commit error]2021/10/12 18:01:53.379012 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307888
+[Commit error]2021/10/12 18:01:53.379131 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:01:53.379136 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307888
+[Commit error]2021/10/12 18:01:53.379140 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307888
+[Commit error]2021/10/12 18:01:53.379266 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:01:53.379271 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307888
+[Commit error]2021/10/12 18:01:53.379275 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307888
+[Commit error]2021/10/12 18:01:53.379386 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:01:53.379392 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307888
+[Commit error]2021/10/12 18:01:53.379396 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307888
+[Reply error]2021/10/12 18:01:53.471045 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:01:53.471197 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:01:53.471270 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 18:02:03.384540 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:03.384555 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307889
+[Commit error]2021/10/12 18:02:03.384559 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307889
+[Commit error]2021/10/12 18:02:03.384721 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:03.384726 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307889
+[Commit error]2021/10/12 18:02:03.384736 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307889
+[Commit error]2021/10/12 18:02:03.384871 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:03.384876 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307889
+[Commit error]2021/10/12 18:02:03.384880 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307889
+[Commit error]2021/10/12 18:02:03.385007 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:03.385012 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307889
+[Commit error]2021/10/12 18:02:03.385015 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307889
+[Reply error]2021/10/12 18:02:03.475341 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:02:03.475633 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:02:03.475783 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:02:03.475880 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 18:02:13.379694 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:13.379713 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307890
+[Commit error]2021/10/12 18:02:13.379718 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307890
+[Commit error]2021/10/12 18:02:13.379859 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:13.379865 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307890
+[Commit error]2021/10/12 18:02:13.379869 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307890
+[Commit error]2021/10/12 18:02:13.379987 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:13.379994 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307890
+[Commit error]2021/10/12 18:02:13.379997 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307890
+[Reply error]2021/10/12 18:02:13.490284 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:02:13.490388 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 18:02:23.393520 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:23.393531 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307891
+[Commit error]2021/10/12 18:02:23.393536 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307891
+[Commit error]2021/10/12 18:02:23.393644 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:23.393650 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307891
+[Commit error]2021/10/12 18:02:23.393654 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307891
+[Commit error]2021/10/12 18:02:23.393799 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:23.393814 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307891
+[Commit error]2021/10/12 18:02:23.393818 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307891
+[Reply error]2021/10/12 18:02:23.482028 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:02:23.482294 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 18:02:33.394379 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:33.394391 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307892
+[Commit error]2021/10/12 18:02:33.394396 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307892
+[Commit error]2021/10/12 18:02:33.394930 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:33.394943 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307892
+[Commit error]2021/10/12 18:02:33.394948 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307892
+[Commit error]2021/10/12 18:02:33.395130 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:33.395137 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307892
+[Commit error]2021/10/12 18:02:33.395141 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307892
+[Commit error]2021/10/12 18:02:33.407521 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [into prepare]
+[Reply error]2021/10/12 18:02:33.506175 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:02:33.506291 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 18:02:43.399739 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:43.399760 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307893
+[Commit error]2021/10/12 18:02:43.399765 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307893
+[Commit error]2021/10/12 18:02:43.399889 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:43.399895 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307893
+[Commit error]2021/10/12 18:02:43.399899 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307893
+[Commit error]2021/10/12 18:02:43.400007 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:43.400013 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307893
+[Commit error]2021/10/12 18:02:43.400017 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307893
+[Reply error]2021/10/12 18:02:43.505111 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:02:43.505246 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:02:43.505366 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 18:02:53.405006 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:53.405023 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307894
+[Commit error]2021/10/12 18:02:53.405034 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307894
+[Commit error]2021/10/12 18:02:53.405147 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:53.405153 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307894
+[Commit error]2021/10/12 18:02:53.405158 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307894
+[Commit error]2021/10/12 18:02:53.405269 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:02:53.405275 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307894
+[Commit error]2021/10/12 18:02:53.405278 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307894
+[Reply error]2021/10/12 18:02:53.488529 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:02:53.488659 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:02:53.488831 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 18:03:08.403420 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:03:08.403434 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307895
+[Commit error]2021/10/12 18:03:08.403439 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307895
+[Commit error]2021/10/12 18:03:08.403579 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:03:08.403588 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307895
+[Commit error]2021/10/12 18:03:08.403592 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307895
+[Commit error]2021/10/12 18:03:08.403728 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:03:08.403734 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307895
+[Commit error]2021/10/12 18:03:08.403738 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307895
+[Reply error]2021/10/12 18:03:08.501633 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:03:08.501734 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:03:08.501871 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 18:03:18.412875 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:03:18.412889 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307896
+[Commit error]2021/10/12 18:03:18.412893 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307896
+[Commit error]2021/10/12 18:03:18.413008 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:03:18.413014 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307896
+[Commit error]2021/10/12 18:03:18.413018 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307896
+[Commit error]2021/10/12 18:03:18.413121 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:03:18.413128 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307896
+[Commit error]2021/10/12 18:03:18.413140 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307896
+[Reply error]2021/10/12 18:03:18.524288 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:03:18.524367 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:03:18.524447 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 18:03:28.412619 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:03:28.412633 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307897
+[Commit error]2021/10/12 18:03:28.412638 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307897
+[Commit error]2021/10/12 18:03:28.412723 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:03:28.412730 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307897
+[Commit error]2021/10/12 18:03:28.412734 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307897
+[Commit error]2021/10/12 18:03:28.412835 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 18:03:28.412845 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307897
+[Commit error]2021/10/12 18:03:28.412849 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307897
+[Reply error]2021/10/12 18:03:28.473572 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:03:28.473664 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 18:03:28.473735 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!

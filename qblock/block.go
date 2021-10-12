@@ -21,13 +21,13 @@ const BLOCK_LENGTH = 1
 
 // 区块结构
 type Block struct {
-	Version    int64 `json:"version"`   // 当前版本
-	Time_stamp int64 `json:"timestamp"` // 系统当前时间
-	Height     int64 `json:"height"`    // 区块高度
+	Version    int64 `json:"Version"`   // 当前版本
+	Time_stamp int64 `json:"Timestamp"` // 系统当前时间
+	Height     int64 `json:"Height"`    // 区块高度
 
-	Prev_block_hash []byte              `json:"prevblockhash"` // 前一区块hash值
-	Hash            []byte              `json:"currentblockhash"`
-	Transactions    []*qbtx.Transaction `json:"transactions"` // 用于共识的交易信息
+	Prev_block_hash []byte              `json:"Prevblockhash"` // 前一区块hash值
+	Hash            []byte              `json:"Currentblockhash"`
+	Transactions    []*qbtx.Transaction `json:"Transactions"` // 用于共识的交易信息
 }
 
 // NewBlock，生成新区块
@@ -115,6 +115,5 @@ func DeserializeBlock(d []byte) *Block {
 	if err != nil {
 		log.Println(err)
 	}
-
 	return &block
 }

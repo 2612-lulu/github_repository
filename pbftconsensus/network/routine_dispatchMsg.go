@@ -38,6 +38,10 @@ func (consensus *NodeConsensus) routeMsg(msg interface{}) []error {
 			msgs = append(msgs, msg)                                    // 附加新到达的消息
 			consensus.PBFT.MsgBuffer.ReqMsgs = make([]*qblock.Block, 0) // 清空重置
 			consensus.MsgDelivery <- msgs                               // 信息发送通道：将msgs中的信息发送给MsgDelivery通道
+			file, _ := utils.Init_log(PBFT_LOG_PATH + "dispatch_" + consensus.Node_name + ".log")
+			defer file.Close()
+			log.SetPrefix("[dispatch block]")
+			log.Println("start a new pbft")
 		} else {
 			consensus.PBFT.MsgBuffer.ReqMsgs = append(consensus.PBFT.MsgBuffer.ReqMsgs, msg)
 			file, _ := utils.Init_log(PBFT_LOG_PATH + "dispatch_" + consensus.Node_name + ".log")
@@ -53,42 +57,42 @@ func (consensus *NodeConsensus) routeMsg(msg interface{}) []error {
 			msgs = append(msgs, msg)                                                 // 附加新到达的消息
 			consensus.PBFT.MsgBuffer.PrePrepareMsgs = make([]*pbft.PrePrepareMsg, 0) // 清空重置
 			consensus.MsgDelivery <- msgs                                            // 信息发送通道：将msgs中的信息发送给MsgDelivery通道
-		} else { // 当CurrentState不为nil时，直接往MsgBuffer缓冲通道中进行添加
-			consensus.PBFT.MsgBuffer.PrePrepareMsgs = append(consensus.PBFT.MsgBuffer.PrePrepareMsgs, msg)
 			file, _ := utils.Init_log(PBFT_LOG_PATH + "dispatch_" + consensus.Node_name + ".log")
 			defer file.Close()
-			log.SetPrefix("[dispatch PrePrepareMsg error]")
-			log.Println("[get a pre-prepare message, but don't put it into channel]")
+			log.SetPrefix("[dispatch PrePrepareMsg]")
+			log.Println("[into pbft]")
+		} else { // 当CurrentState不为nil时，直接往MsgBuffer缓冲通道中进行添加
+			consensus.PBFT.MsgBuffer.PrePrepareMsgs = append(consensus.PBFT.MsgBuffer.PrePrepareMsgs, msg)
 		}
 	// 处理Prepare信息
 	case *pbft.PrepareMsg:
 		if consensus.PBFT.CurrentState == nil || consensus.PBFT.CurrentState.Current_stage != pbft.PrePrepared {
 			consensus.PBFT.MsgBuffer.PrepareMsgs = append(consensus.PBFT.MsgBuffer.PrepareMsgs, msg)
-			file, _ := utils.Init_log(PBFT_LOG_PATH + "dispatch_" + consensus.Node_name + ".log")
-			defer file.Close()
-			log.SetPrefix("[dispatch PrepareMsg error]")
-			log.Println("[get a prepare message,but don't put it into channel]")
 		} else {
 			msgs := make([]*pbft.PrepareMsg, len(consensus.PBFT.MsgBuffer.PrepareMsgs))
 			copy(msgs, consensus.PBFT.MsgBuffer.PrepareMsgs)                   // 复制缓冲数据
 			msgs = append(msgs, msg)                                           // 附加新到达的消息
 			consensus.PBFT.MsgBuffer.PrepareMsgs = make([]*pbft.PrepareMsg, 0) // 清空重置
-			consensus.MsgDelivery <- msgs                                      // 信息发送通道：将msgs中的信息发送给MsgDelivery通道
+			consensus.MsgDelivery <- msgs
+			file, _ := utils.Init_log(PBFT_LOG_PATH + "dispatch_" + consensus.Node_name + ".log")
+			defer file.Close()
+			log.SetPrefix("[dispatch PrepareMsg]")
+			log.Println("[into prepare]") // 信息发送通道：将msgs中的信息发送给MsgDelivery通道
 		}
 	// 处理CommitMsg信息
 	case *pbft.CommitMsg:
 		if consensus.PBFT.CurrentState == nil || consensus.PBFT.CurrentState.Current_stage != pbft.Prepared {
 			consensus.PBFT.MsgBuffer.CommitMsgs = append(consensus.PBFT.MsgBuffer.CommitMsgs, msg)
-			file, _ := utils.Init_log(PBFT_LOG_PATH + "dispatch_" + consensus.Node_name + ".log")
-			defer file.Close()
-			log.SetPrefix("[dispatch CommitMsg error]")
-			log.Println("[get a commit message,but don't put it into channel]")
 		} else {
 			msgs := make([]*pbft.CommitMsg, len(consensus.PBFT.MsgBuffer.CommitMsgs))
 			copy(msgs, consensus.PBFT.MsgBuffer.CommitMsgs)                  // 复制缓冲数据
 			msgs = append(msgs, msg)                                         // 附加新到达的消息
 			consensus.PBFT.MsgBuffer.CommitMsgs = make([]*pbft.CommitMsg, 0) // 清空重置
 			consensus.MsgDelivery <- msgs                                    // 信息发送通道：将msgs中的信息发送给MsgDelivery通道
+			file, _ := utils.Init_log(PBFT_LOG_PATH + "dispatch_" + consensus.Node_name + ".log")
+			defer file.Close()
+			log.SetPrefix("[dispatch CommitMsg]")
+			log.Println("[into commit]")
 		}
 	}
 	return nil
@@ -103,6 +107,20 @@ func (consensus *NodeConsensus) routeMsgWhenAlarmed() []error {
 			copy(msgs, consensus.PBFT.MsgBuffer.PrePrepareMsgs)
 			consensus.PBFT.MsgBuffer.PrePrepareMsgs = make([]*pbft.PrePrepareMsg, 0)
 			consensus.MsgDelivery <- msgs
+			file, _ := utils.Init_log(PBFT_LOG_PATH + "dispatch_" + consensus.Node_name + ".log")
+			defer file.Close()
+			log.SetPrefix("[dispatch request when alarmed]")
+			log.Println("[start a pbft]")
+		}
+		if len(consensus.PBFT.MsgBuffer.PrePrepareMsgs) != 0 {
+			msgs := make([]*pbft.PrePrepareMsg, len(consensus.PBFT.MsgBuffer.PrePrepareMsgs))
+			copy(msgs, consensus.PBFT.MsgBuffer.PrePrepareMsgs)
+			consensus.PBFT.MsgBuffer.PrePrepareMsgs = make([]*pbft.PrePrepareMsg, 0)
+			consensus.MsgDelivery <- msgs
+			file, _ := utils.Init_log(PBFT_LOG_PATH + "dispatch_" + consensus.Node_name + ".log")
+			defer file.Close()
+			log.SetPrefix("[dispatch preprepare when alarmed]")
+			log.Println("[into pbft]")
 		}
 	} else {
 		switch consensus.PBFT.CurrentState.Current_stage {

@@ -23,14 +23,14 @@ func (command *COMM) startNode(nodeID string) {
 	// 检查是否已创建数据库，如未创建则现在创建
 	qbc := quantumbc.Blockchain{}
 	if !quantumbc.DBExists(dbFile) {
+		log.Println("Blockchain didn't exists，have create a new one.")
 		qbc = *quantumbc.CreateBlockchain(addresses, nodeID)
-
 		// utxo初始化
 		UTXOSet := qbutxo.UTXOSet{
 			Blockchain: &qbc,
 		}
 		UTXOSet.Reindex()
-		log.Println("Blockchain didn't exists，have create a new one.")
+
 		qbc.DB.Close() // 关闭账本
 	} else {
 		log.Println("Blockchain already exists.")

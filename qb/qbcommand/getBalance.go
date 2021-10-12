@@ -22,7 +22,7 @@ func (command *COMM) getBalance(address, nodeID string) {
 	UTXOs := UTXOSet.FindUTXO(address)
 
 	for _, out := range UTXOs {
-		balance += out.Value
+		balance += out.TX_value
 	}
 	fmt.Printf("Balance of '%s': %d\n", address, balance)
 }

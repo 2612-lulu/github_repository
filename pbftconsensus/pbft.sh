@@ -13,6 +13,41 @@ gnome-terminal -t "PB3" -x bash -c "./pbft.exe startPBFT;exec bash"
 export NODE_NAME="P4"
 gnome-terminal -t "PB4" -x bash -c "./pbft.exe startPBFT;exec bash"
 
+export NODE_NAME="P5"
+gnome-terminal -t "PB5" -x bash -c "./pbft.exe startPBFT;exec bash"
+
+export NODE_NAME="P6"
+gnome-terminal -t "PB6" -x bash -c "./pbft.exe startPBFT;exec bash"
+
+export NODE_NAME="P7"
+gnome-terminal -t "PB7" -x bash -c "./pbft.exe startPBFT;exec bash"
+
+export NODE_NAME="P8"
+gnome-terminal -t "PB8" -x bash -c "./pbft.exe startPBFT;exec bash"
+
+export NODE_NAME="P9"
+gnome-terminal -t "PB9" -x bash -c "./pbft.exe startPBFT;exec bash"
+
+export NODE_NAME="P10"
+gnome-terminal -t "PB10" -x bash -c "./pbft.exe startPBFT;exec bash"
+
+export NODE_NAME="P11"
+gnome-terminal -t "PB11" -x bash -c "./pbft.exe startPBFT;exec bash"
+
+export NODE_NAME="P12"
+gnome-terminal -t "PB12" -x bash -c "./pbft.exe startPBFT;exec bash"
+
+export NODE_NAME="P13"
+gnome-terminal -t "PB13" -x bash -c "./pbft.exe startPBFT;exec bash"
+
+export NODE_NAME="P14"
+gnome-terminal -t "PB14" -x bash -c "./pbft.exe startPBFT;exec bash"
+
+export NODE_NAME="P15"
+gnome-terminal -t "PB15" -x bash -c "./pbft.exe startPBFT;exec bash"
+
+export NODE_NAME="P16"
+gnome-terminal -t "PB16" -x bash -c "./pbft.exe startPBFT;exec bash"
 
 
  

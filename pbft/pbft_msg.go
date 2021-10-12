@@ -7,8 +7,8 @@ import (
 	"uss"
 )
 
-const F = 1       // F，容忍无效或者恶意节点数
-const N = 3*F + 1 // N=3F+1，本程序中N=4
+var F int // F，容忍无效或者恶意节点数
+var N int // N=3f+1
 
 // Reply消息，由各节点发往客户端
 type ReplyMsg struct {

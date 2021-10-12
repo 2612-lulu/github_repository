@@ -6,6 +6,7 @@ import (
 	"pbft"
 	"qblock"
 	"qbtx"
+	"qkdserv"
 	"time"
 	"utils"
 )
@@ -14,8 +15,6 @@ import (
 const ResolvingTimeDuration = time.Millisecond * 200 // 0.2 second.
 
 const PBFT_LOG_PATH = "../pbftconsensus/network/network_log/"
-
-var pbft_bc map[string]string
 
 // 节点共识
 type NodeConsensus struct {
@@ -29,11 +28,13 @@ type NodeConsensus struct {
 	PBFT      *Consensus
 	Committed []*pbft.CommitMsg
 
-	MsgBroadcast chan interface{} // 广播通道
-	MsgEntrance  chan interface{} // 无缓冲的信息接收通道
-	MsgDelivery  chan interface{} // 无缓冲的信息发送通道
-	Alarm        chan bool        // 警告通道
-	Result       chan interface{} // pbft结果
+	MsgBroadcast        chan interface{} // 广播通道
+	MsgBroadcastPrepare chan interface{} // 广播通道
+	MsgBroadcastCommit  chan interface{} // 广播通道
+	MsgEntrance         chan interface{} // 无缓冲的信息接收通道
+	MsgDelivery         chan interface{} // 无缓冲的信息发送通道
+	Alarm               chan bool        // 警告通道
+	Result              chan interface{} // pbft结果
 }
 
 // 共识
@@ -58,7 +59,7 @@ func NewNodeConsensus(node_name string) *NodeConsensus {
 	// 初始化节点
 	node_consensus := &NodeConsensus{
 		Node_name:            node_name,                                                // 联盟节点或客户段名称，形式为P1、P2...
-		Node_ID:              utils.GetNodeIDTable(node_name),                          // 客户端ID，16字节QKD设备号
+		Node_ID:              utils.GetNodeID(node_name),                               // 客户端ID，16字节QKD设备号
 		Node_consensus_table: utils.InitConfig(utils.INIT_PATH + "pbft_localhost.txt"), // 联盟节点节点索引表，key=Node_name, value=url
 		Node_table:           utils.InitConfig(utils.INIT_PATH + "node_localhost.txt"), // 联盟节点节点索引表，key=Node_name, value=url
 
@@ -75,11 +76,13 @@ func NewNodeConsensus(node_name string) *NodeConsensus {
 		Committed: make([]*pbft.CommitMsg, 0),
 
 		// 初始化通道Channels
-		MsgBroadcast: make(chan interface{}), // 信息发送通道
-		MsgEntrance:  make(chan interface{}), // 无缓冲的信息接收通道
-		MsgDelivery:  make(chan interface{}), // 无缓冲的信息发送通道
-		Alarm:        make(chan bool),        // 警告通道
-		Result:       make(chan interface{}),
+		MsgBroadcast:        make(chan interface{}), // 信息发送通道
+		MsgBroadcastPrepare: make(chan interface{}), // 信息发送通道
+		MsgBroadcastCommit:  make(chan interface{}), // 信息发送通道
+		MsgEntrance:         make(chan interface{}), // 无缓冲的信息接收通道
+		MsgDelivery:         make(chan interface{}), // 无缓冲的信息发送通道
+		Alarm:               make(chan bool),        // 警告通道
+		Result:              make(chan interface{}),
 	}
 
 	file, _ := os.Open("../config/view.json") // 打开文件
@@ -91,20 +94,21 @@ func NewNodeConsensus(node_name string) *NodeConsensus {
 		panic(err)
 	}
 	node_consensus.View = &view
-	pbft_bc = utils.InitConfig(utils.INIT_PATH + "pbft_bc.txt")
-	pbft_url := node_consensus.Node_consensus_table[node_consensus.Node_name]
-	url, ok := pbft_bc[pbft_url]
-	if ok {
-		node_consensus.BC_url = url
-	}
-
+	node_consensus.BC_url = node_consensus.Node_table[node_consensus.Node_name]
+	qkdserv.Node_name = node_name // 调用此程序的当前节点或客户端名称
+	qkdserv.QKD_sign_random_matrix_pool = make(map[qkdserv.QKDSignMatrixIndex]qkdserv.QKDSignRandomsMatrix)
+	pbft.F = int(node_consensus.View.F)
+	pbft.N = 3*int(node_consensus.View.F) + 1
+	qbtx.N = 3*uint32(node_consensus.View.F) + 1
 	node_consensus.setRoute() // 设置路由
 
 	// 开启线程goroutine
-	go node_consensus.broadcastMsg()      // 广播信息
-	go node_consensus.dispatchMsg()       // 启动消息调度器
-	go node_consensus.alarmToDispatcher() // Start alarm trigger
-	go node_consensus.resolveMsg()        // 开始信息表决
+	go node_consensus.broadcastMsg()        // 广播信息
+	go node_consensus.broadcastPrepareMsg() // 广播信息
+	go node_consensus.broadcastCommitMsg()  // 广播信息
+	go node_consensus.dispatchMsg()         // 启动消息调度器
+	go node_consensus.alarmToDispatcher()   // Start alarm trigger
+	go node_consensus.resolveMsg()          // 开始信息表决
 
 	node_consensus.Httplisten() // 开启http
 	return node_consensus

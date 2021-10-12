@@ -10,20 +10,18 @@ import (
 )
 
 // 打包时间间隔
-const BlockTimeDuration = time.Millisecond * 2000 // 1 second.
+const BlockTimeDuration = time.Millisecond * 3000 // 3 second.
 
 // log存放路径
-const CLIENT_LOG_PATH = "../qb/qbnode/clilog/"
 const NODE_LOG_PATH = "../qb/qbnode/nodelog/"
-
-var bc_pbft map[string]string
 
 // 节点
 type Node struct {
-	Node_name  string            // 联盟节点名称
-	Node_ID    [16]byte          // 联盟节点ID，16字节QKD设备号
-	Node_table map[string]string // 节点索引表，key=Node_name, value=url
-	Addr_table map[string]string
+	Node_name            string            // 联盟节点名称
+	Node_ID              [16]byte          // 联盟节点ID，16字节QKD设备号
+	Node_table           map[string]string // 节点索引表，key=Node_name, value=url
+	Node_consensus_table map[string]string
+	Addr_table           map[string]string
 
 	TranscationMsgs []*qbtx.Transaction
 
@@ -51,12 +49,13 @@ const (
 func NewNode(node_name string) *Node {
 	// 初始化节点
 	node := &Node{
-		Node_name:    node_name,                                                // 联盟节点或客户段名称，形式为P1、P2...
-		Node_ID:      utils.GetNodeIDTable(node_name),                          // 客户端ID，16字节QKD设备号
-		Node_table:   utils.InitConfig(utils.INIT_PATH + "node_localhost.txt"), // 联盟节点节点索引表，key=Node_name, value=url
-		Addr_table:   make(map[string]string),
-		Primary:      "",
-		CurrentState: Idle,
+		Node_name:            node_name,                                                // 联盟节点或客户段名称，形式为P1、P2...
+		Node_ID:              utils.GetNodeID(node_name),                               // 客户端ID，16字节QKD设备号
+		Node_table:           utils.InitConfig(utils.INIT_PATH + "node_localhost.txt"), // 联盟节点节点索引表，key=Node_name, value=url
+		Node_consensus_table: utils.InitConfig(utils.INIT_PATH + "pbft_localhost.txt"),
+		Addr_table:           make(map[string]string),
+		Primary:              "",
+		CurrentState:         Idle,
 
 		// 初始化通道Channels
 		MsgBroadcast: make(chan interface{}), // 信息发送通道
@@ -73,12 +72,8 @@ func NewNode(node_name string) *Node {
 		panic(err)
 	}
 	node.Primary = view.Primary
-	bc_pbft = utils.InitConfig(utils.INIT_PATH + "bc_pbft.txt")
-	nodeurl := node.Node_table[node_name]
-	url, ok := bc_pbft[nodeurl]
-	if ok {
-		node.PBFT_url = url
-	}
+	node.PBFT_url = node.Node_consensus_table[node_name]
+	qbtx.N = 3*uint32(view.F) + 1
 	node.setRoute()
 	// 开启线程goroutine
 	go node.blockMsg() // 打包通道

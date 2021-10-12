@@ -96,19 +96,16 @@ func (consensus *NodeConsensus) resolveRequestMsg(msgs []*qblock.Block) []error 
 // 参数：区块*block.Block
 // 返回值：处理错误error，默认为nil
 func (consensus *NodeConsensus) resolveRequest(msgs *qblock.Block) error {
-	prePrepareMsg, err := consensus.PBFT.CurrentState.PrePrePare(msgs) // 进入共识，获得preprepare消息
-	if err != nil {
-		return err
-	} else {
+	prePrepareMsg := consensus.PBFT.CurrentState.PrePrePare(msgs) // 进入共识，获得preprepare消息
+	if prePrepareMsg != nil {
 		file, _ := utils.Init_log(PBFT_LOG_PATH + "resolve_" + consensus.Node_name + ".log")
 		log.SetPrefix("[resolve requestMsg success]")
 		log.Println("put pre-prepare message into broadcast channel")
 		defer file.Close()
 
 		consensus.MsgBroadcast <- prePrepareMsg // 将待广播消息放入通道
-		return nil
 	}
-
+	return nil
 }
 
 // resolvePrePrepareMsg，由从节点处理PrePrepare消息数组
@@ -137,17 +134,14 @@ func (consensus *NodeConsensus) resolvePrePrepareMsg(msgs []*pbft.PrePrepareMsg)
 // 参数：预准备消息*pbft.PrePrepareMsg
 // 返回值：处理错误error，默认为nil
 func (consensus *NodeConsensus) resolvePrePrepare(prePrepareMsg *pbft.PrePrepareMsg) error {
-	prePareMsg, err := consensus.PBFT.CurrentState.PrePare(prePrepareMsg) // 获得prepare信息
-	if err != nil {
-		return err
-	}
+	prePareMsg := consensus.PBFT.CurrentState.PrePare(prePrepareMsg) // 获得prepare信息
 	if prePareMsg != nil {
 		file, _ := utils.Init_log(PBFT_LOG_PATH + "resolve_" + consensus.Node_name + ".log")
 		log.SetPrefix("[resolve pre-prepareMsg success]")
 		log.Println("put prepare message into broadcast channel")
 		defer file.Close()
 
-		consensus.MsgBroadcast <- prePareMsg // 将待广播消息放入通道
+		consensus.MsgBroadcastPrepare <- prePareMsg // 将待广播消息放入通道
 	}
 	return nil
 }
@@ -175,17 +169,14 @@ func (consensus *NodeConsensus) resolvePrepareMsg(msgs []*pbft.PrepareMsg) []err
 // 参数：准备消息*pbft.PrepareMsg
 // 返回值：处理错误error，默认为nil
 func (consensus *NodeConsensus) resolvePrepare(prepareMsg *pbft.PrepareMsg) error {
-	commitMsg, err := consensus.PBFT.CurrentState.Commit(prepareMsg)
-	if err != nil {
-		return err
-	}
+	commitMsg := consensus.PBFT.CurrentState.Commit(prepareMsg)
 	if commitMsg != nil {
 		file, _ := utils.Init_log(PBFT_LOG_PATH + "resolve_" + consensus.Node_name + ".log")
 		log.SetPrefix("[resolve prepareMsg success]")
 		log.Println("put commit message into broadcast channel")
 		defer file.Close()
 
-		consensus.MsgBroadcast <- commitMsg // 将待广播消息放入通道
+		consensus.MsgBroadcastCommit <- commitMsg // 将待广播消息放入通道
 	}
 	return nil
 }
@@ -213,19 +204,14 @@ func (consensus *NodeConsensus) resolveCommitMsg(msgs []*pbft.CommitMsg) []error
 // 参数：准备消息*pbft.CommitMsg
 // 返回值：处理错误error，默认为nil
 func (consensus *NodeConsensus) resolveCommit(commitMsg *pbft.CommitMsg) error {
-	replyMsgs, err := consensus.PBFT.CurrentState.Reply(commitMsg)
-	if err != nil {
-		return err
-	}
+	replyMsgs := consensus.PBFT.CurrentState.Reply(commitMsg)
 	if replyMsgs != nil {
+		consensus.Committed = append(consensus.Committed, commitMsg)
+		consensus.MsgBroadcast <- replyMsgs // 将待广播消息放入通道
 		file, _ := utils.Init_log(PBFT_LOG_PATH + "resolve_" + consensus.Node_name + ".log")
 		log.SetPrefix("[resolve commitMsg success]")
 		log.Println("put reply message into broadcast channel")
 		defer file.Close()
-
-		consensus.Committed = append(consensus.Committed, commitMsg)
-		consensus.MsgBroadcast <- replyMsgs // 将待广播消息放入通道
-
 	}
 	return nil
 }

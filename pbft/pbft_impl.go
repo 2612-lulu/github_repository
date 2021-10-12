@@ -5,8 +5,7 @@ package pbft
 
 import (
 	"bytes"
-	"encoding/json"
-	"errors"
+	"fmt"
 	"log"
 	"qblock"
 	"qbtx"
@@ -38,6 +37,7 @@ type MsgLogs struct {
 type View struct {
 	ID      int64  `json:"viewid"`  // 视图号
 	Primary string `json:"primary"` // 主节点
+	F       int64  `json:"f"`       // 可容忍错误节点的数量
 }
 
 type Stage int
@@ -76,15 +76,15 @@ func CreateState(view int64, lastSequenceNumber int64) *State {
 // State.PrePrePare，进入共识，由主节点进行消息处理：客户端Request——>主节点PrePrePare——>从节点
 // 参数：请求消息*block.Block
 // 返回值：预准备消息*PrePrepareMsg，处理错误error
-func (state *State) PrePrePare(request *qblock.Block) (*PrePrepareMsg, error) {
-	state.Msg_logs.ReqMsg = request // 记录request消息到state的log中
+func (state *State) PrePrePare(request *qblock.Block) *PrePrepareMsg {
+	*state.Msg_logs.ReqMsg = *request // 记录request消息到state的log中
 	msg := request
 	if state.verifyRequest(msg.Transactions) { // 如果每条交易信息验签成功
 		sequenceID := time.Now().UnixNano() // 使用时间戳作为暂时序列号
 		if state.Last_sequence_number != -1 {
 			sequenceID = state.Last_sequence_number + 1 // 主节点每开始一次共识，序列号+1
 		}
-		digest_msg, _ := json.Marshal(msg)
+		digest_msg := msg.SerializeBlock()
 		// 定义一个preprepare消息
 		preprepare := &PrePrepareMsg{
 			View:            state.View.ID,            // 获取视图号
@@ -92,26 +92,28 @@ func (state *State) PrePrePare(request *qblock.Block) (*PrePrepareMsg, error) {
 			Digest_m:        utils.Digest(digest_msg), // 交易信息摘要
 			Sign_p: uss.USSToeplitzHashSignMsg{ // 签名信息
 				Sign_index: qkdserv.QKDSignMatrixIndex{
-					Sign_dev_id:  utils.GetNodeIDTable(qkdserv.Node_name),
+					Sign_dev_id:  utils.GetNodeID(qkdserv.Node_name),
 					Sign_task_sn: uss.GenSignTaskSN(16),
 				},
 				Main_row_num: qkdserv.QKDSignRandomMainRowNum{
-					Sign_Node_Name: qkdserv.Node_name,
-					Main_Row_Num:   0, // 签名主行号，签名时默认为0
+					Sign_node_name:    qkdserv.Node_name,
+					Main_row_num:      0, // 签名主行号，签名时默认为0
+					Random_row_counts: uint32(N - 1),
+					Random_unit_len:   16,
 				},
-				Sign_counts: N - 1,
-				Sign_len:    16,
+				USS_counts:   uint32(N - 1),
+				USS_unit_len: 16,
 			},
 			Request: new(qblock.Block), // 将请求消息附在preprepare中广播给所有从节点
 		}
 		preprepare.Request = request
-		preprepare.Sign_p.Message = preprepare.signMessageEncode()
-		preprepare.Sign_p = uss.Sign(preprepare.Sign_p.Sign_index, preprepare.Sign_p.Sign_counts,
-			preprepare.Sign_p.Sign_len, preprepare.Sign_p.Message)
+		preprepare.Sign_p.USS_message = preprepare.signMessageEncode()
+		preprepare.Sign_p = uss.UnconditionallySecureSign(preprepare.Sign_p.Sign_index,
+			preprepare.Sign_p.USS_counts, preprepare.Sign_p.USS_unit_len, preprepare.Sign_p.USS_message)
 		state.Current_stage = PrePrepared
-		return preprepare, nil
+		return preprepare
 	} else {
-		return nil, errors.New("request message is corrupted")
+		return nil
 	}
 }
 
@@ -122,7 +124,7 @@ func (state *State) verifyRequest(request []*qbtx.Transaction) bool {
 	//TODO:验证每条交易信息的签名
 	verify_num := 0
 	for _, reqMsg := range request {
-		if reqMsg.VerifyTX() { // 验证签名正确性
+		if reqMsg.VerifyUSSTransactionSign() { // 验证签名正确性
 			verify_num++
 		}
 	}
@@ -140,10 +142,10 @@ func (state *State) verifyRequest(request []*qbtx.Transaction) bool {
 // State.PrePare，进入准备阶段，从节点处理pre-prepare消息：从节点PrePrepareMsg——>各节点PrepareMsg
 // 参数：预准备消息*PrePrepareMsg
 // 返回值：准备消息*PrepareMsg，处理错误error
-func (state *State) PrePare(preprepare *PrePrepareMsg) (*PrepareMsg, error) {
-	state.Msg_logs.ReqMsg = preprepare.Request  // 将request消息提取出来记录到state中
-	if !state.verifyPrePrepareMsg(preprepare) { // 校验受到的pre-prepare是否通过
-		return nil, errors.New("preprepare message is corrupted")
+func (state *State) PrePare(preprepare *PrePrepareMsg) *PrepareMsg {
+	*state.Msg_logs.ReqMsg = *preprepare.Request // 将request消息提取出来记录到state中
+	if !state.verifyPrePrepareMsg(preprepare) {  // 校验受到的pre-prepare是否通过
+		return nil
 	} else {
 		i, _ := strconv.ParseInt(qkdserv.Node_name[1:], 10, 64) // 获取节点编号
 		prepare := &PrepareMsg{                                 // 定义一个prepare消息
@@ -153,24 +155,24 @@ func (state *State) PrePare(preprepare *PrePrepareMsg) (*PrepareMsg, error) {
 			Node_i:          i,
 			Sign_i: uss.USSToeplitzHashSignMsg{ // 签名信息
 				Sign_index: qkdserv.QKDSignMatrixIndex{ // 签名索引
-					Sign_dev_id:  utils.GetNodeIDTable(qkdserv.Node_name), // 签名者ID
-					Sign_task_sn: uss.GenSignTaskSN(16),                   // 签名序列号
+					Sign_dev_id:  utils.GetNodeID(qkdserv.Node_name), // 签名者ID
+					Sign_task_sn: uss.GenSignTaskSN(16),              // 签名序列号
 				},
 				Main_row_num: qkdserv.QKDSignRandomMainRowNum{
-					Sign_Node_Name: qkdserv.Node_name, // 签名者节点号
-					Main_Row_Num:   0,                 // 签名主行号，签名时默认为0
+					Sign_node_name: qkdserv.Node_name, // 签名者节点号
+					Main_row_num:   0,                 // 签名主行号，签名时默认为0
 				},
-				Sign_counts: N - 1, // 验签者的数量
-				Sign_len:    16,    // 签名的单位长度，一般默认为16
+				USS_counts:   uint32(N - 1), // 验签者的数量
+				USS_unit_len: 16,            // 签名的单位长度，一般默认为16
 			},
 		}
-		prepare.Sign_i.Message, _ = prepare.signMessageEncode() // 获取prepare阶段待签名消息
+		prepare.Sign_i.USS_message, _ = prepare.signMessageEncode() // 获取prepare阶段待签名消息
 		// prepare消息的签名
-		prepare.Sign_i = uss.Sign(prepare.Sign_i.Sign_index,
-			prepare.Sign_i.Sign_counts, prepare.Sign_i.Sign_len, prepare.Sign_i.Message)
+		prepare.Sign_i = uss.UnconditionallySecureSign(prepare.Sign_i.Sign_index,
+			prepare.Sign_i.USS_counts, prepare.Sign_i.USS_unit_len, prepare.Sign_i.USS_message)
 		state.Msg_logs.PreparedMsgs[i] = prepare // 将节点自己产生的prepare消息写入log，以便后续进行投票校验
 		state.Current_stage = PrePrepared        // 此时状态改变为PrePrepared
-		return prepare, nil
+		return prepare
 	}
 }
 
@@ -179,7 +181,7 @@ func (state *State) PrePare(preprepare *PrePrepareMsg) (*PrepareMsg, error) {
 // 返回值：验证结果bool
 func (state *State) verifyPrePrepareMsg(preprepare *PrePrepareMsg) bool {
 	var result bool
-	msg, _ := json.Marshal(preprepare.Request)
+	msg := preprepare.Request.SerializeBlock()
 	digest := utils.Digest(msg) // 计算消息的摘要值
 	file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 	log.SetPrefix("[Prepare error]")
@@ -199,7 +201,7 @@ func (state *State) verifyPrePrepareMsg(preprepare *PrePrepareMsg) bool {
 	} else if !state.verifyRequest(preprepare.Request.Transactions) {
 		log.Println("the client_sign is wrong!")
 		result = false
-	} else if !uss.VerifySign(preprepare.Sign_p) {
+	} else if !uss.UnconditionallySecureVerifySign(preprepare.Sign_p) {
 		log.Println("the primary_sign is wrong!")
 		result = false
 	} else {
@@ -211,9 +213,9 @@ func (state *State) verifyPrePrepareMsg(preprepare *PrePrepareMsg) bool {
 //  State.Commit，所有联盟节点处理收到的prepare消息：各节点prepare——>其余节点commit
 // 参数：准备消息*PrepareMsg
 // 返回值：提交消息*CommitMsg，处理错误error
-func (state *State) Commit(prepare *PrepareMsg) (*CommitMsg, error) {
+func (state *State) Commit(prepare *PrepareMsg) *CommitMsg {
 	if !state.verifyPrepareMsg(prepare) { // 校验收到的prepare消息
-		return nil, errors.New("prepare message is corrupted")
+		return nil
 	} else if state.prepared() { // 检查是否收到2f+1（含本节点产生的prepare）个通过校验的prepare消息
 		i, _ := strconv.ParseInt(qkdserv.Node_name[1:], 10, 64)
 		_, ok := state.Msg_logs.CommittedMsgs[i] // 检查是否发送过commit消息
@@ -225,28 +227,28 @@ func (state *State) Commit(prepare *PrepareMsg) (*CommitMsg, error) {
 				Node_i:          i,                       // 获取节点编号
 				Sign_i: uss.USSToeplitzHashSignMsg{ // 签名信息
 					Sign_index: qkdserv.QKDSignMatrixIndex{ // 签名索引
-						Sign_dev_id:  utils.GetNodeIDTable(qkdserv.Node_name), // 签名者ID
-						Sign_task_sn: uss.GenSignTaskSN(16),                   // 签名序列号
+						Sign_dev_id:  utils.GetNodeID(qkdserv.Node_name), // 签名者ID
+						Sign_task_sn: uss.GenSignTaskSN(16),              // 签名序列号
 					},
 					Main_row_num: qkdserv.QKDSignRandomMainRowNum{
-						Sign_Node_Name: qkdserv.Node_name, // 签名者节点号
-						Main_Row_Num:   0,                 // 签名主行号，签名时默认为0
+						Sign_node_name: qkdserv.Node_name, // 签名者节点号
+						Main_row_num:   0,                 // 签名主行号，签名时默认为0
 					},
-					Sign_counts: N - 1, // 验签者的数量
-					Sign_len:    16,    // 签名的单位长度，一般默认为16
+					USS_counts:   uint32(N - 1), // 验签者的数量
+					USS_unit_len: 16,            // 签名的单位长度，一般默认为16
 				},
 			}
-			commit.Sign_i.Message, _ = commit.signMessageEncode() // 获取commit阶段待签名消息
+			commit.Sign_i.USS_message, _ = commit.signMessageEncode() // 获取commit阶段待签名消息
 			// commit消息的签名
-			commit.Sign_i = uss.Sign(commit.Sign_i.Sign_index,
-				commit.Sign_i.Sign_counts, commit.Sign_i.Sign_len, commit.Sign_i.Message)
+			commit.Sign_i = uss.UnconditionallySecureSign(commit.Sign_i.Sign_index,
+				commit.Sign_i.USS_counts, commit.Sign_i.USS_unit_len, commit.Sign_i.USS_message)
 
 			state.Msg_logs.CommittedMsgs[i] = commit // 将commit写入log，以便后续投票校验
 			state.Current_stage = Prepared           // 此时状态改变为Prepared
-			return commit, nil
+			return commit
 		}
 	}
-	return nil, nil
+	return nil
 }
 
 // State.VerifyPrepareMsg，验证收到的prepare消息的正确性
@@ -254,11 +256,13 @@ func (state *State) Commit(prepare *PrepareMsg) (*CommitMsg, error) {
 // 返回值：验证结果bool
 func (state *State) verifyPrepareMsg(prepare *PrepareMsg) bool {
 	var result bool
-	msg, _ := json.Marshal(state.Msg_logs.ReqMsg)
-	digest := utils.Digest(msg) // 计算消息的摘要值
 	file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 	log.SetPrefix("[Commit error]")
 	defer file.Close()
+
+	msg := state.Msg_logs.ReqMsg.SerializeBlock()
+	digest := utils.Digest(msg) // 计算消息的摘要值
+
 	if state.View.ID != prepare.View {
 		log.Println("the view of prepare message is wrong!")
 		result = false
@@ -273,7 +277,7 @@ func (state *State) verifyPrepareMsg(prepare *PrepareMsg) bool {
 	} else if !state.verifyRequest(state.Msg_logs.ReqMsg.Transactions) {
 		log.Println("the client_sign is wrong!")
 		result = false
-	} else if !uss.VerifySign(prepare.Sign_i) {
+	} else if !uss.UnconditionallySecureVerifySign(prepare.Sign_i) {
 		log.Println("the node_sign is wrong!")
 		result = false
 	} else {
@@ -291,7 +295,7 @@ func (state *State) prepared() bool {
 	log.SetPrefix("[prepared error]")
 	defer file.Close()
 	if state.Msg_logs.ReqMsg == nil {
-		log.Println("request of state is nil")
+		fmt.Println("request of state is nil")
 		return false
 	}
 
@@ -305,9 +309,9 @@ func (state *State) prepared() bool {
 //  State.ReplyMsg，获取reply消息，当收到2f+1个满足要求的commit时，调用此函数
 // 参数：提交消息*CommitMsg
 // 返回值：应答消息*ReplyMsg，处理错误error
-func (state *State) Reply(commit *CommitMsg) (*ReplyMsg, error) {
+func (state *State) Reply(commit *CommitMsg) *ReplyMsg {
 	if !state.verifyCommitMsg(commit) {
-		return nil, errors.New("commit message is corrupted")
+		return nil
 	} else if state.committed() {
 		i, _ := strconv.ParseInt(qkdserv.Node_name[1:], 10, 64)
 		_, ok := state.Msg_logs.ReplyMsgs[i] // 检查是否发送过reply消息
@@ -320,30 +324,32 @@ func (state *State) Reply(commit *CommitMsg) (*ReplyMsg, error) {
 				Result:      true,
 				Sign_i: uss.USSToeplitzHashSignMsg{ // 签名信息
 					Sign_index: qkdserv.QKDSignMatrixIndex{ // 签名索引
-						Sign_dev_id:  utils.GetNodeIDTable(qkdserv.Node_name), // 签名者ID
-						Sign_task_sn: uss.GenSignTaskSN(16),                   // 签名序列号
+						Sign_dev_id:  utils.GetNodeID(qkdserv.Node_name), // 签名者ID
+						Sign_task_sn: uss.GenSignTaskSN(16),              // 签名序列号
 					},
 					Main_row_num: qkdserv.QKDSignRandomMainRowNum{
-						Sign_Node_Name: qkdserv.Node_name, // 签名者节点号
-						Main_Row_Num:   0,                 // 签名主行号，签名时默认为0
+						Sign_node_name:    qkdserv.Node_name, // 签名者节点号
+						Main_row_num:      0,                 // 签名主行号，签名时默认为0
+						Random_row_counts: 1,
+						Random_unit_len:   16,
 					},
-					Sign_counts: 1,  // 验签者的数量，客户端验签
-					Sign_len:    16, // 签名的单位长度，一般默认为16
+					USS_counts:   1,  // 验签者的数量，客户端验签
+					USS_unit_len: 16, // 签名的单位长度，一般默认为16
 				},
 				Request: *state.Msg_logs.ReqMsg,
 			}
-			reply.Sign_i.Message, _ = reply.signMessageEncode()
+			reply.Sign_i.USS_message, _ = reply.signMessageEncode()
 			// reply消息的签名
-			reply.Sign_i = uss.Sign(reply.Sign_i.Sign_index,
-				reply.Sign_i.Sign_counts, reply.Sign_i.Sign_len, reply.Sign_i.Message)
+			reply.Sign_i = uss.UnconditionallySecureSign(reply.Sign_i.Sign_index,
+				reply.Sign_i.USS_counts, reply.Sign_i.USS_unit_len, reply.Sign_i.USS_message)
 
 			state.Msg_logs.ReplyMsgs[i] = reply
 			state.CommittedMessage = commit
 			state.Current_stage = Committed
-			return reply, nil
+			return reply
 		}
 	}
-	return nil, nil
+	return nil
 }
 
 // State.VerifyCommitMsg，验证收到的commit消息的正确性
@@ -351,11 +357,14 @@ func (state *State) Reply(commit *CommitMsg) (*ReplyMsg, error) {
 // 返回值：验证结果bool
 func (state *State) verifyCommitMsg(commit *CommitMsg) bool {
 	var result bool
-	msg, _ := json.Marshal(state.Msg_logs.ReqMsg)
-	digest := utils.Digest(msg) // 计算消息的摘要值
 	file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 	log.SetPrefix("[Reply error]")
 	defer file.Close()
+	//fmt.Println(state.Msg_logs.ReqMsg)
+
+	msg := state.Msg_logs.ReqMsg.SerializeBlock()
+	digest := utils.Digest(msg) // 计算消息的摘要值
+
 	if state.View.ID != commit.View {
 		log.Println("the view is wrong!")
 		result = false
@@ -368,7 +377,7 @@ func (state *State) verifyCommitMsg(commit *CommitMsg) bool {
 	} else if !state.verifyRequest(state.Msg_logs.ReqMsg.Transactions) {
 		log.Println("the client_sign is wrong!")
 		result = false
-	} else if !uss.VerifySign(commit.Sign_i) {
+	} else if !uss.UnconditionallySecureVerifySign(commit.Sign_i) {
 		log.Println("the node_sign is wrong!")
 		result = false
 	} else {

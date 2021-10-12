@@ -64,6 +64,5 @@ func (node *Node) block(txs []*qbtx.Transaction) *qblock.Block {
 	lastHeight := bc.GetlastHeight()
 	bc.DB.Close() // 关闭数据库
 	block = qblock.NewBlock(txs, preHash, lastHeight+1)
-
 	return block
 }

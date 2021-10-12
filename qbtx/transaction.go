@@ -13,25 +13,25 @@ import (
 )
 
 // 定义准备金金额
-const RESERVE = 10
+const RESERVE = 20
 
 // 定义验签者数量
-const N = 4
+var N uint32
 
 // Transaction，交易结构，多入多处：
 // 有一些输出并没有被关联到某个输入上；一笔交易的输入可以引用之前多笔交易的输出；一个输入必须引用一个输出
 type Transaction struct {
-	ID   []byte     `json:"txid"` // 交易ID，非常重要的Hash值，是在input签名之前计算出来的，作为UTXOSet.map的key存在
-	Vin  []TXInput  `json:"vin"`  // 交易输入项
-	Vout []TXOutput `json:"vout"` // 交易输出项
+	TX_id   []byte     `json:"TXid"`   // 交易ID，非常重要的Hash值，是在input签名之前计算出来的，作为UTXOSet.map的key存在
+	TX_vin  []TXInput  `json:"TXvin"`  // 交易输入项
+	TX_vout []TXOutput `json:"TXvout"` // 交易输出项
 }
 
 // SetID，根据交易输入与输出项生成交易ID。
 func (tx *Transaction) SetID() []byte {
 	var hash [32]byte
-	txCopy := *tx
-	txCopy.ID = []byte{}
-	hash = sha256.Sum256(txCopy.SerializeTX())
+	tx_copy := *tx
+	tx_copy.TX_id = []byte{}
+	hash = sha256.Sum256(tx_copy.SerializeTX())
 	return hash[:]
 }
 
@@ -49,51 +49,51 @@ func (tx Transaction) SerializeTX() []byte {
 
 // DeserializeTX，交易反序列化
 func DeserializeTX(data []byte) Transaction {
-	var transaction Transaction
+	var tx Transaction
 
 	decoder := gob.NewDecoder(bytes.NewReader(data))
-	err := decoder.Decode(&transaction)
+	err := decoder.Decode(&tx)
 	if err != nil {
 		log.Panic(err)
 	}
-	return transaction
+	return tx
 }
 
-// SignTX，对交易输入项签名
-func (tx *Transaction) SignTX(nodeName string) {
-	txCopy := tx.TrimmedCopyTX() // 复制并修剪交易以得到待签名数据
+// USSTransactionSign，对交易输入项签名
+func (tx *Transaction) USSTransactionSign(node_name string) {
+	tx_copy := tx.TrimmedCopyTX() // 复制并修剪交易以得到待签名数据
 
-	for inID, _ := range txCopy.Vin { // 循环向输入项签名
-		txCopy.Vin[inID].Signature = uss.USSToeplitzHashSignMsg{} // 置空
-		dataToSign := txCopy.Vin[inID].SerializeInput()           // 待签名数据
+	for in_id, input := range tx_copy.TX_vin { // 循环向输入项签名
+		tx_copy.TX_vin[in_id].TX_uss_sign = uss.USSToeplitzHashSignMsg{} // 置空
+		data_to_sign := input.SerializeInput()                           // 待签名数据
 		signature := uss.USSToeplitzHashSignMsg{
 			Sign_index: qkdserv.QKDSignMatrixIndex{
-				Sign_dev_id:  utils.GetNodeIDTable(nodeName),
+				Sign_dev_id:  utils.GetNodeID(node_name),
 				Sign_task_sn: uss.GenSignTaskSN(16),
 			},
 			Main_row_num: qkdserv.QKDSignRandomMainRowNum{
-				Sign_Node_Name: nodeName,
-				Main_Row_Num:   0, // 签名主行号，签名时默认为0
+				Sign_node_name:    node_name,
+				Main_row_num:      0, // 签名主行号，签名时默认为0
+				Random_row_counts: N,
+				Random_unit_len:   16,
 			},
-			Sign_counts: N,
-			Sign_len:    16,
-			Message:     dataToSign,
+			USS_counts:   N,
+			USS_unit_len: 16,
+			USS_message:  data_to_sign,
 		}
-		signature = uss.Sign(signature.Sign_index, signature.Sign_counts, signature.Sign_len, signature.Message)
-		tx.Vin[inID].Signature = signature
-		txCopy.Vin[inID].From = "" // 将From置空
+		signature = uss.UnconditionallySecureSign(signature.Sign_index, signature.USS_counts, signature.USS_unit_len, signature.USS_message)
+		tx.TX_vin[in_id].TX_uss_sign = signature
+		//tx_copy.TX_vin[in_id].TX_src = "" // 将From置空
 	}
 }
 
-// VerifyTX,交易输入项验签
-func (tx *Transaction) VerifyTX() bool {
+// VerifyUSSTransactionSign,交易输入项验签
+func (tx *Transaction) VerifyUSSTransactionSign() bool {
 	txCopy := tx
 
-	for inID, _ := range tx.Vin {
-		if uss.VerifySign(txCopy.Vin[inID].Signature) {
-			log.Println("verify of tx success")
-		} else {
-			log.Println("verify of tx wrong")
+	for inID, _ := range tx.TX_vin {
+		if !uss.UnconditionallySecureVerifySign(txCopy.TX_vin[inID].TX_uss_sign) {
+			fmt.Println("verify of tx wrong")
 		}
 	}
 
@@ -105,15 +105,15 @@ func (tx *Transaction) TrimmedCopyTX() Transaction {
 	var inputs []TXInput
 	var outputs []TXOutput
 
-	for _, vin := range tx.Vin { // 将原交易内的签名和公钥都置空
-		inputs = append(inputs, TXInput{vin.Txid, vin.Vout, uss.USSToeplitzHashSignMsg{}, ""})
+	for _, vin := range tx.TX_vin { // 将原交易内的签名和公钥都置空
+		inputs = append(inputs, TXInput{vin.Refer_tx_id, vin.Refer_tx_id_index, uss.USSToeplitzHashSignMsg{}, ""})
 	}
 
-	for _, vout := range tx.Vout { // 复制原输入项
-		outputs = append(outputs, TXOutput{vout.Value, vout.To})
+	for _, vout := range tx.TX_vout { // 复制原输入项
+		outputs = append(outputs, TXOutput{vout.TX_value, vout.TX_dst})
 	}
 
-	txCopy := Transaction{tx.ID, inputs, outputs} // 复制一份交易
+	txCopy := Transaction{tx.TX_id, inputs, outputs} // 复制一份交易
 	return txCopy
 }
 
@@ -128,15 +128,15 @@ func NewReserveTX(to []string, data string) *Transaction {
 		data = string(randData) // 格式化输出：[]byte转string
 	}
 	// 创建一个输入项：空
-	txin := TXInput{[]byte{}, -1, uss.USSToeplitzHashSignMsg{}, data}
+	tx_in := TXInput{[]byte{}, -1, uss.USSToeplitzHashSignMsg{}, data}
 	// 创建输出项
-	txout := make([]TXOutput, 0)
+	tx_out := make([]TXOutput, 0)
 	for _, addr := range to {
 		out := NewTXOutput(RESERVE, addr) // 交易金额=RESERVE，接收方地址=to
-		txout = append(txout, *out)
+		tx_out = append(tx_out, *out)
 	}
-	tx := Transaction{nil, []TXInput{txin}, txout}
-	tx.ID = tx.SetID()
+	tx := Transaction{nil, []TXInput{tx_in}, tx_out}
+	tx.TX_id = tx.SetID()
 
 	return &tx
 }
@@ -144,25 +144,25 @@ func NewReserveTX(to []string, data string) *Transaction {
 // IsReserveTX,检查交易是否是发放准备金
 func (tx Transaction) IsReserveTX() bool {
 	// 判断依据：1.输入项只有一条；2.引用的交易输出编号为-1；3.引用的交易ID为空
-	if len(tx.Vin) == 1 && len(tx.Vin[0].Txid) == 0 && tx.Vin[0].Vout == -1 {
+	if len(tx.TX_vin) == 1 && len(tx.TX_vin[0].Refer_tx_id) == 0 && tx.TX_vin[0].Refer_tx_id_index == -1 {
 		return true
 	}
 	return false
 }
 
 func (tx Transaction) PrintTransaction() {
-	fmt.Printf("\tID:%x\n", tx.ID)
-	for i, vin := range tx.Vin {
-		fmt.Printf("\tVin:%d\n", i+1)
-		fmt.Printf("\t--Txid:%x\n", vin.Txid)
-		fmt.Printf("\t  VoutIndex:%d", vin.Vout)
+	//fmt.Printf("\tID:%x\n", tx.ID)
+	for _, vin := range tx.TX_vin {
+		//fmt.Printf("\tVin:%d\n", i+1)
+		//fmt.Printf("\t--Txid:%x\n", vin.Txid)
+		//fmt.Printf("\t  VoutIndex:%d", vin.Vout)
 		//fmt.Printf("\t--Sign:%x\n", vin.Signature.Sign)
-		fmt.Printf("\tFrom:%s\n", vin.From)
+		fmt.Printf("\tFrom:%s\n", vin.TX_src)
 	}
-	for j, vout := range tx.Vout {
-		fmt.Printf("\tVout:%d\n", j+1)
-		fmt.Printf("\t--Value:%d", vout.Value)
-		fmt.Printf("\tTo:%s\n", vout.To)
+	for _, vout := range tx.TX_vout {
+		//fmt.Printf("\tVout:%d\n", j+1)
+		fmt.Printf("\tValue:%d\n", vout.TX_value)
+		fmt.Printf("\tTo:%s\n", vout.TX_dst)
 	}
 	fmt.Printf("\n")
 }

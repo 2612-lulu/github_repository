@@ -11,7 +11,7 @@ import (
 
 func (command *COMM) transaction(tx_from, tx_to, nodeID string, tx_amount int) {
 	node := qbnode.NewNode(nodeID) // 开启节点
-	file, _ := utils.Init_log(qbnode.CLIENT_LOG_PATH + "resolve_" + node.Node_name + ".log")
+	file, _ := utils.Init_log(qbnode.NODE_LOG_PATH + "resolve_" + node.Node_name + ".log")
 	log.SetPrefix("[resolve tx error]")
 	defer file.Close()
 	if !qbwallet.ValidateAddress(tx_from) { // 检验交易发送地址

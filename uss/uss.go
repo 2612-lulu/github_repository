@@ -13,76 +13,60 @@ import (
 	"utils"
 )
 
-// 用于生成toeplitz字符串
-const TOEPLITZ_KEY = "Toeplitz Matrix"
-
-// toeplitz矩阵，每次签名、验签用同一个toeplitz矩阵
-var Toeplitz_Matrix USSToeplitzMatrixMsg
-
-// USSToeplitzMatrixMsg，包含生成toeplitz矩阵需要的参数
-type USSToeplitzMatrixMsg struct {
-	Row_counts      uint32         // 矩阵行数，=单位签名长度=单位密钥长度
-	Column_counts   uint32         // 矩阵列数，>=签名消息长度
-	Toeplitz_matrix [16][1024]uint // 存放toeplitz矩阵，行数默认为<=16，列数<=1024
-}
-
-// USSToeplitzHashSignMsg,用于存放签名、验签所需的参数
-type USSToeplitzHashSignMsg struct {
-	Sign_index   qkdserv.QKDSignMatrixIndex      // 签名索引
-	Main_row_num qkdserv.QKDSignRandomMainRowNum // 主行号
-	Sign_counts  uint32                          // 每行签名个数，=验签者数量
-	Sign_len     uint32                          // 签名单位长度，=密钥单位长度（以字节为单位）
-	Message      []byte                          // 待签名消息，默认<=1024字节，不足1024时自动补齐
-	Sign         []byte                          // 签名消息
-}
-
-// USS，签名
-// 参数：签名索引qkdserv.QKDSignMatrixIndex,每行签名个数uint32，签名单位长度uint32，待签名消息[1024]byte
+// UnconditionallySecureSign，无条件安全签名
+// 参数：签名索引qkdserv.QKDSignMatrixIndex,每行签名个数uint32，签名单位长度uint32，待签名消息[]byte
 // 返回值：签名信息USSToeplitzHashSignMsg
-func Sign(sign_index qkdserv.QKDSignMatrixIndex, counts,
+func UnconditionallySecureSign(sign_index qkdserv.QKDSignMatrixIndex, counts,
 	unit_len uint32, m []byte) USSToeplitzHashSignMsg {
 	// 1.密钥分发
 	_, randoms := utils.GenRandomWithPRF([]byte(qkdserv.QKD_KEY),
-		sign_index.Sign_dev_id, sign_index.Sign_task_sn,
-		counts*counts, unit_len) // 产生随机数
+		sign_index.Sign_dev_id, sign_index.Sign_task_sn, counts*counts, unit_len) // 产生随机数
 	//random_share_result := qkdserv.QKDSecRandomShare() //分发随机数
 
 	// 2.USS签名
-	Toeplitz_Matrix = generateToeplitz(sign_index, 16, 1024)
-	uss_sign := USSToeplitzHashSignMsg{}
-	uss_sign.Sign_index = sign_index
-	uss_sign.Main_row_num.Counts = counts
-	uss_sign.Main_row_num.Unit_len = unit_len
-	uss_sign.Main_row_num.Sign_Node_Name = qkdserv.Node_name
-	uss_sign.Sign_counts = counts
-	uss_sign.Sign_len = unit_len
-	uss_sign.Message = m
-	sign_m := toSignMessage(m)
-	uss_sign.Sign = ussToeplitzHashSign(Toeplitz_Matrix, randoms, sign_m, counts, unit_len)
+	Toeplitz_Matrix = genToeplitzMatrix(sign_index, 16, 1024)
+	uss_sign := USSToeplitzHashSignMsg{
+		Sign_index: sign_index,
+		Main_row_num: qkdserv.QKDSignRandomMainRowNum{
+			Sign_node_name:    qkdserv.Node_name,
+			Main_row_num:      0,
+			Random_row_counts: counts,
+			Random_unit_len:   unit_len,
+		},
+		USS_counts:   counts,
+		USS_unit_len: unit_len,
+		USS_message:  m,
+	}
+	sign_m := convertToUSSMessage(m)
+	uss_sign.USS_signature = genUSSToeplitzHashSign(Toeplitz_Matrix, randoms, sign_m, counts, unit_len)
 	return uss_sign
 }
 
-func toSignMessage(m []byte) [1024]byte {
+func convertToUSSMessage(m []byte) [1024]byte {
 	var sign_m [1024]byte
-	for i := 0; i < len(m); i++ {
-		sign_m[i] = m[i]
-	}
 	if len(m) > 1024 {
-		fmt.Println("	uss error:length of m is too big")
+		fmt.Println("【uss error】:length of m is too big")
 	} else if len(m) < 1024 {
+		for i := 0; i < len(m); i++ {
+			sign_m[i] = m[i]
+		}
 		for i := len(m); i < 1024; i++ {
 			sign_m[i] = byte(0)
+		}
+	} else {
+		for i := 0; i < len(m); i++ {
+			sign_m[i] = m[i]
 		}
 	}
 	return sign_m
 
 }
 
-// VerifySign，验签
+// UnconditionallySecureVerifySign，验签
 // 参数：签名索引qkdserv.QKDSignMatrixIndex,签名个数uint32，签名单位长度uint32，待签名消息[1024]byte
 // 返回值：验签结果bool
-func VerifySign(uss_sign USSToeplitzHashSignMsg) bool {
-	Toeplitz_Matrix = generateToeplitz(uss_sign.Sign_index, 16, 1024)
+func UnconditionallySecureVerifySign(uss_sign USSToeplitzHashSignMsg) bool {
+	Toeplitz_Matrix = genToeplitzMatrix(uss_sign.Sign_index, 16, 1024)
 
 	// 1.先获取签名密钥
 	verify_random_matrix := qkdserv.QKDReadSecRandom(uss_sign.Sign_index,
@@ -92,16 +76,16 @@ func VerifySign(uss_sign USSToeplitzHashSignMsg) bool {
 	j := 0
 	for i := 0; i < int(verify_random_matrix.Row_counts); i++ {
 		// 计算签名值
-		sign_m := toSignMessage(uss_sign.Message)
-		verify_sign := ussToeplitzHashSign(Toeplitz_Matrix,
+		sign_m := convertToUSSMessage(uss_sign.USS_message)
+		verify_sign := genUSSToeplitzHashSign(Toeplitz_Matrix,
 			verify_random_matrix.Sign_randoms[i].Randoms,
-			sign_m, 1, uss_sign.Sign_len)
+			sign_m, 1, uss_sign.USS_unit_len)
 		// 取出对应位置的签名值
 		row := verify_random_matrix.Sign_randoms[i].Row_num
 		column := verify_random_matrix.Sign_randoms[i].Column_num
-		start := ((row-1)*uss_sign.Sign_counts + column - 1) * uss_sign.Sign_len
-		end := ((row-1)*uss_sign.Sign_counts + column) * uss_sign.Sign_len
-		sign := uss_sign.Sign[start:end]
+		start := ((row-1)*uss_sign.USS_counts + column - 1) * uss_sign.USS_unit_len
+		end := ((row-1)*uss_sign.USS_counts + column) * uss_sign.USS_unit_len
+		sign := uss_sign.USS_signature[start:end]
 		// 比较签名值与验签值
 		if bytes.Equal(verify_sign, sign) {
 			j++
@@ -110,7 +94,7 @@ func VerifySign(uss_sign USSToeplitzHashSignMsg) bool {
 	// 3.判断验签结果
 	var verifysign_result bool
 	var delta float32 = 0.75
-	if float32(j) >= (float32(0.5)+2*(1-delta))*float32(uss_sign.Sign_counts) {
+	if float32(j) >= (float32(0.5)+2*(1-delta))*float32(uss_sign.USS_counts) {
 		verifysign_result = true
 	} else {
 		verifysign_result = false
@@ -131,13 +115,14 @@ func GenSignTaskSN(length uint32) [16]byte {
 	return sign_task_sn
 }
 
-// generateToeplitz，生成toeplitz矩阵
+// genToeplitzMatrix，生成toeplitz矩阵
 // 参数：签名索引QKDSignMatrixIndex，矩阵行数uint32；矩阵列数uint32
 // 返回值：USSToeplitzMatrix，每次签名使用同一个toeplitz矩阵
-func generateToeplitz(signindex qkdserv.QKDSignMatrixIndex, m, n uint32) USSToeplitzMatrixMsg {
-	toeplitz_matrix := USSToeplitzMatrixMsg{}
-	toeplitz_matrix.Row_counts = m    // 矩阵行数
-	toeplitz_matrix.Column_counts = n // 矩阵列数
+func genToeplitzMatrix(signindex qkdserv.QKDSignMatrixIndex, m, n uint32) USSToeplitzMatrixMsg {
+	toeplitz_matrix := USSToeplitzMatrixMsg{
+		Row_counts:    m, // 矩阵行数
+		Column_counts: n, // 矩阵列数
+	}
 
 	// 生成长为m+n-1字节的随机数，用于生成矩阵
 	_, s := utils.GenRandomWithPRF([]byte(TOEPLITZ_KEY),
@@ -152,15 +137,12 @@ func generateToeplitz(signindex qkdserv.QKDSignMatrixIndex, m, n uint32) USSToep
 	return toeplitz_matrix
 }
 
-// ussToeplitzHashSign，签名
+// genUSSToeplitzHashSign，签名
 // 参数：toeplitz矩阵USSToeplitzMatrixMsg，密钥[]byte，待签名消息+每行签名个数+签名单位长度USSToeplitzHashSignMsg
 // 返回值：签名结果[]byte
-func ussToeplitzHashSign(toeplitz_matrix USSToeplitzMatrixMsg,
-	r []byte, m [1024]byte, counts, len uint32) []byte {
+func genUSSToeplitzHashSign(toeplitz_matrix USSToeplitzMatrixMsg, r []byte, m [1024]byte, counts, len uint32) []byte {
 	uss_sign := USSToeplitzHashSignMsg{}
-
-	// 签名个数
-	sign_number := int(counts * counts)
+	sign_number := int(counts * counts) // 签名个数
 
 	// 逐次签名
 	for i := 0; i < sign_number; i++ {
@@ -169,9 +151,9 @@ func ussToeplitzHashSign(toeplitz_matrix USSToeplitzMatrixMsg,
 		topelitz_m := toeplitzMatrixMultiply(toeplitz_matrix, m)
 		random := r[start:end]
 		s := toeplitzMatrixAnd(topelitz_m, random)
-		uss_sign.Sign = append(uss_sign.Sign, s...)
+		uss_sign.USS_signature = append(uss_sign.USS_signature, s...)
 	}
-	return uss_sign.Sign
+	return uss_sign.USS_signature
 }
 
 // toeplitzMatrixMultiply，toeplitz矩阵乘法

@@ -17,7 +17,8 @@ import (
 	"strings"
 )
 
-const INIT_PATH = "/root/study/github_repository/config/"
+// 配置文件路径
+const INIT_PATH = "../config/"
 
 // GenRandomWithPRF,生成随机数（密钥）：根据种子密钥和签名索引产生符合要求的随机数
 // 参数：种子密钥[]byte，签名索引QKDSignMatrixIndex，每行随机数个数uint32，随机数的单位字节长度uint32
@@ -47,22 +48,22 @@ func GenRandomWithPRF(key []byte, sign_dev_id, sign_task_sn [16]byte, random_cou
 	return randoms_len, signrandoms
 }
 
-// GetNodeIDTable，获取节点设备号
+// GetNodeID，获取节点设备号
 // 参数：节点名称string
 // 返回值：节点设备号[16]byte
-func GetNodeIDTable(nodeName string) [16]byte {
-	NodeIDTable := make(map[string][16]byte)
-	NodeTable := InitConfig(INIT_PATH + "id_table.txt")
-	id, ok := NodeTable[nodeName]
+func GetNodeID(node_name string) [16]byte {
+	node_id_table := make(map[string][16]byte)
+	node_table := InitConfig(INIT_PATH + "id_table.txt")
+	id, ok := node_table[node_name]
 	if ok {
-		var NodeID [16]byte
+		var node_id [16]byte
 		ID := []byte(id)
 		for i := 0; i < 16; i++ {
-			NodeID[i] = ID[i]
+			node_id[i] = ID[i]
 		}
-		NodeIDTable[nodeName] = NodeID
+		node_id_table[node_name] = node_id
 	}
-	return NodeIDTable[nodeName]
+	return node_id_table[node_name]
 }
 
 // Digest，摘要函数

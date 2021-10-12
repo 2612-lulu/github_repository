@@ -10,7 +10,7 @@ import (
 
 // 测试接口函数一：签名
 func TestUSSign(t *testing.T) {
-	fmt.Println("----------【2.uss】——Sign------------------------------------------------------------------------")
+	fmt.Println("----------【USS】——Sign------------------------------------------------------------------------")
 	// 定义签名索引
 	SignIndex := qkdserv.QKDSignMatrixIndex{}
 	id := []byte("XHSGDFAYQHDJ2163")
@@ -23,16 +23,14 @@ func TestUSSign(t *testing.T) {
 	}
 	// 签名消息m
 	m := []byte("afhigehrfgui")
-	s := Sign(SignIndex, 4, 16, m)
-	fmt.Println(s.Sign_counts)
-	fmt.Println(s.Sign_len)
-	fmt.Println(hex.EncodeToString(s.Message[:]))
-	fmt.Println(hex.EncodeToString(s.Sign))
+	s := UnconditionallySecureSign(SignIndex, 4, 16, m)
+	fmt.Println("sign message:", hex.EncodeToString(s.USS_message[:]))
+	fmt.Println("uss signature:", hex.EncodeToString(s.USS_signature))
 }
 
 // 测试接口函数二：验签
 func TestUSSVerifySign(t *testing.T) {
-	fmt.Println("----------【2.uss】——VerifySign------------------------------------------------------------------")
+	fmt.Println("----------【USS】——VerifySign------------------------------------------------------------------")
 	// 初始化签名密钥池
 	qkdserv.QKD_sign_random_matrix_pool = make(map[qkdserv.QKDSignMatrixIndex]qkdserv.QKDSignRandomsMatrix)
 	// 定义使用该程序的参与者名称，正常使用时，该参数由命令行输入，此处只是为了测试使用
@@ -49,11 +47,11 @@ func TestUSSVerifySign(t *testing.T) {
 	}
 	// 定义签名信息
 	m := []byte("4379765")
-	uss_sign := Sign(SignIndex, 4, 16, m)
-	uss_sign.Main_row_num.Sign_Node_Name = "C1"
+	uss_sign := UnconditionallySecureSign(SignIndex, 4, 16, m)
+	uss_sign.Main_row_num.Sign_node_name = "C1"
 	//fmt.Println(hex.EncodeToString(uss_sign.Sign))
 	// 验签
-	result := VerifySign(uss_sign)
-	fmt.Println(result)
+	result := UnconditionallySecureVerifySign(uss_sign)
+	fmt.Println("result of verify sign:", result)
 
 }

@@ -2,7 +2,9 @@ package qbutxo
 
 import (
 	"encoding/hex"
+	"fmt"
 	"log"
+	"os"
 	"qb/quantumbc"
 	"qblock"
 	"qbtx"
@@ -28,7 +30,8 @@ func NewUTXOTransaction(from, to, nodeID string, amount int, UTXOSet *UTXOSet) *
 	acc, validOutputs := UTXOSet.FindSpendableOutputs(from, amount)
 
 	if acc < amount { // 如果余额不足
-		log.Panic("ERROR: Not enough funds")
+		fmt.Println("ERROR: Not enough funds")
+		os.Exit(1)
 	}
 
 	// 构建输入项
@@ -40,10 +43,10 @@ func NewUTXOTransaction(from, to, nodeID string, amount int, UTXOSet *UTXOSet) *
 
 		for _, out := range outs {
 			input := qbtx.TXInput{
-				Txid:      txID,
-				Vout:      out,
-				Signature: uss.USSToeplitzHashSignMsg{},
-				From:      from,
+				Refer_tx_id:       txID,
+				Refer_tx_id_index: out,
+				TX_uss_sign:       uss.USSToeplitzHashSignMsg{},
+				TX_src:            from,
 			}
 			inputs = append(inputs, input)
 		}
@@ -57,13 +60,12 @@ func NewUTXOTransaction(from, to, nodeID string, amount int, UTXOSet *UTXOSet) *
 
 	// 交易生成
 	tx := qbtx.Transaction{
-		ID:   nil,
-		Vin:  inputs,
-		Vout: outputs,
+		TX_id:   nil,
+		TX_vin:  inputs,
+		TX_vout: outputs,
 	}
-	tx.SignTX(nodeID) // 输入项签名
-	tx.ID = tx.SetID()
-	log.Println("create a new utxo tx")
+	tx.USSTransactionSign(nodeID) // 输入项签名
+	tx.TX_id = tx.SetID()
 	return &tx
 }
 
@@ -84,8 +86,8 @@ func (u UTXOSet) FindSpendableOutputs(address string, amount int) (int, map[stri
 			outs := qbtx.DeserializeOutputs(v)
 
 			for outIdx, out := range outs.Outputs {
-				if address == out.To && accumulated < amount {
-					accumulated += out.Value
+				if address == out.TX_dst && accumulated < amount {
+					accumulated += out.TX_value
 					unspentOutputs[txID] = append(unspentOutputs[txID], outIdx)
 				}
 			}
@@ -151,24 +153,24 @@ func (u UTXOSet) Update(block *qblock.Block) {
 
 		for _, tx := range block.Transactions {
 			if !tx.IsReserveTX() {
-				for _, vin := range tx.Vin {
+				for _, vin := range tx.TX_vin {
 					updatedOuts := qbtx.TXOutputs{}
-					outsBytes := b.Get(vin.Txid)
+					outsBytes := b.Get(vin.Refer_tx_id)
 					outs := qbtx.DeserializeOutputs(outsBytes)
 
 					for outIdx, out := range outs.Outputs {
-						if outIdx != vin.Vout {
+						if outIdx != vin.Refer_tx_id_index {
 							updatedOuts.Outputs = append(updatedOuts.Outputs, out)
 						}
 					}
 
 					if len(updatedOuts.Outputs) == 0 {
-						err := b.Delete(vin.Txid)
+						err := b.Delete(vin.Refer_tx_id)
 						if err != nil {
 							log.Panic(err)
 						}
 					} else {
-						err := b.Put(vin.Txid, updatedOuts.SerializeOutputs())
+						err := b.Put(vin.Refer_tx_id, updatedOuts.SerializeOutputs())
 						if err != nil {
 							log.Panic(err)
 						}
@@ -178,11 +180,11 @@ func (u UTXOSet) Update(block *qblock.Block) {
 			}
 
 			newOutputs := qbtx.TXOutputs{}
-			for _, out := range tx.Vout {
+			for _, out := range tx.TX_vout {
 				newOutputs.Outputs = append(newOutputs.Outputs, out)
 			}
 
-			err := b.Put(tx.ID, newOutputs.SerializeOutputs())
+			err := b.Put(tx.TX_id, newOutputs.SerializeOutputs())
 			if err != nil {
 				log.Panic(err)
 			}
@@ -207,7 +209,7 @@ func (u UTXOSet) FindUTXO(address string) []qbtx.TXOutput {
 		for k, v := c.First(); k != nil; k, v = c.Next() { // 遍历
 			outs := qbtx.DeserializeOutputs(v) // 反序列化交易输出
 			for _, out := range outs.Outputs {
-				if address == out.To {
+				if address == out.TX_dst {
 					UTXOs = append(UTXOs, out) // 获取所有交易输出项信息
 				}
 			}

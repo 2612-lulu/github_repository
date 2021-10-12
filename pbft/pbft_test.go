@@ -1,102 +1,113 @@
 package pbft
 
 import (
+	"encoding/json"
 	"fmt"
+	"os"
 	"qblock"
-	"qbtx"
 	"qkdserv"
 	"testing"
-	"uss"
 	"utils"
 )
 
 func TestPBFTConsensus(t *testing.T) {
-	fmt.Println("----------【3.pbft】----------------------------------------------------------------------")
+	fmt.Println("----------【pbft】----------------------------------------------------------------------")
 
 	qkdserv.QKD_sign_random_matrix_pool = make(map[qkdserv.QKDSignMatrixIndex]qkdserv.QKDSignRandomsMatrix)
-	qkdserv.Node_name = "C1"
-	txInput := qbtx.TXInput{
-		Txid:      []byte("egry"),
-		Vout:      1,
-		Signature: uss.USSToeplitzHashSignMsg{},
-		From:      "C1",
-	}
-	var Inputs []qbtx.TXInput
-	Inputs = append(Inputs, txInput)
-	txOutput := qbtx.TXOutput{
-		Value: 1,
-		To:    "P3",
-	}
-	var outputs []qbtx.TXOutput
-	outputs = append(outputs, txOutput)
-	tx := qbtx.Transaction{
-		ID:   nil,
-		Vin:  Inputs,
-		Vout: outputs,
-	}
-	tx.SetID()
-	tx.SignTX("C1")
-	// 定义State消息
-	state := CreateState(1, -1)
-
+	state := CreateState(1, -1) // 定义State消息
+	F = 5
+	N = 16
 	// 定义区块消息，即请求消息
-	msgs := make([]*qbtx.Transaction, 0)
-	msgs = append(msgs, &tx)
-	request := qblock.NewBlock(msgs, nil, 1)
-	//log.LogStage("Request", false)
+	file, _ := os.Open("../pbft/request.json") // 打开文件
+	defer file.Close()                         // 关闭文件
+	decoder := json.NewDecoder(file)
+	var block qblock.Block
+	err := decoder.Decode(&block) //Decode从输入流读取下一个json编码值并保存在v指向的值里
+	if err != nil {
+		panic(err)
+	}
+	request := &block
+	utils.LogStage("	Request", false)
 
-	//fmt.Println("-----------------------【3.pbft共识】PrePrepare-------------------------------------------------")
 	qkdserv.Node_name = "P1"
-	preprepare, err := state.PrePrePare(request)
-	if err == nil {
-		//qbtools.LogStage("	Request", true)
-		//fmt.Println(len(preprepare.Sign_p.Message))
+	preprepare := state.PrePrePare(request)
+	if preprepare != nil {
 		utils.LogStage("	Pre-prepare", false)
 	}
-	//fmt.Println("-----------------------【3.pbft共识】Prepare----------------------------------------------------")
+	// prepare
 	qkdserv.Node_name = "P2"
-	prepare, err := state.PrePare(preprepare)
-	if err == nil {
-		//qbtools.LogStage("	Pre-prepare", true)
+	prepare := state.PrePare(preprepare)
+	if prepare != nil {
 		utils.LogStage("	prepare", false)
 	}
 	qkdserv.Node_name = "P3"
-	_, err = state.PrePare(preprepare)
-	if err == nil {
-		//qbtools.LogStage("	Pre-prepare", true)
-		utils.LogStage("	prepare", false)
-	}
+	state.PrePare(preprepare)
 	qkdserv.Node_name = "P4"
-	_, err = state.PrePare(preprepare)
-	if err == nil {
-		//qbtools.LogStage("	Pre-prepare", true)
-		utils.LogStage("	prepare", false)
-	}
-	//fmt.Println("-----------------------【3.pbft共识】Commit-----------------------------------------------------")
-	qkdserv.Node_name = "P3"
-	commit, _ := state.Commit(prepare)
-	if commit != nil {
-		//qbtools.LogStage("	Prepare", true)
-		utils.LogStage("	Commit", false)
-	}
-	qkdserv.Node_name = "P4"
-	_, err = state.Commit(prepare)
-	if err == nil {
-		//qbtools.LogStage("	Prepare", true)
-		utils.LogStage("	Commit", false)
-	}
-	qkdserv.Node_name = "P1"
-	_, err = state.Commit(prepare)
-	if err == nil {
-		//qbtools.LogStage("	Prepare", true)
-		utils.LogStage("	Commit", false)
-	}
+	state.PrePare(preprepare)
+	qkdserv.Node_name = "P5"
+	state.PrePare(preprepare)
+	qkdserv.Node_name = "P6"
+	state.PrePare(preprepare)
+	qkdserv.Node_name = "P7"
+	state.PrePare(preprepare)
+	qkdserv.Node_name = "P8"
+	state.PrePare(preprepare)
+	qkdserv.Node_name = "P9"
+	state.PrePare(preprepare)
+	qkdserv.Node_name = "P10"
+	state.PrePare(preprepare)
+	qkdserv.Node_name = "P11"
+	state.PrePare(preprepare)
+	qkdserv.Node_name = "P12"
+	state.PrePare(preprepare)
+	qkdserv.Node_name = "P13"
+	state.PrePare(preprepare)
+	qkdserv.Node_name = "P14"
+	state.PrePare(preprepare)
+	qkdserv.Node_name = "P15"
+	state.PrePare(preprepare)
+	qkdserv.Node_name = "P16"
+	state.PrePare(preprepare)
 
-	//fmt.Println("-----------------------【3.pbft共识】Reply------------------------------------------------------")
+	// commit
+	qkdserv.Node_name = "P3"
+	commit := state.Commit(prepare)
+	if commit != nil {
+		utils.LogStage("	Commit", false)
+	}
+	qkdserv.Node_name = "P4"
+	state.Commit(prepare)
 	qkdserv.Node_name = "P1"
-	reply, _ := state.Reply(commit)
+	state.Commit(prepare)
+	qkdserv.Node_name = "P5"
+	state.Commit(prepare)
+	qkdserv.Node_name = "P6"
+	state.Commit(prepare)
+	qkdserv.Node_name = "P7"
+	state.Commit(prepare)
+	qkdserv.Node_name = "P8"
+	state.Commit(prepare)
+	qkdserv.Node_name = "P9"
+	state.Commit(prepare)
+	qkdserv.Node_name = "P10"
+	state.Commit(prepare)
+	qkdserv.Node_name = "P11"
+	state.Commit(prepare)
+	qkdserv.Node_name = "P12"
+	state.Commit(prepare)
+	qkdserv.Node_name = "P13"
+	state.Commit(prepare)
+	qkdserv.Node_name = "P15"
+	state.Commit(prepare)
+	qkdserv.Node_name = "P15"
+	state.Commit(prepare)
+	qkdserv.Node_name = "P16"
+	state.Commit(prepare)
+
+	// reply
+	qkdserv.Node_name = "P1"
+	reply := state.Reply(commit)
 	if reply != nil {
-		//qbtools.LogStage("	Commit", true)
 		utils.LogStage("	Reply", false)
 	}
 }

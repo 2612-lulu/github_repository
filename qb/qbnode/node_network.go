@@ -55,7 +55,7 @@ func (node *Node) getTXReply(writer http.ResponseWriter, request *http.Request) 
 		return
 	}
 	node.MsgDelivery <- &msg
-	file, _ := utils.Init_log(CLIENT_LOG_PATH + "listenHttp_" + node.Node_name + ".log")
+	file, _ := utils.Init_log(NODE_LOG_PATH + "listenHttp_" + node.Node_name + ".log")
 	log.SetPrefix("[listen reply]")
 	log.Println("receive the result of tx")
 	defer file.Close()

@@ -3,6 +3,7 @@ package network
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"pbft"
 	"utils"
 )
@@ -18,15 +19,6 @@ func (consensus *NodeConsensus) broadcastMsg() {
 			utils.LogStage("Request", true)
 			utils.LogStage("Pre-Prepare", false)
 			consensus.broadcast(msg, "/preprepare") // 发送preprepare信息给其他节点
-		case *pbft.PrepareMsg:
-			fmt.Println("====================[START NEW PBFT]==============================")
-			utils.LogStage("Pre-prepare", true)
-			utils.LogStage("Prepare", false)
-			consensus.broadcast(msg, "/prepare") // 发送prepare信息给其他节点
-		case *pbft.CommitMsg:
-			utils.LogStage("Prepare", true)
-			utils.LogStage("Commit", false)
-			consensus.broadcast(msg, "/commit") // 发送commit信息给其他节点
 		case *pbft.ReplyMsg:
 			utils.LogStage("Commit", true)
 			utils.LogStage("Reply", false)
@@ -34,6 +26,33 @@ func (consensus *NodeConsensus) broadcastMsg() {
 			utils.LogStage("Reply", true)
 
 			consensus.PBFT.CurrentState = nil
+		}
+	}
+}
+
+// 进程1：broadcastMsg,用于广播消息
+func (consensus *NodeConsensus) broadcastPrepareMsg() {
+	for {
+		msg := <-consensus.MsgBroadcastPrepare
+		switch msg := msg.(type) {
+		case *pbft.PrepareMsg:
+			fmt.Println("====================[START NEW PBFT]==============================")
+			utils.LogStage("Pre-prepare", true)
+			utils.LogStage("Prepare", false)
+			consensus.broadcast(msg, "/prepare") // 发送prepare信息给其他节点
+		}
+	}
+}
+
+// 进程1：broadcastMsg,用于广播消息
+func (consensus *NodeConsensus) broadcastCommitMsg() {
+	for {
+		msg := <-consensus.MsgBroadcastCommit
+		switch msg := msg.(type) {
+		case *pbft.CommitMsg:
+			utils.LogStage("Prepare", true)
+			utils.LogStage("Commit", false)
+			consensus.broadcast(msg, "/commit") // 发送commit信息给其他节点
 		}
 	}
 }
@@ -57,7 +76,22 @@ func (consensus *NodeConsensus) broadcast(msg interface{}, path string) map[stri
 			continue
 		}
 	}
-
+	file, _ := utils.Init_log(PBFT_LOG_PATH + "broadcast_" + consensus.Node_name + ".log")
+	defer file.Close()
+	switch msg.(type) {
+	case *pbft.PrePrepareMsg:
+		log.SetPrefix("[broadcast preprepare]")
+		log.Println("broadcast preprepare message")
+	case *pbft.PrepareMsg:
+		log.SetPrefix("[broadcast prepare]")
+		log.Println("broadcast prepare message")
+	case *pbft.CommitMsg:
+		log.SetPrefix("[broadcast commit]")
+		log.Println("broadcast commit message")
+	case *pbft.ReplyMsg:
+		log.SetPrefix("[broadcast reply]")
+		log.Println("broadcast reply message")
+	}
 	if len(errorMap) == 0 { // 如果转发消息均成功
 		return nil
 	} else { // 如果有转发失败的情况

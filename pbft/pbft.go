@@ -3,8 +3,8 @@ package pbft
 import "qblock"
 
 type PBFT interface {
-	PrePrePare(request *qblock.Block) (*PrePrepareMsg, error)
-	PrePare(preprepare *PrePrepareMsg) (*PrepareMsg, error)
-	Commit(prepare *PrepareMsg) (*CommitMsg, error)
-	Reply(commit *CommitMsg) (*ReplyMsg, error)
+	PrePrePare(request *qblock.Block) *PrePrepareMsg
+	PrePare(preprepare *PrePrepareMsg) *PrepareMsg
+	Commit(prepare *PrepareMsg) *CommitMsg
+	Reply(commit *CommitMsg) *ReplyMsg
 }
