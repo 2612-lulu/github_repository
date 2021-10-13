@@ -6,6 +6,7 @@ import (
 	"os"
 	"qblock"
 	"qkdserv"
+	"reflect"
 	"testing"
 	"utils"
 )
@@ -26,18 +27,18 @@ func TestPBFTConsensus(t *testing.T) {
 	if err != nil {
 		panic(err)
 	}
-	request := &block
+	request := block
 	utils.LogStage("	Request", false)
 
 	qkdserv.Node_name = "P1"
 	preprepare := state.PrePrePare(request)
-	if preprepare != nil {
+	if !reflect.DeepEqual(preprepare, PrePrepareMsg{}) {
 		utils.LogStage("	Pre-prepare", false)
 	}
 	// prepare
 	qkdserv.Node_name = "P2"
 	prepare := state.PrePare(preprepare)
-	if prepare != nil {
+	if !reflect.DeepEqual(prepare, PrepareMsg{}) {
 		utils.LogStage("	prepare", false)
 	}
 	qkdserv.Node_name = "P3"
@@ -72,7 +73,7 @@ func TestPBFTConsensus(t *testing.T) {
 	// commit
 	qkdserv.Node_name = "P3"
 	commit := state.Commit(prepare)
-	if commit != nil {
+	if !reflect.DeepEqual(commit, CommitMsg{}) {
 		utils.LogStage("	Commit", false)
 	}
 	qkdserv.Node_name = "P4"
@@ -107,7 +108,7 @@ func TestPBFTConsensus(t *testing.T) {
 	// reply
 	qkdserv.Node_name = "P1"
 	reply := state.Reply(commit)
-	if reply != nil {
+	if !reflect.DeepEqual(reply, ReplyMsg{}) {
 		utils.LogStage("	Reply", false)
 	}
 }

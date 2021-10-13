@@ -35,7 +35,7 @@ func (node *Node) broadcastMsg() {
 			utils.Send(node.PBFT_url+"/request", jsonMsg) // 发送给对应的pbft
 		case *pbft.ReplyMsg:
 			// TODO1:区块上链
-			node.addBlock(&msg.Request)
+			node.addBlock(msg.Request)
 			// TODO2：主节点发送交易结果
 			if node.Node_name == node.Primary {
 				node.broadcast(msg, "/txreply")
@@ -43,7 +43,7 @@ func (node *Node) broadcastMsg() {
 		}
 	}
 }
-func (node *Node) addBlock(block *qblock.Block) {
+func (node *Node) addBlock(block qblock.Block) {
 	bc := quantumbc.NewBlockchain(node.Node_name) // 获取账本
 	UTXOSet := qbutxo.UTXOSet{                    // 设置utxo
 		Blockchain: bc,

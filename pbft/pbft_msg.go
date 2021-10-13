@@ -27,7 +27,7 @@ type PrePrepareMsg struct {
 	Sequence_number int64                      // 主节点分配的序列号n,在[h, H]之间，用于对request进行排序？
 	Digest_m        []byte                     // 客户端请求消息中m的摘要
 	Sign_p          uss.USSToeplitzHashSignMsg // 主节点P对PrePrepare消息中v,n,d的签名
-	Request         *qblock.Block
+	Request         qblock.Block
 }
 
 // Prepare消息，由从节点发往其他所有节点
@@ -51,7 +51,7 @@ type CommitMsg struct {
 // PrePrepareMsg.signMessageEncode,对预准备消息编码，形成待签名消息
 // 参数：预准备消息PrePrepareMsg
 // 返回值：待签名消息[]byte
-func (obj *PrePrepareMsg) signMessageEncode() []byte {
+func (obj PrePrepareMsg) signMessageEncode() []byte {
 	buf := new(bytes.Buffer)
 	binary.Write(buf, binary.LittleEndian, obj.View)
 	binary.Write(buf, binary.LittleEndian, obj.Sequence_number)
@@ -62,7 +62,7 @@ func (obj *PrePrepareMsg) signMessageEncode() []byte {
 // PrepareMsg.signMessageEncode,对准备消息编码，形成待签名消息
 // 参数：准备消息PrepareMsg
 // 返回值：待签名消息[]byte
-func (obj *PrepareMsg) signMessageEncode() ([]byte, error) {
+func (obj PrepareMsg) signMessageEncode() ([]byte, error) {
 	buf := new(bytes.Buffer)
 
 	binary.Write(buf, binary.LittleEndian, obj.View)
@@ -75,7 +75,7 @@ func (obj *PrepareMsg) signMessageEncode() ([]byte, error) {
 // CommitMsg.signMessageEncode,对提交消息编码，形成待签名消息
 // 参数：提交消息CommitMsg
 // 返回值：待签名消息[]byte
-func (obj *CommitMsg) signMessageEncode() ([]byte, error) {
+func (obj CommitMsg) signMessageEncode() ([]byte, error) {
 	buf := new(bytes.Buffer)
 
 	binary.Write(buf, binary.LittleEndian, obj.View)
@@ -88,7 +88,7 @@ func (obj *CommitMsg) signMessageEncode() ([]byte, error) {
 // ReplyMsg.signMessageEncode,对应答消息编码，形成待签名消息
 // 参数：应答消息ReplyMsg
 // 返回值：待签名消息[]byte
-func (obj *ReplyMsg) signMessageEncode() ([]byte, error) {
+func (obj ReplyMsg) signMessageEncode() ([]byte, error) {
 	buf := new(bytes.Buffer)
 
 	binary.Write(buf, binary.LittleEndian, obj.View)

@@ -49,5 +49,22 @@ gnome-terminal -t "PB15" -x bash -c "./pbft.exe startPBFT;exec bash"
 export NODE_NAME="P16"
 gnome-terminal -t "PB16" -x bash -c "./pbft.exe startPBFT;exec bash"
 
+export NODE_NAME="P17"
+gnome-terminal -t "PB17" -x bash -c "./pbft.exe startPBFT;exec bash"
+
+export NODE_NAME="P18"
+gnome-terminal -t "PB18" -x bash -c "./pbft.exe startPBFT;exec bash"
+
+export NODE_NAME="P19"
+gnome-terminal -t "PB19" -x bash -c "./pbft.exe startPBFT;exec bash"
+
+export NODE_NAME="P20"
+gnome-terminal -t "PB20" -x bash -c "./pbft.exe startPBFT;exec bash"
+
+export NODE_NAME="P21"
+gnome-terminal -t "PB21" -x bash -c "./pbft.exe startPBFT;exec bash"
+
+export NODE_NAME="P22"
+gnome-terminal -t "PB22" -x bash -c "./pbft.exe startPBFT;exec bash"
 
  

@@ -24,8 +24,6 @@ func (consensus *NodeConsensus) broadcastMsg() {
 			utils.LogStage("Reply", false)
 			consensus.broadcastReply(msg, "/reply")
 			utils.LogStage("Reply", true)
-
-			consensus.PBFT.CurrentState = nil
 		}
 	}
 }

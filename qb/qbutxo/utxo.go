@@ -21,7 +21,7 @@ type UTXOSet struct {
 }
 
 // NewUTXOTransaction，创建普通交易
-func NewUTXOTransaction(from, to, nodeID string, amount int, UTXOSet *UTXOSet) *qbtx.Transaction {
+func NewUTXOTransaction(from, to, nodeID string, amount int, UTXOSet *UTXOSet) qbtx.Transaction {
 	// 需要组合输入项和输出项
 	var inputs []qbtx.TXInput
 	var outputs []qbtx.TXOutput
@@ -53,9 +53,9 @@ func NewUTXOTransaction(from, to, nodeID string, amount int, UTXOSet *UTXOSet) *
 	}
 
 	// 构建输出项
-	outputs = append(outputs, *qbtx.NewTXOutput(amount, to))
+	outputs = append(outputs, qbtx.NewTXOutput(amount, to))
 	if acc > amount { // 需要找零
-		outputs = append(outputs, *qbtx.NewTXOutput(acc-amount, from)) // 需要找零
+		outputs = append(outputs, qbtx.NewTXOutput(acc-amount, from)) // 需要找零
 	}
 
 	// 交易生成
@@ -66,7 +66,7 @@ func NewUTXOTransaction(from, to, nodeID string, amount int, UTXOSet *UTXOSet) *
 	}
 	tx.USSTransactionSign(nodeID) // 输入项签名
 	tx.TX_id = tx.SetID()
-	return &tx
+	return tx
 }
 
 // FindSpendableOutputs，获取部分满足交易的utxo
@@ -145,7 +145,7 @@ func (u UTXOSet) Reindex() {
 
 // Update updates the UTXO set with transactions from the Block
 // The Block is considered to be the tip of a blockchain
-func (u UTXOSet) Update(block *qblock.Block) {
+func (u UTXOSet) Update(block qblock.Block) {
 	db := u.Blockchain.DB
 
 	err := db.Update(func(tx *bolt.Tx) error {

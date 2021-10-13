@@ -1,296 +1,626 @@
-[Commit error]2021/10/12 17:53:17.202550 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:53:17.202601 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303083
-[Commit error]2021/10/12 17:53:17.202607 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303083
-[Commit error]2021/10/12 17:53:17.202724 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:53:17.202730 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303083
-[Commit error]2021/10/12 17:53:17.202733 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303083
-[Commit error]2021/10/12 17:53:17.202843 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:53:17.202848 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303083
-[Commit error]2021/10/12 17:53:17.202852 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303083
-[Commit error]2021/10/12 17:53:17.202954 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:53:17.202960 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303083
-[Commit error]2021/10/12 17:53:17.202964 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303083
-[Reply error]2021/10/12 17:53:17.289625 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:53:17.289701 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:53:17.289786 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:53:17.289878 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Commit error]2021/10/12 17:53:42.222356 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:53:42.222367 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303084
-[Commit error]2021/10/12 17:53:42.222371 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303084
-[Commit error]2021/10/12 17:53:42.222497 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:53:42.222504 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303084
-[Commit error]2021/10/12 17:53:42.222508 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303084
-[Commit error]2021/10/12 17:53:42.222628 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:53:42.222634 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303084
-[Commit error]2021/10/12 17:53:42.222638 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303084
-[Commit error]2021/10/12 17:53:42.222741 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:53:42.222749 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303084
-[Commit error]2021/10/12 17:53:42.222754 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303084
-[Reply error]2021/10/12 17:53:42.297183 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:53:42.297930 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:53:42.298240 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:53:42.298326 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Commit error]2021/10/12 17:54:07.241312 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:54:07.241325 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303085
-[Commit error]2021/10/12 17:54:07.241331 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303085
-[Commit error]2021/10/12 17:54:07.241499 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:54:07.241512 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303085
-[Commit error]2021/10/12 17:54:07.241516 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303085
-[Commit error]2021/10/12 17:54:07.244261 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:54:07.244278 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303085
-[Commit error]2021/10/12 17:54:07.244283 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303085
-[Commit error]2021/10/12 17:54:07.244481 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:54:07.244501 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303085
-[Commit error]2021/10/12 17:54:07.244506 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303085
-[Commit error]2021/10/12 17:54:07.244734 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:54:07.244747 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303085
-[Commit error]2021/10/12 17:54:07.244765 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303085
-[Reply error]2021/10/12 17:54:07.341585 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:54:07.344427 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:54:07.347849 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Commit error]2021/10/12 17:54:35.139307 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:54:35.139324 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303086
-[Commit error]2021/10/12 17:54:35.139329 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303086
-[Commit error]2021/10/12 17:54:35.139485 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:54:35.139495 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303086
-[Commit error]2021/10/12 17:54:35.139499 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303086
-[Commit error]2021/10/12 17:54:35.139649 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:54:35.139659 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303086
-[Commit error]2021/10/12 17:54:35.139665 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303086
-[Commit error]2021/10/12 17:54:35.139774 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:54:35.139789 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303086
-[Commit error]2021/10/12 17:54:35.139793 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303086
-[Reply error]2021/10/12 17:54:35.229653 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:54:35.229804 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:54:35.229943 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:54:35.230088 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Commit error]2021/10/12 17:54:50.172702 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:54:50.172718 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303087
-[Commit error]2021/10/12 17:54:50.172724 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303087
-[Commit error]2021/10/12 17:54:50.172851 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:54:50.172857 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303087
-[Commit error]2021/10/12 17:54:50.172862 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303087
-[Commit error]2021/10/12 17:54:50.172980 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:54:50.172985 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303087
-[Commit error]2021/10/12 17:54:50.173025 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303087
-[Commit error]2021/10/12 17:54:50.173167 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:54:50.173176 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303087
-[Commit error]2021/10/12 17:54:50.173180 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303087
-[Reply error]2021/10/12 17:54:50.250031 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:54:50.250158 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:54:50.250273 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:54:50.250451 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:54:50.250583 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Commit error]2021/10/12 17:55:00.143729 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:55:00.143746 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303088
-[Commit error]2021/10/12 17:55:00.143750 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303088
-[Commit error]2021/10/12 17:55:00.143881 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:55:00.143887 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303088
-[Commit error]2021/10/12 17:55:00.143890 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303088
-[Commit error]2021/10/12 17:55:00.144042 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:55:00.144087 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303088
-[Commit error]2021/10/12 17:55:00.144094 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303088
-[Commit error]2021/10/12 17:55:00.144243 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:55:00.144252 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303088
-[Commit error]2021/10/12 17:55:00.144257 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303088
-[Reply error]2021/10/12 17:55:00.238516 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:55:00.238604 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:55:00.238682 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:55:00.238752 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Commit error]2021/10/12 17:55:10.154343 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:55:10.154355 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303089
-[Commit error]2021/10/12 17:55:10.154358 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303089
-[Commit error]2021/10/12 17:55:10.154485 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:55:10.154494 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303089
-[Commit error]2021/10/12 17:55:10.154498 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303089
-[Commit error]2021/10/12 17:55:10.154587 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:55:10.154591 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303089
-[Commit error]2021/10/12 17:55:10.154593 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303089
-[Commit error]2021/10/12 17:55:10.154690 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:55:10.154693 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303089
-[Commit error]2021/10/12 17:55:10.154696 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303089
-[Reply error]2021/10/12 17:55:10.278710 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:55:10.278874 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:55:10.279018 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:55:10.279681 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Commit error]2021/10/12 17:55:20.159851 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:55:20.159863 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303090
-[Commit error]2021/10/12 17:55:20.159869 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303090
-[Commit error]2021/10/12 17:55:20.160015 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:55:20.160026 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303090
-[Commit error]2021/10/12 17:55:20.160038 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303090
-[Commit error]2021/10/12 17:55:20.160182 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:55:20.160190 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303090
-[Commit error]2021/10/12 17:55:20.160194 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303090
-[Commit error]2021/10/12 17:55:20.160307 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:55:20.160313 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303090
-[Commit error]2021/10/12 17:55:20.160316 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303090
-[Reply error]2021/10/12 17:55:20.254568 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:55:20.254656 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:55:20.254724 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:55:20.254811 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Commit error]2021/10/12 17:55:30.160586 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:55:30.160598 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303091
-[Commit error]2021/10/12 17:55:30.160601 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303091
-[Commit error]2021/10/12 17:55:30.160709 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:55:30.160717 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303091
-[Commit error]2021/10/12 17:55:30.160721 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303091
-[Commit error]2021/10/12 17:55:30.160818 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:55:30.160826 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303091
-[Commit error]2021/10/12 17:55:30.160830 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303091
-[Reply error]2021/10/12 17:55:30.252481 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:55:30.252608 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:55:30.252733 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:55:30.252847 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Commit error]2021/10/12 17:55:40.158268 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:55:40.158279 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303092
-[Commit error]2021/10/12 17:55:40.158284 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303092
-[Commit error]2021/10/12 17:55:40.158357 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:55:40.158363 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303092
-[Commit error]2021/10/12 17:55:40.158366 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303092
-[Commit error]2021/10/12 17:55:40.158524 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 17:55:40.158534 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032327117303092
-[Commit error]2021/10/12 17:55:40.158538 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032327117303092
-[Reply error]2021/10/12 17:55:40.231750 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 17:55:40.232072 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Commit error]2021/10/12 18:00:35.495348 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:00:35.495366 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032820454357504
-[Commit error]2021/10/12 18:00:35.495370 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032820454357504
-[Commit error]2021/10/12 18:00:35.495450 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:00:35.495457 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032820454357504
-[Commit error]2021/10/12 18:00:35.495461 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032820454357504
-[Commit error]2021/10/12 18:00:35.495539 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:00:35.495546 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032820454357504
-[Commit error]2021/10/12 18:00:35.495550 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032820454357504
-[Commit error]2021/10/12 18:00:35.495631 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:00:35.495637 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032820454357504
-[Commit error]2021/10/12 18:00:35.495641 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032820454357504
-[Reply error]2021/10/12 18:00:35.542265 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:00:35.542350 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:00:35.542431 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:00:35.542495 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Commit error]2021/10/12 18:01:53.381245 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:01:53.381259 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307888
-[Commit error]2021/10/12 18:01:53.381264 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307888
-[Commit error]2021/10/12 18:01:53.381499 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:01:53.381505 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307888
-[Commit error]2021/10/12 18:01:53.381509 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307888
-[Commit error]2021/10/12 18:01:53.381645 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:01:53.381653 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307888
-[Commit error]2021/10/12 18:01:53.381656 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307888
-[Reply error]2021/10/12 18:01:53.462213 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:01:53.462339 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:01:53.462442 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:01:53.462570 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Commit error]2021/10/12 18:02:03.390687 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:03.390698 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307889
-[Commit error]2021/10/12 18:02:03.390704 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307889
-[Commit error]2021/10/12 18:02:03.390837 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:03.390847 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307889
-[Commit error]2021/10/12 18:02:03.390852 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307889
-[Commit error]2021/10/12 18:02:03.390974 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:03.390979 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307889
-[Commit error]2021/10/12 18:02:03.390983 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307889
-[Commit error]2021/10/12 18:02:03.391143 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:03.391164 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307889
-[Commit error]2021/10/12 18:02:03.391168 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307889
-[Reply error]2021/10/12 18:02:03.493901 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:02:03.494029 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:02:03.494144 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Commit error]2021/10/12 18:02:13.383377 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:13.383394 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307890
-[Commit error]2021/10/12 18:02:13.383398 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307890
-[Commit error]2021/10/12 18:02:13.383506 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:13.383512 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307890
-[Commit error]2021/10/12 18:02:13.383515 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307890
-[Commit error]2021/10/12 18:02:13.383625 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:13.383630 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307890
-[Commit error]2021/10/12 18:02:13.383635 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307890
-[Reply error]2021/10/12 18:02:13.475707 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:02:13.475904 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:02:13.476059 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Commit error]2021/10/12 18:02:23.397933 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:23.397945 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307891
-[Commit error]2021/10/12 18:02:23.397949 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307891
-[Commit error]2021/10/12 18:02:23.398103 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:23.398111 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307891
-[Commit error]2021/10/12 18:02:23.398114 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307891
-[Commit error]2021/10/12 18:02:23.398243 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:23.398252 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307891
-[Commit error]2021/10/12 18:02:23.398256 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307891
-[Reply error]2021/10/12 18:02:23.479342 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:02:23.479453 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:02:23.479567 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:02:23.514113 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [into commit]
-[Commit error]2021/10/12 18:02:33.397131 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:33.397142 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307892
-[Commit error]2021/10/12 18:02:33.397146 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307892
-[Commit error]2021/10/12 18:02:33.397304 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:33.397311 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307892
-[Commit error]2021/10/12 18:02:33.397315 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307892
-[Commit error]2021/10/12 18:02:33.397422 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:33.397428 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307892
-[Commit error]2021/10/12 18:02:33.397432 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307892
-[Reply error]2021/10/12 18:02:33.490323 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:02:33.490351 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [into commit]
-[Reply error]2021/10/12 18:02:33.490894 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Commit error]2021/10/12 18:02:43.399752 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:43.399768 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307893
-[Commit error]2021/10/12 18:02:43.399773 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307893
-[Commit error]2021/10/12 18:02:43.400209 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:43.400218 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307893
-[Commit error]2021/10/12 18:02:43.400221 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307893
-[Commit error]2021/10/12 18:02:43.400682 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:43.400696 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307893
-[Commit error]2021/10/12 18:02:43.400701 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307893
-[Reply error]2021/10/12 18:02:43.488485 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:02:43.488666 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Commit error]2021/10/12 18:02:53.412218 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:53.412232 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307894
-[Commit error]2021/10/12 18:02:53.412236 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307894
-[Commit error]2021/10/12 18:02:53.412417 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:53.412426 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307894
-[Commit error]2021/10/12 18:02:53.412430 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307894
-[Commit error]2021/10/12 18:02:53.412551 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:02:53.412557 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307894
-[Commit error]2021/10/12 18:02:53.412562 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307894
-[Reply error]2021/10/12 18:02:53.489486 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:02:53.489827 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:02:53.490058 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:02:53.490138 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Commit error]2021/10/12 18:03:08.407701 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:03:08.407713 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307895
-[Commit error]2021/10/12 18:03:08.407717 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307895
-[Commit error]2021/10/12 18:03:08.410810 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:03:08.410824 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307895
-[Commit error]2021/10/12 18:03:08.410830 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307895
-[Reply error]2021/10/12 18:03:08.509072 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:03:08.509184 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:03:08.509290 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:03:08.509314 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [into commit]
-[Commit error]2021/10/12 18:03:18.415997 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:03:18.416015 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307896
-[Commit error]2021/10/12 18:03:18.416045 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307896
-[Commit error]2021/10/12 18:03:18.416352 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:03:18.416365 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307896
-[Commit error]2021/10/12 18:03:18.416369 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307896
-[Reply error]2021/10/12 18:03:18.521518 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:03:18.521625 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:03:18.521710 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:03:18.521914 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Commit error]2021/10/12 18:03:28.416790 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:03:28.416807 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307897
-[Commit error]2021/10/12 18:03:28.416813 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307897
-[Commit error]2021/10/12 18:03:28.416900 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:03:28.416907 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307897
-[Commit error]2021/10/12 18:03:28.416911 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307897
-[Commit error]2021/10/12 18:03:28.416997 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:03:28.417003 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307897
-[Commit error]2021/10/12 18:03:28.417007 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307897
-[Commit error]2021/10/12 18:03:28.417080 /root/study/github_repository/pbft/pbft_impl.go:270: the sequenceID of prepare message is wrong!
-[Commit error]2021/10/12 18:03:28.417086 /root/study/github_repository/pbft/pbft_impl.go:271: Last_sequence_number= 1634032903344307897
-[Commit error]2021/10/12 18:03:28.417090 /root/study/github_repository/pbft/pbft_impl.go:272: prepare.Sequence_number= 1634032903344307897
-[Reply error]2021/10/12 18:03:28.463189 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:03:28.463259 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:03:28.463306 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
-[Reply error]2021/10/12 18:03:28.463350 /root/study/github_repository/pbft/pbft_impl.go:372: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 21:58:03.804144 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 21:58:03.804534 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 21:58:03.805201 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 21:58:03.805340 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 21:58:03.805465 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 21:58:03.805837 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 21:58:03.999762 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 21:58:03.999895 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 21:58:04.000020 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 21:58:04.000122 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 21:58:04.000208 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 21:58:04.000290 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 21:59:45.938594 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 21:59:45.938789 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 21:59:45.938889 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 21:59:45.939016 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 21:59:45.939100 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 21:59:45.939191 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 21:59:46.112128 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 21:59:46.112225 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 21:59:46.112300 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 21:59:46.112528 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 21:59:46.119225 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 21:59:46.119362 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:00:03.884564 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:00:03.884665 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:00:03.884781 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:00:03.884902 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:00:03.885105 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:00:03.885226 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:00:04.104992 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:00:04.105103 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:00:04.105198 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:00:04.105291 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:00:04.105431 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:00:04.105534 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:00:18.911801 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:00:18.911911 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:00:18.912026 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:00:18.912137 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:00:18.912250 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:00:18.912342 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:00:19.087496 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:00:19.087611 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:00:19.087718 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:00:19.087815 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:00:19.087907 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:00:19.088077 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:00:19.088184 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:16:42.784451 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:16:42.784546 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:16:42.784666 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:16:42.784766 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:16:42.784858 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:16:42.784947 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:16:42.971803 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:16:42.971939 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:16:42.972034 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:16:42.972140 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:16:42.972244 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:16:42.972334 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:16:48.802779 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:16:48.802885 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:16:48.802991 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:16:48.803112 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:16:48.803240 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:16:48.803341 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:16:48.977058 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:16:48.977159 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:16:48.977255 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:16:48.977347 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:16:48.977486 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:16:48.977605 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:16:48.977673 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:16:57.836807 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:16:57.836918 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:16:57.837013 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:16:57.837112 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:16:57.837247 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:16:57.837335 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:16:57.978838 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:16:57.979142 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:16:57.979242 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:16:57.979318 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:16:57.979391 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:16:57.979479 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:17:03.788215 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:03.788334 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:03.788466 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:03.788595 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:03.788723 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:03.788845 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:17:03.995213 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:03.995374 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:03.995496 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:03.995572 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:03.995639 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:03.995699 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:17:09.807206 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:09.807324 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:09.807429 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:09.807532 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:09.807632 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:09.807726 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:17:09.949228 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:09.949426 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:09.949577 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:09.949685 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:09.949834 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:09.949940 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:17:15.854024 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:15.854132 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:15.854230 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:15.854330 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:15.854458 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:15.854587 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:17:15.992087 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:15.992200 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:15.992299 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:15.992413 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:15.992528 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:15.992619 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:17:21.830492 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:21.830594 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:21.830698 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:21.830794 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:21.830893 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:21.830983 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:17:21.984387 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:21.984467 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:21.984554 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:21.984649 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:21.984763 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:21.984858 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:21.984989 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:17:27.839245 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:27.839345 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:27.839440 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:27.839600 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:27.839703 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:27.839795 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:17:28.021119 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:28.021266 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:28.021412 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:28.021601 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:28.021742 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:28.021912 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:17:33.831884 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:33.831991 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:33.832092 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:33.832202 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:33.832303 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:33.832420 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:17:34.009587 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:34.009719 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:34.009939 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:34.010053 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:34.010149 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:34.010266 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:17:39.813160 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:39.813306 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:39.813438 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:39.813578 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:39.813691 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:39.813808 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:17:39.981557 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:39.981662 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:39.981760 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:39.981852 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:39.981945 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:39.982066 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:39.982211 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [into commit]
+[Commit error]2021/10/12 22:17:45.828499 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:45.828908 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:45.829029 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:45.829235 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:45.829403 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:17:45.829532 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:17:46.045833 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:46.045946 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:46.046060 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:46.046164 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:46.046281 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:17:46.046385 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:32:24.748445 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:32:24.748571 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:32:24.748645 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:32:24.748708 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:32:24.748768 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:32:24.748827 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:32:24.923580 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:32:24.923669 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:32:24.923742 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:32:24.923816 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:32:24.923886 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:32:24.923969 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:33:22.958725 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:22.958920 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:22.959093 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:22.959271 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:22.959440 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:22.959625 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:33:23.206638 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:23.206838 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:23.207009 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:23.207183 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:23.207343 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:23.207501 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:23.207733 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:33:37.948871 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:37.949063 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:37.949235 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:37.949399 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:37.949628 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:37.949820 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:33:38.232596 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:38.232888 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:38.241205 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:38.241411 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:38.241576 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:38.241755 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:33:43.924978 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:43.925158 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:43.925330 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:43.925544 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:43.925695 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:43.925836 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:33:44.192961 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:44.193143 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:44.193315 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:44.193805 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:44.194009 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:44.194326 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:44.194534 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:33:49.940306 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:49.940470 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:49.940626 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:49.940843 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:49.941055 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:49.941299 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:33:50.161835 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:50.162163 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:50.162375 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:50.162517 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:50.162708 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:50.162935 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:33:55.933514 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:55.933693 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:55.933856 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:55.934054 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:55.934237 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:33:55.934415 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:33:56.224265 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:56.224449 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:56.224620 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:56.224773 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:56.224949 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:33:56.225111 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:34:08.008612 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:08.008793 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:08.008967 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:08.009159 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:08.009339 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:08.009524 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:34:08.282024 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:08.285721 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:08.285970 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:08.286163 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:08.286379 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:08.286563 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:34:13.970643 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:13.970810 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:13.970973 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:13.971237 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:13.971429 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:13.971674 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:34:14.269463 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:14.269903 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:14.270231 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:14.270518 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:14.270737 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:14.270991 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:14.271295 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:34:19.942530 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:19.942664 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:19.942782 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:19.942976 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:19.943179 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:19.943355 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:34:20.239248 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:20.239426 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:20.239614 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:20.239785 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:20.239943 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:20.240105 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:34:25.960636 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:25.960817 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:25.960975 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:25.961576 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:25.973987 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:25.975103 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:34:26.294016 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:26.294136 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:26.294582 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:26.294870 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:26.295074 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:26.295492 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:34:29.023056 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:29.023136 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:29.023216 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:29.023280 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:29.023365 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:29.023483 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:34:29.190602 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:29.190696 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:29.190764 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:29.190824 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:29.191022 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:29.191121 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:34:31.954548 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:31.954721 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:31.962871 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:31.963208 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:31.963387 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:31.963571 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:34:32.164485 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:32.164670 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:32.164812 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:32.165047 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:32.165212 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:32.165376 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:32.165553 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:34:53.120345 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:53.120529 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:53.120694 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:53.120864 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:53.121076 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:53.121252 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:34:53.398941 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:53.399146 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:53.399314 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:53.399478 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:53.399639 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:53.400128 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:34:59.140354 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:59.140540 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:59.140744 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:59.140906 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:59.141981 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:59.142254 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:34:59.142888 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:34:59.352193 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:59.352394 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:59.352598 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:59.352780 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:59.352967 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:34:59.353153 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:35:08.141688 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:08.141860 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:08.142053 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:08.142230 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:08.142419 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:08.142654 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:35:08.408156 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:08.408331 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:08.408520 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:08.408698 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:08.409095 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:08.409446 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:35:14.116969 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:14.117134 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:14.117313 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:14.117509 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:14.117667 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:14.117835 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:35:14.411126 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:14.411298 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:14.411450 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:14.411662 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:14.417361 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:14.418521 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:35:20.209629 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:20.209827 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:20.210015 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:20.210200 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:20.210369 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:20.210523 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:35:20.440693 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:20.440894 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:20.441083 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:20.441268 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:20.441453 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:20.452348 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:35:26.157276 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:26.157459 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:26.157694 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:26.157891 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:26.158050 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:26.158208 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:35:26.392639 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:26.393397 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:26.393620 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:26.393837 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:26.394013 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:26.404251 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:35:44.125529 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:44.125775 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:44.126048 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:44.126307 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:44.126507 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:44.126702 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:35:44.389057 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:44.389257 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:44.389434 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:44.389606 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:44.389807 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:44.394378 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:44.394608 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:35:50.190760 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:50.190983 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:50.191368 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:50.191549 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:50.191711 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:50.191937 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:35:50.379905 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:50.380154 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:50.383539 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:50.383761 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:50.383937 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:50.384131 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:35:56.140919 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:56.141048 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:56.141203 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:56.141369 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:56.141524 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:35:56.141697 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:35:56.363866 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:56.364168 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:56.364373 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:56.364604 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:56.364800 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:35:56.365038 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:36:02.161444 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:02.161601 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:02.161759 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:02.161901 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:02.162053 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:02.162213 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:36:02.464675 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:02.464971 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:02.465178 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:02.465351 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:02.465528 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:02.465700 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:02.465865 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:36:30.028263 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:30.028597 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:30.029286 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:30.029670 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:30.029993 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:30.030338 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:36:30.345675 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:30.345854 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:30.346030 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:30.346231 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:30.346424 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:30.346596 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:36:36.050153 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:36.050358 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:36.051788 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:36.052090 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:36.052303 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:36.052540 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:36:36.376848 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:36.377020 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:36.377209 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:36.377374 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:36.377535 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:36.377700 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:36:42.034281 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:42.034636 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:42.035008 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:42.035390 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:42.035749 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:42.036112 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:36:42.353028 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:42.353228 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:42.353412 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:42.353615 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:42.353794 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:42.353958 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:36:45.027020 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:45.027145 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:45.027273 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:45.027384 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:45.027894 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:45.028201 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:36:45.196240 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:45.196360 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:45.196457 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:45.202506 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:45.202782 /root/study/github_repository/pbftconsensus/network/network_http.go:89: receive a commit message
+[Reply error]2021/10/12 22:36:45.203255 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:36:48.006902 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:48.007100 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:48.007240 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:48.007416 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:48.007552 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:48.007722 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:36:48.256528 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:48.256804 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:48.256932 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:48.257021 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:48.257464 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:48.257589 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:36:51.103639 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:51.103713 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:51.103785 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:51.103852 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:51.103924 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:51.104019 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:36:51.223971 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:51.224063 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:51.224393 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:51.224473 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:51.224591 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:51.225155 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:36:54.008840 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:54.008985 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:54.009122 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:54.009255 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:54.009375 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:36:54.009503 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:36:54.252411 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:54.252564 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:54.252690 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:54.270838 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:54.271121 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:36:54.271300 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:37:00.015561 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:00.015804 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:00.016077 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:00.016300 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:00.016532 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:00.016768 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:37:00.328442 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:00.328641 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:00.328821 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:00.329012 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:00.329204 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:00.329361 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:00.329545 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:37:03.056336 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:03.056424 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:03.056490 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:03.056553 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:03.056653 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:03.056770 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:37:03.164873 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:03.165515 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:03.165633 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:03.165728 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:03.165796 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:03.165919 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:37:06.070980 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:06.071123 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:06.071310 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:06.071451 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:06.071594 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:06.071763 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:06.071931 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:37:06.264454 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:06.264726 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:06.264909 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:06.272125 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:06.272499 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:06.273571 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:37:12.027974 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:12.028123 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:12.028253 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:12.028748 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:12.028952 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:12.029172 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:37:12.273536 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:12.273927 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:12.274098 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:12.274234 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:12.274442 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:12.274655 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:12.274876 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:37:18.078877 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:18.079063 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:18.079217 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:18.079384 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:18.079597 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:18.079811 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:37:18.310204 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:18.310389 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:18.310714 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:18.310910 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:18.311106 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:18.311583 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:37:24.064135 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:24.064315 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:24.064469 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:24.064633 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:24.064759 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:24.064881 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:37:24.324480 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:24.324669 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:24.325005 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:24.325183 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:24.325423 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:24.325555 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Commit error]2021/10/12 22:37:30.059171 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:30.059277 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:30.059398 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:30.059560 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:30.059686 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Commit error]2021/10/12 22:37:30.059778 /root/study/github_repository/pbft/pbft_impl.go:282: the sequenceID of prepare message is wrong!
+[Reply error]2021/10/12 22:37:30.232029 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:30.232152 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:30.232260 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:30.232361 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:30.232456 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!
+[Reply error]2021/10/12 22:37:30.232557 /root/study/github_repository/pbft/pbft_impl.go:390: the sequenceID of commit message is wrong!

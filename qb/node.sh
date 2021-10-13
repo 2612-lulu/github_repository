@@ -50,6 +50,24 @@ gnome-terminal -t "P15" -x bash -c "./qbrun.exe startnode;exec bash"
 export NODE_NAME="P16"
 gnome-terminal -t "P16" -x bash -c "./qbrun.exe startnode;exec bash"
 
+export NODE_NAME="P17"
+gnome-terminal -t "P17" -x bash -c "./qbrun.exe startnode;exec bash"
+
+export NODE_NAME="P18"
+gnome-terminal -t "P18" -x bash -c "./qbrun.exe startnode;exec bash"
+
+export NODE_NAME="P19"
+gnome-terminal -t "P19" -x bash -c "./qbrun.exe startnode;exec bash"
+
+export NODE_NAME="P20"
+gnome-terminal -t "P20" -x bash -c "./qbrun.exe startnode;exec bash"
+
+export NODE_NAME="P21"
+gnome-terminal -t "P21" -x bash -c "./qbrun.exe startnode;exec bash"
+
+export NODE_NAME="P22"
+gnome-terminal -t "P22" -x bash -c "./qbrun.exe startnode;exec bash"
+
 
 :<<!
 -t 为打开终端的标题，便于区分。

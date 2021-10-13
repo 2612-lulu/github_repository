@@ -29,6 +29,6 @@ func (command *COMM) transaction(tx_from, tx_to, nodeID string, tx_amount int) {
 	bc.DB.Close() // 关闭数据库
 	transaction.PrintTransaction()
 
-	node.MsgBroadcast <- transaction
+	node.MsgBroadcast <- &transaction
 	node.Httplisten() // 开启http
 }

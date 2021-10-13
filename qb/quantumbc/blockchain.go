@@ -173,8 +173,8 @@ func (bc *Blockchain) FindUTXO() map[string]qbtx.TXOutputs {
 }
 
 // Iterator,通过blockchain构造迭代器
-func (bc *Blockchain) Iterator() *BlockchainIterator {
-	bci := &BlockchainIterator{ // 初始为最新区块
+func (bc *Blockchain) Iterator() BlockchainIterator {
+	bci := BlockchainIterator{ // 初始为最新区块
 		currentHash: bc.tip,
 		db:          bc.DB,
 	}
@@ -182,9 +182,9 @@ func (bc *Blockchain) Iterator() *BlockchainIterator {
 }
 
 // AddBlock，向区块链中添加新区块
-func (bc *Blockchain) AddBlock(block *qblock.Block) {
+func (bc *Blockchain) AddBlock(block qblock.Block) {
 	var tip []byte
-	var lastblock *qblock.Block
+	var lastblock qblock.Block
 	err := bc.DB.View(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(blocksBucket))
 		tip = b.Get([]byte("last"))
@@ -225,7 +225,7 @@ func (bc *Blockchain) GetlastHeight() int64 {
 		b := tx.Bucket([]byte(blocksBucket))
 		lastHash := b.Get([]byte("last"))
 		blockData := b.Get(lastHash)
-		lastBlock = *qblock.DeserializeBlock(blockData)
+		lastBlock = qblock.DeserializeBlock(blockData)
 		return nil
 	})
 	if err != nil {
@@ -242,7 +242,7 @@ func (bc *Blockchain) GetlastHash() []byte {
 		b := tx.Bucket([]byte(blocksBucket))
 		lastHash := b.Get([]byte("last"))
 		blockData := b.Get(lastHash)
-		lastBlock = *qblock.DeserializeBlock(blockData)
+		lastBlock = qblock.DeserializeBlock(blockData)
 		return nil
 	})
 	if err != nil {
@@ -264,7 +264,7 @@ func (bc *Blockchain) GetBlock(blockHash []byte) (qblock.Block, error) {
 			return errors.New("block is not found")
 		}
 
-		block = *qblock.DeserializeBlock(blockData)
+		block = qblock.DeserializeBlock(blockData)
 
 		return nil
 	})
@@ -300,26 +300,3 @@ func DBExists(dbFile string) bool {
 	}
 	return true
 }
-
-/*
-// FindTransaction finds a transaction by its ID
-func (bc *Blockchain) FindTransaction(ID []byte) (transaction.Transaction, error) {
-	bci := bc.Iterator()
-
-	for {
-		block := bci.Next()
-
-		for _, tx := range block.Transactions {
-			if bytes.Equal(tx.ID, ID) {
-				return *tx, nil
-			}
-		}
-
-		if len(block.PrevBlockHash) == 0 {
-			break
-		}
-	}
-
-	return transaction.Transaction{}, errors.New("Transaction is not found")
-}
-*/

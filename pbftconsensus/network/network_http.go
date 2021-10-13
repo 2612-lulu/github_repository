@@ -27,6 +27,7 @@ func (consensus *NodeConsensus) getRequest(writer http.ResponseWriter, request *
 		fmt.Println(err)
 		return
 	}
+	consensus.PBFT.CurrentState = nil
 	consensus.MsgEntrance <- &msg // 将解码后的消息放入通道MsgEntrance
 
 	file, _ := utils.Init_log(PBFT_LOG_PATH + "listenHttp_" + consensus.Node_name + ".log")
@@ -45,6 +46,7 @@ func (consensus *NodeConsensus) getPrePrepare(writer http.ResponseWriter, reques
 		fmt.Println(err)
 		return
 	}
+	consensus.PBFT.CurrentState = nil
 	consensus.MsgEntrance <- &msg // 将解码后的消息放入通道MsgEntrance
 
 	file, _ := utils.Init_log(PBFT_LOG_PATH + "listenHttp_" + consensus.Node_name + ".log")

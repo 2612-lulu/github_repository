@@ -27,9 +27,9 @@ type Transaction struct {
 }
 
 // SetID，根据交易输入与输出项生成交易ID。
-func (tx *Transaction) SetID() []byte {
+func (tx Transaction) SetID() []byte {
 	var hash [32]byte
-	tx_copy := *tx
+	tx_copy := tx
 	tx_copy.TX_id = []byte{}
 	hash = sha256.Sum256(tx_copy.SerializeTX())
 	return hash[:]
@@ -60,7 +60,7 @@ func DeserializeTX(data []byte) Transaction {
 }
 
 // USSTransactionSign，对交易输入项签名
-func (tx *Transaction) USSTransactionSign(node_name string) {
+func (tx Transaction) USSTransactionSign(node_name string) {
 	tx_copy := tx.TrimmedCopyTX() // 复制并修剪交易以得到待签名数据
 
 	for in_id, input := range tx_copy.TX_vin { // 循环向输入项签名
@@ -88,7 +88,7 @@ func (tx *Transaction) USSTransactionSign(node_name string) {
 }
 
 // VerifyUSSTransactionSign,交易输入项验签
-func (tx *Transaction) VerifyUSSTransactionSign() bool {
+func (tx Transaction) VerifyUSSTransactionSign() bool {
 	txCopy := tx
 
 	for inID, _ := range tx.TX_vin {
@@ -101,7 +101,7 @@ func (tx *Transaction) VerifyUSSTransactionSign() bool {
 }
 
 // TrimmedCopyTX，交易修剪以得到待签名消息
-func (tx *Transaction) TrimmedCopyTX() Transaction {
+func (tx Transaction) TrimmedCopyTX() Transaction {
 	var inputs []TXInput
 	var outputs []TXOutput
 
@@ -118,7 +118,7 @@ func (tx *Transaction) TrimmedCopyTX() Transaction {
 }
 
 // NewReserveTX，发放准备金：只有输出，没有输入，输出来自于准备金
-func NewReserveTX(to []string, data string) *Transaction {
+func NewReserveTX(to []string, data string) Transaction {
 	if data == "" { // 如果输入data为0，则生成一串随机数作data
 		randData := make([]byte, 20)  // 初始化一个长度为20的字节数组
 		_, err := rand.Read(randData) // 取伪随机数
@@ -133,12 +133,12 @@ func NewReserveTX(to []string, data string) *Transaction {
 	tx_out := make([]TXOutput, 0)
 	for _, addr := range to {
 		out := NewTXOutput(RESERVE, addr) // 交易金额=RESERVE，接收方地址=to
-		tx_out = append(tx_out, *out)
+		tx_out = append(tx_out, out)
 	}
 	tx := Transaction{nil, []TXInput{tx_in}, tx_out}
 	tx.TX_id = tx.SetID()
 
-	return &tx
+	return tx
 }
 
 // IsReserveTX,检查交易是否是发放准备金

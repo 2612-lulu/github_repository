@@ -25,7 +25,7 @@ func TestBlock(t *testing.T) {
 
 		Prev_block_hash: []byte{},
 		Hash:            []byte{}, // 空
-		Transactions:    []*qbtx.Transaction{reserve_tx},
+		Transactions:    []qbtx.Transaction{reserve_tx},
 	}
 	genesis.Hash = genesis.BlockToResolveHash()
 

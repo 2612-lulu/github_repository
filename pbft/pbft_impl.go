@@ -10,6 +10,7 @@ import (
 	"qblock"
 	"qbtx"
 	"qkdserv"
+	"reflect"
 	"strconv"
 	"time"
 	"uss"
@@ -18,19 +19,18 @@ import (
 
 // pbft状态标识
 type State struct {
-	View                 View       // 视图号
-	Msg_logs             MsgLogs    // 缓存数据
-	Last_sequence_number int64      // 上次共识序列号
-	Current_stage        Stage      // 当前状态
-	CommittedMessage     *CommitMsg // 达成共识的commit消息
+	View                 View    // 视图号
+	Msg_logs             MsgLogs // 缓存数据
+	Last_sequence_number int64   // 上次共识序列号
+	Current_stage        Stage   // 当前状态
 }
 
 // pbft缓存数据，用于存放pbft过程中的各类消息
 type MsgLogs struct {
-	ReqMsg        *qblock.Block         // 存放request消息
-	PreparedMsgs  map[int64]*PrepareMsg // 存放prepared消息
-	CommittedMsgs map[int64]*CommitMsg  // 存放committed消息
-	ReplyMsgs     map[int64]*ReplyMsg   // 存放Reply消息
+	ReqMsg        qblock.Block         // 存放request消息
+	PreparedMsgs  map[int64]PrepareMsg // 存放prepared消息
+	CommittedMsgs map[int64]CommitMsg  // 存放committed消息
+	ReplyMsgs     map[int64]ReplyMsg   // 存放Reply消息
 }
 
 // 视图号
@@ -62,12 +62,11 @@ func CreateState(view int64, lastSequenceNumber int64) *State {
 			ID: view, // 当前视图号，为主节点编号
 		},
 		Msg_logs: MsgLogs{ // 初始化
-			ReqMsg:        new(qblock.Block),
-			PreparedMsgs:  make(map[int64]*PrepareMsg),
-			CommittedMsgs: make(map[int64]*CommitMsg),
-			ReplyMsgs:     make(map[int64]*ReplyMsg),
+			ReqMsg:        qblock.Block{},
+			PreparedMsgs:  make(map[int64]PrepareMsg),
+			CommittedMsgs: make(map[int64]CommitMsg),
+			ReplyMsgs:     make(map[int64]ReplyMsg),
 		},
-		CommittedMessage:     nil,
 		Last_sequence_number: lastSequenceNumber, // 上一个序列号
 		Current_stage:        Idle,               // 目前状态，节点创立，即将进入共识
 	}
@@ -76,8 +75,8 @@ func CreateState(view int64, lastSequenceNumber int64) *State {
 // State.PrePrePare，进入共识，由主节点进行消息处理：客户端Request——>主节点PrePrePare——>从节点
 // 参数：请求消息*block.Block
 // 返回值：预准备消息*PrePrepareMsg，处理错误error
-func (state *State) PrePrePare(request *qblock.Block) *PrePrepareMsg {
-	*state.Msg_logs.ReqMsg = *request // 记录request消息到state的log中
+func (state *State) PrePrePare(request qblock.Block) PrePrepareMsg {
+	state.Msg_logs.ReqMsg = request // 记录request消息到state的log中
 	msg := request
 	if state.verifyRequest(msg.Transactions) { // 如果每条交易信息验签成功
 		sequenceID := time.Now().UnixNano() // 使用时间戳作为暂时序列号
@@ -86,7 +85,7 @@ func (state *State) PrePrePare(request *qblock.Block) *PrePrepareMsg {
 		}
 		digest_msg := msg.SerializeBlock()
 		// 定义一个preprepare消息
-		preprepare := &PrePrepareMsg{
+		preprepare := PrePrepareMsg{
 			View:            state.View.ID,            // 获取视图号
 			Sequence_number: sequenceID,               // 为其分配序列号
 			Digest_m:        utils.Digest(digest_msg), // 交易信息摘要
@@ -104,7 +103,7 @@ func (state *State) PrePrePare(request *qblock.Block) *PrePrepareMsg {
 				USS_counts:   uint32(N - 1),
 				USS_unit_len: 16,
 			},
-			Request: new(qblock.Block), // 将请求消息附在preprepare中广播给所有从节点
+			Request: qblock.Block{}, // 将请求消息附在preprepare中广播给所有从节点
 		}
 		preprepare.Request = request
 		preprepare.Sign_p.USS_message = preprepare.signMessageEncode()
@@ -113,14 +112,14 @@ func (state *State) PrePrePare(request *qblock.Block) *PrePrepareMsg {
 		state.Current_stage = PrePrepared
 		return preprepare
 	} else {
-		return nil
+		return PrePrepareMsg{}
 	}
 }
 
 // State.VerifyRequest，验证请求消息中每条交易信息的正确性
 // 参数：交易消息[]*block.Transaction
 // 返回值：验证结果bool
-func (state *State) verifyRequest(request []*qbtx.Transaction) bool {
+func (state *State) verifyRequest(request []qbtx.Transaction) bool {
 	//TODO:验证每条交易信息的签名
 	verify_num := 0
 	for _, reqMsg := range request {
@@ -142,13 +141,13 @@ func (state *State) verifyRequest(request []*qbtx.Transaction) bool {
 // State.PrePare，进入准备阶段，从节点处理pre-prepare消息：从节点PrePrepareMsg——>各节点PrepareMsg
 // 参数：预准备消息*PrePrepareMsg
 // 返回值：准备消息*PrepareMsg，处理错误error
-func (state *State) PrePare(preprepare *PrePrepareMsg) *PrepareMsg {
-	*state.Msg_logs.ReqMsg = *preprepare.Request // 将request消息提取出来记录到state中
-	if !state.verifyPrePrepareMsg(preprepare) {  // 校验受到的pre-prepare是否通过
-		return nil
+func (state *State) PrePare(preprepare PrePrepareMsg) PrepareMsg {
+	state.Msg_logs.ReqMsg = preprepare.Request  // 将request消息提取出来记录到state中
+	if !state.verifyPrePrepareMsg(preprepare) { // 校验受到的pre-prepare是否通过
+		return PrepareMsg{}
 	} else {
 		i, _ := strconv.ParseInt(qkdserv.Node_name[1:], 10, 64) // 获取节点编号
-		prepare := &PrepareMsg{                                 // 定义一个prepare消息
+		prepare := PrepareMsg{                                  // 定义一个prepare消息
 			View:            preprepare.View,            // 获取视图号
 			Sequence_number: preprepare.Sequence_number, // 获取索引号
 			Digest_m:        preprepare.Digest_m,        // 获取消息摘要
@@ -179,29 +178,40 @@ func (state *State) PrePare(preprepare *PrePrepareMsg) *PrepareMsg {
 // State.VerifyPrePrepareMsg,验证收到的pre-prepare消息的正确性
 // 参数：预准备消息*PrePrepareMsg
 // 返回值：验证结果bool
-func (state *State) verifyPrePrepareMsg(preprepare *PrePrepareMsg) bool {
+func (state *State) verifyPrePrepareMsg(preprepare PrePrepareMsg) bool {
 	var result bool
 	msg := preprepare.Request.SerializeBlock()
 	digest := utils.Digest(msg) // 计算消息的摘要值
-	file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
-	log.SetPrefix("[Prepare error]")
-	defer file.Close()
+
 	// 判断是否符合校验条件
 	if state.View.ID != preprepare.View {
+		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Prepare error]")
+		defer file.Close()
 		log.Println("the view of preprepare message is wrong!")
 		result = false
 	} else if state.Last_sequence_number >= preprepare.Sequence_number {
+		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Prepare error]")
+		defer file.Close()
 		log.Println("the sequenceID of preprepare message is wrong!")
-		log.Println("Last_sequence_number=", state.Last_sequence_number)
-		log.Println("preprepare.Sequence_number=", preprepare.Sequence_number)
 		result = false
 	} else if !bytes.Equal(digest, preprepare.Digest_m) {
+		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Prepare error]")
+		defer file.Close()
 		log.Println("the digest is wrong!")
 		result = false
 	} else if !state.verifyRequest(preprepare.Request.Transactions) {
+		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Prepare error]")
+		defer file.Close()
 		log.Println("the client_sign is wrong!")
 		result = false
 	} else if !uss.UnconditionallySecureVerifySign(preprepare.Sign_p) {
+		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Prepare error]")
+		defer file.Close()
 		log.Println("the primary_sign is wrong!")
 		result = false
 	} else {
@@ -213,14 +223,14 @@ func (state *State) verifyPrePrepareMsg(preprepare *PrePrepareMsg) bool {
 //  State.Commit，所有联盟节点处理收到的prepare消息：各节点prepare——>其余节点commit
 // 参数：准备消息*PrepareMsg
 // 返回值：提交消息*CommitMsg，处理错误error
-func (state *State) Commit(prepare *PrepareMsg) *CommitMsg {
+func (state *State) Commit(prepare PrepareMsg) CommitMsg {
 	if !state.verifyPrepareMsg(prepare) { // 校验收到的prepare消息
-		return nil
+		return CommitMsg{}
 	} else if state.prepared() { // 检查是否收到2f+1（含本节点产生的prepare）个通过校验的prepare消息
 		i, _ := strconv.ParseInt(qkdserv.Node_name[1:], 10, 64)
 		_, ok := state.Msg_logs.CommittedMsgs[i] // 检查是否发送过commit消息
-		if !ok {                                 // 如果log中无commit信息，则发送commit
-			commit := &CommitMsg{ // 定义一个commit消息
+		if !ok {
+			commit := CommitMsg{ // 定义一个commit消息
 				View:            prepare.View,            // 获取视图号
 				Sequence_number: prepare.Sequence_number, // 获取索引号
 				Digest_m:        prepare.Digest_m,        // 获取消息摘要
@@ -248,36 +258,45 @@ func (state *State) Commit(prepare *PrepareMsg) *CommitMsg {
 			return commit
 		}
 	}
-	return nil
+	return CommitMsg{}
 }
 
 // State.VerifyPrepareMsg，验证收到的prepare消息的正确性
 // 参数：准备消息*PrepareMsg
 // 返回值：验证结果bool
-func (state *State) verifyPrepareMsg(prepare *PrepareMsg) bool {
+func (state *State) verifyPrepareMsg(prepare PrepareMsg) bool {
 	var result bool
-	file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
-	log.SetPrefix("[Commit error]")
-	defer file.Close()
-
 	msg := state.Msg_logs.ReqMsg.SerializeBlock()
 	digest := utils.Digest(msg) // 计算消息的摘要值
 
 	if state.View.ID != prepare.View {
+		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Commit error]")
+		defer file.Close()
 		log.Println("the view of prepare message is wrong!")
 		result = false
 	} else if state.Last_sequence_number >= prepare.Sequence_number {
+		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Commit error]")
+		defer file.Close()
 		log.Println("the sequenceID of prepare message is wrong!")
-		log.Println("Last_sequence_number=", state.Last_sequence_number)
-		log.Println("prepare.Sequence_number=", prepare.Sequence_number)
 		result = false
 	} else if !bytes.Equal(digest, prepare.Digest_m) {
+		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Commit error]")
+		defer file.Close()
 		log.Println("the verify of digest is wrong!")
 		result = false
 	} else if !state.verifyRequest(state.Msg_logs.ReqMsg.Transactions) {
+		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Commit error]")
+		defer file.Close()
 		log.Println("the client_sign is wrong!")
 		result = false
 	} else if !uss.UnconditionallySecureVerifySign(prepare.Sign_i) {
+		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Commit error]")
+		defer file.Close()
 		log.Println("the node_sign is wrong!")
 		result = false
 	} else {
@@ -291,16 +310,15 @@ func (state *State) verifyPrepareMsg(prepare *PrepareMsg) bool {
 // 参数：共识状态state
 // 返回值：验证结果bool
 func (state *State) prepared() bool {
-	file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
-	log.SetPrefix("[prepared error]")
-	defer file.Close()
-	if state.Msg_logs.ReqMsg == nil {
+	if reflect.DeepEqual(state.Msg_logs.ReqMsg, qblock.Block{}) {
 		fmt.Println("request of state is nil")
 		return false
 	}
-
 	if len(state.Msg_logs.PreparedMsgs) < 2*F {
-		//log.Println("didn't receive 2*f prepared message,please wait")
+		/*file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
+		log.SetPrefix("[prepared error]")
+		defer file.Close()
+		log.Println("didn't receive 2*f prepared message,please wait")*/
 		return false
 	}
 	return true
@@ -309,14 +327,14 @@ func (state *State) prepared() bool {
 //  State.ReplyMsg，获取reply消息，当收到2f+1个满足要求的commit时，调用此函数
 // 参数：提交消息*CommitMsg
 // 返回值：应答消息*ReplyMsg，处理错误error
-func (state *State) Reply(commit *CommitMsg) *ReplyMsg {
+func (state *State) Reply(commit CommitMsg) ReplyMsg {
 	if !state.verifyCommitMsg(commit) {
-		return nil
+		return ReplyMsg{}
 	} else if state.committed() {
 		i, _ := strconv.ParseInt(qkdserv.Node_name[1:], 10, 64)
-		_, ok := state.Msg_logs.ReplyMsgs[i] // 检查是否发送过reply消息
+		_, ok := state.Msg_logs.ReplyMsgs[i] // 检查是否发送过reply消息,避免重复发送
 		if !ok {                             // 如果未发送过reply消息
-			reply := &ReplyMsg{
+			reply := ReplyMsg{
 				View:        commit.View,                      // 获取视图号
 				Time_stamp:  state.Msg_logs.ReqMsg.Time_stamp, // 相应request消息的时间戳
 				Client_name: "",                               // 客户端名称
@@ -336,7 +354,7 @@ func (state *State) Reply(commit *CommitMsg) *ReplyMsg {
 					USS_counts:   1,  // 验签者的数量，客户端验签
 					USS_unit_len: 16, // 签名的单位长度，一般默认为16
 				},
-				Request: *state.Msg_logs.ReqMsg,
+				Request: state.Msg_logs.ReqMsg,
 			}
 			reply.Sign_i.USS_message, _ = reply.signMessageEncode()
 			// reply消息的签名
@@ -344,40 +362,49 @@ func (state *State) Reply(commit *CommitMsg) *ReplyMsg {
 				reply.Sign_i.USS_counts, reply.Sign_i.USS_unit_len, reply.Sign_i.USS_message)
 
 			state.Msg_logs.ReplyMsgs[i] = reply
-			state.CommittedMessage = commit
 			state.Current_stage = Committed
 			return reply
 		}
 	}
-	return nil
+	return ReplyMsg{}
 }
 
 // State.VerifyCommitMsg，验证收到的commit消息的正确性
 // 参数：提交消息*CommitMsg
 // 返回值：验证结果bool
-func (state *State) verifyCommitMsg(commit *CommitMsg) bool {
+func (state *State) verifyCommitMsg(commit CommitMsg) bool {
 	var result bool
-	file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
-	log.SetPrefix("[Reply error]")
-	defer file.Close()
-	//fmt.Println(state.Msg_logs.ReqMsg)
-
 	msg := state.Msg_logs.ReqMsg.SerializeBlock()
 	digest := utils.Digest(msg) // 计算消息的摘要值
 
 	if state.View.ID != commit.View {
+		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Reply error]")
+		defer file.Close()
 		log.Println("the view is wrong!")
 		result = false
 	} else if state.Last_sequence_number != -1 && state.Last_sequence_number >= commit.Sequence_number {
+		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Reply error]")
+		defer file.Close()
 		log.Println("the sequenceID of commit message is wrong!")
 		result = false
 	} else if !bytes.Equal(digest, commit.Digest_m) {
+		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Reply error]")
+		defer file.Close()
 		log.Println("the verify of digest is wrong!")
 		result = false
 	} else if !state.verifyRequest(state.Msg_logs.ReqMsg.Transactions) {
+		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Reply error]")
+		defer file.Close()
 		log.Println("the client_sign is wrong!")
 		result = false
 	} else if !uss.UnconditionallySecureVerifySign(commit.Sign_i) {
+		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Reply error]")
+		defer file.Close()
 		log.Println("the node_sign is wrong!")
 		result = false
 	} else {
@@ -391,10 +418,10 @@ func (state *State) verifyCommitMsg(commit *CommitMsg) bool {
 // 参数：共识状态state
 // 返回值：验证结果bool
 func (state *State) committed() bool {
-	file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
-	log.SetPrefix("[committed error]")
-	defer file.Close()
 	if !state.prepared() { // 如果prepare投票未通过，则不能进入commit
+		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
+		log.SetPrefix("[committed error]")
+		defer file.Close()
 		log.Println("didn't prepared!")
 		return false
 	}

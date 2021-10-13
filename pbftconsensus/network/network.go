@@ -24,8 +24,8 @@ type NodeConsensus struct {
 	Node_table           map[string]string // 节点索引表，key=Node_name, value=url
 	BC_url               string
 
-	View      *pbft.View // 视图号
-	PBFT      *Consensus
+	View      pbft.View // 视图号
+	PBFT      Consensus
 	Committed []*pbft.CommitMsg
 
 	MsgBroadcast        chan interface{} // 广播通道
@@ -40,16 +40,16 @@ type NodeConsensus struct {
 // 共识
 type Consensus struct {
 	CurrentState *pbft.State // 节点状态，默认为nil
-	MsgBuffer    *MsgBuffer  // 五种消息类型缓冲列表
+	MsgBuffer    MsgBuffer   // 五种消息类型缓冲列表
 }
 
 // 数据缓存区
 type MsgBuffer struct {
-	TranscationMsgs []*qbtx.Transaction
-	ReqMsgs         []*qblock.Block
-	PrePrepareMsgs  []*pbft.PrePrepareMsg
-	PrepareMsgs     []*pbft.PrepareMsg
-	CommitMsgs      []*pbft.CommitMsg
+	TranscationMsgs []qbtx.Transaction
+	ReqMsgs         []qblock.Block
+	PrePrepareMsgs  []pbft.PrePrepareMsg
+	PrepareMsgs     []pbft.PrepareMsg
+	CommitMsgs      []pbft.CommitMsg
 }
 
 // NewNodeConsensus，节点共识初始化
@@ -63,14 +63,14 @@ func NewNodeConsensus(node_name string) *NodeConsensus {
 		Node_consensus_table: utils.InitConfig(utils.INIT_PATH + "pbft_localhost.txt"), // 联盟节点节点索引表，key=Node_name, value=url
 		Node_table:           utils.InitConfig(utils.INIT_PATH + "node_localhost.txt"), // 联盟节点节点索引表，key=Node_name, value=url
 
-		View: new(pbft.View),
-		PBFT: &Consensus{
+		View: pbft.View{},
+		PBFT: Consensus{
 			CurrentState: nil,
-			MsgBuffer: &MsgBuffer{ // 初始化
-				ReqMsgs:        make([]*qblock.Block, 0),
-				PrePrepareMsgs: make([]*pbft.PrePrepareMsg, 0),
-				PrepareMsgs:    make([]*pbft.PrepareMsg, 0),
-				CommitMsgs:     make([]*pbft.CommitMsg, 0),
+			MsgBuffer: MsgBuffer{ // 初始化
+				ReqMsgs:        make([]qblock.Block, 0),
+				PrePrepareMsgs: make([]pbft.PrePrepareMsg, 0),
+				PrepareMsgs:    make([]pbft.PrepareMsg, 0),
+				CommitMsgs:     make([]pbft.CommitMsg, 0),
 			},
 		},
 		Committed: make([]*pbft.CommitMsg, 0),
@@ -93,7 +93,7 @@ func NewNodeConsensus(node_name string) *NodeConsensus {
 	if err != nil {
 		panic(err)
 	}
-	node_consensus.View = &view
+	node_consensus.View = view
 	node_consensus.BC_url = node_consensus.Node_table[node_consensus.Node_name]
 	qkdserv.Node_name = node_name // 调用此程序的当前节点或客户端名称
 	qkdserv.QKD_sign_random_matrix_pool = make(map[qkdserv.QKDSignMatrixIndex]qkdserv.QKDSignRandomsMatrix)

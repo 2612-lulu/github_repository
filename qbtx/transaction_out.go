@@ -15,8 +15,8 @@ type TXOutput struct {
 
 // NewTXOutput，初始化交易输出项
 // 参数：交易数值int，接收方地址string
-func NewTXOutput(tx_value int, tx_dst string) *TXOutput {
-	txo := &TXOutput{tx_value, tx_dst}
+func NewTXOutput(tx_value int, tx_dst string) TXOutput {
+	txo := TXOutput{tx_value, tx_dst}
 	return txo
 }
 

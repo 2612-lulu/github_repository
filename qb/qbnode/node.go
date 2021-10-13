@@ -23,7 +23,7 @@ type Node struct {
 	Node_consensus_table map[string]string
 	Addr_table           map[string]string
 
-	TranscationMsgs []*qbtx.Transaction
+	TranscationMsgs []qbtx.Transaction
 
 	PBFT_url     string
 	Primary      string
