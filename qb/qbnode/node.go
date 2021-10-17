@@ -10,7 +10,7 @@ import (
 )
 
 // 打包时间间隔
-const BlockTimeDuration = time.Millisecond * 3000 // 3 second.
+const BlockTimeDuration = time.Millisecond * 2000 // 3 second.
 
 // log存放路径
 const NODE_LOG_PATH = "../qb/qbnode/nodelog/"
@@ -23,7 +23,7 @@ type Node struct {
 	Node_consensus_table map[string]string
 	Addr_table           map[string]string
 
-	TranscationMsgs []qbtx.Transaction
+	TranscationMsgs []*qbtx.Transaction
 
 	PBFT_url     string
 	Primary      string
@@ -54,9 +54,12 @@ func NewNode(node_name string) *Node {
 		Node_table:           utils.InitConfig(utils.INIT_PATH + "node_localhost.txt"), // 联盟节点节点索引表，key=Node_name, value=url
 		Node_consensus_table: utils.InitConfig(utils.INIT_PATH + "pbft_localhost.txt"),
 		Addr_table:           make(map[string]string),
-		Primary:              "",
-		CurrentState:         Idle,
 
+		TranscationMsgs: make([]*qbtx.Transaction, 0),
+
+		PBFT_url:     "",
+		Primary:      "",
+		CurrentState: Idle,
 		// 初始化通道Channels
 		MsgBroadcast: make(chan interface{}), // 信息发送通道
 		MsgDelivery:  make(chan interface{}),

@@ -1,0 +1,48 @@
+COLLECT TRANSACTION---2021/10/17 20:33:27.446987 /root/study/github_repository/qb/qbnode/node_network.go:32: collect a transaction
+COLLECT TRANSACTION---2021/10/17 20:33:27.603988 /root/study/github_repository/qb/qbnode/node_network.go:32: collect a transaction
+COLLECT TRANSACTION---2021/10/17 20:33:27.757348 /root/study/github_repository/qb/qbnode/node_network.go:32: collect a transaction
+COLLECT TRANSACTION---2021/10/17 20:33:27.889619 /root/study/github_repository/qb/qbnode/node_network.go:32: collect a transaction
+BLOCK--2021/10/17 20:33:28.617324 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:54: collect enough transactions, create a block
+PBFT--[REQUEST DONE]2021/10/17 20:33:28.618953 /root/study/github_repository/qb/qbnode/node_routine_broadcastMsg.go:53: broadcast request message, start pbft
+PBFT--[PRE-PREPARE DONE]2021/10/17 20:33:28.715950 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:84: broadcast preprepare message, into prepare
+PBFT--[COMMIT DONE]2021/10/17 20:33:29.187402 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:94: broadcast commit message, into reply
+PBFT--[REPLY DONE]2021/10/17 20:33:29.321385 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:117: broadcast reply message, send result of pbft
+UPDATE BLOCKCHAIN--2021/10/17 20:33:29.325784 /root/study/github_repository/qb/qbnode/node_routine_broadcastMsg.go:71: add new block to blockchain
+RETURN RESULT--2021/10/17 20:33:29.326196 /root/study/github_repository/qb/qbnode/node_routine_broadcastMsg.go:73: Returns the result of the transaction
+
+COLLECT TRANSACTION---2021/10/17 20:33:35.147439 /root/study/github_repository/qb/qbnode/node_network.go:32: collect a transaction
+COLLECT TRANSACTION---2021/10/17 20:33:35.273895 /root/study/github_repository/qb/qbnode/node_network.go:32: collect a transaction
+COLLECT TRANSACTION---2021/10/17 20:33:35.398251 /root/study/github_repository/qb/qbnode/node_network.go:32: collect a transaction
+COLLECT TRANSACTION---2021/10/17 20:33:35.521893 /root/study/github_repository/qb/qbnode/node_network.go:32: collect a transaction
+BLOCK--2021/10/17 20:33:36.620760 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:54: collect enough transactions, create a block
+PBFT--[REQUEST DONE]2021/10/17 20:33:36.621627 /root/study/github_repository/qb/qbnode/node_routine_broadcastMsg.go:53: broadcast request message, start pbft
+PBFT--[PRE-PREPARE DONE]2021/10/17 20:33:36.693490 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:84: broadcast preprepare message, into prepare
+PBFT--[COMMIT DONE]2021/10/17 20:33:37.212433 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:94: broadcast commit message, into reply
+PBFT--[REPLY DONE]2021/10/17 20:33:37.380088 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:117: broadcast reply message, send result of pbft
+UPDATE BLOCKCHAIN--2021/10/17 20:33:37.390088 /root/study/github_repository/qb/qbnode/node_routine_broadcastMsg.go:71: add new block to blockchain
+RETURN RESULT--2021/10/17 20:33:37.390112 /root/study/github_repository/qb/qbnode/node_routine_broadcastMsg.go:73: Returns the result of the transaction
+
+COLLECT TRANSACTION---2021/10/17 20:46:07.426142 /root/study/github_repository/qb/qbnode/node_network.go:32: collect a transaction
+COLLECT TRANSACTION---2021/10/17 20:46:07.549489 /root/study/github_repository/qb/qbnode/node_network.go:32: collect a transaction
+COLLECT TRANSACTION---2021/10/17 20:46:07.690605 /root/study/github_repository/qb/qbnode/node_network.go:32: collect a transaction
+COLLECT TRANSACTION---2021/10/17 20:46:07.815214 /root/study/github_repository/qb/qbnode/node_network.go:32: collect a transaction
+BLOCK--2021/10/17 20:46:08.418770 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:62: collect enough transactions, create a block
+PBFT--[REQUEST DONE]2021/10/17 20:46:08.420286 /root/study/github_repository/qb/qbnode/node_routine_broadcastMsg.go:53: broadcast request message, start pbft
+PBFT--[PRE-PREPARE DONE]2021/10/17 20:46:08.504529 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:84: broadcast preprepare message, into prepare
+PBFT--[COMMIT DONE]2021/10/17 20:46:09.107086 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:94: broadcast commit message, into reply
+PBFT--[REPLY DONE]2021/10/17 20:46:09.256813 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:117: broadcast reply message, send result of pbft
+UPDATE BLOCKCHAIN--2021/10/17 20:46:09.263660 /root/study/github_repository/qb/qbnode/node_routine_broadcastMsg.go:71: add new block to blockchain
+RETURN RESULT--2021/10/17 20:46:09.263727 /root/study/github_repository/qb/qbnode/node_routine_broadcastMsg.go:73: Returns the result of the transaction
+
+COLLECT TRANSACTION---2021/10/17 20:46:13.370009 /root/study/github_repository/qb/qbnode/node_network.go:32: collect a transaction
+COLLECT TRANSACTION---2021/10/17 20:46:13.493410 /root/study/github_repository/qb/qbnode/node_network.go:32: collect a transaction
+COLLECT TRANSACTION---2021/10/17 20:46:13.619215 /root/study/github_repository/qb/qbnode/node_network.go:32: collect a transaction
+COLLECT TRANSACTION---2021/10/17 20:46:13.745686 /root/study/github_repository/qb/qbnode/node_network.go:32: collect a transaction
+BLOCK--2021/10/17 20:46:14.422495 /root/study/github_repository/qb/qbnode/node_routine_blockMsg.go:62: collect enough transactions, create a block
+PBFT--[REQUEST DONE]2021/10/17 20:46:14.423369 /root/study/github_repository/qb/qbnode/node_routine_broadcastMsg.go:53: broadcast request message, start pbft
+PBFT--[PRE-PREPARE DONE]2021/10/17 20:46:14.511403 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:84: broadcast preprepare message, into prepare
+PBFT--[COMMIT DONE]2021/10/17 20:46:15.388438 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:94: broadcast commit message, into reply
+PBFT--[REPLY DONE]2021/10/17 20:46:15.551103 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:117: broadcast reply message, send result of pbft
+UPDATE BLOCKCHAIN--2021/10/17 20:46:15.555236 /root/study/github_repository/qb/qbnode/node_routine_broadcastMsg.go:71: add new block to blockchain
+RETURN RESULT--2021/10/17 20:46:15.555301 /root/study/github_repository/qb/qbnode/node_routine_broadcastMsg.go:73: Returns the result of the transaction
+

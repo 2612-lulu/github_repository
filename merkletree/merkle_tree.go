@@ -1,3 +1,7 @@
+// qkdserv包，模拟QKD服务基本功能，包括密钥分发与获取密钥
+// 创建人：zhanglu
+// 创建时间：2021/08/04
+// 使用须知：使用前需初始化签名密钥池qkdserv.QKD_sign_random_matrix_pool与当前节点号qkdserv.Node_name
 package merkletree
 
 import (
@@ -17,6 +21,8 @@ type MerkleNode struct {
 }
 
 // NewMerkleTree，将节点组建为树
+// 参数：节点数据
+// 返回值：默克尔树
 func NewMerkleTree(data [][]byte) *MerkleTree {
 	var nodes []MerkleNode
 	// 确保必须为2的整数倍节点
@@ -48,6 +54,8 @@ func NewMerkleTree(data [][]byte) *MerkleTree {
 }
 
 // NewMerkleNode，创建默克尔树节点，既要支持中间节点，也要支持叶子节点
+// 参数：左右节点，原始数据
+// 返回值：默克尔树节点
 func NewMerkleNode(left, right *MerkleNode, data []byte) *MerkleNode {
 	m_node := MerkleNode{}
 

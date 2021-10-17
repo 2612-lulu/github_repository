@@ -3,6 +3,7 @@ package qbnode
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"pbft"
 	"qb/qbutxo"
 	"qb/quantumbc"
@@ -28,22 +29,32 @@ func (node *Node) broadcastMsg() {
 				fmt.Println("The last transaction didn't finish,please wait")
 			}
 		case *qblock.Block:
-			jsonMsg, err := json.Marshal(msg) // 将msg信息编码成json格式
-			if err != nil {
-				fmt.Println(err)
-			}
-			utils.Send(node.PBFT_url+"/request", jsonMsg) // 发送给对应的pbft
+			node.broadcastBlock(msg)
 		case *pbft.ReplyMsg:
 			// TODO1:区块上链
-			node.addBlock(msg.Request)
 			// TODO2：主节点发送交易结果
+			node.addBlock(msg.Request)
 			if node.Node_name == node.Primary {
 				node.broadcast(msg, "/txreply")
 			}
 		}
 	}
 }
-func (node *Node) addBlock(block qblock.Block) {
+
+func (node *Node) broadcastBlock(msg *qblock.Block) error {
+	jsonMsg, err := json.Marshal(msg) // 将msg信息编码成json格式
+	if err != nil {
+		fmt.Println(err)
+	}
+	utils.Send(node.PBFT_url+"/request", jsonMsg) // 发送给对应的pbft
+	file, _ := utils.Init_log(utils.FLOW_PATH + node.Node_name + ".log")
+	defer file.Close()
+	log.SetPrefix("PBFT--[REQUEST DONE]")
+	log.Println("broadcast request message, start pbft")
+	return nil
+}
+
+func (node *Node) addBlock(block *qblock.Block) {
 	bc := quantumbc.NewBlockchain(node.Node_name) // 获取账本
 	UTXOSet := qbutxo.UTXOSet{                    // 设置utxo
 		Blockchain: bc,
@@ -52,10 +63,23 @@ func (node *Node) addBlock(block qblock.Block) {
 	defer bc.DB.Close() // 关闭数据库
 	UTXOSet.Update(block)
 	UTXOSet.Reindex()
-	count := UTXOSet.CountTransactions()
-	fmt.Printf("Done! There are %d transactions in the UTXO set.\n", count)
+
+	file, _ := utils.Init_log(utils.FLOW_PATH + node.Node_name + ".log")
+	defer file.Close()
+	if node.Node_name == node.Primary {
+		log.SetPrefix("UPDATE BLOCKCHAIN--")
+		log.Println("add new block to blockchain")
+		log.SetPrefix("RETURN RESULT--")
+		log.Printf("Returns the result of the transaction\n\n")
+	} else {
+		log.SetPrefix("UPDATE BLOCKCHAIN--")
+		log.Printf("add new block to blockchain\n\n")
+	}
+	//count := UTXOSet.CountTransactions()
+	//fmt.Printf("Done! There are %d transactions in the UTXO set.\n", count)
 	//quantumbc.PrintBlockChain(node.Node_name)
 }
+
 func (node *Node) broadcast(msg interface{}, path string) map[string]error {
 	errorMap := make(map[string]error) // 存放广播结果
 	// 将消息广播给其他联盟节点

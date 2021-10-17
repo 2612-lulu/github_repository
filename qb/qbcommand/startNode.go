@@ -12,7 +12,7 @@ import (
 func (command *COMM) startNode(nodeID string) {
 	node := qbnode.NewNode(nodeID) // 开启一个联盟节点
 	addresses := make([]string, 0)
-	for ID, _ := range node.Node_table { // 钱包地址
+	for ID := range node.Node_table { // 钱包地址
 		w := qbwallet.NewWallet(ID)
 		node.Addr_table[string(w.Addr)] = ID
 		addresses = append(addresses, string(w.Addr))

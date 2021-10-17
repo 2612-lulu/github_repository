@@ -1,3 +1,7 @@
+// qbtx包，定义了交易数据结构及相关处理函数
+// 创建人：zhanglu
+// 创建时间：2021/08/24
+// 使用须知：使用前需先定义验签者数量
 package qbtx
 
 import (
@@ -27,7 +31,9 @@ type Transaction struct {
 }
 
 // SetID，根据交易输入与输出项生成交易ID。
-func (tx Transaction) SetID() []byte {
+// 参数：交易
+// 返回值：交易ID
+func (tx *Transaction) SetID() []byte {
 	var hash [32]byte
 	tx_copy := tx
 	tx_copy.TX_id = []byte{}
@@ -36,7 +42,9 @@ func (tx Transaction) SetID() []byte {
 }
 
 // Serialize，交易序列化
-func (tx Transaction) SerializeTX() []byte {
+// 参数：交易
+// 返回值：交易序列化结果
+func (tx *Transaction) SerializeTX() []byte {
 	var encoded bytes.Buffer
 
 	enc := gob.NewEncoder(&encoded)
@@ -48,8 +56,10 @@ func (tx Transaction) SerializeTX() []byte {
 }
 
 // DeserializeTX，交易反序列化
-func DeserializeTX(data []byte) Transaction {
-	var tx Transaction
+// 参数：序列化结果
+// 返回值：交易
+func DeserializeTX(data []byte) *Transaction {
+	var tx *Transaction
 
 	decoder := gob.NewDecoder(bytes.NewReader(data))
 	err := decoder.Decode(&tx)
@@ -60,7 +70,9 @@ func DeserializeTX(data []byte) Transaction {
 }
 
 // USSTransactionSign，对交易输入项签名
-func (tx Transaction) USSTransactionSign(node_name string) {
+// 参数：交易，节点名称
+// 返回值：无，交易带签名值
+func (tx *Transaction) USSTransactionSign(node_name string) {
 	tx_copy := tx.TrimmedCopyTX() // 复制并修剪交易以得到待签名数据
 
 	for in_id, input := range tx_copy.TX_vin { // 循环向输入项签名
@@ -83,25 +95,27 @@ func (tx Transaction) USSTransactionSign(node_name string) {
 		}
 		signature = uss.UnconditionallySecureSign(signature.Sign_index, signature.USS_counts, signature.USS_unit_len, signature.USS_message)
 		tx.TX_vin[in_id].TX_uss_sign = signature
-		//tx_copy.TX_vin[in_id].TX_src = "" // 将From置空
 	}
 }
 
 // VerifyUSSTransactionSign,交易输入项验签
-func (tx Transaction) VerifyUSSTransactionSign() bool {
+// 参数：带有签名的交易
+// 返回值：验签结果bool
+func (tx *Transaction) VerifyUSSTransactionSign() bool {
 	txCopy := tx
 
-	for inID, _ := range tx.TX_vin {
+	for inID := range tx.TX_vin {
 		if !uss.UnconditionallySecureVerifySign(txCopy.TX_vin[inID].TX_uss_sign) {
 			fmt.Println("verify of tx wrong")
 		}
 	}
-
 	return true
 }
 
 // TrimmedCopyTX，交易修剪以得到待签名消息
-func (tx Transaction) TrimmedCopyTX() Transaction {
+// 参数：交易
+// 返回值：修剪后的带签名交易消息
+func (tx *Transaction) TrimmedCopyTX() *Transaction {
 	var inputs []TXInput
 	var outputs []TXOutput
 
@@ -114,11 +128,13 @@ func (tx Transaction) TrimmedCopyTX() Transaction {
 	}
 
 	txCopy := Transaction{tx.TX_id, inputs, outputs} // 复制一份交易
-	return txCopy
+	return &txCopy
 }
 
 // NewReserveTX，发放准备金：只有输出，没有输入，输出来自于准备金
-func NewReserveTX(to []string, data string) Transaction {
+// 参数：交易目的地，交易内容
+// 返回值：交易*Transaction
+func NewReserveTX(to []string, data string) *Transaction {
 	if data == "" { // 如果输入data为0，则生成一串随机数作data
 		randData := make([]byte, 20)  // 初始化一个长度为20的字节数组
 		_, err := rand.Read(randData) // 取伪随机数
@@ -135,14 +151,16 @@ func NewReserveTX(to []string, data string) Transaction {
 		out := NewTXOutput(RESERVE, addr) // 交易金额=RESERVE，接收方地址=to
 		tx_out = append(tx_out, out)
 	}
-	tx := Transaction{nil, []TXInput{tx_in}, tx_out}
+	tx := &Transaction{nil, []TXInput{tx_in}, tx_out}
 	tx.TX_id = tx.SetID()
 
 	return tx
 }
 
 // IsReserveTX,检查交易是否是发放准备金
-func (tx Transaction) IsReserveTX() bool {
+// 参数：待判断交易
+// 返回值：判断结果bool
+func (tx *Transaction) IsReserveTX() bool {
 	// 判断依据：1.输入项只有一条；2.引用的交易输出编号为-1；3.引用的交易ID为空
 	if len(tx.TX_vin) == 1 && len(tx.TX_vin[0].Refer_tx_id) == 0 && tx.TX_vin[0].Refer_tx_id_index == -1 {
 		return true
@@ -150,7 +168,10 @@ func (tx Transaction) IsReserveTX() bool {
 	return false
 }
 
-func (tx Transaction) PrintTransaction() {
+// PrintTransaction，打印交易
+// 参数：待打印交易
+// 返回值：无，屏幕输出交易信息
+func (tx *Transaction) PrintTransaction() {
 	//fmt.Printf("\tID:%x\n", tx.ID)
 	for _, vin := range tx.TX_vin {
 		//fmt.Printf("\tVin:%d\n", i+1)

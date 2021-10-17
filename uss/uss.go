@@ -42,26 +42,6 @@ func UnconditionallySecureSign(sign_index qkdserv.QKDSignMatrixIndex, counts,
 	return uss_sign
 }
 
-func convertToUSSMessage(m []byte) [1024]byte {
-	var sign_m [1024]byte
-	if len(m) > 1024 {
-		fmt.Println("【uss error】:length of m is too big")
-	} else if len(m) < 1024 {
-		for i := 0; i < len(m); i++ {
-			sign_m[i] = m[i]
-		}
-		for i := len(m); i < 1024; i++ {
-			sign_m[i] = byte(0)
-		}
-	} else {
-		for i := 0; i < len(m); i++ {
-			sign_m[i] = m[i]
-		}
-	}
-	return sign_m
-
-}
-
 // UnconditionallySecureVerifySign，验签
 // 参数：签名索引qkdserv.QKDSignMatrixIndex,签名个数uint32，签名单位长度uint32，待签名消息[1024]byte
 // 返回值：验签结果bool
@@ -100,6 +80,26 @@ func UnconditionallySecureVerifySign(uss_sign USSToeplitzHashSignMsg) bool {
 		verifysign_result = false
 	}
 	return verifysign_result
+}
+
+func convertToUSSMessage(m []byte) [1024]byte {
+	var sign_m [1024]byte
+	if len(m) > 1024 {
+		fmt.Println("【uss error】:length of m is too big")
+	} else if len(m) < 1024 {
+		for i := 0; i < len(m); i++ {
+			sign_m[i] = m[i]
+		}
+		for i := len(m); i < 1024; i++ {
+			sign_m[i] = byte(0)
+		}
+	} else {
+		for i := 0; i < len(m); i++ {
+			sign_m[i] = m[i]
+		}
+	}
+	return sign_m
+
 }
 
 // GenSignTaskSN，产生指定字节长度的随机数，主要可做签名序列号（一般为16字节）

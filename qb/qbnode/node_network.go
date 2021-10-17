@@ -26,10 +26,10 @@ func (node *Node) getTranscation(writer http.ResponseWriter, request *http.Reque
 		return
 	}
 	node.MsgBlock <- &msg // 将解码后的交易消息放入打包通道
-	file, _ := utils.Init_log(NODE_LOG_PATH + "listenHttp_" + node.Node_name + ".log")
-	log.SetPrefix("[listen transcation]")
-	log.Println("receive a transcation message")
+	file, _ := utils.Init_log(utils.FLOW_PATH + node.Node_name + ".log")
 	defer file.Close()
+	log.SetPrefix("COLLECT TRANSACTION---")
+	log.Println("collect a transaction")
 }
 
 // getTranscation，解析交易消息
@@ -41,7 +41,7 @@ func (node *Node) getReply(writer http.ResponseWriter, request *http.Request) {
 		return
 	}
 	node.MsgBroadcast <- &msg // 将解码后的交易消息放入通道
-	file, _ := utils.Init_log(NODE_LOG_PATH + "listenHttp_" + node.Node_name + ".log")
+	file, _ := utils.Init_log(NODE_LOG_PATH + node.Node_name + ".log")
 	log.SetPrefix("[listen reply]")
 	log.Println("receive a transcation message")
 	defer file.Close()
@@ -55,7 +55,7 @@ func (node *Node) getTXReply(writer http.ResponseWriter, request *http.Request) 
 		return
 	}
 	node.MsgDelivery <- &msg
-	file, _ := utils.Init_log(NODE_LOG_PATH + "listenHttp_" + node.Node_name + ".log")
+	file, _ := utils.Init_log(NODE_LOG_PATH + node.Node_name + ".log")
 	log.SetPrefix("[listen reply]")
 	log.Println("receive the result of tx")
 	defer file.Close()

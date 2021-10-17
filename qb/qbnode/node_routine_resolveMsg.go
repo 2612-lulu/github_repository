@@ -30,7 +30,8 @@ func (node *Node) resolveMsg() {
 // 返回值：交易信息*block.Transaction
 func (node *Node) SignTranscation(tx *qbtx.Transaction) *qbtx.Transaction {
 	tx.USSTransactionSign(node.Node_name)
-	file, _ := utils.Init_log(NODE_LOG_PATH + "resolve_" + node.Node_name + ".log")
+
+	file, _ := utils.Init_log(NODE_LOG_PATH + node.Node_name + ".log")
 	log.SetPrefix("[generate tx]")
 	log.Println("get a tx and prepare to send it to the Primary")
 	defer file.Close()

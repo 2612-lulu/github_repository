@@ -20,6 +20,10 @@ import (
 // 配置文件路径
 const INIT_PATH = "../config/"
 
+const FLOW_PATH = "../log/qbc_system_flow_log/"
+const SIGN_PATH = "../log/uss_log/"
+const VERIFY_PATH = "../log/verify_log/"
+
 // GenRandomWithPRF,生成随机数（密钥）：根据种子密钥和签名索引产生符合要求的随机数
 // 参数：种子密钥[]byte，签名索引QKDSignMatrixIndex，每行随机数个数uint32，随机数的单位字节长度uint32
 // 返回值：随机数字节长度uint32，随机数[]byte
@@ -132,7 +136,7 @@ func Init_log(path string) (*os.File, error) {
 
 // LogStage，在终端打印共识处理过程
 // 参数：共识过程string，该共识过程处理情况bool
-// 返回值：无
+// 返回值：无，终端输出共识流程
 func LogStage(stage string, isDone bool) {
 	if isDone {
 		fmt.Printf("[STAGE-DONE] %s\n", stage)
@@ -141,12 +145,17 @@ func LogStage(stage string, isDone bool) {
 	}
 }
 
+// Send，http信息发送
+// 参数：目的地值，待发送消息
+// 返回值：无
 func Send(url string, msg []byte) {
 	buff := bytes.NewBuffer(msg)
 	http.Post("http://"+url, "application/json", buff)
 }
 
 // ReverseBytes，将字符串逆序
+// 参数：目标数据
+// 返回值：无
 func ReverseBytes(data []byte) {
 	for i, j := 0, len(data)-1; i < j; i, j = i+1, j-1 {
 		data[i], data[j] = data[j], data[i]
@@ -154,6 +163,8 @@ func ReverseBytes(data []byte) {
 }
 
 // IntToHex，将int转换为[]byte
+// 参数：待转换数据int64
+// 返回值：目标类型数据[]byte
 func IntToHex(num int64) []byte {
 	buff := new(bytes.Buffer)
 	err := binary.Write(buff, binary.BigEndian, num)

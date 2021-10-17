@@ -12,10 +12,12 @@ type TXInput struct {
 	Refer_tx_id       []byte                     `json:"ReferTXid"`      // 引用交易ID，一个输入必须引用一个输出
 	Refer_tx_id_index int                        `json:"ReferTXidIndex"` // 引用的交易输出编号，引用的交易中具体的某一个output
 	TX_uss_sign       uss.USSToeplitzHashSignMsg `json:"TxUssSign"`      // 签名，花钱的人要证明这些钱是属于它的，会在交易确认的时候，校验这个签名
-	TX_src            string                     `json:"TXsrc"`          //
+	TX_src            string                     `json:"TXsrc"`          // 交易来源
 }
 
 // SerializeInput，交易输入项序列化
+// 参数：交易输入项
+// 返回值：序列化结果bool
 func (tx_input TXInput) SerializeInput() []byte {
 	var buff bytes.Buffer
 
@@ -29,6 +31,8 @@ func (tx_input TXInput) SerializeInput() []byte {
 }
 
 // DeserializeInput，交易输入项反序列化
+// 参数：序列化结果[]byte
+// 返回值：交易输入项
 func DeserializeInput(data []byte) TXInput {
 	var tx_input TXInput
 

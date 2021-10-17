@@ -182,9 +182,9 @@ func (bc *Blockchain) Iterator() BlockchainIterator {
 }
 
 // AddBlock，向区块链中添加新区块
-func (bc *Blockchain) AddBlock(block qblock.Block) {
+func (bc *Blockchain) AddBlock(block *qblock.Block) {
 	var tip []byte
-	var lastblock qblock.Block
+	var lastblock *qblock.Block
 	err := bc.DB.View(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(blocksBucket))
 		tip = b.Get([]byte("last"))
@@ -219,7 +219,7 @@ func (bc *Blockchain) AddBlock(block qblock.Block) {
 
 // GetBestHeight returns the height of the latest block
 func (bc *Blockchain) GetlastHeight() int64 {
-	var lastBlock qblock.Block
+	var lastBlock *qblock.Block
 
 	err := bc.DB.View(func(tx *bolt.Tx) error { // 查询账本
 		b := tx.Bucket([]byte(blocksBucket))
@@ -236,7 +236,7 @@ func (bc *Blockchain) GetlastHeight() int64 {
 
 //
 func (bc *Blockchain) GetlastHash() []byte {
-	var lastBlock qblock.Block
+	var lastBlock *qblock.Block
 
 	err := bc.DB.View(func(tx *bolt.Tx) error { // 查询账本
 		b := tx.Bucket([]byte(blocksBucket))
@@ -252,8 +252,8 @@ func (bc *Blockchain) GetlastHash() []byte {
 }
 
 // GetBlock finds a block by its hash and returns it
-func (bc *Blockchain) GetBlock(blockHash []byte) (qblock.Block, error) {
-	var block qblock.Block
+func (bc *Blockchain) GetBlock(blockHash []byte) (*qblock.Block, error) {
+	var block *qblock.Block
 
 	err := bc.DB.View(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(blocksBucket))

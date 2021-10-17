@@ -8,7 +8,7 @@ import (
 	"utils"
 )
 
-// 进程1：broadcastMsg,用于广播消息
+// 线程：broadcastMsg,用于广播消息
 func (consensus *NodeConsensus) broadcastMsg() {
 	for {
 		msg := <-consensus.MsgBroadcast
@@ -28,7 +28,7 @@ func (consensus *NodeConsensus) broadcastMsg() {
 	}
 }
 
-// 进程1：broadcastMsg,用于广播消息
+// 线程：broadcastPrepareMsg,用于广播准备消息
 func (consensus *NodeConsensus) broadcastPrepareMsg() {
 	for {
 		msg := <-consensus.MsgBroadcastPrepare
@@ -38,11 +38,12 @@ func (consensus *NodeConsensus) broadcastPrepareMsg() {
 			utils.LogStage("Pre-prepare", true)
 			utils.LogStage("Prepare", false)
 			consensus.broadcast(msg, "/prepare") // 发送prepare信息给其他节点
+			consensus.PBFT.CurrentState.Current_stage = pbft.PrePrepared
 		}
 	}
 }
 
-// 进程1：broadcastMsg,用于广播消息
+// 线程：broadcastCommitMsg,用于广播提交消息
 func (consensus *NodeConsensus) broadcastCommitMsg() {
 	for {
 		msg := <-consensus.MsgBroadcastCommit
@@ -51,6 +52,7 @@ func (consensus *NodeConsensus) broadcastCommitMsg() {
 			utils.LogStage("Prepare", true)
 			utils.LogStage("Commit", false)
 			consensus.broadcast(msg, "/commit") // 发送commit信息给其他节点
+			consensus.PBFT.CurrentState.Current_stage = pbft.Prepared
 		}
 	}
 }
@@ -74,21 +76,22 @@ func (consensus *NodeConsensus) broadcast(msg interface{}, path string) map[stri
 			continue
 		}
 	}
-	file, _ := utils.Init_log(PBFT_LOG_PATH + "broadcast_" + consensus.Node_name + ".log")
-	defer file.Close()
 	switch msg.(type) {
 	case *pbft.PrePrepareMsg:
-		log.SetPrefix("[broadcast preprepare]")
-		log.Println("broadcast preprepare message")
+		file, _ := utils.Init_log(utils.FLOW_PATH + consensus.Node_name + ".log")
+		defer file.Close()
+		log.SetPrefix("PBFT--[PRE-PREPARE DONE]")
+		log.Println("broadcast preprepare message, into prepare")
 	case *pbft.PrepareMsg:
-		log.SetPrefix("[broadcast prepare]")
-		log.Println("broadcast prepare message")
+		file, _ := utils.Init_log(utils.FLOW_PATH + consensus.Node_name + ".log")
+		defer file.Close()
+		log.SetPrefix("PBFT--[PREPARE DONE]")
+		log.Println("broadcast prepare message, into commit")
 	case *pbft.CommitMsg:
-		log.SetPrefix("[broadcast commit]")
-		log.Println("broadcast commit message")
-	case *pbft.ReplyMsg:
-		log.SetPrefix("[broadcast reply]")
-		log.Println("broadcast reply message")
+		file, _ := utils.Init_log(utils.FLOW_PATH + consensus.Node_name + ".log")
+		defer file.Close()
+		log.SetPrefix("PBFT--[COMMIT DONE]")
+		log.Println("broadcast commit message, into reply")
 	}
 	if len(errorMap) == 0 { // 如果转发消息均成功
 		return nil
@@ -108,6 +111,10 @@ func (consensus *NodeConsensus) broadcastReply(msg *pbft.ReplyMsg, path string) 
 	url := consensus.BC_url
 	// 将json格式传送给其他的联盟节点
 	utils.Send(url+path, jsonMsg) // url：localhost:1111  path：/prepare等等
+	file, _ := utils.Init_log(utils.FLOW_PATH + consensus.Node_name + ".log")
+	defer file.Close()
+	log.SetPrefix("PBFT--[REPLY DONE]")
+	log.Println("broadcast reply message, send result of pbft")
 	return nil
 
 }

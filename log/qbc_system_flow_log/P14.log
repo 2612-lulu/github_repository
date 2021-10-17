@@ -1,0 +1,20 @@
+PBFT--[PREPARE DONE]2021/10/17 20:33:28.802855 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:89: broadcast prepare message, into commit
+PBFT--[COMMIT DONE]2021/10/17 20:33:29.173309 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:94: broadcast commit message, into reply
+PBFT--[REPLY DONE]2021/10/17 20:33:29.350075 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:117: broadcast reply message, send result of pbft
+UPDATE BLOCKCHAIN--2021/10/17 20:33:29.354856 /root/study/github_repository/qb/qbnode/node_routine_broadcastMsg.go:76: add new block to blockchain
+
+PBFT--[PREPARE DONE]2021/10/17 20:33:36.707349 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:89: broadcast prepare message, into commit
+PBFT--[COMMIT DONE]2021/10/17 20:33:37.092239 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:94: broadcast commit message, into reply
+PBFT--[REPLY DONE]2021/10/17 20:33:37.265070 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:117: broadcast reply message, send result of pbft
+UPDATE BLOCKCHAIN--2021/10/17 20:33:37.277553 /root/study/github_repository/qb/qbnode/node_routine_broadcastMsg.go:76: add new block to blockchain
+
+PBFT--[PREPARE DONE]2021/10/17 20:46:08.928529 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:89: broadcast prepare message, into commit
+PBFT--[COMMIT DONE]2021/10/17 20:46:09.445028 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:94: broadcast commit message, into reply
+PBFT--[REPLY DONE]2021/10/17 20:46:09.606074 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:117: broadcast reply message, send result of pbft
+UPDATE BLOCKCHAIN--2021/10/17 20:46:09.609553 /root/study/github_repository/qb/qbnode/node_routine_broadcastMsg.go:76: add new block to blockchain
+
+PBFT--[PREPARE DONE]2021/10/17 20:46:14.952370 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:89: broadcast prepare message, into commit
+PBFT--[COMMIT DONE]2021/10/17 20:46:15.416289 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:94: broadcast commit message, into reply
+PBFT--[REPLY DONE]2021/10/17 20:46:15.592577 /root/study/github_repository/pbftconsensus/network/routine_broadcastMsg.go:117: broadcast reply message, send result of pbft
+UPDATE BLOCKCHAIN--2021/10/17 20:46:15.599336 /root/study/github_repository/qb/qbnode/node_routine_broadcastMsg.go:76: add new block to blockchain
+

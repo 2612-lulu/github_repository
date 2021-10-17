@@ -3,12 +3,17 @@ package qbcommand
 import (
 	"fmt"
 	"log"
+	"qb/qbnode"
 	"qb/qbutxo"
 	"qb/qbwallet"
 	"qb/quantumbc"
+	"utils"
 )
 
 func (command *COMM) getBalance(address, nodeID string) {
+	file, _ := utils.Init_log(qbnode.NODE_LOG_PATH + nodeID + ".log")
+	log.SetPrefix("[resolve tx error]")
+	defer file.Close()
 	if !qbwallet.ValidateAddress(address) {
 		log.Panic("ERROR: Address is not valid")
 	}

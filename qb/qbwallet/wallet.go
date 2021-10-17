@@ -43,7 +43,7 @@ func NewWallet(nodeID string) *Wallet {
 }
 
 // getAddress，生成地址
-func (w Wallet) getAddress() []byte {
+func (w *Wallet) getAddress() []byte {
 	// 1.计算公钥hash
 	addr_hash := hashID(w.Node_id[:])
 
@@ -83,7 +83,7 @@ func checksum(payload []byte) []byte {
 }
 
 // SaveToFile，保存方法,把新建的wallet添加进去
-func (w Wallet) saveToFile(nodeName string) {
+func (w *Wallet) saveToFile(nodeName string) {
 	var content bytes.Buffer
 	walletFile := fmt.Sprintf(walletFile, nodeName)
 

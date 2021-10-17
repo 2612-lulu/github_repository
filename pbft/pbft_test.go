@@ -6,7 +6,6 @@ import (
 	"os"
 	"qblock"
 	"qkdserv"
-	"reflect"
 	"testing"
 	"utils"
 )
@@ -22,7 +21,7 @@ func TestPBFTConsensus(t *testing.T) {
 	file, _ := os.Open("../pbft/request.json") // 打开文件
 	defer file.Close()                         // 关闭文件
 	decoder := json.NewDecoder(file)
-	var block qblock.Block
+	var block *qblock.Block
 	err := decoder.Decode(&block) //Decode从输入流读取下一个json编码值并保存在v指向的值里
 	if err != nil {
 		panic(err)
@@ -32,13 +31,13 @@ func TestPBFTConsensus(t *testing.T) {
 
 	qkdserv.Node_name = "P1"
 	preprepare := state.PrePrePare(request)
-	if !reflect.DeepEqual(preprepare, PrePrepareMsg{}) {
+	if preprepare != nil {
 		utils.LogStage("	Pre-prepare", false)
 	}
 	// prepare
 	qkdserv.Node_name = "P2"
 	prepare := state.PrePare(preprepare)
-	if !reflect.DeepEqual(prepare, PrepareMsg{}) {
+	if prepare != nil {
 		utils.LogStage("	prepare", false)
 	}
 	qkdserv.Node_name = "P3"
@@ -73,7 +72,7 @@ func TestPBFTConsensus(t *testing.T) {
 	// commit
 	qkdserv.Node_name = "P3"
 	commit := state.Commit(prepare)
-	if !reflect.DeepEqual(commit, CommitMsg{}) {
+	if commit != nil {
 		utils.LogStage("	Commit", false)
 	}
 	qkdserv.Node_name = "P4"
@@ -108,7 +107,7 @@ func TestPBFTConsensus(t *testing.T) {
 	// reply
 	qkdserv.Node_name = "P1"
 	reply := state.Reply(commit)
-	if !reflect.DeepEqual(reply, ReplyMsg{}) {
+	if reply != nil {
 		utils.LogStage("	Reply", false)
 	}
 }

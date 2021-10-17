@@ -33,7 +33,7 @@ func (node *Node) blockMsg() {
 func (node *Node) startTopbft(msg interface{}) error {
 	switch msg := msg.(type) {
 	case *qbtx.Transaction:
-		node.TranscationMsgs = append(node.TranscationMsgs, *msg)
+		node.TranscationMsgs = append(node.TranscationMsgs, msg)
 	}
 	return nil
 }
@@ -43,22 +43,30 @@ func (node *Node) startTopbft(msg interface{}) error {
 // 返回值：处理错误error，默认为nil
 func (node *Node) blockWhenClock() error {
 	if len(node.TranscationMsgs) >= qblock.BLOCK_LENGTH {
-		msgs := make([]qbtx.Transaction, len(node.TranscationMsgs))
+		msgs := make([]*qbtx.Transaction, len(node.TranscationMsgs))
 		copy(msgs, node.TranscationMsgs) // 复制缓冲数据
 		request := node.block(msgs)
-		node.TranscationMsgs = make([]qbtx.Transaction, 0) // 清空重置
+		node.TranscationMsgs = make([]*qbtx.Transaction, 0) // 清空重置
 
-		file, _ := utils.Init_log(NODE_LOG_PATH + "block_" + node.Node_name + ".log")
-		log.SetPrefix("[block a block success]")
-		log.Println("create a new block, and put it into channel")
+		file, _ := utils.Init_log(utils.SIGN_PATH + node.Node_name + ".log")
+		log.SetPrefix("[BLOCK SIGN]")
+		log.Printf("block Height:%d\n", request.Height)
 		defer file.Close()
-		node.MsgBroadcast <- &request
+		log.Printf("Index of uss:%x\n", request.Block_uss.Sign_index.Sign_task_sn)
+		log.Printf("plaintext:%x\n", request.Block_uss.USS_message)
+		//log.Printf("signature:%x\n", request.Block_uss.USS_signature)
+
+		file, _ = utils.Init_log(utils.FLOW_PATH + node.Node_name + ".log")
+		defer file.Close()
+		log.SetPrefix("BLOCK--")
+		log.Println("collect enough transactions, create a block")
+		node.MsgBroadcast <- request
 	}
 	return nil
 }
 
-func (node *Node) block(txs []qbtx.Transaction) qblock.Block {
-	var block qblock.Block
+func (node *Node) block(txs []*qbtx.Transaction) *qblock.Block {
+	var block *qblock.Block
 	bc := quantumbc.NewBlockchain(node.Node_name)
 	preHash := bc.GetlastHash()
 	lastHeight := bc.GetlastHeight()

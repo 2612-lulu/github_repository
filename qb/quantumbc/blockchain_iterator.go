@@ -14,8 +14,8 @@ type BlockchainIterator struct {
 }
 
 // Next,获取当前区块
-func (i *BlockchainIterator) Next() qblock.Block {
-	var b qblock.Block
+func (i *BlockchainIterator) Next() *qblock.Block {
+	var b *qblock.Block
 	// 根据hash获取块数据
 	err := i.db.View(func(tx *bolt.Tx) error { // 查看数据库
 		bucket := tx.Bucket([]byte(blocksBucket)) // 获取已有bucket

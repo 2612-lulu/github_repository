@@ -21,7 +21,7 @@ type UTXOSet struct {
 }
 
 // NewUTXOTransaction，创建普通交易
-func NewUTXOTransaction(from, to, nodeID string, amount int, UTXOSet *UTXOSet) qbtx.Transaction {
+func NewUTXOTransaction(from, to, nodeID string, amount int, UTXOSet *UTXOSet) *qbtx.Transaction {
 	// 需要组合输入项和输出项
 	var inputs []qbtx.TXInput
 	var outputs []qbtx.TXOutput
@@ -59,7 +59,7 @@ func NewUTXOTransaction(from, to, nodeID string, amount int, UTXOSet *UTXOSet) q
 	}
 
 	// 交易生成
-	tx := qbtx.Transaction{
+	tx := &qbtx.Transaction{
 		TX_id:   nil,
 		TX_vin:  inputs,
 		TX_vout: outputs,
@@ -72,7 +72,7 @@ func NewUTXOTransaction(from, to, nodeID string, amount int, UTXOSet *UTXOSet) q
 // FindSpendableOutputs，获取部分满足交易的utxo
 //
 // 返回值：余额int，可使用/未花费的交易map[string][]int
-func (u UTXOSet) FindSpendableOutputs(address string, amount int) (int, map[string][]int) {
+func (u *UTXOSet) FindSpendableOutputs(address string, amount int) (int, map[string][]int) {
 	unspentOutputs := make(map[string][]int) // 可使用交易
 	accumulated := 0                         // 记录余额
 	db := u.Blockchain.DB
@@ -103,7 +103,7 @@ func (u UTXOSet) FindSpendableOutputs(address string, amount int) (int, map[stri
 }
 
 // Reindex,更新UTXO
-func (u UTXOSet) Reindex() {
+func (u *UTXOSet) Reindex() {
 	db := u.Blockchain.DB
 	bucketName := []byte(utxoBucket)
 
@@ -145,7 +145,7 @@ func (u UTXOSet) Reindex() {
 
 // Update updates the UTXO set with transactions from the Block
 // The Block is considered to be the tip of a blockchain
-func (u UTXOSet) Update(block qblock.Block) {
+func (u *UTXOSet) Update(block *qblock.Block) {
 	db := u.Blockchain.DB
 
 	err := db.Update(func(tx *bolt.Tx) error {
@@ -198,7 +198,7 @@ func (u UTXOSet) Update(block qblock.Block) {
 }
 
 // FindUTXO，返回所有用户未使用的交易输出
-func (u UTXOSet) FindUTXO(address string) []qbtx.TXOutput {
+func (u *UTXOSet) FindUTXO(address string) []qbtx.TXOutput {
 	var UTXOs []qbtx.TXOutput
 	db := u.Blockchain.DB
 
@@ -223,7 +223,7 @@ func (u UTXOSet) FindUTXO(address string) []qbtx.TXOutput {
 }
 
 // CountTransactions returns the number of transactions in the UTXO set
-func (u UTXOSet) CountTransactions() int {
+func (u *UTXOSet) CountTransactions() int {
 	db := u.Blockchain.DB
 	counter := 0
 
