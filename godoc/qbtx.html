@@ -1,0 +1,610 @@
+using module mode; GOMOD=/root/study/go/src/qbtx/go.mod
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>qbtx - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="/lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="/lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.16.5";</script>
+<script src="/lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="/pkg/">GoDoc</a></div>
+<a href="#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package qbtx
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "qbtx"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+qbtx包，定义了交易数据结构及相关处理函数
+创建人：zhanglu
+创建时间：2021/08/24
+使用须知：使用前需先定义验签者数量
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="#pkg-variables">Variables</a></dd>
+			
+			
+			
+				
+				<dd><a href="#TXInput">type TXInput</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DeserializeInput">func DeserializeInput(data []byte) TXInput</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TXInput.SerializeInput">func (tx_input TXInput) SerializeInput() []byte</a></dd>
+				
+			
+				
+				<dd><a href="#TXOutput">type TXOutput</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewTXOutput">func NewTXOutput(tx_value int, tx_dst string) TXOutput</a></dd>
+				
+				
+			
+				
+				<dd><a href="#TXOutputs">type TXOutputs</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DeserializeOutputs">func DeserializeOutputs(data []byte) TXOutputs</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TXOutputs.SerializeOutputs">func (tx_outputs TXOutputs) SerializeOutputs() []byte</a></dd>
+				
+			
+				
+				<dd><a href="#Transaction">type Transaction</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DeserializeTX">func DeserializeTX(data []byte) *Transaction</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewReserveTX">func NewReserveTX(to []string, data string) *Transaction</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Transaction.IsReserveTX">func (tx *Transaction) IsReserveTX() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Transaction.PrintTransaction">func (tx *Transaction) PrintTransaction()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Transaction.SerializeTX">func (tx *Transaction) SerializeTX() []byte</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Transaction.SetID">func (tx *Transaction) SetID() []byte</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Transaction.TrimmedCopyTX">func (tx *Transaction) TrimmedCopyTX() *Transaction</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Transaction.USSTransactionSign">func (tx *Transaction) USSTransactionSign(node_name string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Transaction.VerifyUSSTransactionSign">func (tx *Transaction) VerifyUSSTransactionSign() bool</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/qbtx/transaction.go">transaction.go</a>
+			
+				<a href="/src/qbtx/transaction_in.go">transaction_in.go</a>
+			
+				<a href="/src/qbtx/transaction_out.go">transaction_out.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+定义准备金金额
+</p>
+
+				<pre>const <span id="RESERVE">RESERVE</span> = 20</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+定义验签者数量
+</p>
+
+				<pre>var <span id="N">N</span> <a href="/pkg/builtin/#uint32">uint32</a></pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="TXInput">type <a href="/src/qbtx/transaction_in.go?s=292:853#L1">TXInput</a>
+				<a class="permalink" href="#TXInput">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+TXInput，交易输入结构，表示交易金额的来源，一笔交易可以是由一个用户发起，但是是该用户的多笔零钱发起的一定金额的转账；也可以是多个用户发起的一笔共同转账
+</p>
+
+			<pre>type TXInput struct {
+<span id="TXInput.Refer_tx_id"></span>    Refer_tx_id       []<a href="/pkg/builtin/#byte">byte</a>                     `json:&#34;ReferTXid&#34;`      <span class="comment">// 引用交易ID，一个输入必须引用一个输出</span>
+<span id="TXInput.Refer_tx_id_index"></span>    Refer_tx_id_index <a href="/pkg/builtin/#int">int</a>                        `json:&#34;ReferTXidIndex&#34;` <span class="comment">// 引用的交易输出编号，引用的交易中具体的某一个output</span>
+<span id="TXInput.TX_uss_sign"></span>    TX_uss_sign       <a href="/pkg/uss/">uss</a>.<a href="/pkg/uss/#USSToeplitzHashSignMsg">USSToeplitzHashSignMsg</a> `json:&#34;TxUssSign&#34;`      <span class="comment">// 签名，花钱的人要证明这些钱是属于它的，会在交易确认的时候，校验这个签名</span>
+<span id="TXInput.TX_src"></span>    TX_src            <a href="/pkg/builtin/#string">string</a>                     `json:&#34;TXsrc&#34;`          <span class="comment">// 交易来源</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="DeserializeInput">func <a href="/src/qbtx/transaction_in.go?s=1273:1315#L26">DeserializeInput</a>
+					<a class="permalink" href="#DeserializeInput">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func DeserializeInput(data []<a href="/pkg/builtin/#byte">byte</a>) <a href="#TXInput">TXInput</a></pre>
+				<p>
+DeserializeInput，交易输入项反序列化
+参数：序列化结果[]byte
+返回值：交易输入项
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="TXInput.SerializeInput">func (TXInput) <a href="/src/qbtx/transaction_in.go?s=963:1010#L11">SerializeInput</a>
+					<a class="permalink" href="#TXInput.SerializeInput">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (tx_input <a href="#TXInput">TXInput</a>) SerializeInput() []<a href="/pkg/builtin/#byte">byte</a></pre>
+				<p>
+SerializeInput，交易输入项序列化
+参数：交易输入项
+返回值：序列化结果bool
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="TXOutput">type <a href="/src/qbtx/transaction_out.go?s=98:219#L1">TXOutput</a>
+				<a class="permalink" href="#TXOutput">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+TXOutput，交易输出结构
+</p>
+
+			<pre>type TXOutput struct {
+<span id="TXOutput.TX_value"></span>    TX_value <a href="/pkg/builtin/#int">int</a>    `json:&#34;TXValue&#34;` <span class="comment">// 输出金额</span>
+<span id="TXOutput.TX_dst"></span>    TX_dst   <a href="/pkg/builtin/#string">string</a> `json:&#34;TXdst&#34;`   <span class="comment">// 接收方</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewTXOutput">func <a href="/src/qbtx/transaction_out.go?s=406:460#L14">NewTXOutput</a>
+					<a class="permalink" href="#NewTXOutput">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewTXOutput(tx_value <a href="/pkg/builtin/#int">int</a>, tx_dst <a href="/pkg/builtin/#string">string</a>) <a href="#TXOutput">TXOutput</a></pre>
+				<p>
+NewTXOutput，初始化交易输出项
+参数：交易数值int，接收方地址string
+返回值：交易输出项
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="TXOutputs">type <a href="/src/qbtx/transaction_out.go?s=234:279#L7">TXOutputs</a>
+				<a class="permalink" href="#TXOutputs">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+TXOutputs
+</p>
+
+			<pre>type TXOutputs struct {
+<span id="TXOutputs.Outputs"></span>    Outputs []<a href="#TXOutput">TXOutput</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="DeserializeOutputs">func <a href="/src/qbtx/transaction_out.go?s=967:1013#L36">DeserializeOutputs</a>
+					<a class="permalink" href="#DeserializeOutputs">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func DeserializeOutputs(data []<a href="/pkg/builtin/#byte">byte</a>) <a href="#TXOutputs">TXOutputs</a></pre>
+				<p>
+DeserializeOutputs，交易输出项反序列化
+参数：序列化结果
+返回值：反序列化的交易输出项数组
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="TXOutputs.SerializeOutputs">func (TXOutputs) <a href="/src/qbtx/transaction_out.go?s=633:686#L22">SerializeOutputs</a>
+					<a class="permalink" href="#TXOutputs.SerializeOutputs">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (tx_outputs <a href="#TXOutputs">TXOutputs</a>) SerializeOutputs() []<a href="/pkg/builtin/#byte">byte</a></pre>
+				<p>
+SerializeOutput，交易输出项序列化
+参数：待序列化的交易输出项
+返回值：序列化结果
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Transaction">type <a href="/src/qbtx/transaction.go?s=582:865#L17">Transaction</a>
+				<a class="permalink" href="#Transaction">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+Transaction，交易结构，多入多处：
+有一些输出并没有被关联到某个输入上；一笔交易的输入可以引用之前多笔交易的输出；一个输入必须引用一个输出
+</p>
+
+			<pre>type Transaction struct {
+<span id="Transaction.TX_id"></span>    TX_id   []<a href="/pkg/builtin/#byte">byte</a>     `json:&#34;TXid&#34;`   <span class="comment">// 交易ID，非常重要的Hash值，是在input签名之前计算出来的，作为UTXOSet.map的key存在</span>
+<span id="Transaction.TX_vin"></span>    TX_vin  []<a href="#TXInput">TXInput</a>  `json:&#34;TXvin&#34;`  <span class="comment">// 交易输入项</span>
+<span id="Transaction.TX_vout"></span>    TX_vout []<a href="#TXOutput">TXOutput</a> `json:&#34;TXvout&#34;` <span class="comment">// 交易输出项</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="DeserializeTX">func <a href="/src/qbtx/transaction.go?s=1501:1545#L51">DeserializeTX</a>
+					<a class="permalink" href="#DeserializeTX">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func DeserializeTX(data []<a href="/pkg/builtin/#byte">byte</a>) *<a href="#Transaction">Transaction</a></pre>
+				<p>
+DeserializeTX，交易反序列化
+参数：序列化结果
+返回值：交易
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewReserveTX">func <a href="/src/qbtx/transaction.go?s=4008:4064#L127">NewReserveTX</a>
+					<a class="permalink" href="#NewReserveTX">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewReserveTX(to []<a href="/pkg/builtin/#string">string</a>, data <a href="/pkg/builtin/#string">string</a>) *<a href="#Transaction">Transaction</a></pre>
+				<p>
+NewReserveTX，发放准备金：只有输出，没有输入，输出来自于准备金
+参数：交易目的地，交易内容
+返回值：交易*Transaction
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Transaction.IsReserveTX">func (*Transaction) <a href="/src/qbtx/transaction.go?s=4870:4911#L153">IsReserveTX</a>
+					<a class="permalink" href="#Transaction.IsReserveTX">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (tx *<a href="#Transaction">Transaction</a>) IsReserveTX() <a href="/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsReserveTX,检查交易是否是发放准备金
+参数：待判断交易
+返回值：判断结果bool
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Transaction.PrintTransaction">func (*Transaction) <a href="/src/qbtx/transaction.go?s=5269:5310#L164">PrintTransaction</a>
+					<a class="permalink" href="#Transaction.PrintTransaction">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (tx *<a href="#Transaction">Transaction</a>) PrintTransaction()</pre>
+				<p>
+PrintTransaction，打印交易
+参数：待打印交易
+返回值：无，屏幕输出交易信息
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Transaction.SerializeTX">func (*Transaction) <a href="/src/qbtx/transaction.go?s=1220:1263#L37">SerializeTX</a>
+					<a class="permalink" href="#Transaction.SerializeTX">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (tx *<a href="#Transaction">Transaction</a>) SerializeTX() []<a href="/pkg/builtin/#byte">byte</a></pre>
+				<p>
+Serialize，交易序列化
+参数：交易
+返回值：交易序列化结果
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Transaction.SetID">func (*Transaction) <a href="/src/qbtx/transaction.go?s=969:1006#L26">SetID</a>
+					<a class="permalink" href="#Transaction.SetID">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (tx *<a href="#Transaction">Transaction</a>) SetID() []<a href="/pkg/builtin/#byte">byte</a></pre>
+				<p>
+SetID，根据交易输入与输出项生成交易ID。
+参数：交易
+返回值：交易ID
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Transaction.TrimmedCopyTX">func (*Transaction) <a href="/src/qbtx/transaction.go?s=3329:3380#L108">TrimmedCopyTX</a>
+					<a class="permalink" href="#Transaction.TrimmedCopyTX">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (tx *<a href="#Transaction">Transaction</a>) TrimmedCopyTX() *<a href="#Transaction">Transaction</a></pre>
+				<p>
+TrimmedCopyTX，交易修剪以得到待签名消息
+参数：交易
+返回值：修剪后的带签名交易消息
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Transaction.USSTransactionSign">func (*Transaction) <a href="/src/qbtx/transaction.go?s=1822:1881#L65">USSTransactionSign</a>
+					<a class="permalink" href="#Transaction.USSTransactionSign">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (tx *<a href="#Transaction">Transaction</a>) USSTransactionSign(node_name <a href="/pkg/builtin/#string">string</a>)</pre>
+				<p>
+USSTransactionSign，对交易输入项签名
+参数：交易，节点名称
+返回值：无，交易带签名值
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Transaction.VerifyUSSTransactionSign">func (*Transaction) <a href="/src/qbtx/transaction.go?s=2965:3019#L94">VerifyUSSTransactionSign</a>
+					<a class="permalink" href="#Transaction.VerifyUSSTransactionSign">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (tx *<a href="#Transaction">Transaction</a>) VerifyUSSTransactionSign() <a href="/pkg/builtin/#bool">bool</a></pre>
+				<p>
+VerifyUSSTransactionSign,交易输入项验签
+参数：带有签名的交易
+返回值：验签结果bool
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.16.5.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

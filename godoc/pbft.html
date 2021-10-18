@@ -1,0 +1,633 @@
+using module mode; GOMOD=/root/study/go/src/pbft/go.mod
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>pbft - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="/lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="/lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.16.5";</script>
+<script src="/lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="/pkg/">GoDoc</a></div>
+<a href="#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package pbft
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "pbft"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+pbft包，实现了pbft共识的相关处理
+创建人：zhanglu
+创建时间：2021/08/15
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="#pkg-variables">Variables</a></dd>
+			
+			
+			
+				
+				<dd><a href="#CommitMsg">type CommitMsg</a></dd>
+				
+				
+			
+				
+				<dd><a href="#MsgLogs">type MsgLogs</a></dd>
+				
+				
+			
+				
+				<dd><a href="#PBFT">type PBFT</a></dd>
+				
+				
+			
+				
+				<dd><a href="#PrePrepareMsg">type PrePrepareMsg</a></dd>
+				
+				
+			
+				
+				<dd><a href="#PrepareMsg">type PrepareMsg</a></dd>
+				
+				
+			
+				
+				<dd><a href="#ReplyMsg">type ReplyMsg</a></dd>
+				
+				
+			
+				
+				<dd><a href="#Stage">type Stage</a></dd>
+				
+				
+			
+				
+				<dd><a href="#State">type State</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CreateState">func CreateState(view int64, lastSequenceNumber int64) *State</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#State.Commit">func (state *State) Commit(prepare *PrepareMsg) *CommitMsg</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#State.PrePare">func (state *State) PrePare(preprepare *PrePrepareMsg) *PrepareMsg</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#State.PrePrePare">func (state *State) PrePrePare(request *qblock.Block) *PrePrepareMsg</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#State.Reply">func (state *State) Reply(commit *CommitMsg) *ReplyMsg</a></dd>
+				
+			
+				
+				<dd><a href="#View">type View</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/pbft/pbft.go">pbft.go</a>
+			
+				<a href="/src/pbft/pbft_commit.go">pbft_commit.go</a>
+			
+				<a href="/src/pbft/pbft_impl.go">pbft_impl.go</a>
+			
+				<a href="/src/pbft/pbft_msg.go">pbft_msg.go</a>
+			
+				<a href="/src/pbft/pbft_prepare.go">pbft_prepare.go</a>
+			
+				<a href="/src/pbft/pbft_preprepare.go">pbft_preprepare.go</a>
+			
+				<a href="/src/pbft/pbft_reply.go">pbft_reply.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+错误log存放路径
+</p>
+
+				<pre>const <span id="LOG_ERROR_PATH">LOG_ERROR_PATH</span> = &#34;../pbft/errorlog/error_&#34;</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var <span id="F">F</span> <a href="/pkg/builtin/#int">int</a> <span class="comment">// F，容忍无效或者恶意节点数</span>
+</pre>
+			
+				
+				<pre>var <span id="N">N</span> <a href="/pkg/builtin/#int">int</a> <span class="comment">// N=3f+1</span>
+</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="CommitMsg">type <a href="/src/pbft/pbft_msg.go?s=1694:2147#L32">CommitMsg</a>
+				<a class="permalink" href="#CommitMsg">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+Commit消息，由任一节点发往其他各节点
+</p>
+
+			<pre>type CommitMsg struct {
+<span id="CommitMsg.View"></span>    View            <a href="/pkg/builtin/#int64">int64</a>                      <span class="comment">// 当前视图编号</span>
+<span id="CommitMsg.Sequence_number"></span>    Sequence_number <a href="/pkg/builtin/#int64">int64</a>                      <span class="comment">// 主节点分配的序列号n,在[h, H]之间，用于对request进行排序？</span>
+<span id="CommitMsg.Digest_m"></span>    Digest_m        []<a href="/pkg/builtin/#byte">byte</a>                     <span class="comment">// 客户端请求消息中m的摘要</span>
+<span id="CommitMsg.Node_i"></span>    Node_i          <a href="/pkg/builtin/#int64">int64</a>                      <span class="comment">// 当前节点编号</span>
+<span id="CommitMsg.Sign_i"></span>    Sign_i          <a href="/pkg/uss/">uss</a>.<a href="/pkg/uss/#USSToeplitzHashSignMsg">USSToeplitzHashSignMsg</a> <span class="comment">// 当前从节点i对Commit消息的签名</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="MsgLogs">type <a href="/src/pbft/pbft_impl.go?s=436:700#L9">MsgLogs</a>
+				<a class="permalink" href="#MsgLogs">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+pbft缓存数据，用于存放pbft过程中的各类消息
+</p>
+
+			<pre>type MsgLogs struct {
+<span id="MsgLogs.ReqMsg"></span>    ReqMsg        *<a href="/pkg/qblock/">qblock</a>.<a href="/pkg/qblock/#Block">Block</a>         <span class="comment">// 存放request消息</span>
+<span id="MsgLogs.PreparedMsgs"></span>    PreparedMsgs  map[<a href="/pkg/builtin/#int64">int64</a>]*<a href="#PrepareMsg">PrepareMsg</a> <span class="comment">// 存放prepared消息</span>
+<span id="MsgLogs.CommittedMsgs"></span>    CommittedMsgs map[<a href="/pkg/builtin/#int64">int64</a>]*<a href="#CommitMsg">CommitMsg</a>  <span class="comment">// 存放committed消息</span>
+<span id="MsgLogs.ReplyMsgs"></span>    ReplyMsgs     map[<a href="/pkg/builtin/#int64">int64</a>]*<a href="#ReplyMsg">ReplyMsg</a>   <span class="comment">// 存放Reply消息</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PBFT">type <a href="/src/pbft/pbft.go?s=31:228#L1">PBFT</a>
+				<a class="permalink" href="#PBFT">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type PBFT interface {
+    PrePrePare(request *<a href="/pkg/qblock/">qblock</a>.<a href="/pkg/qblock/#Block">Block</a>) *<a href="#PrePrepareMsg">PrePrepareMsg</a>
+    PrePare(preprepare *<a href="#PrePrepareMsg">PrePrepareMsg</a>) *<a href="#PrepareMsg">PrepareMsg</a>
+    Commit(prepare *<a href="#PrepareMsg">PrepareMsg</a>) *<a href="#CommitMsg">CommitMsg</a>
+    Reply(commit *<a href="#CommitMsg">CommitMsg</a>) *<a href="#ReplyMsg">ReplyMsg</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PrePrepareMsg">type <a href="/src/pbft/pbft_msg.go?s=696:1124#L14">PrePrepareMsg</a>
+				<a class="permalink" href="#PrePrepareMsg">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+PrePrepare消息，由主节点发往从节点
+</p>
+
+			<pre>type PrePrepareMsg struct {
+<span id="PrePrepareMsg.View"></span>    View            <a href="/pkg/builtin/#int64">int64</a>                      <span class="comment">// 当前视图编号</span>
+<span id="PrePrepareMsg.Sequence_number"></span>    Sequence_number <a href="/pkg/builtin/#int64">int64</a>                      <span class="comment">// 主节点分配的序列号n,在[h, H]之间，用于对request进行排序？</span>
+<span id="PrePrepareMsg.Digest_m"></span>    Digest_m        []<a href="/pkg/builtin/#byte">byte</a>                     <span class="comment">// 客户端请求消息中m的摘要</span>
+<span id="PrePrepareMsg.Sign_p"></span>    Sign_p          <a href="/pkg/uss/">uss</a>.<a href="/pkg/uss/#USSToeplitzHashSignMsg">USSToeplitzHashSignMsg</a> <span class="comment">// 主节点P对PrePrepare消息中v,n,d的签名</span>
+<span id="PrePrepareMsg.Request"></span>    Request         *<a href="/pkg/qblock/">qblock</a>.<a href="/pkg/qblock/#Block">Block</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PrepareMsg">type <a href="/src/pbft/pbft_msg.go?s=1182:1637#L23">PrepareMsg</a>
+				<a class="permalink" href="#PrepareMsg">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+Prepare消息，由从节点发往其他所有节点
+</p>
+
+			<pre>type PrepareMsg struct {
+<span id="PrepareMsg.View"></span>    View            <a href="/pkg/builtin/#int64">int64</a>                      <span class="comment">// 当前视图编号</span>
+<span id="PrepareMsg.Sequence_number"></span>    Sequence_number <a href="/pkg/builtin/#int64">int64</a>                      <span class="comment">// 主节点分配的序列号n,在[h, H]之间，用于对request进行排序？</span>
+<span id="PrepareMsg.Digest_m"></span>    Digest_m        []<a href="/pkg/builtin/#byte">byte</a>                     <span class="comment">// 客户端请求消息中m的摘要</span>
+<span id="PrepareMsg.Node_i"></span>    Node_i          <a href="/pkg/builtin/#int64">int64</a>                      <span class="comment">// 当前节点编号</span>
+<span id="PrepareMsg.Sign_i"></span>    Sign_i          <a href="/pkg/uss/">uss</a>.<a href="/pkg/uss/#USSToeplitzHashSignMsg">USSToeplitzHashSignMsg</a> <span class="comment">// 当前从节点i对Prepare消息的签名</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ReplyMsg">type <a href="/src/pbft/pbft_msg.go?s=177:644#L3">ReplyMsg</a>
+				<a class="permalink" href="#ReplyMsg">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+Reply消息，由各节点发往客户端
+</p>
+
+			<pre>type ReplyMsg struct {
+<span id="ReplyMsg.View"></span>    View        <a href="/pkg/builtin/#int64">int64</a>                      <span class="comment">// 当前视图编号</span>
+<span id="ReplyMsg.Time_stamp"></span>    Time_stamp  <a href="/pkg/builtin/#int64">int64</a>                      <span class="comment">// 相应request的时间戳</span>
+<span id="ReplyMsg.Client_name"></span>    Client_name <a href="/pkg/builtin/#string">string</a>                     <span class="comment">// 客户端名称</span>
+<span id="ReplyMsg.Node_i"></span>    Node_i      <a href="/pkg/builtin/#int64">int64</a>                      <span class="comment">// 当前节点编号</span>
+<span id="ReplyMsg.Result"></span>    Result      <a href="/pkg/builtin/#bool">bool</a>                       <span class="comment">// 执行request操作的结果</span>
+<span id="ReplyMsg.Sign_i"></span>    Sign_i      <a href="/pkg/uss/">uss</a>.<a href="/pkg/uss/#USSToeplitzHashSignMsg">USSToeplitzHashSignMsg</a> <span class="comment">// 当前节点对Commit消息中v,t,c,i,r的签名</span>
+<span id="ReplyMsg.Request"></span>    Request     *<a href="/pkg/qblock/">qblock</a>.<a href="/pkg/qblock/#Block">Block</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Stage">type <a href="/src/pbft/pbft_impl.go?s=912:926#L24">Stage</a>
+				<a class="permalink" href="#Stage">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+状态标识
+</p>
+
+			<pre>type Stage <a href="/pkg/builtin/#int">int</a></pre>
+
+			
+				
+				<pre>const (
+    <span id="Idle">Idle</span>        <a href="#Stage">Stage</a> = <a href="/pkg/builtin/#iota">iota</a> <span class="comment">// Idle=0，节点已成功创建，但共识过程尚未启动。</span>
+    <span id="PrePrepared">PrePrepared</span>              <span class="comment">// PrePrepared=1，RequestMsg已成功处理。节点已准备好进入prepare阶段。</span>
+    <span id="Prepared">Prepared</span>                 <span class="comment">// Prepared=2，Same with `prepared` stage explained in the original paper.</span>
+    <span id="Committed">Committed</span>                <span class="comment">// Committed=3，Same with `committed-local` stage explained in the original paper.</span>
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="State">type <a href="/src/pbft/pbft_impl.go?s=156:371#L1">State</a>
+				<a class="permalink" href="#State">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+pbft状态标识
+</p>
+
+			<pre>type State struct {
+<span id="State.View"></span>    View                 <a href="#View">View</a>     <span class="comment">// 视图号</span>
+<span id="State.Msg_logs"></span>    Msg_logs             *<a href="#MsgLogs">MsgLogs</a> <span class="comment">// 缓存数据</span>
+<span id="State.Last_sequence_number"></span>    Last_sequence_number <a href="/pkg/builtin/#int64">int64</a>    <span class="comment">// 上次共识序列号</span>
+<span id="State.Current_stage"></span>    Current_stage        <a href="#Stage">Stage</a>    <span class="comment">// 当前状态</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="CreateState">func <a href="/src/pbft/pbft_impl.go?s=1622:1683#L39">CreateState</a>
+					<a class="permalink" href="#CreateState">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func CreateState(view <a href="/pkg/builtin/#int64">int64</a>, lastSequenceNumber <a href="/pkg/builtin/#int64">int64</a>) *<a href="#State">State</a></pre>
+				<p>
+CreateState，创建共识状态。如果不存在lastSequenceNumber，则lastSequenceNumber=-1
+参数：视图号int64，上次共识的序列号int64
+返回值：pbft状态State
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="State.Commit">func (*State) <a href="/src/pbft/pbft_commit.go?s=292:350#L8">Commit</a>
+					<a class="permalink" href="#State.Commit">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (state *<a href="#State">State</a>) Commit(prepare *<a href="#PrepareMsg">PrepareMsg</a>) *<a href="#CommitMsg">CommitMsg</a></pre>
+				<pre>State.Commit，所有联盟节点处理收到的prepare消息：各节点prepare——&gt;其余节点commit
+</pre>
+<p>
+参数：准备消息*PrepareMsg
+返回值：提交消息*CommitMsg
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.PrePare">func (*State) <a href="/src/pbft/pbft_prepare.go?s=285:351#L5">PrePare</a>
+					<a class="permalink" href="#State.PrePare">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (state *<a href="#State">State</a>) PrePare(preprepare *<a href="#PrePrepareMsg">PrePrepareMsg</a>) *<a href="#PrepareMsg">PrepareMsg</a></pre>
+				<p>
+State.PrePare，进入准备阶段，从节点处理pre-prepare消息：从节点PrePrepareMsg——&gt;各节点PrepareMsg
+参数：预准备消息*PrePrepareMsg
+返回值：准备消息*PrepareMsg
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.PrePrePare">func (*State) <a href="/src/pbft/pbft_preprepare.go?s=298:366#L6">PrePrePare</a>
+					<a class="permalink" href="#State.PrePrePare">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (state *<a href="#State">State</a>) PrePrePare(request *<a href="/pkg/qblock/">qblock</a>.<a href="/pkg/qblock/#Block">Block</a>) *<a href="#PrePrepareMsg">PrePrepareMsg</a></pre>
+				<p>
+State.PrePrePare，进入共识，由主节点进行消息处理：客户端Request——&gt;主节点PrePrePare——&gt;从节点
+参数：请求消息*qblock.Block
+返回值：预准备消息*PrePrepareMsg
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.Reply">func (*State) <a href="/src/pbft/pbft_reply.go?s=252:306#L5">Reply</a>
+					<a class="permalink" href="#State.Reply">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (state *<a href="#State">State</a>) Reply(commit *<a href="#CommitMsg">CommitMsg</a>) *<a href="#ReplyMsg">ReplyMsg</a></pre>
+				<pre>State.ReplyMsg，获取reply消息，当收到2f+1个满足要求的commit时，调用此函数
+</pre>
+<p>
+参数：提交消息*CommitMsg
+返回值：应答消息*ReplyMsg
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="View">type <a href="/src/pbft/pbft_impl.go?s=715:894#L17">View</a>
+				<a class="permalink" href="#View">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+视图号
+</p>
+
+			<pre>type View struct {
+<span id="View.ID"></span>    ID      <a href="/pkg/builtin/#int64">int64</a>  `json:&#34;viewid&#34;`  <span class="comment">// 视图号</span>
+<span id="View.Primary"></span>    Primary <a href="/pkg/builtin/#string">string</a> `json:&#34;primary&#34;` <span class="comment">// 主节点</span>
+<span id="View.F"></span>    F       <a href="/pkg/builtin/#int64">int64</a>  `json:&#34;f&#34;`       <span class="comment">// 可容忍错误节点的数量</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.16.5.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

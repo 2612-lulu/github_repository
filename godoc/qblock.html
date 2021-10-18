@@ -1,0 +1,337 @@
+using module mode; GOMOD=/root/study/go/src/qblock/go.mod
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>qblock - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="/lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="/lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.16.5";</script>
+<script src="/lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="/pkg/">GoDoc</a></div>
+<a href="#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package qblock
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "qblock"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+block包，定义区块链数据结构，实现区块链打包
+创建人：zhanglu
+创建时间：2021/08/25
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="#Block">type Block</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DeserializeBlock">func DeserializeBlock(d []byte) *Block</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewBlock">func NewBlock(transactions []*qbtx.Transaction, prevBlockHash []byte, height int64) *Block</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewGenesisBlock">func NewGenesisBlock(reserve *qbtx.Transaction) *Block</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Block.BlockToResolveHash">func (b *Block) BlockToResolveHash() []byte</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Block.HashTransactions">func (b *Block) HashTransactions() []byte</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Block.SerializeBlock">func (b *Block) SerializeBlock() []byte</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/qblock/block.go">block.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+区块包含的最小交易数量
+</p>
+
+				<pre>const <span id="BLOCK_LENGTH">BLOCK_LENGTH</span> = 1</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="Block">type <a href="/src/qblock/block.go?s=352:819#L15">Block</a>
+				<a class="permalink" href="#Block">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+区块结构
+</p>
+
+			<pre>type Block struct {
+<span id="Block.Version"></span>    Version    <a href="/pkg/builtin/#int64">int64</a> `json:&#34;Version&#34;`   <span class="comment">// 当前版本</span>
+<span id="Block.Time_stamp"></span>    Time_stamp <a href="/pkg/builtin/#int64">int64</a> `json:&#34;Timestamp&#34;` <span class="comment">// 系统当前时间</span>
+<span id="Block.Height"></span>    Height     <a href="/pkg/builtin/#int64">int64</a> `json:&#34;Height&#34;`    <span class="comment">// 区块高度</span>
+
+<span id="Block.Prev_block_hash"></span>    Prev_block_hash []<a href="/pkg/builtin/#byte">byte</a>              `json:&#34;Prevblockhash&#34;` <span class="comment">// 前一区块hash值</span>
+<span id="Block.Hash"></span>    Hash            []<a href="/pkg/builtin/#byte">byte</a>              `json:&#34;Currentblockhash&#34;`
+<span id="Block.Transactions"></span>    Transactions    []*<a href="/pkg/qbtx/">qbtx</a>.<a href="/pkg/qbtx/#Transaction">Transaction</a> `json:&#34;Transactions&#34;` <span class="comment">// 用于共识的交易信息</span>
+<span id="Block.Block_uss"></span>    Block_uss       <a href="/pkg/uss/">uss</a>.<a href="/pkg/uss/#USSToeplitzHashSignMsg">USSToeplitzHashSignMsg</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="DeserializeBlock">func <a href="/src/qblock/block.go?s=4389:4427#L137">DeserializeBlock</a>
+					<a class="permalink" href="#DeserializeBlock">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func DeserializeBlock(d []<a href="/pkg/builtin/#byte">byte</a>) *<a href="#Block">Block</a></pre>
+				<p>
+DeserializeBlock，区块反序列化
+参数：序列化结果
+返回值：区块
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewBlock">func <a href="/src/qblock/block.go?s=969:1059#L29">NewBlock</a>
+					<a class="permalink" href="#NewBlock">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewBlock(transactions []*<a href="/pkg/qbtx/">qbtx</a>.<a href="/pkg/qbtx/#Transaction">Transaction</a>, prevBlockHash []<a href="/pkg/builtin/#byte">byte</a>, height <a href="/pkg/builtin/#int64">int64</a>) *<a href="#Block">Block</a></pre>
+				<p>
+NewBlock，生成新区块
+参数：交易[]*qbtx.Transaction，前一区块hashprevBlockHash，高度值int64
+返回值：新区块*Block
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewGenesisBlock">func <a href="/src/qblock/block.go?s=2386:2440#L65">NewGenesisBlock</a>
+					<a class="permalink" href="#NewGenesisBlock">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewGenesisBlock(reserve *<a href="/pkg/qbtx/">qbtx</a>.<a href="/pkg/qbtx/#Transaction">Transaction</a>) *<a href="#Block">Block</a></pre>
+				<p>
+NewGenesisBlock，创建创世区块。实际操作是读取固定区块以保证各节点有相同的账本
+参数：准备金交易
+返回值：创世区块
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Block.BlockToResolveHash">func (*Block) <a href="/src/qblock/block.go?s=3018:3061#L81">BlockToResolveHash</a>
+					<a class="permalink" href="#Block.BlockToResolveHash">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="#Block">Block</a>) BlockToResolveHash() []<a href="/pkg/builtin/#byte">byte</a></pre>
+				<p>
+NewBlock，生成新区块hash值
+参数：区块
+返回值：该区块hash值
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Block.HashTransactions">func (*Block) <a href="/src/qblock/block.go?s=3713:3754#L108">HashTransactions</a>
+					<a class="permalink" href="#Block.HashTransactions">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="#Block">Block</a>) HashTransactions() []<a href="/pkg/builtin/#byte">byte</a></pre>
+				<p>
+HashTransactions，构建区块交易hash值，实现一种交易转[]byte的方法
+参数：区块
+返回值：区块中交易信息的hash值
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Block.SerializeBlock">func (*Block) <a href="/src/qblock/block.go?s=4069:4108#L122">SerializeBlock</a>
+					<a class="permalink" href="#Block.SerializeBlock">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (b *<a href="#Block">Block</a>) SerializeBlock() []<a href="/pkg/builtin/#byte">byte</a></pre>
+				<p>
+SerializeBlock，区块序列化
+参数：待序列化的区块结构
+返回值：序列化结果
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.16.5.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

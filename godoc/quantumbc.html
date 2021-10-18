@@ -1,0 +1,459 @@
+using module mode; GOMOD=/root/study/go/src/qb/go.mod
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>quantumbc - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="/lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="/lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.16.5";</script>
+<script src="/lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="/pkg/">GoDoc</a></div>
+<a href="#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package quantumbc
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "qb/quantumbc"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="#DBExists">func DBExists(dbFile string) bool</a></dd>
+			
+				
+				<dd><a href="#PrintBlockChain">func PrintBlockChain(nodeID string)</a></dd>
+			
+			
+				
+				<dd><a href="#Blockchain">type Blockchain</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CreateBlockchain">func CreateBlockchain(addresses []string, nodeID string) *Blockchain</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewBlockchain">func NewBlockchain(nodeID string) *Blockchain</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Blockchain.AddBlock">func (bc *Blockchain) AddBlock(block *qblock.Block)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Blockchain.FindUTXO">func (bc *Blockchain) FindUTXO() map[string]qbtx.TXOutputs</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Blockchain.GetBlock">func (bc *Blockchain) GetBlock(blockHash []byte) (*qblock.Block, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Blockchain.GetBlockHashes">func (bc *Blockchain) GetBlockHashes() [][]byte</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Blockchain.GetlastHash">func (bc *Blockchain) GetlastHash() []byte</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Blockchain.GetlastHeight">func (bc *Blockchain) GetlastHeight() int64</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Blockchain.Iterator">func (bc *Blockchain) Iterator() BlockchainIterator</a></dd>
+				
+			
+				
+				<dd><a href="#BlockchainIterator">type BlockchainIterator</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#BlockchainIterator.Next">func (i *BlockchainIterator) Next() *qblock.Block</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/qb/quantumbc/blockchain.go">blockchain.go</a>
+			
+				<a href="/src/qb/quantumbc/blockchain_iterator.go">blockchain_iterator.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+数据库路径及名称
+</p>
+
+				<pre>const <span id="DBFile">DBFile</span> = &#34;/root/study/github_repository/qb/quantumbc/DB/blockchain_%s.db&#34;</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="DBExists">func <a href="/src/qb/quantumbc/blockchain.go?s=7998:8031#L287">DBExists</a>
+				<a class="permalink" href="#DBExists">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func DBExists(dbFile <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+			<p>
+判断数据库文件/区块链是否存在
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="PrintBlockChain">func <a href="/src/qb/quantumbc/blockchain.go?s=2182:2217#L71">PrintBlockChain</a>
+				<a class="permalink" href="#PrintBlockChain">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func PrintBlockChain(nodeID <a href="/pkg/builtin/#string">string</a>)</pre>
+			<p>
+打印区块链
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Blockchain">type <a href="/src/qb/quantumbc/blockchain.go?s=421:709#L15">Blockchain</a>
+				<a class="permalink" href="#Blockchain">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+Blockchain implements interactions with a DB
+</p>
+
+			<pre>type Blockchain struct {
+<span id="Blockchain.DB"></span>    DB *<a href="/pkg/github.com/boltdb/bolt/">bolt</a>.<a href="/pkg/github.com/boltdb/bolt/#DB">DB</a> <span class="comment">// blot数据库，下一层bucket（类似于数据库中的表），bucket下是键值对</span>
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="CreateBlockchain">func <a href="/src/qb/quantumbc/blockchain.go?s=786:854#L21">CreateBlockchain</a>
+					<a class="permalink" href="#CreateBlockchain">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func CreateBlockchain(addresses []<a href="/pkg/builtin/#string">string</a>, nodeID <a href="/pkg/builtin/#string">string</a>) *<a href="#Blockchain">Blockchain</a></pre>
+				<p>
+CreateBlockchain,创建区块链结构，初始化时只有创世区块
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewBlockchain">func <a href="/src/qb/quantumbc/blockchain.go?s=3111:3156#L96">NewBlockchain</a>
+					<a class="permalink" href="#NewBlockchain">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewBlockchain(nodeID <a href="/pkg/builtin/#string">string</a>) *<a href="#Blockchain">Blockchain</a></pre>
+				<p>
+NewBlockchain,读取当前区块
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Blockchain.AddBlock">func (*Blockchain) <a href="/src/qb/quantumbc/blockchain.go?s=5629:5680#L175">AddBlock</a>
+					<a class="permalink" href="#Blockchain.AddBlock">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (bc *<a href="#Blockchain">Blockchain</a>) AddBlock(block *<a href="/pkg/qblock/">qblock</a>.<a href="/pkg/qblock/#Block">Block</a>)</pre>
+				<p>
+AddBlock，向区块链中添加新区块
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Blockchain.FindUTXO">func (*Blockchain) <a href="/src/qb/quantumbc/blockchain.go?s=3931:3989#L124">FindUTXO</a>
+					<a class="permalink" href="#Blockchain.FindUTXO">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (bc *<a href="#Blockchain">Blockchain</a>) FindUTXO() map[<a href="/pkg/builtin/#string">string</a>]<a href="/pkg/qbtx/">qbtx</a>.<a href="/pkg/qbtx/#TXOutputs">TXOutputs</a></pre>
+				<p>
+FindUTXO，查找所有未花费的交易输出
+参数：
+返回值：
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Blockchain.GetBlock">func (*Blockchain) <a href="/src/qb/quantumbc/blockchain.go?s=7224:7295#L245">GetBlock</a>
+					<a class="permalink" href="#Blockchain.GetBlock">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (bc *<a href="#Blockchain">Blockchain</a>) GetBlock(blockHash []<a href="/pkg/builtin/#byte">byte</a>) (*<a href="/pkg/qblock/">qblock</a>.<a href="/pkg/qblock/#Block">Block</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetBlock finds a block by its hash and returns it
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Blockchain.GetBlockHashes">func (*Blockchain) <a href="/src/qb/quantumbc/blockchain.go?s=7714:7761#L269">GetBlockHashes</a>
+					<a class="permalink" href="#Blockchain.GetBlockHashes">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (bc *<a href="#Blockchain">Blockchain</a>) GetBlockHashes() [][]<a href="/pkg/builtin/#byte">byte</a></pre>
+				<p>
+GetBlockHashes returns a list of hashes of all the blocks in the chain
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Blockchain.GetlastHash">func (*Blockchain) <a href="/src/qb/quantumbc/blockchain.go?s=6800:6842#L228">GetlastHash</a>
+					<a class="permalink" href="#Blockchain.GetlastHash">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (bc *<a href="#Blockchain">Blockchain</a>) GetlastHash() []<a href="/pkg/builtin/#byte">byte</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Blockchain.GetlastHeight">func (*Blockchain) <a href="/src/qb/quantumbc/blockchain.go?s=6423:6466#L211">GetlastHeight</a>
+					<a class="permalink" href="#Blockchain.GetlastHeight">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (bc *<a href="#Blockchain">Blockchain</a>) GetlastHeight() <a href="/pkg/builtin/#int64">int64</a></pre>
+				<p>
+GetBestHeight returns the height of the latest block
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Blockchain.Iterator">func (*Blockchain) <a href="/src/qb/quantumbc/blockchain.go?s=5414:5465#L166">Iterator</a>
+					<a class="permalink" href="#Blockchain.Iterator">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (bc *<a href="#Blockchain">Blockchain</a>) Iterator() <a href="#BlockchainIterator">BlockchainIterator</a></pre>
+				<p>
+Iterator,通过blockchain构造迭代器
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="BlockchainIterator">type <a href="/src/qb/quantumbc/blockchain_iterator.go?s=109:235#L1">BlockchainIterator</a>
+				<a class="permalink" href="#BlockchainIterator">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+BlockchainIterator，迭代器
+</p>
+
+			<pre>type BlockchainIterator struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="BlockchainIterator.Next">func (*BlockchainIterator) <a href="/src/qb/quantumbc/blockchain_iterator.go?s=264:313#L7">Next</a>
+					<a class="permalink" href="#BlockchainIterator.Next">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (i *<a href="#BlockchainIterator">BlockchainIterator</a>) Next() *<a href="/pkg/qblock/">qblock</a>.<a href="/pkg/qblock/#Block">Block</a></pre>
+				<p>
+Next,获取当前区块
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.16.5.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

@@ -1,0 +1,276 @@
+using module mode; GOMOD=/root/study/go/src/merkletree/go.mod
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>merkletree - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="/lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="/lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.16.5";</script>
+<script src="/lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="/pkg/">GoDoc</a></div>
+<a href="#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package merkletree
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "merkletree"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+qkdserv包，模拟QKD服务基本功能，包括密钥分发与获取密钥
+创建人：zhanglu
+创建时间：2021/08/04
+使用须知：使用前需初始化签名密钥池qkdserv.QKD_sign_random_matrix_pool与当前节点号qkdserv.Node_name
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="#MerkleNode">type MerkleNode</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewMerkleNode">func NewMerkleNode(left, right *MerkleNode, data []byte) *MerkleNode</a></dd>
+				
+				
+			
+				
+				<dd><a href="#MerkleTree">type MerkleTree</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewMerkleTree">func NewMerkleTree(data [][]byte) *MerkleTree</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/merkletree/merkle_tree.go">merkle_tree.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="MerkleNode">type <a href="/src/merkletree/merkle_tree.go?s=406:509#L7">MerkleNode</a>
+				<a class="permalink" href="#MerkleNode">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+默克尔数节点结构
+</p>
+
+			<pre>type MerkleNode struct {
+<span id="MerkleNode.Left"></span>    Left  *<a href="#MerkleNode">MerkleNode</a>
+<span id="MerkleNode.Right"></span>    Right *<a href="#MerkleNode">MerkleNode</a>
+<span id="MerkleNode.Data"></span>    Data  []<a href="/pkg/builtin/#byte">byte</a> <span class="comment">// 默克尔树根节点</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewMerkleNode">func <a href="/src/merkletree/merkle_tree.go?s=1544:1612#L49">NewMerkleNode</a>
+					<a class="permalink" href="#NewMerkleNode">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewMerkleNode(left, right *<a href="#MerkleNode">MerkleNode</a>, data []<a href="/pkg/builtin/#byte">byte</a>) *<a href="#MerkleNode">MerkleNode</a></pre>
+				<p>
+NewMerkleNode，创建默克尔树节点，既要支持中间节点，也要支持叶子节点
+参数：左右节点，原始数据
+返回值：默克尔树节点
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="MerkleTree">type <a href="/src/merkletree/merkle_tree.go?s=328:376#L2">MerkleTree</a>
+				<a class="permalink" href="#MerkleTree">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+默克尔数结构
+</p>
+
+			<pre>type MerkleTree struct {
+<span id="MerkleTree.RootNode"></span>    RootNode *<a href="#MerkleNode">MerkleNode</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewMerkleTree">func <a href="/src/merkletree/merkle_tree.go?s=605:650#L16">NewMerkleTree</a>
+					<a class="permalink" href="#NewMerkleTree">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewMerkleTree(data [][]<a href="/pkg/builtin/#byte">byte</a>) *<a href="#MerkleTree">MerkleTree</a></pre>
+				<p>
+NewMerkleTree，将节点组建为树
+参数：节点数据
+返回值：默克尔树
+</p>
+
+				
+				
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.16.5.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

@@ -1,0 +1,378 @@
+using module mode; GOMOD=/root/study/go/src/utils/go.mod
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>utils - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="/lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="/lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.16.5";</script>
+<script src="/lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="/pkg/">GoDoc</a></div>
+<a href="#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package utils
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "utils"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+utils包，包含量子安全区块连原型系统中常用的一些函数
+创建人：zhanglu
+创建时间：2021/08/04
+</p>
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="#Digest">func Digest(m []byte) []byte</a></dd>
+			
+				
+				<dd><a href="#GenRandomWithPRF">func GenRandomWithPRF(key []byte, sign_dev_id, sign_task_sn [16]byte, random_counts uint32, unit_len uint32) (uint32, []byte)</a></dd>
+			
+				
+				<dd><a href="#GetNodeID">func GetNodeID(node_name string) [16]byte</a></dd>
+			
+				
+				<dd><a href="#InitConfig">func InitConfig(path string) map[string]string</a></dd>
+			
+				
+				<dd><a href="#Init_log">func Init_log(path string) (*os.File, error)</a></dd>
+			
+				
+				<dd><a href="#IntToHex">func IntToHex(num int64) []byte</a></dd>
+			
+				
+				<dd><a href="#LogStage">func LogStage(stage string, isDone bool)</a></dd>
+			
+				
+				<dd><a href="#ReverseBytes">func ReverseBytes(data []byte)</a></dd>
+			
+				
+				<dd><a href="#Send">func Send(url string, msg []byte)</a></dd>
+			
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/utils/utils.go">utils.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const <span id="FLOW_PATH">FLOW_PATH</span> = &#34;../log/qbc_system_flow_log/&#34;</pre>
+			
+				<p>
+配置文件路径
+</p>
+
+				<pre>const <span id="INIT_PATH">INIT_PATH</span> = &#34;../config/&#34;</pre>
+			
+				
+				<pre>const <span id="SIGN_PATH">SIGN_PATH</span> = &#34;../log/uss_log/&#34;</pre>
+			
+				
+				<pre>const <span id="VERIFY_PATH">VERIFY_PATH</span> = &#34;../log/verify_log/&#34;</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="Digest">func <a href="/src/utils/utils.go?s=2152:2180#L66">Digest</a>
+				<a class="permalink" href="#Digest">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func Digest(m []<a href="/pkg/builtin/#byte">byte</a>) []<a href="/pkg/builtin/#byte">byte</a></pre>
+			<p>
+Digest，摘要函数
+参数：消息[]byte
+返回值：摘要值[]byte
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GenRandomWithPRF">func <a href="/src/utils/utils.go?s=760:885#L20">GenRandomWithPRF</a>
+				<a class="permalink" href="#GenRandomWithPRF">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GenRandomWithPRF(key []<a href="/pkg/builtin/#byte">byte</a>, sign_dev_id, sign_task_sn [16]<a href="/pkg/builtin/#byte">byte</a>, random_counts <a href="/pkg/builtin/#uint32">uint32</a>, unit_len <a href="/pkg/builtin/#uint32">uint32</a>) (<a href="/pkg/builtin/#uint32">uint32</a>, []<a href="/pkg/builtin/#byte">byte</a>)</pre>
+			<p>
+GenRandomWithPRF,生成随机数（密钥）：根据种子密钥和签名索引产生符合要求的随机数
+参数：种子密钥[]byte，签名索引QKDSignMatrixIndex，每行随机数个数uint32，随机数的单位字节长度uint32
+返回值：随机数字节长度uint32，随机数[]byte
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetNodeID">func <a href="/src/utils/utils.go?s=1715:1756#L48">GetNodeID</a>
+				<a class="permalink" href="#GetNodeID">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GetNodeID(node_name <a href="/pkg/builtin/#string">string</a>) [16]<a href="/pkg/builtin/#byte">byte</a></pre>
+			<p>
+GetNodeID，获取节点设备号
+参数：节点名称string
+返回值：节点设备号[16]byte
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="InitConfig">func <a href="/src/utils/utils.go?s=2413:2459#L76">InitConfig</a>
+				<a class="permalink" href="#InitConfig">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func InitConfig(path <a href="/pkg/builtin/#string">string</a>) map[<a href="/pkg/builtin/#string">string</a>]<a href="/pkg/builtin/#string">string</a></pre>
+			<p>
+InitConfig,读取key=value类型的配置文件
+参数：配置文件存放路径string
+返回值：节点/客户端配置信息map[string]string
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Init_log">func <a href="/src/utils/utils.go?s=3158:3202#L116">Init_log</a>
+				<a class="permalink" href="#Init_log">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func Init_log(path <a href="/pkg/builtin/#string">string</a>) (*<a href="/pkg/os/">os</a>.<a href="/pkg/os/#File">File</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+			<p>
+Init_log,初始化log日志存放文件
+参数：日志存放路径string
+返回值：初始化处理错误error，初始化成功返回nil
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IntToHex">func <a href="/src/utils/utils.go?s=4375:4406#L158">IntToHex</a>
+				<a class="permalink" href="#IntToHex">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func IntToHex(num <a href="/pkg/builtin/#int64">int64</a>) []<a href="/pkg/builtin/#byte">byte</a></pre>
+			<p>
+IntToHex，将int转换为[]byte
+参数：待转换数据int64
+返回值：目标类型数据[]byte
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="LogStage">func <a href="/src/utils/utils.go?s=3689:3729#L130">LogStage</a>
+				<a class="permalink" href="#LogStage">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func LogStage(stage <a href="/pkg/builtin/#string">string</a>, isDone <a href="/pkg/builtin/#bool">bool</a>)</pre>
+			<p>
+LogStage，在终端打印共识处理过程
+参数：共识过程string，该共识过程处理情况bool
+返回值：无，终端输出共识流程
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ReverseBytes">func <a href="/src/utils/utils.go?s=4135:4165#L149">ReverseBytes</a>
+				<a class="permalink" href="#ReverseBytes">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func ReverseBytes(data []<a href="/pkg/builtin/#byte">byte</a>)</pre>
+			<p>
+ReverseBytes，将字符串逆序
+参数：目标数据
+返回值：无
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Send">func <a href="/src/utils/utils.go?s=3933:3966#L141">Send</a>
+				<a class="permalink" href="#Send">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func Send(url <a href="/pkg/builtin/#string">string</a>, msg []<a href="/pkg/builtin/#byte">byte</a>)</pre>
+			<p>
+Send，http信息发送
+参数：目的地值，待发送消息
+返回值：无
+</p>
+
+			
+			
+
+		
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.16.5.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>
