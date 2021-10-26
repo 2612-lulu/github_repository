@@ -1,6 +1,7 @@
 package pbft
 
 import (
+	"encoding/hex"
 	"log"
 	"qblock"
 	"qbtx"
@@ -51,9 +52,10 @@ func (state *State) PrePrePare(request *qblock.Block) *PrePrepareMsg {
 
 		file, _ := utils.Init_log(utils.SIGN_PATH + qkdserv.Node_name + ".log")
 		log.SetPrefix("[PBFT-PREPREPARE SIGN]")
-		log.Printf("Index of uss:%x\n", preprepare.Sign_p.Sign_index.Sign_task_sn)
-		log.Printf("plaintext:%x\n", preprepare.Sign_p.USS_message)
-		//log.Printf("signature:%x\n", preprepare.Sign_p.USS_signature)
+		log.Println("Index of uss:", hex.EncodeToString(preprepare.Sign_p.Sign_index.Sign_task_sn[:]))
+		log.Println("plaintext:", hex.EncodeToString(preprepare.Sign_p.USS_message))
+		log.Println("signature:", hex.EncodeToString(preprepare.Sign_p.USS_signature))
+		log.Printf("sign of preprepare message success\n\n\n")
 		defer file.Close()
 		return preprepare
 	} else {
@@ -71,12 +73,14 @@ func (state *State) verifyRequestTX(txs []*qbtx.Transaction) bool {
 	for _, tx := range txs {
 		if tx.VerifyUSSTransactionSign() { // 验证签名正确性
 			file, _ := utils.Init_log(utils.VERIFY_PATH + qkdserv.Node_name + ".log")
-			log.SetPrefix("[STAGE-PrePrepare:VERIFY of TX SIGN]")
-			log.Printf("transaciton ID:%x\n", tx.TX_id)
+			log.SetPrefix("[STAGE-PrePrepare/Prepare:VERIFY of Transaction SIGN]")
+			log.Println("transaciton ID:", hex.EncodeToString(tx.TX_id))
 			defer file.Close()
 			for _, vin := range tx.TX_vin {
-				log.Printf("verify of uss:%x is true\n", vin.TX_uss_sign.Sign_index.Sign_task_sn)
+				log.Println("Index of uss:", hex.EncodeToString(vin.TX_uss_sign.Sign_index.Sign_task_sn[:]))
 			}
+			log.Printf("Verify of transaction sign success\n\n")
+
 			verify_num++
 		}
 	}

@@ -32,6 +32,7 @@ gnome-terminal -t "P9" -x bash -c "./qbrun.exe startnode;exec bash"
 export NODE_NAME="P10"
 gnome-terminal -t "P10" -x bash -c "./qbrun.exe startnode;exec bash"
 
+:<<!
 export NODE_NAME="P11"
 gnome-terminal -t "P11" -x bash -c "./qbrun.exe startnode;exec bash"
 
@@ -67,7 +68,7 @@ gnome-terminal -t "P21" -x bash -c "./qbrun.exe startnode;exec bash"
 
 export NODE_NAME="P22"
 gnome-terminal -t "P22" -x bash -c "./qbrun.exe startnode;exec bash"
-
+!
 
 :<<!
 -t 为打开终端的标题，便于区分。

@@ -49,7 +49,7 @@ func (node *Node) broadcastBlock(msg *qblock.Block) error {
 	utils.Send(node.PBFT_url+"/request", jsonMsg) // 发送给对应的pbft
 	file, _ := utils.Init_log(utils.FLOW_PATH + node.Node_name + ".log")
 	defer file.Close()
-	log.SetPrefix("PBFT--[REQUEST DONE]")
+	log.SetPrefix("PBFT--[REQUEST DONE]----")
 	log.Println("broadcast request message, start pbft")
 	return nil
 }
@@ -67,12 +67,12 @@ func (node *Node) addBlock(block *qblock.Block) {
 	file, _ := utils.Init_log(utils.FLOW_PATH + node.Node_name + ".log")
 	defer file.Close()
 	if node.Node_name == node.Primary {
-		log.SetPrefix("UPDATE BLOCKCHAIN--")
+		log.SetPrefix("UPDATE BLOCKCHAIN-------")
 		log.Println("add new block to blockchain")
-		log.SetPrefix("RETURN RESULT--")
+		log.SetPrefix("RETURN RESULT-----------")
 		log.Printf("Returns the result of the transaction\n\n")
 	} else {
-		log.SetPrefix("UPDATE BLOCKCHAIN--")
+		log.SetPrefix("UPDATE BLOCKCHAIN-------")
 		log.Printf("add new block to blockchain\n\n")
 	}
 	//count := UTXOSet.CountTransactions()

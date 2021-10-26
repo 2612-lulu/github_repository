@@ -2,6 +2,7 @@ package pbft
 
 import (
 	"bytes"
+	"encoding/hex"
 	"fmt"
 	"log"
 	"qblock"
@@ -49,10 +50,11 @@ func (state *State) Commit(prepare *PrepareMsg) *CommitMsg {
 			//state.Current_stage = Prepared           // 此时状态改变为Prepared
 
 			file, _ := utils.Init_log(utils.SIGN_PATH + qkdserv.Node_name + ".log")
-			log.SetPrefix("[PBFT-COMMIT SIGN]")
-			log.Printf("Index of uss:%x\n", commit.Sign_i.Sign_index.Sign_task_sn)
-			log.Printf("plaintext:%x\n", commit.Sign_i.USS_message)
-			//log.Printf("signature:%x\n", commit.Sign_i.USS_signature)
+			log.SetPrefix("[PBFT-COMMIT     SIGN]")
+			log.Println("Index of uss:", hex.EncodeToString(commit.Sign_i.Sign_index.Sign_task_sn[:]))
+			log.Println("plaintext:", hex.EncodeToString(commit.Sign_i.USS_message))
+			log.Println("signature:", hex.EncodeToString(commit.Sign_i.USS_signature))
+			log.Printf("sign of commit message success\n\n")
 			defer file.Close()
 			return commit
 		}
@@ -86,12 +88,6 @@ func (state *State) verifyPrepareMsg(prepare *PrepareMsg) bool {
 		defer file.Close()
 		log.Println("the verify of digest is wrong!")
 		result = false
-	} else if !state.verifyRequestTX(state.Msg_logs.ReqMsg.Transactions) {
-		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
-		log.SetPrefix("[Commit error]")
-		defer file.Close()
-		log.Println("the client_sign is wrong!")
-		result = false
 	} else if !uss.UnconditionallySecureVerifySign(prepare.Sign_i) {
 		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 		log.SetPrefix("[Commit error]")
@@ -101,9 +97,9 @@ func (state *State) verifyPrepareMsg(prepare *PrepareMsg) bool {
 	} else {
 		file, _ := utils.Init_log(utils.VERIFY_PATH + qkdserv.Node_name + ".log")
 		defer file.Close()
-		log.SetPrefix("[STAGE-Commit:VERIFY of PrepareMsg SIGN]")
-		log.Printf("verify of uss:%x is true\n", prepare.Sign_i.Sign_index.Sign_task_sn)
-
+		log.SetPrefix("[STAGE-Commit:    VERIFY of PrepareMsg SIGN   ]")
+		log.Println("Index of uss:", hex.EncodeToString(prepare.Sign_i.Sign_index.Sign_task_sn[:]))
+		log.Printf("Verify of prepare sign success\n\n")
 		state.Msg_logs.PreparedMsgs[prepare.Node_i] = prepare
 		result = true
 	}

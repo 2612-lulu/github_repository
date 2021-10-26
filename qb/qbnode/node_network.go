@@ -28,7 +28,7 @@ func (node *Node) getTranscation(writer http.ResponseWriter, request *http.Reque
 	node.MsgBlock <- &msg // 将解码后的交易消息放入打包通道
 	file, _ := utils.Init_log(utils.FLOW_PATH + node.Node_name + ".log")
 	defer file.Close()
-	log.SetPrefix("COLLECT TRANSACTION---")
+	log.SetPrefix("COLLECT TRANSACTION-----")
 	log.Println("collect a transaction")
 }
 

@@ -1,6 +1,7 @@
 package qbnode
 
 import (
+	"encoding/hex"
 	"fmt"
 	"log"
 	"qb/quantumbc"
@@ -49,16 +50,17 @@ func (node *Node) blockWhenClock() error {
 		node.TranscationMsgs = make([]*qbtx.Transaction, 0) // 清空重置
 
 		file, _ := utils.Init_log(utils.SIGN_PATH + node.Node_name + ".log")
-		log.SetPrefix("[BLOCK SIGN]")
+		log.SetPrefix("[BLOCK           SIGN]")
 		log.Printf("block Height:%d\n", request.Height)
 		defer file.Close()
-		log.Printf("Index of uss:%x\n", request.Block_uss.Sign_index.Sign_task_sn)
-		log.Printf("plaintext:%x\n", request.Block_uss.USS_message)
-		//log.Printf("signature:%x\n", request.Block_uss.USS_signature)
+		log.Println("Index of uss:", hex.EncodeToString(request.Block_uss.Sign_index.Sign_task_sn[:]))
+		log.Println("plaintext:", hex.EncodeToString(request.Block_uss.USS_message))
+		log.Println("signature:", hex.EncodeToString(request.Block_uss.USS_signature))
+		log.Printf("Sign of block success\n\n\n")
 
 		file, _ = utils.Init_log(utils.FLOW_PATH + node.Node_name + ".log")
 		defer file.Close()
-		log.SetPrefix("BLOCK--")
+		log.SetPrefix("BLOCK-------------------")
 		log.Println("collect enough transactions, create a block")
 		node.MsgBroadcast <- request
 	}

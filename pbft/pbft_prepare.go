@@ -2,6 +2,7 @@ package pbft
 
 import (
 	"bytes"
+	"encoding/hex"
 	"log"
 	"qkdserv"
 	"strconv"
@@ -43,10 +44,11 @@ func (state *State) PrePare(preprepare *PrePrepareMsg) *PrepareMsg {
 		state.Msg_logs.PreparedMsgs[i] = prepare // 将节点自己产生的prepare消息写入log，以便后续进行投票校验
 		//state.Current_stage = PrePrepared        // 此时状态改变为PrePrepared
 		file, _ := utils.Init_log(utils.SIGN_PATH + qkdserv.Node_name + ".log")
-		log.SetPrefix("[PBFT-PREPARE SIGN]")
-		log.Printf("Index of uss:%x\n", prepare.Sign_i.Sign_index.Sign_task_sn)
-		log.Printf("plaintext:%x\n", prepare.Sign_i.USS_message)
-		//log.Printf("signature:%x\n", prepare.Sign_i.USS_signature)
+		log.SetPrefix("[PBFT-PREPARE    SIGN]")
+		log.Println("Index of uss:", hex.EncodeToString(prepare.Sign_i.Sign_index.Sign_task_sn[:]))
+		log.Println("plaintext:", hex.EncodeToString(prepare.Sign_i.USS_message))
+		log.Println("signature:", hex.EncodeToString(prepare.Sign_i.USS_signature))
+		log.Printf("sign of prepare message success\n\n\n")
 		defer file.Close()
 		return prepare
 	}
@@ -93,15 +95,21 @@ func (state *State) verifyPrePrepareMsg(preprepare *PrePrepareMsg) bool {
 		defer file.Close()
 		log.Println("the primary_sign is wrong!")
 		result = false
+	} else if !state.verifyRequestTX(preprepare.Request.Transactions) {
+		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
+		log.SetPrefix("[Prepare error]")
+		defer file.Close()
+		log.Println("the tx is wrong!")
+		result = false
 	} else {
 		file, _ := utils.Init_log(utils.VERIFY_PATH + qkdserv.Node_name + ".log")
 		defer file.Close()
-		log.SetPrefix("[STAGE-Prepare:VERIFY of BLOCK SIGN]")
-		log.Printf("verify of uss:%x is true\n", preprepare.Request.Block_uss.Sign_index.Sign_task_sn)
-
-		log.SetPrefix("[STAGE-Prepare:VERIFY of PrePrepareMsg SIGN]")
-		log.Printf("verify of uss:%x is true\n", preprepare.Sign_p.Sign_index.Sign_task_sn)
-
+		log.SetPrefix("[STAGE-Prepare:   VERIFY of BLOCK SIGN        ]")
+		log.Println("Index of uss:", hex.EncodeToString(preprepare.Request.Block_uss.Sign_index.Sign_task_sn[:]))
+		log.Printf("Verify of block sign success\n\n")
+		log.SetPrefix("[STAGE-Prepare:   VERIFY of PrePrepareMsg SIGN]")
+		log.Println("Index of uss:", hex.EncodeToString(preprepare.Sign_p.Sign_index.Sign_task_sn[:]))
+		log.Printf("Verify of preprepare sign success\n\n")
 		result = true
 	}
 	return result

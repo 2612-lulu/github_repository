@@ -2,6 +2,7 @@ package pbft
 
 import (
 	"bytes"
+	"encoding/hex"
 	"log"
 	"qkdserv"
 	"strconv"
@@ -50,10 +51,11 @@ func (state *State) Reply(commit *CommitMsg) *ReplyMsg {
 			state.Current_stage = Committed
 
 			file, _ := utils.Init_log(utils.SIGN_PATH + qkdserv.Node_name + ".log")
-			log.SetPrefix("[PBFT-REPLY SIGN]")
-			log.Printf("Index of uss:%x\n", reply.Sign_i.Sign_index.Sign_task_sn)
-			log.Printf("plaintext:%x\n", reply.Sign_i.USS_message)
-			//log.Printf("signature:%x\n", reply.Sign_i.USS_signature)
+			log.SetPrefix("[PBFT-REPLY      SIGN]")
+			log.Println("Index of uss:", hex.EncodeToString(reply.Sign_i.Sign_index.Sign_task_sn[:]))
+			log.Println("plaintext:", hex.EncodeToString(reply.Sign_i.USS_message))
+			log.Println("signature:", hex.EncodeToString(reply.Sign_i.USS_signature))
+			log.Printf("sign of reply message success\n\n")
 			defer file.Close()
 			return reply
 		}
@@ -87,12 +89,6 @@ func (state *State) verifyCommitMsg(commit *CommitMsg) bool {
 		defer file.Close()
 		log.Println("the verify of digest is wrong!")
 		result = false
-	} else if !state.verifyRequestTX(state.Msg_logs.ReqMsg.Transactions) {
-		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
-		log.SetPrefix("[Reply error]")
-		defer file.Close()
-		log.Println("the client_sign is wrong!")
-		result = false
 	} else if !uss.UnconditionallySecureVerifySign(commit.Sign_i) {
 		file, _ := utils.Init_log(LOG_ERROR_PATH + qkdserv.Node_name + ".log")
 		log.SetPrefix("[Reply error]")
@@ -102,9 +98,9 @@ func (state *State) verifyCommitMsg(commit *CommitMsg) bool {
 	} else {
 		file, _ := utils.Init_log(utils.VERIFY_PATH + qkdserv.Node_name + ".log")
 		defer file.Close()
-		log.SetPrefix("[STAGE-Commit:VERIFY of CommitMsg SIGN]")
-		log.Printf("verify of uss:%x is true\n", commit.Sign_i.Sign_index.Sign_task_sn)
-
+		log.SetPrefix("[STAGE-Commit:    VERIFY of CommitMsg SIGN    ]")
+		log.Println("Index of uss:", hex.EncodeToString(commit.Sign_i.Sign_index.Sign_task_sn[:]))
+		log.Printf("Verify of commit sign success\n\n\n")
 		state.Msg_logs.CommittedMsgs[commit.Node_i] = commit
 		result = true
 	}

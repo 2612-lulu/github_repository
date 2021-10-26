@@ -1,6 +1,7 @@
 package qbcommand
 
 import (
+	"encoding/hex"
 	"log"
 	"qb/qbnode"
 	"qb/qbutxo"
@@ -30,13 +31,14 @@ func (command *COMM) transaction(tx_from, tx_to, nodeID string, tx_amount int) {
 	transaction.PrintTransaction()
 	file, _ = utils.Init_log(utils.SIGN_PATH + nodeID + ".log")
 	log.SetPrefix("[TRANSACTION SIGN]")
-	log.Printf("transaciton ID:%x\n", transaction.TX_id)
+	log.Println("transaciton ID:", hex.EncodeToString(transaction.TX_id))
 	defer file.Close()
 	for _, vin := range transaction.TX_vin {
-		log.Printf("Index of uss:%x\n", vin.TX_uss_sign.Sign_index.Sign_task_sn)
-		log.Printf("plaintext:%x\n", vin.TX_uss_sign.USS_message)
-		//log.Printf("signature:%x\n", vin.TX_uss_sign.USS_signature)
+		log.Println("Index of uss:", hex.EncodeToString(vin.TX_uss_sign.Sign_index.Sign_task_sn[:]))
+		log.Println("plaintext:", hex.EncodeToString(vin.TX_uss_sign.USS_message))
+		log.Println("signature:", hex.EncodeToString(vin.TX_uss_sign.USS_signature))
 	}
+	log.Printf("Sign of transaction success\n\n")
 
 	node.MsgBroadcast <- transaction
 	node.Httplisten() // 开启http

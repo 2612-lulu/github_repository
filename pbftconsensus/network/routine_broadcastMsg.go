@@ -85,12 +85,12 @@ func (consensus *NodeConsensus) broadcast(msg interface{}, path string) map[stri
 	case *pbft.PrepareMsg:
 		file, _ := utils.Init_log(utils.FLOW_PATH + consensus.Node_name + ".log")
 		defer file.Close()
-		log.SetPrefix("PBFT--[PREPARE DONE]")
+		log.SetPrefix("PBFT--[PREPARE DONE]----")
 		log.Println("broadcast prepare message, into commit")
 	case *pbft.CommitMsg:
 		file, _ := utils.Init_log(utils.FLOW_PATH + consensus.Node_name + ".log")
 		defer file.Close()
-		log.SetPrefix("PBFT--[COMMIT DONE]")
+		log.SetPrefix("PBFT--[COMMIT DONE]-----")
 		log.Println("broadcast commit message, into reply")
 	}
 	if len(errorMap) == 0 { // 如果转发消息均成功
@@ -113,8 +113,7 @@ func (consensus *NodeConsensus) broadcastReply(msg *pbft.ReplyMsg, path string) 
 	utils.Send(url+path, jsonMsg) // url：localhost:1111  path：/prepare等等
 	file, _ := utils.Init_log(utils.FLOW_PATH + consensus.Node_name + ".log")
 	defer file.Close()
-	log.SetPrefix("PBFT--[REPLY DONE]")
+	log.SetPrefix("PBFT--[REPLY DONE]------")
 	log.Println("broadcast reply message, send result of pbft")
 	return nil
-
 }
