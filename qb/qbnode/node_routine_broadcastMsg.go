@@ -64,14 +64,16 @@ func (node *Node) addBlock(block *qblock.Block) {
 	UTXOSet.Update(block)
 	UTXOSet.Reindex()
 
-	file, _ := utils.Init_log(utils.FLOW_PATH + node.Node_name + ".log")
-	defer file.Close()
 	if node.Node_name == node.Primary {
+		file, _ := utils.Init_log(utils.FLOW_PATH + node.Node_name + ".log")
+		defer file.Close()
 		log.SetPrefix("UPDATE BLOCKCHAIN-------")
 		log.Println("add new block to blockchain")
 		log.SetPrefix("RETURN RESULT-----------")
 		log.Printf("Returns the result of the transaction\n\n")
 	} else {
+		file, _ := utils.Init_log(utils.FLOW_PATH + node.Node_name + ".log")
+		defer file.Close()
 		log.SetPrefix("UPDATE BLOCKCHAIN-------")
 		log.Printf("add new block to blockchain\n\n")
 	}

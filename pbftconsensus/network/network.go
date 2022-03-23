@@ -25,6 +25,10 @@ type NodeConsensus struct {
 	Node_table           map[string]string // 节点索引表，key=Node_name, value=url
 	BC_url               string
 
+	start     time.Time
+	end       time.Time
+	pbft_time time.Duration
+
 	View      *pbft.View // 视图号
 	PBFT      *Consensus
 	Committed []*pbft.CommitMsg

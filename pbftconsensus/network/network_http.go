@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"pbft"
 	"qblock"
+	"time"
 )
 
 // setRoute,设置路由规则，在启动http服务之前设置
@@ -28,6 +29,7 @@ func (consensus *NodeConsensus) getRequest(writer http.ResponseWriter, request *
 		fmt.Println(err)
 		return
 	}
+	consensus.start = time.Now()
 	consensus.PBFT.CurrentState = nil
 	consensus.MsgEntrance <- &msg // 将解码后的消息放入通道MsgEntrance
 }
@@ -42,6 +44,7 @@ func (consensus *NodeConsensus) getPrePrepare(writer http.ResponseWriter, reques
 		fmt.Println(err)
 		return
 	}
+	consensus.start = time.Now()
 	consensus.PBFT.CurrentState = nil
 	consensus.MsgEntrance <- &msg // 将解码后的消息放入通道MsgEntrance
 }

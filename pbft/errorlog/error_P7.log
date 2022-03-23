@@ -1,0 +1,77 @@
+[Commit error]2021/11/09 15:23:15.994606 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/09 15:23:17.119301 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/11 14:53:17.231688 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/11 14:53:17.232448 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/11 14:53:17.232951 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/11 14:53:17.233744 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/11 14:53:17.234474 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/11 14:53:17.247404 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/11 14:53:17.286616 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/11 14:53:17.287216 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/11 14:59:14.908451 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/11 14:59:14.908963 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/11 14:59:14.909104 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/11 14:59:14.909406 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/11 14:59:14.909594 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/11 14:59:14.909776 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/11 14:59:14.909974 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/11 14:59:14.912760 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/11 14:59:30.341444 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/13 22:43:01.350648 /root/study/github_repository/pbft/pbft_commit.go:83: the sequenceID of prepare message is wrong!
+[Reply error]2021/11/13 22:43:02.134567 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:43:02.134713 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:43:02.134963 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:43:02.135220 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:43:02.135382 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:43:02.135543 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:43:02.135709 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:56:02.842275 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:56:02.842345 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:56:02.842401 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:56:02.842458 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:56:02.842515 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:56:02.842600 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:56:02.842659 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:56:06.026306 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:56:06.026769 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:56:06.026987 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:56:06.027255 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:56:06.027382 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:56:06.027482 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/13 22:56:06.027579 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Commit error]2021/11/26 13:15:17.566157 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/26 13:15:17.586126 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/26 13:15:17.753720 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Commit error]2021/11/26 13:15:17.753980 /root/study/github_repository/pbft/pbft_commit.go:89: the verify of digest is wrong!
+[Reply error]2021/11/26 13:17:34.303203 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:18:11.721411 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Commit error]2021/11/26 13:18:39.374902 /root/study/github_repository/pbft/pbft_commit.go:83: the sequenceID of prepare message is wrong!
+[Reply error]2021/11/26 13:18:39.878049 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:18:39.878218 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:18:39.878689 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:18:39.879055 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:18:39.879281 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:18:39.879634 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:18:39.879792 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Commit error]2021/11/26 13:18:52.162999 /root/study/github_repository/pbft/pbft_commit.go:83: the sequenceID of prepare message is wrong!
+[Commit error]2021/11/26 13:18:52.163459 /root/study/github_repository/pbft/pbft_commit.go:83: the sequenceID of prepare message is wrong!
+[Reply error]2021/11/26 13:18:52.463622 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:18:52.463829 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:18:52.464000 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:18:52.464184 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:18:52.464354 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:18:52.464510 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:18:52.465049 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:19:16.289363 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:19:16.289940 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Commit error]2021/11/26 13:19:24.765317 /root/study/github_repository/pbft/pbft_commit.go:83: the sequenceID of prepare message is wrong!
+[Reply error]2021/11/26 13:19:25.349843 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:19:25.349999 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:19:25.350172 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:19:25.350399 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:19:25.350557 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:19:25.350979 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:19:34.133062 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:19:34.133252 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:19:34.133741 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!
+[Reply error]2021/11/26 13:19:34.134199 /root/study/github_repository/pbft/pbft_reply.go:84: the sequenceID of commit message is wrong!

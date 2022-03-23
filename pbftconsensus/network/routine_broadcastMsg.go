@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"pbft"
+	"time"
 	"utils"
 )
 
@@ -24,6 +25,7 @@ func (consensus *NodeConsensus) broadcastMsg() {
 			utils.LogStage("Reply", false)
 			consensus.broadcastReply(msg, "/reply")
 			utils.LogStage("Reply", true)
+			fmt.Println("=====[PBFT Time]:", consensus.pbft_time)
 		}
 	}
 }
@@ -111,6 +113,9 @@ func (consensus *NodeConsensus) broadcastReply(msg *pbft.ReplyMsg, path string) 
 	url := consensus.BC_url
 	// 将json格式传送给其他的联盟节点
 	utils.Send(url+path, jsonMsg) // url：localhost:1111  path：/prepare等等
+	consensus.end = time.Now()
+	consensus.pbft_time = consensus.end.Sub(consensus.start)
+
 	file, _ := utils.Init_log(utils.FLOW_PATH + consensus.Node_name + ".log")
 	defer file.Close()
 	log.SetPrefix("PBFT--[REPLY DONE]------")

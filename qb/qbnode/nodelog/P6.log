@@ -1,0 +1,45 @@
+[listen reply]2021/11/13 22:42:59.841091 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/13 22:43:00.090490 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/13 22:43:02.135839 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/13 22:43:02.152947 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/13 22:55:33.199934 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/13 22:55:34.014000 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/13 22:56:02.944775 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/13 22:56:03.022128 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/13 22:56:06.086808 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/13 22:56:06.295234 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/26 12:43:10.984947 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/26 12:43:11.741758 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/26 12:58:32.591820 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/26 12:58:34.286854 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/26 13:01:37.443026 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/26 13:01:37.821538 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/26 13:05:16.253182 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/26 13:05:20.292780 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/26 13:09:33.862248 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/26 13:09:33.954514 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/26 13:12:31.518785 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/26 13:12:31.531620 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/26 13:14:00.892341 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/26 13:14:01.711247 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/26 13:15:18.784714 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/26 13:16:59.187291 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/26 13:16:59.290471 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/26 13:17:34.082086 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/26 13:17:34.278785 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/26 13:18:11.300829 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/26 13:18:16.050952 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/26 13:18:25.736715 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/26 13:18:26.554313 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/26 13:18:39.995740 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/26 13:18:40.369482 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/26 13:18:52.200800 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/26 13:18:52.421709 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/26 13:19:01.063356 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/26 13:19:01.179907 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/26 13:19:16.208967 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/26 13:19:17.164549 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/26 13:19:25.189402 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/26 13:19:25.509190 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx
+[listen reply]2021/11/26 13:19:34.103151 /root/study/github_repository/qb/qbnode/node_network.go:46: receive a transcation message
+[listen reply]2021/11/26 13:19:34.286428 /root/study/github_repository/qb/qbnode/node_network.go:60: receive the result of tx

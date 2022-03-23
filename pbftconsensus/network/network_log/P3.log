@@ -1,811 +1,246 @@
-[dispatch PrePrepareMsg]2021/10/17 16:51:50.226228 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 16:51:50.248934 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 16:51:50.249514 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 16:51:50.271892 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 16:51:50.309167 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 16:51:50.318327 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 16:51:50.329739 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 16:51:50.367792 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 16:51:50.374984 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 16:51:50.394528 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 16:51:50.407987 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 16:51:50.425822 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 16:51:50.451494 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 16:51:50.469615 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 16:51:50.520691 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 16:51:50.520940 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:51:50.531054 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:51:50.545404 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:51:50.553203 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:51:50.562042 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:51:50.571300 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:51:50.586871 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:51:50.593878 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:51:50.605360 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:51:50.640274 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:51:50.669885 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:51:50.685124 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:51:50.712181 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:51:50.723350 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:51:50.732515 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 16:51:50.739408 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch PrePrepareMsg]2021/10/17 16:59:24.749958 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 16:59:24.784074 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 16:59:24.880167 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 16:59:24.892324 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 16:59:24.899287 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 16:59:24.919736 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 16:59:24.926334 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 16:59:24.934631 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 16:59:24.974928 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 16:59:24.998696 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 16:59:25.018077 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch CommitMsg]2021/10/17 16:59:25.019625 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:59:25.080432 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:59:25.216878 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:59:25.243426 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:59:25.250780 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:59:25.260632 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:59:25.279243 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:59:25.302916 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:59:25.321439 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:59:25.331199 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:59:25.338954 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:59:25.375338 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:59:25.393918 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 16:59:25.404773 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 16:59:25.410663 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/17 16:59:25.412100 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/17 17:04:46.245504 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 17:04:46.270523 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 17:04:46.357461 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 17:04:46.370305 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 17:04:46.396296 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 17:04:46.447252 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 17:04:46.530529 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 17:04:46.543329 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 17:04:46.549845 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 17:04:46.595838 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 17:04:46.652994 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 17:04:46.655621 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 17:04:46.660883 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 17:04:46.700134 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 17:04:46.707827 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 17:04:46.717720 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 17:04:46.734725 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 17:04:46.742017 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 17:04:46.758814 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 17:04:46.782770 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 17:04:46.800129 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 17:04:46.811522 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 17:04:46.822956 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 17:04:46.831966 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/17 17:04:46.833451 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/17 18:49:20.117910 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 18:49:20.144591 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 18:49:20.176971 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:49:20.181661 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:49:20.186357 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:49:20.194422 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:49:20.199529 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:49:20.203953 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:49:20.221186 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:49:20.259060 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:49:20.265831 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 18:49:20.291209 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 18:49:20.292605 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:20.299351 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:20.320529 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:20.324375 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:20.327040 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:20.331718 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:20.353557 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:20.357352 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:20.368805 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:20.391530 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:20.394992 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:20.399367 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:20.402145 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:20.414589 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:20.424235 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 18:49:20.427699 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch PrePrepareMsg]2021/10/17 18:49:22.153469 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 18:49:22.179517 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 18:49:22.193390 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:49:22.275994 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:49:22.283182 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:49:22.291631 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:49:22.297325 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:49:22.303784 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 18:49:22.358035 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 18:49:22.359798 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:22.366114 /root/study/github_repository/pbft/pbft_reply.go:82: the sequenceID of commit message is wrong!
-[dispatch CommitMsg]2021/10/17 18:49:22.366118 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:22.385226 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:22.394658 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:22.427752 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:22.433064 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:22.439500 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:22.460790 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:22.483880 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:22.518489 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:22.525132 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:22.547993 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:22.555376 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:22.569366 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:49:22.583148 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 18:49:22.590595 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/17 18:49:22.591402 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/17 18:50:42.530485 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 18:50:42.553513 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 18:50:42.588086 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:50:42.609941 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:50:42.627507 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:50:42.642190 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:50:42.652373 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:50:42.672247 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:50:42.684081 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:50:42.717909 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:50:42.729838 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:50:42.755075 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:50:42.755116 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:50:42.773701 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 18:50:42.822937 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 18:50:42.830619 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:50:42.837267 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:50:42.845822 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:50:42.867184 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:50:42.880803 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:50:42.900400 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:50:42.906898 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:50:42.915123 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:50:42.948042 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:50:42.969496 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:50:42.987775 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:50:43.024025 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:50:43.044632 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:50:43.056502 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:50:43.070191 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 18:50:43.083161 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch PrePrepareMsg]2021/10/17 18:57:58.920840 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 18:57:58.947207 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 18:57:58.955916 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:57:59.021720 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:57:59.038010 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:57:59.045461 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:57:59.055035 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:57:59.064809 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:57:59.073538 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:57:59.082708 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 18:57:59.094515 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 18:57:59.148574 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 18:57:59.148772 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:57:59.174830 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:57:59.191105 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:57:59.220504 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:57:59.333736 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:57:59.365169 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:57:59.385275 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:57:59.400792 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:57:59.419292 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:57:59.448073 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:57:59.457446 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:57:59.467223 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:57:59.475996 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:57:59.494510 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 18:57:59.535185 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 18:57:59.543309 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/17 18:57:59.544402 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/17 19:11:35.743577 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 19:11:35.768310 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 19:11:35.781354 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:11:35.794714 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:11:35.816725 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:11:35.829798 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:11:35.861355 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:11:35.873360 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:11:35.900578 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:11:35.916659 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:11:35.922515 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:11:35.944998 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:11:35.960498 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:11:35.970178 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:11:36.004687 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 19:11:36.038613 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 19:11:36.039419 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:11:36.050498 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:11:36.066766 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:11:36.118976 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:11:36.146913 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:11:36.171740 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:11:36.184909 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:11:36.215957 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:11:36.225784 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:11:36.241976 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:11:36.257018 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:11:36.285773 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:11:36.297946 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:11:36.329134 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:11:36.356093 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 19:11:36.366310 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch PrePrepareMsg]2021/10/17 19:40:39.481734 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 19:40:39.506353 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 19:40:39.516823 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:39.526913 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:39.544456 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:39.551065 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:39.557942 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:39.573788 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:39.596308 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:39.624995 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:39.634349 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:39.640210 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:39.647091 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:39.676462 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:39.684173 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 19:40:39.723344 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 19:40:39.723888 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:39.728737 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:39.741017 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:39.756987 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:39.788171 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:39.804038 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:39.815872 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:39.826387 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:39.852487 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:39.858335 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:39.868127 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:39.873216 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:39.887756 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:39.901241 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 19:40:39.914305 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/17 19:40:39.924767 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/17 19:40:41.485067 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 19:40:41.516577 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 19:40:41.520548 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:41.549000 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:41.555226 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:41.581657 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:41.602178 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:41.612286 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:41.617992 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:41.640530 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:41.654800 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:41.663784 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:41.668873 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:40:41.683547 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 19:40:41.715160 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 19:40:41.715421 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:41.728736 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:41.753217 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:41.774337 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:41.796520 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:41.796688 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:41.811861 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:41.821309 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:41.830998 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:41.852966 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:41.871635 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:41.884744 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:41.903352 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:41.909460 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:40:41.920698 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 19:40:41.924833 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/17 19:40:41.925084 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/17 19:46:36.295786 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 19:46:36.321277 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 19:46:36.324656 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:46:36.379863 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:46:36.389638 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:46:36.404599 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:46:36.415603 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:46:36.423599 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:46:36.449142 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:46:36.460311 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:46:36.491488 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:46:36.544953 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:46:36.568198 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 19:46:36.576423 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 19:46:36.648594 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 19:46:36.648872 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:46:36.668925 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:46:36.678879 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:46:36.705276 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:46:36.711605 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:46:36.722734 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:46:36.731520 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:46:36.749663 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:46:36.757979 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:46:36.777384 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:46:36.814942 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:46:36.832433 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:46:36.843820 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:46:36.884738 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 19:46:36.898358 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 19:46:36.903686 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/17 19:46:36.912255 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/17 20:18:47.297453 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 20:18:47.322124 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 20:18:47.323659 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:18:47.344568 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:18:47.355342 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:18:47.378252 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:18:47.398591 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:18:47.428327 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:18:47.428360 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:18:47.442085 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:18:47.452559 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:18:47.467441 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:18:47.508436 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:18:47.522163 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:18:47.561607 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 20:18:47.591882 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 20:18:47.600267 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:18:47.610123 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:18:47.653306 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:18:47.679688 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:18:47.709641 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:18:47.736868 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:18:47.762661 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:18:47.787671 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:18:47.817575 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:18:47.828132 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:18:47.851016 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:18:47.904108 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:18:47.923714 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:18:47.952795 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 20:18:47.975955 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/17 20:18:47.976664 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/17 20:22:07.780831 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 20:22:07.814073 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 20:22:07.830860 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:22:07.899642 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:22:07.908771 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:22:07.936576 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:22:07.958388 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:22:07.958491 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:22:07.981991 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:22:08.030412 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:22:08.089823 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:22:08.099739 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:22:08.132066 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 20:22:08.172992 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 20:22:08.174262 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:22:08.193422 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:22:08.285417 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:22:08.287300 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:22:08.297665 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:22:08.306646 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:22:08.328470 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:22:08.337436 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:22:08.352826 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:22:08.356427 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 20:22:08.378085 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/17 20:22:08.383485 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/17 20:28:05.192004 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 20:28:05.218546 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 20:28:05.439915 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 20:28:05.575531 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 20:28:05.639558 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:28:05.646056 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:28:05.868004 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 20:28:06.028861 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/17 20:28:06.029113 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/17 20:29:59.882929 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 20:29:59.908454 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 20:29:59.947161 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:29:59.991423 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:30:00.003186 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:30:00.003214 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:30:00.008784 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:30:00.024666 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:30:00.035121 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 20:30:00.066107 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 20:30:00.066456 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:30:00.074257 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:30:00.078717 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:30:00.090596 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:30:00.096983 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:30:00.180437 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:30:00.290442 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:30:00.320056 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:30:00.325497 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:30:00.333103 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:30:00.344241 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:30:00.351574 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:30:00.359911 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:30:00.371578 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:30:00.395828 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 20:30:00.402649 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch PrePrepareMsg]2021/10/17 20:30:01.882251 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 20:30:01.926620 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 20:30:02.202866 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 20:30:02.299551 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[resolve commitMsg success]2021/10/17 20:30:02.668542 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch PrePrepareMsg]2021/10/17 20:30:07.930206 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 20:30:07.955075 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[resolve prepareMsg success]2021/10/17 20:30:08.369824 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 20:30:08.404365 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:30:08.413298 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:30:08.428277 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:30:08.763212 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 20:30:08.893435 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/17 20:30:08.930103 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/17 20:31:56.371914 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 20:31:56.400542 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[resolve prepareMsg success]2021/10/17 20:31:57.043439 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 20:31:57.094755 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:31:57.235712 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 20:31:57.345379 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/17 20:31:57.386362 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/17 20:33:28.671311 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 20:33:28.696453 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 20:33:28.831579 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 20:33:28.984116 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 20:33:28.994046 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:33:29.002296 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:33:29.016639 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:33:29.026737 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:33:29.063160 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:33:29.147874 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 20:33:29.704478 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch PrePrepareMsg]2021/10/17 20:33:36.661073 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 20:33:36.687365 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 20:33:36.891815 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 20:33:37.022189 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 20:33:37.060089 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:33:37.069167 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:33:37.078811 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:33:37.225641 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 20:33:37.348730 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/17 20:33:37.368886 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/17 20:46:08.480161 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 20:46:08.505310 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 20:46:08.936058 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/17 20:46:09.063581 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch CommitMsg]2021/10/17 20:46:09.169926 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 20:46:09.310265 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/17 20:46:09.336598 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/17 20:46:14.449896 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/17 20:46:14.473291 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[resolve prepareMsg success]2021/10/17 20:46:14.792942 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/17 20:46:14.801096 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:46:14.816266 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:46:14.823532 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:46:14.832460 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:46:14.840566 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/17 20:46:14.850499 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/17 20:46:15.254767 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/17 20:46:15.376071 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/17 20:46:15.387682 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/18 14:16:42.716637 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/18 14:16:42.745685 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/18 14:16:42.837434 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/18 14:16:42.969955 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/18 14:16:43.026830 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:16:43.342660 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:16:43.350034 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/18 14:16:43.358609 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/18 14:16:43.364455 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/18 14:43:14.440665 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/18 14:43:14.462381 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/18 14:43:14.544182 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:14.550735 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:14.559209 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:14.564896 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:14.573581 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:14.579741 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:14.596028 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:14.602987 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/18 14:43:14.632882 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/18 14:43:14.634328 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:14.642266 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:14.649781 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:14.657868 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:14.828931 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:14.838320 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:14.907411 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:43:14.984261 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:43:15.096395 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/18 14:43:15.109557 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/18 14:43:15.109718 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/18 14:43:42.244277 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/18 14:43:42.268540 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/18 14:43:42.302368 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:42.352251 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:42.358974 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:42.368158 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:42.376069 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:42.384182 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:42.390506 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:42.398150 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/18 14:43:42.425068 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/18 14:43:42.426403 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:42.434845 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:42.443882 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:42.453527 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:42.464627 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:42.473774 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:43:42.608700 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:43:42.642231 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:43:42.683226 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:43:42.689725 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:43:42.698190 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:43:42.715210 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:43:42.726016 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:43:42.782195 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:43:42.825383 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:43:42.862857 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:43:42.886954 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/18 14:43:42.896750 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch PrePrepareMsg]2021/10/18 14:46:26.990958 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/18 14:46:27.015043 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/18 14:46:27.147182 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/18 14:46:27.265421 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/18 14:46:27.281836 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:46:27.289539 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:46:27.297808 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:46:27.306753 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:46:27.320956 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:46:27.480897 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:46:27.538964 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:46:27.548115 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:46:27.555606 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:46:27.565087 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:46:27.573134 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:46:27.580017 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:46:27.602110 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:46:27.610995 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/18 14:46:27.620536 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/18 14:46:27.625375 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/18 14:46:35.000162 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/18 14:46:35.023898 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[resolve prepareMsg success]2021/10/18 14:46:35.447181 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/18 14:46:35.486731 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/18 14:46:35.502575 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:46:35.617167 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/18 14:46:35.741489 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/18 14:46:35.749590 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/18 14:46:35.753858 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/22 10:55:34.215729 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 10:55:34.255619 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[resolve prepareMsg success]2021/10/22 10:55:34.553824 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[resolve commitMsg success]2021/10/22 10:55:34.742660 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch PrePrepareMsg]2021/10/22 10:55:36.224658 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 10:55:36.260487 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 10:55:36.400076 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/22 10:55:36.448496 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[resolve commitMsg success]2021/10/22 10:55:36.992151 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch PrePrepareMsg]2021/10/22 10:55:48.239767 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 10:55:48.272281 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[resolve prepareMsg success]2021/10/22 10:55:48.399945 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 10:55:48.405100 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 10:55:48.406843 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 10:55:48.409071 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 10:55:48.410995 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 10:55:48.412552 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 10:55:48.628778 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/22 10:55:48.782393 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/22 10:55:48.815660 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/22 11:04:12.836519 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 11:04:12.868966 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 11:04:12.920882 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:04:12.942367 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/22 11:04:12.962218 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 11:04:12.962556 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:04:12.964570 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:04:12.967018 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:04:12.979746 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:04:12.983498 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:04:13.012599 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:04:13.016587 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:04:13.092283 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:04:13.195399 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/22 11:04:13.204684 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/22 11:04:13.205421 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/22 11:04:26.884741 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 11:04:26.926967 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 11:04:27.014959 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/22 11:04:27.057267 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 11:04:27.077062 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:04:27.079087 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:04:27.080641 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:04:27.092042 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:04:27.279917 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/22 11:04:27.350520 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/22 11:04:27.360955 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/22 11:04:28.847891 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 11:04:28.881273 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 11:04:28.901353 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:04:28.920867 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:04:28.922919 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/22 11:04:28.965492 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 11:04:28.965714 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:04:28.967681 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:04:28.969342 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:04:28.971253 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:04:28.975009 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:04:28.975044 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:04:28.978472 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:04:29.038592 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:04:29.083153 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:04:29.088474 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:04:29.096460 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:04:29.098503 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:04:29.102934 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:04:29.116115 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:04:29.134954 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:04:29.140967 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/22 11:04:29.160858 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/22 11:04:29.160914 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/22 11:15:07.668626 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 11:15:07.706959 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 11:15:07.810058 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/22 11:15:07.851222 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 11:15:07.856353 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:15:07.863875 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:15:07.874648 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:15:07.932393 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:15:08.032392 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:15:08.042354 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:15:08.051343 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/22 11:15:08.061347 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/22 11:15:08.062007 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/22 11:15:57.433391 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 11:15:57.472879 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 11:15:57.600950 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/22 11:15:57.644850 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 11:15:57.654357 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:15:57.655472 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:15:57.687667 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:15:57.800431 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/22 11:15:57.812267 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/22 11:15:57.812522 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/22 11:16:05.451829 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 11:16:05.517418 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 11:16:05.659419 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/22 11:16:05.703191 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch CommitMsg]2021/10/22 11:16:05.980580 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/22 11:16:06.090324 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch PrePrepareMsg]2021/10/22 11:23:05.054642 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 11:23:05.084453 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 11:23:05.174493 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/22 11:23:05.220551 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 11:23:05.226109 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:23:05.227675 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:23:05.229734 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:23:05.230701 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:23:05.403690 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/22 11:23:05.449065 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/22 11:23:05.458772 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/22 11:23:07.012707 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 11:23:07.049361 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 11:23:07.099689 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/22 11:23:07.142931 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 11:23:07.147802 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:23:07.151629 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:23:07.166302 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:23:07.203302 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 11:23:07.223998 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:23:07.381696 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/22 11:23:07.476149 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch PrePrepareMsg]2021/10/22 11:23:15.046542 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 11:23:15.078857 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 11:23:15.194202 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/22 11:23:15.248705 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 11:23:15.260760 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 11:23:15.402715 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/22 11:23:15.543797 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/22 11:23:15.571048 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/22 13:26:23.693680 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 13:26:23.729067 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 13:26:23.781487 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:26:23.832666 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:26:23.836162 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:26:23.836902 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/22 13:26:23.860217 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 13:26:23.860544 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:26:23.863667 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:26:23.865232 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:26:23.866824 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:26:23.868385 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:26:23.892118 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:26:23.909982 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 13:26:24.031403 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 13:26:24.127485 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 13:26:24.135086 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/22 13:26:24.150634 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/22 13:26:24.150911 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/22 13:28:25.813866 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 13:28:25.845652 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 13:28:25.880767 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:28:25.895289 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:28:25.897237 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:28:25.899627 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:28:25.902309 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:28:25.906521 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/22 13:28:25.929395 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 13:28:25.929808 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:28:25.936443 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:28:25.941489 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:28:25.951226 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:28:25.953515 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:28:25.956843 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:28:26.024166 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/22 13:28:26.260436 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/22 13:28:26.260581 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/22 13:43:33.271646 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 13:43:33.301816 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrePrepareMsg]2021/10/22 13:58:19.852089 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 13:58:19.882835 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 13:58:19.898778 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/22 13:58:21.835186 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 13:58:21.858774 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 13:58:21.864141 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:58:21.870778 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:58:21.872501 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:58:21.873312 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 13:58:21.875191 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/22 14:10:35.998863 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 14:10:36.033044 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[resolve prepareMsg success]2021/10/22 14:10:36.326796 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch CommitMsg]2021/10/22 14:10:36.562318 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/22 14:10:36.676686 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch PrePrepareMsg]2021/10/22 14:11:53.618700 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 14:11:53.649595 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 14:11:53.701126 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 14:11:53.714482 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 14:11:53.717683 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 14:11:53.720170 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 14:11:53.722918 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 14:11:53.726902 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 14:11:53.726925 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 14:11:53.729547 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/22 14:11:53.756218 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 14:11:53.756705 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 14:11:53.760923 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 14:11:53.777083 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 14:11:53.780690 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 14:11:53.783612 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 14:11:53.820813 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 14:11:53.868364 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 14:11:53.880643 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 14:11:53.964391 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 14:11:53.973032 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 14:11:53.983248 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 14:11:53.991522 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 14:11:54.000793 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/22 14:11:54.010119 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/22 14:11:54.012013 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/22 18:47:36.600578 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 18:47:36.630447 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[resolve prepareMsg success]2021/10/22 18:47:39.654062 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 18:47:39.654391 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 18:47:39.658138 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 18:47:39.712282 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 18:47:40.090316 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 18:47:40.366873 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 18:47:40.465565 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 18:47:40.700753 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 18:47:40.915628 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/22 18:47:40.922867 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch PrePrepareMsg]2021/10/22 18:47:59.186303 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 18:47:59.211896 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[resolve prepareMsg success]2021/10/22 18:48:00.351500 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 18:48:00.617328 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 18:48:00.723436 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 18:48:01.424663 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/22 18:48:01.517777 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
-[dispatch CommitMsg]2021/10/22 18:48:01.558060 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[dispatch PrePrepareMsg]2021/10/22 18:49:06.245552 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
-[resolve pre-prepareMsg success]2021/10/22 18:49:06.270638 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 18:49:07.149459 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[resolve prepareMsg success]2021/10/22 18:49:07.168147 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
-[dispatch PrepareMsg]2021/10/22 18:49:07.181970 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 18:49:07.326892 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 18:49:07.381815 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 18:49:07.439045 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 18:49:07.533014 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch PrepareMsg]2021/10/22 18:49:07.976024 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
-[dispatch CommitMsg]2021/10/22 18:49:08.108138 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
-[resolve commitMsg success]2021/10/22 18:49:08.202941 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch PrePrepareMsg]2021/11/13 22:42:58.923302 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/13 22:42:58.946245 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[resolve prepareMsg success]2021/11/13 22:42:59.655678 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/13 22:42:59.662730 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/13 22:42:59.772098 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/13 22:42:59.900846 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/13 22:42:59.920125 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch CommitMsg]2021/11/13 22:42:59.927013 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[dispatch PrePrepareMsg]2021/11/13 22:43:01.502689 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/13 22:43:01.524660 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[dispatch PrepareMsg]2021/11/13 22:43:01.989746 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[resolve prepareMsg success]2021/11/13 22:43:02.025443 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/13 22:43:02.031974 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/13 22:43:02.033230 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/13 22:43:02.034266 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/13 22:43:02.283802 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/13 22:43:02.303005 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch PrePrepareMsg]2021/11/13 22:55:32.376022 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/13 22:55:32.409776 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[resolve prepareMsg success]2021/11/13 22:55:33.267195 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[resolve commitMsg success]2021/11/13 22:55:33.652077 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch PrePrepareMsg]2021/11/13 22:56:02.266604 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/13 22:56:02.289724 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[resolve prepareMsg success]2021/11/13 22:56:03.048565 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[resolve commitMsg success]2021/11/13 22:56:03.434275 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch PrePrepareMsg]2021/11/13 22:56:04.737415 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/13 22:56:04.763975 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[dispatch PrepareMsg]2021/11/13 22:56:05.184840 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/13 22:56:05.245775 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/13 22:56:05.247642 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[resolve prepareMsg success]2021/11/13 22:56:05.268578 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/13 22:56:05.292113 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/13 22:56:05.319988 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/13 22:56:05.489762 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/13 22:56:05.531279 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/13 22:56:05.545907 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/13 22:56:05.569516 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/13 22:56:05.636418 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/13 22:56:05.842476 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/13 22:56:05.844097 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch PrePrepareMsg]2021/11/26 12:43:08.504858 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 12:43:08.541749 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 12:43:10.332014 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[resolve prepareMsg success]2021/11/26 12:43:10.350187 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 12:43:10.367322 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 12:43:10.426468 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 12:43:10.492723 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 12:43:10.670834 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 12:43:10.710949 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 12:43:10.737477 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 12:43:10.797366 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 12:43:10.920214 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 12:43:10.939730 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/26 12:43:10.941085 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch PrePrepareMsg]2021/11/26 12:58:30.584842 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:65: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 12:58:30.609569 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 12:58:31.388852 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:82: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 12:58:31.464665 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:82: [receive prepare message, and prepare to resolve it]
+[resolve prepareMsg success]2021/11/26 12:58:31.483232 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 12:58:31.516804 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:82: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 12:58:31.636547 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:82: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 12:58:31.901876 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:82: [receive prepare message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 12:58:31.998317 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:97: [receive commit message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 12:58:32.063190 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:97: [receive commit message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 12:58:32.110297 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:97: [receive commit message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 12:58:32.346999 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:97: [receive commit message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 12:58:32.349494 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:97: [receive commit message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/26 12:58:32.350178 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch PrePrepareMsg]2021/11/26 13:01:34.524379 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:65: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 13:01:34.549326 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:01:36.037680 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:82: [receive prepare message, and prepare to resolve it]
+[resolve prepareMsg success]2021/11/26 13:01:36.073667 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:01:36.392262 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:82: [receive prepare message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/26 13:01:36.567040 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch PrePrepareMsg]2021/11/26 13:05:14.625691 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:65: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 13:05:14.651419 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:05:15.957282 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:82: [receive prepare message, and prepare to resolve it]
+[resolve prepareMsg success]2021/11/26 13:05:15.992532 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:05:16.020695 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:82: [receive prepare message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 13:05:16.448559 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:97: [receive commit message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/26 13:05:16.467815 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch PrePrepareMsg]2021/11/26 13:09:30.757255 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:66: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 13:09:30.783347 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:09:32.261971 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:83: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:09:32.278732 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:83: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:09:32.401878 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:83: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:09:32.421509 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:83: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:09:32.717021 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:83: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:09:32.745528 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:83: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:09:32.963806 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:83: [receive prepare message, and prepare to resolve it]
+[resolve prepareMsg success]2021/11/26 13:09:32.982238 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:09:32.982890 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:83: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:09:33.024789 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:83: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:09:33.192123 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:83: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:09:33.254783 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:83: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:09:33.415105 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:83: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:09:33.660597 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:83: [receive prepare message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 13:09:33.760834 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:98: [receive commit message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 13:09:33.804941 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:98: [receive commit message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 13:09:33.902394 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:98: [receive commit message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/26 13:09:33.904216 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch PrePrepareMsg]2021/11/26 13:12:28.425036 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 13:12:28.450491 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[resolve prepareMsg success]2021/11/26 13:12:29.942595 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:12:30.043928 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:12:30.236245 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:12:30.271311 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 13:12:30.541005 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 13:12:30.658634 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 13:12:30.660760 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 13:12:30.663800 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 13:12:30.800808 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 13:12:30.848082 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/26 13:12:30.849691 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch PrePrepareMsg]2021/11/26 13:13:59.365989 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 13:13:59.391563 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[resolve prepareMsg success]2021/11/26 13:14:00.460576 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:14:00.507765 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:14:00.770981 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/26 13:14:01.048784 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch PrePrepareMsg]2021/11/26 13:15:14.953251 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 13:15:14.975418 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:15:17.406665 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[resolve prepareMsg success]2021/11/26 13:15:17.442144 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:15:17.465526 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:15:17.544835 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:15:17.592878 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:15:17.668407 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:15:17.748869 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:15:17.753484 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:15:17.778665 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrePrepareMsg]2021/11/26 13:15:17.796599 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 13:15:17.819650 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[dispatch CommitMsg]2021/11/26 13:15:18.175477 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 13:15:18.185068 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 13:15:18.261597 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 13:15:18.263393 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:15:18.308802 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:15:18.445606 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrePrepareMsg]2021/11/26 13:16:57.688457 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 13:16:57.716986 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[resolve prepareMsg success]2021/11/26 13:16:58.794746 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch CommitMsg]2021/11/26 13:16:59.276417 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/26 13:16:59.296734 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch PrePrepareMsg]2021/11/26 13:17:33.249417 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 13:17:33.278058 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:17:33.709690 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[resolve prepareMsg success]2021/11/26 13:17:33.746369 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:17:33.770345 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 13:17:34.144144 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/26 13:17:34.164458 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch PrePrepareMsg]2021/11/26 13:18:10.079984 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 13:18:10.107333 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:18:10.630585 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[resolve prepareMsg success]2021/11/26 13:18:10.666488 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:18:10.672736 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:10.675339 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:10.846264 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 13:18:11.184643 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/26 13:18:11.204930 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch PrePrepareMsg]2021/11/26 13:18:23.866682 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 13:18:23.895231 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:18:24.658603 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:24.748646 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:24.895186 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:24.917218 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:25.044040 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[resolve prepareMsg success]2021/11/26 13:18:25.062486 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:18:25.073174 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:25.119711 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:25.150952 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:25.220787 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:25.581914 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:25.584136 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:25.595482 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/26 13:18:25.671148 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch CommitMsg]2021/11/26 13:18:25.672413 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[dispatch PrePrepareMsg]2021/11/26 13:18:38.874245 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 13:18:38.904448 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:18:39.184810 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:39.218472 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:39.220962 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:39.243837 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:39.324317 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:39.339231 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:39.382636 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:39.505996 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[resolve prepareMsg success]2021/11/26 13:18:39.524536 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:18:39.527471 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:39.613444 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:39.650019 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:39.685720 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:39.752485 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:39.915122 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 13:18:40.008073 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/26 13:18:40.029877 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch CommitMsg]2021/11/26 13:18:40.031522 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[dispatch PrePrepareMsg]2021/11/26 13:18:51.397326 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 13:18:51.423540 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[resolve prepareMsg success]2021/11/26 13:18:52.040567 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:18:52.099657 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:18:52.158265 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/26 13:18:52.425655 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch PrePrepareMsg]2021/11/26 13:19:00.330498 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 13:19:00.358549 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:19:00.778253 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[resolve prepareMsg success]2021/11/26 13:19:00.816969 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:19:00.823194 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:19:00.839252 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:19:00.926798 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/26 13:19:01.274131 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch CommitMsg]2021/11/26 13:19:01.282072 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[dispatch PrePrepareMsg]2021/11/26 13:19:15.004805 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 13:19:15.030713 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:19:15.462585 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:19:15.515720 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:19:15.553097 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:19:15.668952 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:19:15.670916 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[resolve prepareMsg success]2021/11/26 13:19:15.689703 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:19:15.689937 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:19:15.911460 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:19:16.015780 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:19:16.118425 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:19:16.170734 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:19:16.183589 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/26 13:19:16.352061 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch CommitMsg]2021/11/26 13:19:16.353091 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[dispatch PrePrepareMsg]2021/11/26 13:19:24.189164 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 13:19:24.220112 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:19:24.540756 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[resolve prepareMsg success]2021/11/26 13:19:24.582185 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:19:24.583809 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:19:24.754364 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:19:24.788906 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:19:24.911693 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch PrepareMsg]2021/11/26 13:19:24.948231 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[dispatch CommitMsg]2021/11/26 13:19:25.171386 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/26 13:19:25.195494 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch PrePrepareMsg]2021/11/26 13:19:33.240104 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:63: [receive preprepare message, and prepare to resolve it]
+[resolve pre-prepareMsg success]2021/11/26 13:19:33.267525 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:145: put prepare message into broadcast channel
+[dispatch PrepareMsg]2021/11/26 13:19:33.744650 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:80: [receive prepare message, and prepare to resolve it]
+[resolve prepareMsg success]2021/11/26 13:19:33.781729 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:183: put commit message into broadcast channel
+[dispatch CommitMsg]2021/11/26 13:19:34.168049 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]
+[resolve commitMsg success]2021/11/26 13:19:34.191047 /root/study/github_repository/pbftconsensus/network/routine_resolveMsg.go:229: put reply message into broadcast channel
+[dispatch CommitMsg]2021/11/26 13:19:34.199559 /root/study/github_repository/pbftconsensus/network/routine_dispatchMsg.go:95: [receive commit message, and prepare to resolve it]

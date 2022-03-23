@@ -10,7 +10,7 @@ import (
 )
 
 // 打包时间间隔
-const BlockTimeDuration = time.Millisecond * 2000 // 3 second.
+const BlockTimeDuration = time.Millisecond * 3000 // 3 second.
 
 // log存放路径
 const NODE_LOG_PATH = "../qb/qbnode/nodelog/"

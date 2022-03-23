@@ -1,6 +1,7 @@
 #!/bin/bash
 echo "run pbft server!"
 set NODE_NAME
+
 export NODE_NAME="P1"
 gnome-terminal -t "PB1" -x bash -c "./pbft.exe startPBFT;exec bash"
 
@@ -32,6 +33,7 @@ export NODE_NAME="P10"
 gnome-terminal -t "PB10" -x bash -c "./pbft.exe startPBFT;exec bash"
 
 :<<!
+
 export NODE_NAME="P11"
 gnome-terminal -t "PB11" -x bash -c "./pbft.exe startPBFT;exec bash"
 
@@ -67,4 +69,5 @@ gnome-terminal -t "PB21" -x bash -c "./pbft.exe startPBFT;exec bash"
 
 export NODE_NAME="P22"
 gnome-terminal -t "PB22" -x bash -c "./pbft.exe startPBFT;exec bash"
+
 !
